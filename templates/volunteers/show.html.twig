@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Volunteers{% endblock %}
+
+{% block body %}
+    <h1>Volunteers</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ volunteer.id }}</td>
+            </tr>
+            <tr>
+                <th>TitleVolunteer</th>
+                <td>{{ volunteer.titleVolunteer }}</td>
+            </tr>
+            <tr>
+                <th>DescriptionVolunteer</th>
+                <td>{{ volunteer.descriptionVolunteer }}</td>
+            </tr>
+            <tr>
+                <th>NameVolunteer</th>
+                <td>{{ volunteer.nameVolunteer }}</td>
+            </tr>
+            <tr>
+                <th>FirstNameVolunteer</th>
+                <td>{{ volunteer.firstNameVolunteer }}</td>
+            </tr>
+            <tr>
+                <th>PhoneVolunteer</th>
+                <td>{{ volunteer.phoneVolunteer }}</td>
+            </tr>
+            <tr>
+                <th>ObjectVolunteer</th>
+                <td>{{ volunteer.objectVolunteer }}</td>
+            </tr>
+            <tr>
+                <th>MessageVolunteer</th>
+                <td>{{ volunteer.messageVolunteer }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('volunteers_index') }}">back to list</a>
+
+    <a href="{{ path('volunteers_edit', {'id': volunteer.id}) }}">edit</a>
+
+    {{ include('volunteers/_delete_form.html.twig') }}
+{% endblock %}

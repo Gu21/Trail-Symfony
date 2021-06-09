@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Races index{% endblock %}
+
+{% block body %}
+    <h1>Races index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>TitleRace</th>
+                <th>DescriptionRace</th>
+                <th>InfoRace</th>
+                <th>LinkRace</th>
+                <th>PictureRace</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for race in races %}
+            <tr>
+                <td>{{ race.id }}</td>
+                <td>{{ race.titleRace }}</td>
+                <td>{{ race.descriptionRace }}</td>
+                <td>{{ race.infoRace }}</td>
+                <td>{{ race.linkRace }}</td>
+                <td>{{ race.pictureRace }}</td>
+                <td>
+                    <a href="{{ path('races_show', {'id': race.id}) }}">show</a>
+                    <a href="{{ path('races_edit', {'id': race.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('races_new') }}">Create new</a>
+{% endblock %}

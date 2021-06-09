@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Volunteers index{% endblock %}
+
+{% block body %}
+    <h1>Volunteers index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>TitleVolunteer</th>
+                <th>DescriptionVolunteer</th>
+                <th>NameVolunteer</th>
+                <th>FirstNameVolunteer</th>
+                <th>PhoneVolunteer</th>
+                <th>ObjectVolunteer</th>
+                <th>MessageVolunteer</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for volunteer in volunteers %}
+            <tr>
+                <td>{{ volunteer.id }}</td>
+                <td>{{ volunteer.titleVolunteer }}</td>
+                <td>{{ volunteer.descriptionVolunteer }}</td>
+                <td>{{ volunteer.nameVolunteer }}</td>
+                <td>{{ volunteer.firstNameVolunteer }}</td>
+                <td>{{ volunteer.phoneVolunteer }}</td>
+                <td>{{ volunteer.objectVolunteer }}</td>
+                <td>{{ volunteer.messageVolunteer }}</td>
+                <td>
+                    <a href="{{ path('volunteers_show', {'id': volunteer.id}) }}">show</a>
+                    <a href="{{ path('volunteers_edit', {'id': volunteer.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('volunteers_new') }}">Create new</a>
+{% endblock %}

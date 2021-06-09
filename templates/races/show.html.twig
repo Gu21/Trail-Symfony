@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Races{% endblock %}
+
+{% block body %}
+    <h1>Races</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ race.id }}</td>
+            </tr>
+            <tr>
+                <th>TitleRace</th>
+                <td>{{ race.titleRace }}</td>
+            </tr>
+            <tr>
+                <th>DescriptionRace</th>
+                <td>{{ race.descriptionRace }}</td>
+            </tr>
+            <tr>
+                <th>InfoRace</th>
+                <td>{{ race.infoRace }}</td>
+            </tr>
+            <tr>
+                <th>LinkRace</th>
+                <td>{{ race.linkRace }}</td>
+            </tr>
+            <tr>
+                <th>PictureRace</th>
+                <td>{{ race.pictureRace }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('races_index') }}">back to list</a>
+
+    <a href="{{ path('races_edit', {'id': race.id}) }}">edit</a>
+
+    {{ include('races/_delete_form.html.twig') }}
+{% endblock %}
