@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img  src="img/carrousel3.jpg" class="d-block w-100" alt="coureur_enfant">
+                    <img src="img/carrousel3.jpg" class="d-block w-100" alt="coureur_enfant">
                     <div class="carousel-caption d-none d-md-block titlePosition">
                         <h1 class="trail">TRAIL</h1>
                         <h2 class="Legs-alaire">DES JAMBES ALLAIRE</h2>
@@ -56,7 +56,132 @@
 </section>
 <!-- -------------------------------END--CARROUSEL-------------------------- -->
 
+<!-- -------------------------------COMPTEUR-------------------------- -->
+<section class="sectionCounter py-5">
+    <div class="container">
+        <h2 class="titleCounter">PROCHAIN TRAIL!</h2>
+        <!-- <div class="form-group">
+            <input type="text" class="form-control text-center" id="choice">
+            <button type="button" class="btn" onclick="getInputValue();"></button>
+        </div> -->
+
+        <div class="numbers">
+
+            <div class="blockDays">
+                <div class="block" id="days"></div>
+            </div>
+
+            <div class="blockHours">
+                <div class="block" id="hours"></div>
+            </div>
+
+            <div class="blockMinutes">
+                <div class="block" id="minutes"></div>
+            </div>
+
+            <div class=blockSeconds>
+                <div class="block" id="seconds"></div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
 
 
+<!-- -------------------------END------COMPTEUR-------------------------- -->
 
-{% endblock %}
+
+     <!-- -------------------------------ACTUALITE-------------------------- -->
+     <section class="parallax Section-parallax">
+
+     <div class="container">
+        <div class="row">
+            <div class="col-sm-12 pt-5 boxpresentation">
+                {% for home in homes %}
+
+                <div class="Actualite-Title">
+                    <h2>{{ home.subtitle }}</h2>
+                </div>
+
+                <div class="Logo--Socios">
+                    <img class="Img-Logo" src="img/logo-socios.jpg" alt="logo-socio">
+                </div>
+
+                <div class="Paragraph-Socio">
+                    {{ home.description }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- --------------------------END -----ACTUALITE-------------------------- -->
+
+    <!-- -------------------------------PARTENAIRES-------------------------- -->
+    <section class="sponsor">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                {% for partner in partners %}
+                
+                <div class="col-sm-12 partenaires">
+                    <div class="Carousel-Partenaires w-100">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item tex-center align-middle active">
+                                    {% if loop.index0 == 0 %} class="item-active" {% else %} class="active" {% endif %}>
+                                    <img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" width="100">
+                                </div>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>{{ partner.titlePartner }}</h5>
+                                          </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- <div class="carousel-item tex-center align-middle">
+                                    <img src="../trail/img/partenaire3.png" loading="lazy" alt="">
+                                    <img src="../trail/img/partenaire4.png" loading="lazy" alt="">
+                                    <div class="carousel-caption d-none" loading="lazy">
+                                    </div>
+                                </div> -->
+
+
+                                <!-- <div class="carousel-item tex-center align-middle">
+                                    <img src="../trail/img/partenaire5.png" loading="lazy" alt="">
+                                    <img src="../trail/img/partenaire6.png" loading="lazy" alt="">
+                                    <div class="carousel-caption d-none" loading="lazy">
+                                    </div>
+                                </div> -->
+
+                                <!-- <div class="carousel-item tex-center align-middle">
+                                    <img src="../trail/img/partenaire7.png" loading="lazy" alt="">
+                                    <img src="../trail/img/partenaire8.png" loading="lazy" alt="">
+                                    <div class="carousel-caption d-none  loading=" lazy"">
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span><i class="fas fa-chevron-left" aria-hidden="true"></i></span>
+                                <span class="visually-hidden"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                <span class="visually-hidden"></span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- ------------------------END------partenaire-------------------------- -->
+
+    {% endblock %}

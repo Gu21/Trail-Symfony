@@ -3,9 +3,13 @@
 {% block title %}Partners index{% endblock %}
 
 {% block body %}
+
+<div class="container">
+
+
     <h1>Partners index</h1>
 
-    <table class="table">
+    <table class="table table-dark table-hover table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -21,7 +25,7 @@
             <tr>
                 <td>{{ partner.id }}</td>
                 <td>{{ partner.titlePartner }}</td>
-                <td>{{ partner.picturePartner }}</td>
+                <td><img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" width="100"></td>
                 <td>{{ partner.descriptionPartner }}</td>
                 <td>{{ partner.downloadFolderPartner }}</td>
                 <td>
@@ -38,4 +42,6 @@
     </table>
 
     <a href="{{ path('partners_new') }}">Create new</a>
+
+</div>
 {% endblock %}

@@ -9,6 +9,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 #[Route('/partners')]
 class PartnersController extends AbstractController
@@ -22,13 +25,34 @@ class PartnersController extends AbstractController
     }
 
     #[Route('/new', name: 'partners_new', methods: ['GET', 'POST'])]
-    public function new(Request $request): Response
+    public function new(Request $request, SluggerInterface $slugger): Response
     {
         $partner = new Partners();
         $form = $this->createForm(PartnersType::class, $partner);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            
+            $picturePartner = $form->get('picturePartner')->getData();
+
+if ($picturePartner) {
+$originalFilename = pathinfo($picturePartner->getClientOriginalName(),PATHINFO_FILENAME);
+
+$safeFilename = $slugger->slug($originalFilename);
+$newFilename = $safeFilename.'-'.uniqid().'.'.$picturePartner->guessExtension();
+
+try {
+    $picturePartner->move(
+    $this->getParameter('photos_directory'),
+    $newFilename
+    );
+    } catch (FileException $e) {
+
+    }
+    $partner->setPicturePartner($newFilename);
+}
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($partner);
             $entityManager->flush();
@@ -51,12 +75,31 @@ class PartnersController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'partners_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Partners $partner): Response
+    public function edit(Request $request, Partners $partner, SluggerInterface $slugger): Response
     {
         $form = $this->createForm(PartnersType::class, $partner);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $picturePartner = $form->get('picturePartner')->getData();
+
+            if ($picturePartner) {
+            $originalFilename = pathinfo($picturePartner->getClientOriginalName(),PATHINFO_FILENAME);
+            
+            $safeFilename = $slugger->slug($originalFilename);
+            $newFilename = $safeFilename.'-'.uniqid().'.'.$picturePartner->guessExtension();
+            
+            try {
+                $picturePartner->move(
+                $this->getParameter('photos_directory'),
+                $newFilename
+                );
+                } catch (FileException $e) {
+            
+                }
+                $partner->setPicturePartner($newFilename);
+            }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('partners_index');

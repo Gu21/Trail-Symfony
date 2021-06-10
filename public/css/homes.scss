@@ -98,3 +98,203 @@ $color4: #60ae46;
 
 
 // ------END--CAROUSEL--------------------
+
+// ------COMPTEUR--------------------
+
+.numbers{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: sans-serif;
+    
+    
+
+}
+.titleCounter{
+
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 117px;
+    font-size: 3rem;
+    font-family: 'Roboto','Arial', sans-serif;
+    font-weight: 700;
+    color: $color1;
+    letter-spacing: 0.5rem;
+    
+}
+
+.titleCounter::after{
+    content: "";
+    display: block;
+    border: 3px solid $color1;
+    width: 36%;
+    margin: 0 auto;
+    padding-right: 100px;
+    margin-bottom: 50px;
+    margin-top: 27px;
+
+}
+#days,#hours,#minutes,#seconds{
+
+    color: $color1;
+    font-size: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+     
+}
+
+ .blockDays,.blockHours,.blockMinutes,.blockSeconds{
+
+    background: #000;
+    width: 18%;
+    box-shadow: -5px 12px 9px rgba(0, 0, 0, 0.6);
+
+ } 
+
+// <!-- -------------------------------ACTUALITE-------------------------- -->
+
+.Section-parallax{
+
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),url("../img/section.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        // background-color: #000;
+        // height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+    
+    }
+
+.Actualite-Title {
+
+    h2 {
+        text-align: center;
+        padding-top: 100px;
+        color: $color1;
+        padding: 50px;
+       
+      
+    }
+
+}
+.Actualite-Title::before {
+    content: "";
+    display: block;
+    border: 3px solid $color1;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.Actualite-Title::after {
+    content: "";
+    display: block;
+    border: 3px solid $color1;
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 68px;
+}
+
+.Img-Logo {
+    float: left;
+    padding: 5px 10px;
+}
+
+.Paragraph-Socio {
+
+    text-align: justify;
+    color: $color3;
+    font-family: 'Lato','Arial', sans-serif;
+    font-weight: 400;
+    margin-top: 50px;
+
+}
+
+.Paragraph-Socio::after {
+    content: "";
+    display: block;
+    border: 3px solid $color1;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 68px;
+    margin-bottom: 76px;
+}
+.boxpresentation {
+    position: relative;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, 4%);
+    width: 82em;
+    height: 43em;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    line-height: 1.7em;
+    padding: 6.5em;
+}
+
+// .boxpresentation{
+
+//     opacity: 0;
+//     transition: all 0.4s linear;
+// }
+
+.fade-in{
+
+    opacity: 1;
+}
+
+
+// <!-- --------------------------END -----ACTUALITE-------------------------- -->
+
+   
+// <!-- -------------------------------PARTENAIRES-------------------------- -->
+.Carousel-Partenaires {
+    padding-top: 108px;
+    padding-bottom: 103px;
+
+
+}
+
+.partenaires {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -36px;
+    margin-bottom: -13px;
+}
+
+
+.align-middle {
+    vertical-align: middle!important;
+    text-align: center;
+}
+ .carousel-control-next i, .carousel-control-prev i{
+
+    font-size: 2rem;
+    color: #aad044;
+ }
+
+ .sponsor{
+
+    background-color: #000;
+ }
+
+
+
+
+
+
+// <!-- --------------------END-----------PARTENAIRES-------------------------- -->
+
+
+
+
+
