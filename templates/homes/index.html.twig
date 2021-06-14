@@ -60,13 +60,19 @@
 <section class="sectionCounter py-5">
     <div class="container">
         <h2 class="titleCounter">PROCHAIN TRAIL!</h2>
+        {% for setting in settings %}
+           
+        <div class="dateCounter">{{ setting.eventSetting ? setting.eventSetting|date('d-m-Y') : '' }}</div>
         <!-- <div class="form-group">
             <input type="text" class="form-control text-center" id="choice">
             <button type="button" class="btn" onclick="getInputValue();"></button>
         </div> -->
-
+       
+       
         <div id="numbers">
-
+           
+         
+            
             <div class="blockDays">
                 <div class="block" id="days"></div>
             </div>
@@ -86,7 +92,7 @@
         </div>
        
     </div>
-
+    {% endfor %}
    
     
 
@@ -121,7 +127,7 @@
                 {% endfor %}
 
             </div>
-            <!-- HGGDFDRE -->
+            
 
         </div>
     </div>
@@ -146,7 +152,10 @@
                         <div class="carousel-inner">
                             <h3 class="titlePartner mb-5">LES PARTENAIRES</h3>
                             {%  set isFirst = true %}
+                            {% set x = 0 %}
                             {% for partner in partners %}
+                            {% set x = x + 1 %}
+                            {% if x == 1 %}
                             <!-- <h3>{{ partner.titlePartner }}</h3> -->
                             <div
                                 class="carousel-item tex-center align-middle {% if loop.index0 == 0 %} active  {% endif %}">
@@ -155,13 +164,13 @@
                                     {% else %}
                                     <div class="item">
 
-                                        {% endif %}
+                                        {% endif %} {% endif %}
                                         <img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" alt=""
                                             width="200">
                                         <!-- <img src="../trail/img/partenaire2.png"  > -->
+                                        {% if x == 2 %}
                                     </div>
-
-
+                                    
                                     <!-- </div>
                             <div class="carousel-item tex-center align-middle">
                                 <img src="../trail/img/partenaire3.png" loading="lazy" alt="">
@@ -186,7 +195,7 @@
                             </div> -->
 
                                 </div>
-
+                               
                                 <button class="carousel-control-prev" type="button"
                                     data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                     <span><i class="fas fa-chevron-left" aria-hidden="true"></i></span>
@@ -198,10 +207,13 @@
                                     <span><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
                                     <span class="visually-hidden"></span>
                                 </button>
+                                {% set x = 0 %} 
+                                    {% endif %}
                                 {% endfor %}
                             </div>
-
+                           
                         </div>
+                       
                     </div>
                 </div>
             </div>
@@ -400,15 +412,17 @@
 
 <!-- //  ----SCRIPT----COMPTEUR------  -->
 
-
+{% for setting in settings %}
 <script>    
      jQuery(function($){
-
-var launch = new Date('2021-09-27'); //  HORAIRES EN UTC
+        
+var launch = new Date("{{ setting.eventSetting ? setting.eventSetting|date('Y-m-d') : '' }}"); //  HORAIRES EN UTC
 var days = $('#days');
 var hours = $('#hours');
 var minutes = $('#minutes');
 var seconds = $('#seconds');
+
+
 
 setDate();
 function setDate(){
@@ -440,8 +454,18 @@ function setDate(){
 }
 
 });
+
 </script>
 
+{% endfor %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var userRating = document.querySelector('.dateCounter');
+    var isAuthenticated = userRating.dataset.isAuthenticated;
+
+    
+});
+</script>
 <!-- //  -END---SCRIPT----COMPTEUR------     -->
 
 {% endblock %}
