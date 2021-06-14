@@ -46,8 +46,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- ------SCROLLMAGIC-------------- -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.4/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.4/plugins/debug.addIndicators.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <!-- --END----SCROLLMAGIC-------------- -->
 
 
@@ -213,9 +213,58 @@
                 </div>
             </div>
         </nav>
+           <!-- -----------------------------END-----NAV-------------------------- -->
     </header>
 
-    {% block body %}{% endblock %}
+  <!-- -------------------------END-----HEADER-------------------------- -->
+  {% block body %}{% endblock %}
+    
+    <!-- -----------------------------------FOOTER----------------------- -->
+    <footer class="Footer">
+
+        <div class="container-fluid Container-Footer">
+            <div class="Box-Contact">
+
+                <div class="row Box-Footer">
+                    <div class="col-sm-3 Footer">
+                        <a href="/">Nous Contacter</a>
+                    </div>
+                    <div class="col-sm-3 Footer">
+                        <p>Mention Legales</p>
+                    </div>
+                    <div class="col-sm-3 Footer">
+                        <a href="/">Politique de Confidentialité</a>
+                    </div>
+                   
+                </div>
+                
+            </div>
+            
+            <div class="container-fluid">
+                
+                <div class="row">
+
+                    <div class="col-sm-12 Footer">
+                        <a href="/"><i class="fab fa-2x fa-facebook Icon-Footer"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        
+                        <div class="copyright">
+                            <p class="Paragraphe-Footer">Bisson Guillaume | 2021 © Tous droits réservés</p>
+                        </div>
+                    </div>
+                </div>   
+
+            </div>
+
+        </div>
+    </footer>
+    <!-- -----------------------------END------FOOTER----------------------- -->
+
+  
 </body>
 
 </html>

@@ -65,7 +65,7 @@
             <button type="button" class="btn" onclick="getInputValue();"></button>
         </div> -->
 
-        <div class="numbers">
+        <div id="numbers">
 
             <div class="blockDays">
                 <div class="block" id="days"></div>
@@ -84,7 +84,11 @@
             </div>
 
         </div>
+       
     </div>
+
+   
+    
 
 </section>
 
@@ -92,96 +96,352 @@
 <!-- -------------------------END------COMPTEUR-------------------------- -->
 
 
-     <!-- -------------------------------ACTUALITE-------------------------- -->
-     <section class="parallax Section-parallax">
+<!-- -------------------------------ACTUALITE-------------------------- -->
+<section class="parallax Section-parallax">
 
-     <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12 pt-5 boxpresentation">
                 {% for home in homes %}
+                {% if home.id == 1 %}
 
                 <div class="Actualite-Title">
+
                     <h2>{{ home.subtitle }}</h2>
                 </div>
 
-                <div class="Logo--Socios">
+                <div class="LogoSocios">
                     <img class="Img-Logo" src="img/logo-socios.jpg" alt="logo-socio">
                 </div>
 
                 <div class="Paragraph-Socio">
                     {{ home.description }}
                 </div>
+                {%endif %}
                 {% endfor %}
+
             </div>
+            <!-- HGGDFDRE -->
+
         </div>
     </div>
-</div>
+    </div>
+
 </section>
 <!-- --------------------------END -----ACTUALITE-------------------------- -->
 
-    <!-- -------------------------------PARTENAIRES-------------------------- -->
-    <section class="sponsor">
+<!-- -------------------------------PARTENAIRES-------------------------- -->
+<section class="sponsor">
 
 
-        <div class="container-fluid">
-            <div class="row">
-                {% for partner in partners %}
-                
-                <div class="col-sm-12 partenaires">
-                    <div class="Carousel-Partenaires w-100">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 partenaires">
+                <div class="Carousel-Partenaires w-100">
 
-                            <div class="carousel-inner">
-                                <div class="carousel-item tex-center align-middle active">
-                                    {% if loop.index0 == 0 %} class="item-active" {% else %} class="active" {% endif %}>
-                                    <img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" width="100">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+
+                        <div class="carousel-caption d-none d-md-block titleCarrousel"></div>
+                        <div class="carousel-inner">
+                            <h3 class="titlePartner mb-5">LES PARTENAIRES</h3>
+                            {%  set isFirst = true %}
+                            {% for partner in partners %}
+                            <!-- <h3>{{ partner.titlePartner }}</h3> -->
+                            <div
+                                class="carousel-item tex-center align-middle {% if loop.index0 == 0 %} active  {% endif %}">
+                                {% if isFirst == true %}
+                                <div class="item active">
+                                    {% else %}
+                                    <div class="item">
+
+                                        {% endif %}
+                                        <img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" alt=""
+                                            width="200">
+                                        <!-- <img src="../trail/img/partenaire2.png"  > -->
+                                    </div>
+
+
+                                    <!-- </div>
+                            <div class="carousel-item tex-center align-middle">
+                                <img src="../trail/img/partenaire3.png" loading="lazy" alt="">
+                                <img src="../trail/img/partenaire4.png" loading="lazy" alt="">
+                                <div class="carousel-caption d-none" loading="lazy">
                                 </div>
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>{{ partner.titlePartner }}</h5>
-                                          </div>
-                                    </div>
+                            </div>
+
+
+                            <div class="carousel-item tex-center align-middle">
+                                <img src="../trail/img/partenaire5.png" loading="lazy" alt="">
+                                <img src="../trail/img/partenaire6.png" loading="lazy" alt="">
+                                <div class="carousel-caption d-none" loading="lazy">
                                 </div>
-                                
-                                <!-- <div class="carousel-item tex-center align-middle">
-                                    <img src="../trail/img/partenaire3.png" loading="lazy" alt="">
-                                    <img src="../trail/img/partenaire4.png" loading="lazy" alt="">
-                                    <div class="carousel-caption d-none" loading="lazy">
-                                    </div>
-                                </div> -->
+                            </div>
 
-
-                                <!-- <div class="carousel-item tex-center align-middle">
-                                    <img src="../trail/img/partenaire5.png" loading="lazy" alt="">
-                                    <img src="../trail/img/partenaire6.png" loading="lazy" alt="">
-                                    <div class="carousel-caption d-none" loading="lazy">
-                                    </div>
-                                </div> -->
-
-                                <!-- <div class="carousel-item tex-center align-middle">
-                                    <img src="../trail/img/partenaire7.png" loading="lazy" alt="">
-                                    <img src="../trail/img/partenaire8.png" loading="lazy" alt="">
-                                    <div class="carousel-caption d-none  loading=" lazy"">
-                                    </div>
+                            <div class="carousel-item tex-center align-middle">
+                                <img src="../trail/img/partenaire7.png" loading="lazy" alt="">
+                                <img src="../trail/img/partenaire8.png" loading="lazy" alt="">
+                                <div class="carousel-caption d-none  loading=" lazy"">
                                 </div>
                             </div> -->
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span><i class="fas fa-chevron-left" aria-hidden="true"></i></span>
-                                <span class="visually-hidden"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
-                                <span class="visually-hidden"></span>
-                            </button>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span><i class="fas fa-chevron-left" aria-hidden="true"></i></span>
+                                    <span class="visually-hidden"></span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span><i class="fas fa-chevron-right" aria-hidden="true"></i></span>
+                                    <span class="visually-hidden"></span>
+                                </button>
+                                {% endfor %}
+                            </div>
 
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+            </div>
+</section>
+<!-- ------------------------END------partenaire-------------------------- -->
+
+
+<section>
+    <!-- -------------------------------VIDEO------------------------ -->
+    <div class="container-fluid">
+        <div class="row Video">
+            <div class="col-sm-12 Box-Video">
+                <div class="col-sm-12 Video-Trail">
+
+                    <!-- -----VIDEO IFRAME---- -->
+                    <!-- <iframe width="1903" height="1070"
+                        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftraildesjambesallaire%2Fvideos%2F372733490362214%2F&show_text=false&width=560&t=0"
+                        allowfullscreen="autoplay=1&loop=1" muted="true" preload="auto" class="d-block"
+                        style="border:none;overflow:hidden" scrolling="no" frameborder="0" allow="autoplay;"
+                        allowFullScreen="true"></iframe> -->
+                    <!-- ---END--VIDEO IFRAME---- -->
+
+                    <video width="1903" height="1070" loop autoplay="true" muted="true" preload="auto"
+                        class="d-block w-100">
+                        <source src="img/Trail des Jambes Allaire 2019.mp4" type="video/mp4">
+                    </video>
+
+
+                </div>
+                <!-- </div> -->
             </div>
         </div>
-    </section>
-    <!-- ------------------------END------partenaire-------------------------- -->
+        <!-- ---------------------------END----VIDEO------------------------ -->
 
-    {% endblock %}
+        <!-- --------------------------ACTUALITY--------------------- -->
+
+
+        <div class="container">
+            <div class="row">
+                {% for home in homes %}
+                {% if home.id == 3 %}
+                <div class="col-sm-6 newsActu">
+                    <div class="News-Trail">
+                        <div class="News1 mb-5">
+                            <h2>Notre actualité</h2>
+                        </div>
+                        <div class="News1">
+                            <h3>{{ home.subtitle }}</h3>
+                        </div>
+                    </div>
+
+                    <div class="boxNews">
+                        <div class="Paragraph-Actualite">
+                            <p class="Actualite"> {{ home.description }} </p>
+                        </div>
+                    </div>
+                </div>
+
+                {%endif %}
+                {% endfor %}
+
+
+                {% for home in homes %}
+                {% if home.id == 4 %}
+                <div class="col-sm-6 newsediting">
+                    <div class="Breaking-News">
+                        <h3>{{ home.subtitle }}</h3>
+                    </div>
+                    <div class="Paragraph-Breaking-News">
+                        <p>{{ home.description }} </p>
+                    </div>
+                </div>
+                {%endif %}
+                {% endfor %}
+            </div>
+
+</section>
+
+<!-- ----------------END----------ACTUALITY--------------------- -->
+<!-- ----------------GALERY---RUN------------- -->
+
+<section class="runGallery">
+
+
+    <div class="container-fluid boxInfoImg py-3">
+        <h2 class="run mt-2 mb-5">LES COURSES</h2>
+        <div class="row">
+            <div class="col-sm-6 boxImg">
+                <div class="teamChallenge">
+                    <div class="linkRun">
+                        <a href="#">challenge par equipe </a>
+                    </div>
+                </div>
+
+                <!-- <img src="img/courseChallengeParEquipe.jpg" class="img-fluid img-thumbnail" alt="Course challenge par equipe"> -->
+
+                <!-- <img src="/img/course.jpg" alt="course" /> -->
+                <!-- <div class="infos-hover">
+                    <i class="fa fa-eye"></i>
+                    <a href="/" class="linkRun"></a>
+                </div> -->
+                <div class="gallery">
+                    <div class="ChildrenRaces">
+                        <div class="linkRace">
+                            <a href="#">DUO ADULTES / ENFANTS </a>
+                        </div>
+                    </div>
+                    <!-- <img src="img/galeries.jpg" class=" img-thumbnail" alt="Courses enfants" /> -->
+                    <!-- <div class="infos-hover">
+                    <i class="fa fa-eye"></i>
+                    <a href="/" class="linkRun"></a>
+                </div> -->
+
+                <div class="run15">
+                    <div class="linkRun15">
+                        <a href="#">TRAIL 15 KM</a>
+                    </div>
+                </div>
+                    <!-- <img src="img/courses15Km.JPG" class="img-thumbnail" alt="Courses 15 km" /> -->
+                    <!-- <div class="infos-hover">
+                    <i class="fa fa-eye"></i>
+                    <a href="/" class="linkRun"></a>
+                </div> -->
+                </div>
+            </div>
+
+            <div class="col-sm-6 boxImg">
+                <div class="gallery">
+
+                    <div class="run9">
+                        <div class="linkRun9">
+                            <a href="#">TRAIL 9 KM</a>
+                        </div>
+                    </div>
+                    <!-- <img src="img/Course 9Km.jpg" class=" img-thumbnail" alt="Courses 9 km" /> -->
+                    <!-- <div class="infos-hover">
+                        <i class="fa fa-eye"></i>
+                        <a href="/" class="linkRun"></a>
+                    </div> -->
+                    <div class="run25">
+                        <div class="linkRun25">
+                            <a href="#">TRAIL 25 KM</a>
+                        </div>
+                    </div>
+                    <!-- <img src="img/Course25Km.jpg" class="img-thumbnail" alt="Courses 25 km" /> -->
+                    <!-- <div class="infos-hover">
+                        <i class="fa fa-eye"></i>
+                        <a href="/" class="linkRun"></a>
+                    </div> -->
+                </div>
+
+                <div class="run17">
+                    <div class="linkRun17">
+                        <a href="#">TRAIL 17 KM NOCTURNE</a>
+                    </div>
+                </div>
+                <!-- <img src="img/Course17Nocturne.jpg" class="img-fluid img-thumbnail" alt="Courses 17 km nocturne"> -->
+                <!-- <img src="/img/course.jpg" alt="course" /> -->
+                <!-- <div class="infos-hover">
+                    <i class="fa fa-eye"></i>
+                    <a href="/" class="linkRun"></a>
+                </div> -->
+
+            </div>
+        </div>
+</section>
+<section>
+
+    <div class="row">
+        <div class="col-sm-6 boxImg">
+            <div class="runSociosChallenges">
+                <div class="linkSociosChallenges">
+                    <a href="#">DEFIS SOCIOS</a>
+                </div>
+            </div>
+            <!-- <img src="img/courseDefisSoci.jpg" class=" img-thumbnail" alt="Courses defis socios"> -->
+        </div>
+
+        <div class="col-sm-6 boxImg">
+            <div class="runYoung">
+                <div class="linkRunYoung">
+                    <a href="#">COURSES JEUNES</a>
+                </div>
+            </div>
+            <!-- <img src="img/CourseDuoEnfantsParents.JPG" class=" img-thumbnail" alt="Courses enfants/parents "> -->
+        </div>
+    </div>
+    </div>
+    <!-- ----------------END----------GALERY-------------------- -->
+
+</section>
+
+<script src="{{ asset('js/app.js') }}"></script>
+
+
+
+<!-- //  ----SCRIPT----COMPTEUR------  -->
+
+
+<script>    
+     jQuery(function($){
+
+var launch = new Date('2021-09-27'); //  HORAIRES EN UTC
+var days = $('#days');
+var hours = $('#hours');
+var minutes = $('#minutes');
+var seconds = $('#seconds');
+
+setDate();
+function setDate(){
+
+  var now = new Date();
+  console.log(now.getTimezoneOffset());
+ var s = ((launch.getTime() - now.getTime())/1000) - now.getTimezoneOffset()*60;
+ var d = Math.floor(s/86400);
+ days.html('<strong>'+d+'</strong>JR');
+//  days.html('<strong>'+d+'</strong>JR'+(d>1?'s':''));
+ s -= d*86400;
+
+ var h = Math.floor(s/3600);
+ hours.html('<strong>'+h+'</strong>HR');
+//  hours.html('<strong>'+h+'</strong>HR'+(h>1?'s':''));
+ s -= h*3600;
+
+ var m = Math.floor(s/60);
+ minutes.html('<strong>'+m+'</strong>MIN');
+//  minutes.html('<strong>'+m+'</strong>MIN'+(m>1?'s':''));
+ s -= m*60;
+
+ s = Math.floor(s);
+ seconds.html('<strong>'+s+'</strong>SEC');
+//  seconds.html('<strong>'+s+'</strong>SEC'+(s>1?'s':''));
+
+
+ setTimeout(setDate,1000);
+}
+
+});
+</script>
+
+<!-- //  -END---SCRIPT----COMPTEUR------     -->
+
+{% endblock %}

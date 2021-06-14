@@ -42,45 +42,45 @@ $(document).ready(function(){
   
   //  ----SCRIPT----COMPTEUR------      
      
-       
-jQuery(function($){
+     
+//  jQuery(function($){
 
-var launch = new Date('2021-09-27'); //  HORAIRES EN UTC
-var days = $('#days');
-var hours = $('#hours');
-var minutes = $('#minutes');
-var seconds = $('#seconds');
+// var launch = new Date('2021-09-27'); //  HORAIRES EN UTC
+// var days = $('#days');
+// var hours = $('#hours');
+// var minutes = $('#minutes');
+// var seconds = $('#seconds');
 
-setDate();
-function setDate(){
+// setDate();
+// function setDate(){
 
-  var now = new Date();
-  console.log(now.getTimezoneOffset());
- var s = ((launch.getTime() - now.getTime())/1000) - now.getTimezoneOffset()*60;
- var d = Math.floor(s/86400);
- days.html('<strong>'+d+'</strong>JR');
-//  days.html('<strong>'+d+'</strong>JR'+(d>1?'s':''));
- s -= d*86400;
+//   var now = new Date();
+//   console.log(now.getTimezoneOffset());
+//  var s = ((launch.getTime() - now.getTime())/1000) - now.getTimezoneOffset()*60;
+//  var d = Math.floor(s/86400);
+//  days.html('<strong>'+d+'</strong>JR');
+// //  days.html('<strong>'+d+'</strong>JR'+(d>1?'s':''));
+//  s -= d*86400;
 
- var h = Math.floor(s/3600);
- hours.html('<strong>'+h+'</strong>HR');
-//  hours.html('<strong>'+h+'</strong>HR'+(h>1?'s':''));
- s -= h*3600;
+//  var h = Math.floor(s/3600);
+//  hours.html('<strong>'+h+'</strong>HR');
+// //  hours.html('<strong>'+h+'</strong>HR'+(h>1?'s':''));
+//  s -= h*3600;
 
- var m = Math.floor(s/60);
- minutes.html('<strong>'+m+'</strong>MIN');
-//  minutes.html('<strong>'+m+'</strong>MIN'+(m>1?'s':''));
- s -= m*60;
+//  var m = Math.floor(s/60);
+//  minutes.html('<strong>'+m+'</strong>MIN');
+// //  minutes.html('<strong>'+m+'</strong>MIN'+(m>1?'s':''));
+//  s -= m*60;
 
- s = Math.floor(s);
- seconds.html('<strong>'+s+'</strong>SEC');
-//  seconds.html('<strong>'+s+'</strong>SEC'+(s>1?'s':''));
+//  s = Math.floor(s);
+//  seconds.html('<strong>'+s+'</strong>SEC');
+// //  seconds.html('<strong>'+s+'</strong>SEC'+(s>1?'s':''));
 
 
- setTimeout(setDate,1000);
-}
+//  setTimeout(setDate,1000);
+// }
 
-});
+// });
 
  //  -END---SCRIPT----COMPTEUR------    
  
@@ -90,23 +90,23 @@ function setDate(){
 
   // ---SCRIPT----PRESENTATION------  
  
-//  var controller = new ScrollMagic.Controller();
+ var controller = new ScrollMagic.Controller();
 
-//  var scene = new ScrollMagic.Scene({
+ var scene = new ScrollMagic.Scene({
 
-// triggerElement: '.boxpresentation',
-// reverse: false
+triggerElement: '.boxpresentation ',
+reverse: false
 
 
-//  })
+ })
 
-//  .setClassToggle('.boxpresentation','fade-in')
+ .setClassToggle('.boxpresentation ','fade-in')
 //  .addIndicators({
 // name: 'INDICATIONS',
 // incident: 200,
 // colorStart: '#fff'
 //  })
-//  .addTo(controller);
+ .addTo(controller);
 
 
 

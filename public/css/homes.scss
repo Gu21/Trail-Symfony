@@ -1,16 +1,24 @@
-
 $color1 : #aad044;
 $color2: #6b90bb;
 $color3: #fff;
 $color4: #60ae46;
+$color5: #000;
 
 // ---------CAROUSEL--------------------
-.headerCarousel
- {
+
+.Container-Carousel {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid $color4;
+}
+
+.headerCarousel {
     background-color: #121519
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -28,67 +36,67 @@ $color4: #60ae46;
     transition: opacity .15s ease;
 }
 
-   
-
-    .trail {
 
 
-        color: $color2;
-        font-family: 'Barlow', sans-serif;
-        font-weight: 700;
-        letter-spacing: 5px;
-        text-shadow: 0 2px 0 BLACK,
-            0 2px 0 #e5e5e5,
-            -1px 3px 0 #C8C8C8,
-            -1px 4px 0 #C1C1C1,
-            -2px 5px 0 #B9B9B9,
-            -2px 6px 0 #B2B2B2,
-            -2px 7px 2px rgba(0, 0, 0, 0.6),
-            -2px 7px 8px rgba(0, 0, 0, 0.2),
-            -2px 7px 45px rgba(0, 0, 0, 0.4);
-
-            font-size: 6em;
-
-    }
-
-    .Legs-alaire {
-        color: $color1;
-        font-family: 'Barlow', sans-serif;
-        font-weight: 700;
-        letter-spacing: 5px;
-        text-shadow: 0 2px 0 BLACK,
-            0 2px 0 #e5e5e5,
-            -1px 3px 0 #C8C8C8,
-            -1px 4px 0 #C1C1C1,
-            -2px 5px 0 #B9B9B9,
-            -2px 6px 0 #B2B2B2,
-            -2px 7px 2px rgba(0, 0, 0, 0.6),
-            -2px 7px 8px rgba(0, 0, 0, 0.2),
-            -2px 7px 45px rgba(0, 0, 0, 0.4);
-            font-size: 4em;
+.trail {
 
 
-    }
+    color: $color3;
+    font-family: 'Barlow',"Arial" sans-serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 0 BLACK,
+        0 2px 0 #e5e5e5,
+        -1px 3px 0 #C8C8C8,
+        -1px 4px 0 #C1C1C1,
+        -2px 5px 0 #B9B9B9,
+        -2px 6px 0 #B2B2B2,
+        -2px 7px 2px rgba(0, 0, 0, 0.6),
+        -2px 7px 8px rgba(0, 0, 0, 0.2),
+        -2px 7px 45px rgba(0, 0, 0, 0.4);
 
-    .carousel-caption{
+    font-size: 6em;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 86%;
-        padding-top: 200px;
+}
 
- }
- 
-.carousel-item::after{
+.Legs-alaire {
+    color: $color3;
+    font-family: "Lato","Arial" sans-serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 0 BLACK,
+        0 2px 0 #e5e5e5,
+        -1px 3px 0 #C8C8C8,
+        -1px 4px 0 #C1C1C1,
+        -2px 5px 0 #B9B9B9,
+        -2px 6px 0 #B2B2B2,
+        -2px 7px 2px rgba(0, 0, 0, 0.6),
+        -2px 7px 8px rgba(0, 0, 0, 0.2),
+        -2px 7px 45px rgba(0, 0, 0, 0.4);
+    font-size: 5em;
 
-    content:"";
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background: linear-gradient(rgba(0,0,0,0.44), rgba(0,0,0,0.55))
+
+}
+
+.carousel-caption {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 86%;
+    padding-top: 200px;
+
+}
+
+.carousel-item::after {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.55))
 }
 
 // .carousel-control-next i, .carousel-control-prev i{
@@ -101,30 +109,31 @@ $color4: #60ae46;
 
 // ------COMPTEUR--------------------
 
-.numbers{
+#numbers {
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-family: sans-serif;
-    
-    
+
+
 
 }
-.titleCounter{
+
+.titleCounter {
 
     text-align: center;
     margin-top: 0;
     margin-bottom: 117px;
     font-size: 3rem;
-    font-family: 'Roboto','Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     font-weight: 700;
     color: $color1;
     letter-spacing: 0.5rem;
-    
+
 }
 
-.titleCounter::after{
+.titleCounter::after {
     content: "";
     display: block;
     border: 3px solid $color1;
@@ -135,41 +144,51 @@ $color4: #60ae46;
     margin-top: 27px;
 
 }
-#days,#hours,#minutes,#seconds{
+
+#days,
+#hours,
+#minutes,
+#seconds {
 
     color: $color1;
     font-size: 4em;
     display: flex;
     flex-direction: column;
-    align-items: center;   
-     
+    align-items: center;
+
 }
 
- .blockDays,.blockHours,.blockMinutes,.blockSeconds{
+.blockDays,
+.blockHours,
+.blockMinutes,
+.blockSeconds {
 
     background: #000;
     width: 18%;
     box-shadow: -5px 12px 9px rgba(0, 0, 0, 0.6);
 
- } 
+}
+
+
+// ---END---COMPTEUR--------------------
 
 // <!-- -------------------------------ACTUALITE-------------------------- -->
 
-.Section-parallax{
+.Section-parallax {
 
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),url("../img/section.JPG");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        // background-color: #000;
-        // height: 250px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 80vh;
-    
-    }
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../img/section.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    // background-color: #000;
+    // height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85vh;
+
+}
 
 .Actualite-Title {
 
@@ -178,11 +197,12 @@ $color4: #60ae46;
         padding-top: 100px;
         color: $color1;
         padding: 50px;
-       
-      
+
+
     }
 
 }
+
 .Actualite-Title::before {
     content: "";
     display: block;
@@ -210,7 +230,7 @@ $color4: #60ae46;
 
     text-align: justify;
     color: $color3;
-    font-family: 'Lato','Arial', sans-serif;
+    font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 400;
     margin-top: 50px;
 
@@ -225,6 +245,7 @@ $color4: #60ae46;
     margin-top: 68px;
     margin-bottom: 76px;
 }
+
 .boxpresentation {
     position: relative;
     top: 51%;
@@ -239,13 +260,13 @@ $color4: #60ae46;
     padding: 6.5em;
 }
 
-// .boxpresentation{
+.boxpresentation {
 
-//     opacity: 0;
-//     transition: all 0.4s linear;
-// }
+    opacity: 0;
+    transition: all 0.4s linear;
+}
 
-.fade-in{
+.fade-in {
 
     opacity: 1;
 }
@@ -253,7 +274,7 @@ $color4: #60ae46;
 
 // <!-- --------------------------END -----ACTUALITE-------------------------- -->
 
-   
+
 // <!-- -------------------------------PARTENAIRES-------------------------- -->
 .Carousel-Partenaires {
     padding-top: 108px;
@@ -273,19 +294,28 @@ $color4: #60ae46;
 
 
 .align-middle {
-    vertical-align: middle!important;
+    vertical-align: middle !important;
     text-align: center;
 }
- .carousel-control-next i, .carousel-control-prev i{
+
+.carousel-control-next i,
+.carousel-control-prev i {
 
     font-size: 2rem;
     color: #aad044;
- }
+}
 
- .sponsor{
+.sponsor {
 
     background-color: #000;
- }
+}
+
+.titlePartner {
+
+    text-align: center;
+    color: $color3;
+}
+
 
 
 
@@ -295,6 +325,563 @@ $color4: #60ae46;
 // <!-- --------------------END-----------PARTENAIRES-------------------------- -->
 
 
+// <!-- -------------------VIDEO-------------------------- -->
+.Video::after {
+
+    content: "";
+    display: block;
+    border: 3px solid $color1;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+.Box-Video {
+
+    padding: 0;
+}
+
+.Video-Trail {
+
+    border-top: 4px solid $color2;
+    border-bottom: 4px solid $color2;
+    padding: 0;
+}
+
+
+// .Box-Video::before {
+//     content: "";
+//     display: block;
+//     border: 3px solid $color1;
+//     width: 30%;
+//     margin: 0 auto;
+//     margin-bottom: 50px;
+
+// }
+
+// <!-- -------------END------VIDEO-------------------------- -->
+
+
+// <!-- --------------------NEW------------------------ -->
+
+.News-Trail {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.Menu {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    margin-top: 110px;
+
+
+}
+
+.text-white {
+    color: $color1 !important;
+    background-color: $color2;
+    text-shadow: 1px 1px 1px $color3;
+}
+
+.btn-primary {
+
+    background-color: $color1;
+
+}
+
+.Menu::after {
+
+    content: "";
+    display: block;
+    border: 3px solid $color1;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
 
 
 
+
+
+.Paragraph-Actualite {
+
+    text-align: justify;
+    color: $color2;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 500;
+    line-height: 1.7em;
+}
+
+
+.News1 {
+
+
+
+    h2,
+    h3 {
+        color: $color1;
+        text-align: center;
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+    }
+
+
+}
+
+.Breaking-News {
+
+    h3 {
+        color: $color1;
+        text-align: center;
+        padding-top: 50px;
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+
+        // padding-left: 50px;
+
+    }
+}
+
+.box-breaking {
+
+    padding-left: 50px;
+
+}
+
+.Paragraph-Breaking-News {
+
+    border-left: 3px solid $color1;
+    height: 388px;
+
+
+
+}
+
+.Paragraph-Breaking-News {
+
+    p {
+
+        padding-top: 96px;
+        text-align: justify;
+        color: $color2;
+        // margin-left: 60px;
+        padding-left: 34px;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-weight: 500;
+        line-height: 1.7em;
+    }
+
+
+}
+
+// <!-- --------------------END----------NEW------------------------ -->
+
+.gallery {
+
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.gallery img {
+
+    width: 100%;
+
+}
+
+.run {
+
+    text-align: center;
+    text-align: center;
+    padding-top: 100px;
+    color: $color2;
+    width: 82%;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.run::before {
+
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6.3rem;
+    height: 4px;
+    background: $color2;
+
+}
+
+
+
+.run::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6.3rem;
+    height: 4px;
+    background: $color2;
+}
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.boxImg {
+
+    padding: 0;
+
+}
+
+
+.boxInfoImg {
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+// <!-- ----------------GALERY---RUN------------- -->
+
+.runGallery::after {
+
+    content: "";
+    display: block;
+    border: 3px solid $color1;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+.teamChallenge {
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courseChallengeParEquipe.jpg");
+    background-size: cover;
+    height: 72vh;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 5px 2px 2px 0px;
+    transition: all 1s
+   
+   
+ 
+
+
+}
+
+
+.linkRun,
+.linkRun17 {
+
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 77px;
+    text-align: center;
+    position: absolute;
+    bottom: 18rem;
+    right: 16rem;
+    z-index: 10;
+    font-size: 0.9em;
+
+
+
+    a {
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+
+    }
+}
+
+.teamChallenge:hover{
+
+    // -webkit-transition: all 2s;
+    // -o-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-transform: scale(1.0);
+    // -ms-transform: scale(1.0);
+    transform: scale(0.95)!important;
+   
+}
+
+
+
+
+
+
+.ChildrenRaces {
+
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/CourseDuoEnfantsParents.JPG");
+    background-size: cover;
+    height: 40vh;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50%;
+    margin: 5px 2px 5px 0px;
+    transition: all 1s
+}
+
+.linkRace {
+    // top: 17rem;
+    // left: 24rem;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 77px;
+    text-align: center;
+    position: absolute;
+    bottom: 8rem;
+    right: 5rem;
+    z-index: 10;
+    font-size: 0.6em;
+
+
+
+    a {
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+
+    }
+}
+
+.ChildrenRaces:hover{
+
+    // -webkit-transition: all 2s;
+    // -o-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-transform: scale(1.0);
+    // -ms-transform: scale(1.0);
+    transform: scale(0.95)!important;
+   
+}
+
+
+
+
+.run15 {
+
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courses15Km.JPG");
+    background-size: cover;
+    height: 40vh;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50%;
+    margin: 5px 2px 5px 5px;
+    transition: all 1s
+}
+
+.linkRun15,
+.linkRun9,
+.linkRun25 {
+    // top: 17rem;
+    // left: 24rem;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 77px;
+    text-align: center;
+    position: absolute;
+    bottom: 8rem;
+    right: 9rem;
+    z-index: 10;
+    font-size: 0.6em;
+
+
+
+    a {
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+
+    }
+}
+
+.run15:hover{
+
+    // -webkit-transition: all 2s;
+    // -o-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-transform: scale(1.0);
+    // -ms-transform: scale(1.0);
+    transform: scale(0.95)!important;
+   
+}
+
+
+.run9 {
+
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course\ 9Km.jpg");
+    background-size: cover;
+    height: 40vh;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50%;
+    margin: 5px 2px 5px 2px;
+    transition: all 1s
+}
+
+.run9:hover{
+
+    // -webkit-transition: all 2s;
+    // -o-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-transform: scale(1.0);
+    // -ms-transform: scale(1.0);
+    transform: scale(0.95)!important;
+   
+}
+
+.run25 {
+
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course25Km.jpg");
+    background-size: cover;
+    height: 40vh;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50%;
+    margin: 5px 2px 5px 5px;
+    transition: all 2s
+}
+
+.run25:hover{
+
+    // -webkit-transition: all 2s;
+    // -o-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-transform: scale(1.0);
+    // -ms-transform: scale(1.0);
+    transform: scale(0.95)!important;
+   
+}
+
+.run17 {
+
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course17Nocturne.jpg");
+    background-size: cover;
+    height: 72vh;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 2px 2px 2px 2px;
+    transition: all 1s
+}
+.run17:hover{
+
+    // -webkit-transition: all 2s;
+    // -o-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-transform: scale(1.0);
+    // -ms-transform: scale(1.0);
+    transform: scale(0.95)!important;
+   
+}
+
+.runSociosChallenges {
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courseDefisSocio.jpg");
+    background-size: cover;
+    height: 72vh;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 5px 5px 5px 0px;
+    transition: all 1s
+}
+.runSociosChallenges:hover{
+
+    // -webkit-transition: all 2s;
+    // -o-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-transform: scale(1.0);
+    // -ms-transform: scale(1.0);
+    transform: scale(0.95)!important;
+   
+}
+
+.linkSociosChallenges,
+.linkRunYoung {
+
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 77px;
+    text-align: center;
+    position: absolute;
+    bottom: 18rem;
+    right: 21rem;
+    z-index: 10;
+    font-size: 0.9em;
+
+
+
+    a {
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+
+    }
+}
+
+.runYoung {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/coursesJeunes.jpg");
+    background-size: cover;
+    height: 72vh;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 5px 5px 5px 0px;
+    transition: all 1s
+
+}
+
+.runYoung:hover{
+
+    // -webkit-transition: all 2s;
+    // -o-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-transform: scale(1.0);
+    // -ms-transform: scale(1.0);
+    transform: scale(0.95)!important;
+   
+}
+
+// <!-- ----------END------GALERY---RUN------------- -->
