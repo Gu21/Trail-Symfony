@@ -20,16 +20,6 @@ class Contacts
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $titleContact;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $subtitleContact;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $nameContact;
 
     /**
@@ -55,30 +45,6 @@ class Contacts
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getTitleContact(): ?string
-    {
-        return $this->titleContact;
-    }
-
-    public function setTitleContact(string $titleContact): self
-    {
-        $this->titleContact = $titleContact;
-
-        return $this;
-    }
-
-    public function getSubtitleContact(): ?string
-    {
-        return $this->subtitleContact;
-    }
-
-    public function setSubtitleContact(string $subtitleContact): self
-    {
-        $this->subtitleContact = $subtitleContact;
-
-        return $this;
     }
 
     public function getNameContact(): ?string

@@ -6,24 +6,41 @@ use App\Entity\Contacts;
 use App\Form\ContactsType;
 use App\Repository\ContactsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\String\Slugger\SluggerInterface;
+
 
 #[Route('/contacts')]
 class ContactsController extends AbstractController
 {
-    #[Route('/', name: 'contacts_index', methods: ['GET'])]
-    public function index(ContactsRepository $contactsRepository): Response
+    #[Route('/', name: 'contacts_index', methods: ['GET','POST'])]
+    public function index(Request $request, ContactsRepository $contactsRepository, SluggerInterface $slugger): Response
     {
-        return $this->render('contacts/index.html.twig', [
-            'contacts' => $contactsRepository->findAll(),
-        ]);
+       
+            $contact = new Contacts();
+            $form = $this->createForm(ContactsType::class, $contact);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($contact);
+                $entityManager->flush();
+    
+                return $this->redirectToRoute('contacts_index');
+            }
+            return $this->render('contacts/index.html.twig', [
+                'contacts' => $contactsRepository->findAll(),
+                'form' => $form->createView(),
+            ]);
     }
 
     #[Route('/new', name: 'contacts_new', methods: ['GET', 'POST'])]
     public function new(Request $request): Response
     {
+       
+     
         $contact = new Contacts();
         $form = $this->createForm(ContactsType::class, $contact);
         $form->handleRequest($request);
@@ -41,6 +58,7 @@ class ContactsController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+  
 
     #[Route('/{id}', name: 'contacts_show', methods: ['GET'])]
     public function show(Contacts $contact): Response
