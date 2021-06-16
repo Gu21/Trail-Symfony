@@ -1,0 +1,167 @@
+$color1 : #aad044;
+$color2: #6b90bb;
+$color3: #fff;
+$color4: #60ae46;
+$color5: #000;
+
+
+.imgRunPage {
+
+    img {
+
+        background-color: #fff;
+        -ms-transform: skew(0deg, -2deg);
+        transform: skew(0deg, -2deg);
+    }
+}
+
+.titleRun {
+
+    h1{
+        padding-top: 20px;
+        color: $color2;
+        padding-left: 34px;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-weight: 700; 
+        font-size: 2rem;
+    }
+   
+
+    h1::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 3.7rem;
+        height: 4px;
+        background: $color2;
+    }
+
+    h1::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 3.7rem;
+        height: 4px;
+        background: $color2;
+    }
+}
+
+
+
+
+
+
+
+
+.RunLink {
+    border: 1px solid $color3;
+    border-radius: 20px;
+    background-color: $color5 !important;
+    box-shadow: 2px 2px 5px 0px;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    padding: 9px;
+    transition: 1s !important;
+
+
+
+
+
+    a {
+        color: $color3;
+        text-decoration: none;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+
+
+
+    }
+
+
+}
+
+
+
+.RunLink:hover {
+    border: 1px solid #000;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #6b90bb 40%, #aad044 100%) !important;
+    box-shadow: 2px 2px 5px 0px;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    padding: 9px;
+}
+
+
+.boximgRun {
+
+    img {
+
+        margin-top: 55px;
+        margin-left: 30px;
+        
+    }
+
+    .verticalLine {
+        display: inline-block;
+        border-left: 2px solid #aad044;
+        height: 517px;
+    }
+
+}
+
+.infoRun {
+
+    P {
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+
+    }
+
+    P::after {
+
+        content: "";
+        display: block;
+        border: 1px solid #aad044;
+        width: 70%;
+        margin: 0 auto;
+        padding-right: 100px;
+        margin-bottom: 50px;
+        margin-top: 2px;
+        transition: 2s;
+
+
+
+    }
+
+    P:hover::after {
+
+        content: "";
+        display: block;
+        border: 1px solid #aad044;
+        width: 34%;
+        margin: 0 auto;
+        padding-right: 100px;
+        margin-bottom: 50px;
+        margin-top: 2px;
+
+
+
+    }
+}
+
+.descriptionRun {
+    p {
+
+        font-family: 'Roboto', 'Arial', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+
+
+}

@@ -6,6 +6,8 @@ use App\Entity\Races;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
 
 class RacesType extends AbstractType
 {
@@ -16,7 +18,22 @@ class RacesType extends AbstractType
             ->add('descriptionRace')
             ->add('infoRace')
             ->add('linkRace')
-            ->add('pictureRace')
+            ->add('pictureRace', FileType::class, [
+                'label' => 'Photo',
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                new File([
+                'maxSize' => '1024k',
+                'mimeTypes' => [
+                'image/*',
+                ],
+                'mimeTypesMessage' => 'Veuillez entrer un format de document valide',
+                
+                ])
+            ],
+                ]);
+            
         ;
     }
 

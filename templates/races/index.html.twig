@@ -25,6 +25,7 @@
                 <td>{{ race.descriptionRace }}</td>
                 <td>{{ race.infoRace }}</td>
                 <td>{{ race.linkRace }}</td>
+                <td><img src="{{ asset('uploads/photos/' ~ race.pictureRace)}}" width="100"></td>
                 <td>{{ race.pictureRace }}</td>
                 <td>
                     <a href="{{ path('races_show', {'id': race.id}) }}">show</a>
@@ -40,4 +41,5 @@
     </table>
 
     <a href="{{ path('races_new') }}">Create new</a>
+   
 {% endblock %}

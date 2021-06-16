@@ -86,8 +86,7 @@ iframe {
   height: 6px;
   background: #aad044;
 }
-
-h1::after {
+.Title-Form h1::after {
   content: "";
   display: inline-block;
   vertical-align: middle;

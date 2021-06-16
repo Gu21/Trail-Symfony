@@ -123,9 +123,7 @@ iframe {
         height: 6px;
         background: $color1;
     }
-}
-
-
+    
 h1::after {
     content: "";
     display: inline-block;
@@ -134,6 +132,9 @@ h1::after {
     height: 6px;
     background: $color1;
 }
+}
+
+
 
 
 

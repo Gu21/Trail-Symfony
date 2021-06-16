@@ -9,6 +9,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 #[Route('/races')]
 class RacesController extends AbstractController
@@ -22,13 +25,34 @@ class RacesController extends AbstractController
     }
 
     #[Route('/new', name: 'races_new', methods: ['GET', 'POST'])]
-    public function new(Request $request): Response
+    public function new(Request $request, SluggerInterface $slugger): Response
     {
         $race = new Races();
         $form = $this->createForm(RacesType::class, $race);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $pictureRace= $form->get('pictureRace')->getData();
+
+            if ($pictureRace) {
+            $originalFilename = pathinfo($pictureRace->getClientOriginalName(),PATHINFO_FILENAME);
+            
+            $safeFilename = $slugger->slug($originalFilename);
+            $newFilename = $safeFilename.'-'.uniqid().'.'.$pictureRace->guessExtension();
+            
+            try {
+                $pictureRace->move(
+                $this->getParameter('photos_directory'),
+                $newFilename
+                );
+                } catch (FileException $e) {
+            
+                }
+                $race->setPictureRace($newFilename);
+            }
+
+            
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($race);
             $entityManager->flush();
@@ -50,13 +74,40 @@ class RacesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'races_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Races $race): Response
+    #[Route('/{id}/edit', name: 'races_edit', methods: ['GET','POST'])]
+    public function edit(Request $request, Races $race, SluggerInterface $slugger): Response
     {
         $form = $this->createForm(RacesType::class, $race);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            
+            $pictureRace= $form->get('pictureRace')->getData();
+
+            if ($pictureRace) {
+            $originalFilename = pathinfo($pictureRace->getClientOriginalName(),PATHINFO_FILENAME);
+            
+            $safeFilename = $slugger->slug($originalFilename);
+            $newFilename = $safeFilename.'-'.uniqid().'.'.$pictureRace->guessExtension();
+            
+            try {
+                $pictureRace->move(
+                $this->getParameter('photos_directory'),
+                $newFilename
+                );
+                } catch (FileException $e) {
+            
+                }
+                $race->setPictureRace($newFilename);
+            }
+
+            
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($race);
+            $entityManager->flush();
+
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('races_index');
@@ -68,8 +119,8 @@ class RacesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'races_delete', methods: ['POST'])]
-    public function delete(Request $request, Races $race): Response
+    #[Route('/{id}', name: 'races_delete', methods: ['POST'])] 
+    public function delete(Request $request, Races $race):Response
     {
         if ($this->isCsrfTokenValid('delete'.$race->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
@@ -79,4 +130,5 @@ class RacesController extends AbstractController
 
         return $this->redirectToRoute('races_index');
     }
+
 }

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/homes.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/partners.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/race.css') }}" />
 
     <!-- ---END--LINK CSS------------- -->
 
@@ -98,7 +99,7 @@
                         <a class="nav-link active Home" aria-current="page" href="#">Accueil</a>
                     </li> -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link Nav" href="{{path ('homes')}}" id="navbarDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Présentation</a>
 
@@ -147,7 +148,7 @@
                         </li>
                     </ul>
                     <div id="logo">
-                        <a class="nav-link active Home" aria-current="page" href="#"><img class="navbar-brand"
+                        <a class="nav-link active Home" aria-current="page" href="{{path ('homes')}}"><img class="navbar-brand"
                                 src="/img/LOGO.png" alt="LOGO" width="150px" /></a>
                     </div>
 
@@ -167,7 +168,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">Les courses</a>
                             <ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
                                 <li>
-                                    <a class="dropdown-item Subtitle-Item" href="#">Trail 12km</a>
+                                    <a class="dropdown-item Subtitle-Item"  href="{{ path('BloggerBlogBundle_blog_show', { {'id': race.id}) }}">Trail 12km</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item Subtitle-Item" href="#">Trail 25km semi nocturne</a>
@@ -202,7 +203,7 @@
                             </a>
                             <ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
                                 <li>
-                                    <a class="dropdown-item Subtitle-Item" href="#">Contact</a>
+                                    <a class="dropdown-item Subtitle-Item"  href="{{path ('contacts_index')}}">Contact</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item Subtitle-Item" href="#">Livre d'or</a>

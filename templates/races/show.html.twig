@@ -3,8 +3,8 @@
 {% block title %}Races{% endblock %}
 
 {% block body %}
-    <h1>Races</h1>
 
+<!-- 
     <table class="table">
         <tbody>
             <tr>
@@ -29,14 +29,59 @@
             </tr>
             <tr>
                 <th>PictureRace</th>
-                <td>{{ race.pictureRace }}</td>
+                 <td><img src="{{ asset('uploads/photos/' ~ race.pictureRace)}}" width="100"></td>
             </tr>
         </tbody>
     </table>
 
     <a href="{{ path('races_index') }}">back to list</a>
 
-    <a href="{{ path('races_edit', {'id': race.id}) }}">edit</a>
+    <a href="{{ path('races_edit', {'id': race.id}) }}">edit</a> -->
 
-    {{ include('races/_delete_form.html.twig') }}
+<!-- {{ include('races/_delete_form.html.twig') }} -->
+
+<body>
+    <section>
+        <div class="imgRunPage">
+            <img src="/img/run.jpg" alt="">
+        </div>
+        <div class="container containerRun py-5">
+           
+            <div class="row boxRun py-5 mt-5">
+                <div class="col-md-6 Run">
+                    <div class="titleRun text-center mb-5">
+                        <h1>{{ race.titleRace }}</h1>
+                    </div>
+
+                    <div class="descriptionRun text-justify mb-5">
+                        <p>{{ race.descriptionRace }}</p>
+                    </div>
+
+                    <div class="infoRun text-center mb-5">
+                        <p>{{ race.infoRace }}</p>
+                    </div>
+
+                    <div class="RunLink text-center">
+                        <a href="{{ race.linkRace }}">Pré-inscription</a>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="col-md-6 text-center boximgRun">
+                    <span class="verticalLine">
+                    <img src="{{ asset('uploads/photos/' ~ race.pictureRace)}}" width="500">
+                </span>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+</body>
+
+
 {% endblock %}

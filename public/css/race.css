@@ -1,0 +1,102 @@
+.imgRunPage img {
+  background-color: #fff;
+  transform: skew(0deg, -2deg);
+}
+
+.titleRun h1 {
+  padding-top: 20px;
+  color: #6b90bb;
+  padding-left: 34px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.titleRun h1::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.7rem;
+  height: 4px;
+  background: #6b90bb;
+}
+.titleRun h1::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.7rem;
+  height: 4px;
+  background: #6b90bb;
+}
+
+.RunLink {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  background-color: #000 !important;
+  box-shadow: 2px 2px 5px 0px;
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  padding: 9px;
+  transition: 1s !important;
+}
+.RunLink a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.RunLink:hover {
+  border: 1px solid #000;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #6b90bb 40%, #aad044 100%) !important;
+  box-shadow: 2px 2px 5px 0px;
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  padding: 9px;
+}
+
+.boximgRun img {
+  margin-top: 55px;
+  margin-left: 30px;
+}
+.boximgRun .verticalLine {
+  display: inline-block;
+  border-left: 2px solid #aad044;
+  height: 517px;
+}
+
+.infoRun P {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.infoRun P::after {
+  content: "";
+  display: block;
+  border: 1px solid #aad044;
+  width: 70%;
+  margin: 0 auto;
+  padding-right: 100px;
+  margin-bottom: 50px;
+  margin-top: 2px;
+  transition: 2s;
+}
+.infoRun P:hover::after {
+  content: "";
+  display: block;
+  border: 1px solid #aad044;
+  width: 34%;
+  margin: 0 auto;
+  padding-right: 100px;
+  margin-bottom: 50px;
+  margin-top: 2px;
+}
+
+.descriptionRun p {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+}/*# sourceMappingURL=race.css.map */

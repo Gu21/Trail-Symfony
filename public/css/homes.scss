@@ -43,7 +43,7 @@ $color5: #000;
 
 
     color: $color3;
-    font-family: 'Barlow',"Arial" sans-serif;
+    font-family: 'Lato',"Arial" sans-serif;
     font-weight: 700;
     letter-spacing: 5px;
     text-shadow: 0 2px 0 BLACK,
@@ -523,18 +523,10 @@ $color5: #000;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 700;
     font-size: 3em;
-}
-
-.run::before {
-
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 6.3rem;
-    height: 4px;
-    background: $color2;
 
 }
+
+
 
 
 
