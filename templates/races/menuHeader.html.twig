@@ -1,0 +1,11 @@
+
+
+
+{% for race in races %}
+
+<li>
+    <a class="dropdown-item Subtitle-Item" href="{{ path('races_show', {'id': race.id}) }}">{{ race.titleRace }}</a>
+</li>
+
+
+{% endfor %}

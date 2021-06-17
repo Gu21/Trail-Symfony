@@ -20,9 +20,21 @@ class RacesController extends AbstractController
     public function index(RacesRepository $racesRepository): Response
     {
         return $this->render('races/index.html.twig', [
-            'races' => $racesRepository->findAll(),
+            'race' => $racesRepository->findAll(),
         ]);
     }
+
+
+    
+    public function menuHeader(RacesRepository $racesRepository): Response
+    {
+        return $this->render('races/menuHeader.html.twig', [
+            'races' => $racesRepository->findAll(),
+        ]);
+
+    }
+
+
 
     #[Route('/new', name: 'races_new', methods: ['GET', 'POST'])]
     public function new(Request $request, SluggerInterface $slugger): Response
@@ -69,6 +81,7 @@ class RacesController extends AbstractController
     #[Route('/{id}', name: 'races_show', methods: ['GET'])]
     public function show(Races $race): Response
     {
+        
         return $this->render('races/show.html.twig', [
             'race' => $race,
         ]);
@@ -77,6 +90,7 @@ class RacesController extends AbstractController
     #[Route('/{id}/edit', name: 'races_edit', methods: ['GET','POST'])]
     public function edit(Request $request, Races $race, SluggerInterface $slugger): Response
     {
+      
         $form = $this->createForm(RacesType::class, $race);
         $form->handleRequest($request);
 

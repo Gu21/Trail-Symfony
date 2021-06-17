@@ -1,45 +1,145 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pictures index{% endblock %}
+{% block title %}Pictures index
+{% endblock %}
 
 {% block body %}
-    <h1>Pictures index</h1>
+<!-- {# <h1>Pictures index</h1> #}
+{# 
+						    <table class="table">
+						        <thead>
+						            <tr>
+						                <th>Id</th>
+						                <th>TitlePicture</th>
+						                <th>SubtitlePicture</th>
+						                <th>CategoryPicture</th>
+						                <th>InfoPicture</th>
+						                <th>LinkPicture</th>
+						                <th>YearsPicture</th>
+						                <th>actions</th>
+						            </tr>
+						        </thead>
+						        <tbody>
+						        {% for picture in pictures %}
+						            <tr>
+						                <td>{{ picture.id }}</td>
+						                <td>{{ picture.titlePicture }}</td>
+						                <td>{{ picture.subtitlePicture }}</td>
+						                <td>{{ picture.categoryPicture }}</td>
+						                <td>{{ picture.infoPicture }}</td>
+						                <td>{{ picture.linkPicture }}</td>
+						                <td>{{ picture.yearsPicture ? picture.yearsPicture|date('Y-m-d') : '' }}</td>
+						                <td>
+						                    <a href="{{ path('pictures_show', {'id': picture.id}) }}">show</a>
+						                    <a href="{{ path('pictures_edit', {'id': picture.id}) }}">edit</a>
+						                </td>
+						            </tr>
+						        {% else %}
+						            <tr>
+						                <td colspan="8">no records found</td>
+						            </tr>
+						        {% endfor %}
+						        </tbody>
+						    </table>
+						
+						    <a href="{{ path('pictures_new') }}">Create new</a> #} -->
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>TitlePicture</th>
-                <th>SubtitlePicture</th>
-                <th>CategoryPicture</th>
-                <th>InfoPicture</th>
-                <th>LinkPicture</th>
-                <th>YearsPicture</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+
+<body class="bodyPicture">
+    <div class="container boxPicture">
+    
+     
+        
+        <div class="row">
+
+            {% for picture in pictures %}
+            {% if picture.id == 1 %}
+            <div class=".col-6 .col-md-4">
+                <div class="testimotionals">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <p>{{ picture.infoPicture }}<br>{{ picture.categoryPicture }}</p>
+                            <div class="image">
+                                <img src="/img/coureur.png" alt="vignette coureur">
+                            </div>
+                            <div class="details">
+                                <h2>
+                                    {{ picture.subtitlePicture }}<br><span>
+                                        <a href="{{ picture.linkPicture }}">Lien google</a>
+                                    </span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+
         {% for picture in pictures %}
-            <tr>
-                <td>{{ picture.id }}</td>
-                <td>{{ picture.titlePicture }}</td>
-                <td>{{ picture.subtitlePicture }}</td>
-                <td>{{ picture.categoryPicture }}</td>
-                <td>{{ picture.infoPicture }}</td>
-                <td>{{ picture.linkPicture }}</td>
-                <td>{{ picture.yearsPicture ? picture.yearsPicture|date('Y-m-d') : '' }}</td>
-                <td>
-                    <a href="{{ path('pictures_show', {'id': picture.id}) }}">show</a>
-                    <a href="{{ path('pictures_edit', {'id': picture.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        {% if picture.id == 2 %}
+        <div class="testimotionals">
+            <div class=".col-6 .col-md-4">
 
-    <a href="{{ path('pictures_new') }}">Create new</a>
-{% endblock %}
+                <div class="card">
+                    <div class="layer"></div>
+                    <div class="content">
+                        <p>{{ picture.infoPicture }}<br>{{ picture.categoryPicture }}</p>
+                        <div class="image">
+                            <img src="/img/coureur.png" alt="vignette coureur">
+                        </div>
+                        <div class="details">
+                            <h2>
+                                {{ picture.subtitlePicture }}<br><span>
+                                    <a href="{{ picture.linkPicture }}">Lien google</a>
+                                </span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+
+        {% for picture in pictures %}
+        {% if picture.id == 3 %}
+        <div class="testimotionals">
+            <div class=".col-6 .col-md-4">
+
+                <div class="card">
+                    <div class="layer"></div>
+                    <div class="content">
+                        <p>{{ picture.infoPicture }}<br>{{ picture.categoryPicture }}</p>
+                        <div class="image">
+                            <img src="/img/coureur.png" alt="vignette coureur">
+                        </div>
+                        <div class="details">
+                            <h2>
+                                {{ picture.subtitlePicture }}<br><span>
+                                    <a href="{{ picture.linkPicture }}">Lien google</a>
+                                </span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+
+
+
+
+
+    </div>
+</body>
+</div>
+</body>{% endblock %}

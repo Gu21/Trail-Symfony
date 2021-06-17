@@ -8,6 +8,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+
 
 class PicturesType extends AbstractType
 {
@@ -24,6 +26,9 @@ class PicturesType extends AbstractType
                 'choice_label' => 'titleRace',
             ])
             ->add('yearsPicture')
+            ->add('yearsPicture', DateType::class, [
+                'years' => range(1960, date('Y')+20) 
+            ])
         ;
     }
 

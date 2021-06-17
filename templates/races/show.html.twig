@@ -4,8 +4,8 @@
 
 {% block body %}
 
-<!-- 
-    <table class="table">
+ 
+    {# <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -36,9 +36,11 @@
 
     <a href="{{ path('races_index') }}">back to list</a>
 
-    <a href="{{ path('races_edit', {'id': race.id}) }}">edit</a> -->
+    <a href="{{ path('races_edit', {'id': race.id}) }}">edit</a>
 
-<!-- {{ include('races/_delete_form.html.twig') }} -->
+ {{ include('races/_delete_form.html.twig') }} 
+
+ -------------------RACE------------------------  #}
 
 <body>
     <section>
@@ -83,5 +85,6 @@
     </section>
 </body>
 
-
+ {# -------------END------RACE------------------------ #}
 {% endblock %}
+

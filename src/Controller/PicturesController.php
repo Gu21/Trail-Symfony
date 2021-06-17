@@ -37,7 +37,7 @@ class PicturesController extends AbstractController
         }
 
         return $this->render('pictures/new.html.twig', [
-            'picture' => $picture,
+            'pictures' => $picture,
             'form' => $form->createView(),
         ]);
     }
@@ -46,7 +46,7 @@ class PicturesController extends AbstractController
     public function show(Pictures $picture): Response
     {
         return $this->render('pictures/show.html.twig', [
-            'picture' => $picture,
+            'pictures' => $picture,
         ]);
     }
 

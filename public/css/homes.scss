@@ -526,7 +526,14 @@ $color5: #000;
 
 }
 
-
+.run::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6.3rem;
+    height: 4px;
+    background: $color2;
+}
 
 
 

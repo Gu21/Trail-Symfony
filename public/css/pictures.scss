@@ -1,0 +1,128 @@
+$color1 : #aad044;
+$color2: #6b90bb;
+$color3: #fff;
+$color4: #60ae46;
+$color5: #000;
+
+.bodyPicture {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    background-color: #262626
+}
+
+.boxPicture{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+// .testimotionals {
+//     width: 350px;
+//     display: inline-block;
+//     margin-left: 50px;
+//     margin-top: 50px;
+// }
+
+
+.testimotionals .card {
+
+    position: relative;
+    overflow: hidden;
+    // width: 200px;
+    // margin: 0 auto;
+    background: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+    // margin-left: 40px;
+}
+
+.testimotionals .card .layer {
+    z-index: 1;
+    position: absolute;
+    top: calc(100% - 2px);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: linear-gradient(to left, orange, tomato);
+    transition: 0.5s;
+
+}
+
+.testimotionals .card .content {
+    z-index: 1;
+    position: relative;
+}
+
+.testimotionals .card:hover  .layer{
+    top:0;
+  }
+
+.testimotionals .card .content {
+
+    p {
+        font-size: 1rem;
+        line-height: 24px;
+        color: $color3;
+
+
+    }
+}
+
+    .testimotionals .card .content .image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid $color3;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .testimotionals .card .conte nt .details {
+
+        h2 {
+            font-size: 2rem;
+            color: $color3;
+
+        }
+    }
+
+    .testimotionals .card .content .details {
+
+        span a {
+            color: $color1;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+    }
+
+    .testimotionals .card:hover .content .details {
+
+
+        span a {
+            color: $color2;
+            position: relative;
+           
+        }
+
+    }
+
+    .details{
+
+        h2{
+
+            font-size: 1.5rem;
+            color: $color3;
+            margin-top: 10px;
+        }
+       
+
+    }
