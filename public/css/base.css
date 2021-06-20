@@ -120,11 +120,13 @@ body {
   font-size: 1.3rem;
 }
 
-.Home.scrolled, .Nav.scrolled {
+.Home.scrolled,
+.Nav.scrolled {
   color: #6b90bb !important;
 }
 
-.dropdown-toggle, .nav-link:hover {
+.dropdown-toggle,
+.nav-link:hover {
   color: #aad044 !important;
 }
 
@@ -198,6 +200,25 @@ body {
   transition: 1s;
 }
 .Footer i:hover {
+  color: #6b90bb;
+}
+.Footer .verticalLineFooterLeft {
+  display: inline-block;
+  border-left: 2px solid #aad044;
+  height: 86px;
+  margin-top: 50px;
+}
+.Footer .verticalLineFooteRight {
+  display: inline-block;
+  border-left: 2px solid #aad044;
+  height: 86px;
+  margin-top: 50px;
+  padding-right: 55px;
+}
+.Footer p, .Footer a {
+  transition: 1s;
+}
+.Footer p:hover, .Footer a:hover {
   color: #6b90bb;
 }
 

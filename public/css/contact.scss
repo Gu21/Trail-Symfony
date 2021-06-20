@@ -23,7 +23,7 @@ body {
     // height: 1600px;
     // height: 1915px;
     height: 200vh;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
     padding-top: 0px;
 }
 
@@ -57,7 +57,7 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    box-shadow: -5px 7px 12px 3px rgba(0, 0, 0, 0.44);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.75) inset;
 }
 
 .form-control::placeholder {
@@ -89,7 +89,7 @@ iframe {
 
 
 .Body-parallax {
-    background-image: url("/img/parallax-contact.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),url("/img/parallax-contact.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -104,7 +104,7 @@ iframe {
 
     text-align: center;
     padding: 108px;
-    color: $color5;
+    color: $color3;
     margin-top: 123px;
 
 
@@ -161,6 +161,7 @@ h1::after {
         font-family: 'roboto', 'Arial', sans-serif;
         font-size: 1.5rem;
         font-weight: 500;
+        color: $color3;
     }
 }
 
@@ -183,6 +184,7 @@ h1::after {
         font-family: 'roboto', 'Arial', sans-serif;
         font-size: 1.5rem;
         font-weight: 500;
+        color: $color3;
     }
 }
 
@@ -200,6 +202,7 @@ h1::after {
         font-family: 'roboto', 'Arial', sans-serif;
         font-size: 1.5rem;
         font-weight: 500;
+        color: $color3;
     }
 }
 
@@ -229,11 +232,11 @@ h1::after {
     margin-top: 50px;
 }
 
-.Box-Form {
-    height: 1713px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding-top: 0px;
-}
+// .Box-Form {
+//     height: 1713px;
+//     background-color: rgba(255, 255, 255, 0.8);
+//     padding-top: 0px;
+// }
 
 .Box-Form::after {
 
@@ -249,7 +252,7 @@ h1::after {
 .mail {
 
     a {
-        color: $color5;
+        color: $color3;
         font-family: 'roboto', 'Arial', sans-serif;
         font-size: 1.2rem;
         font-weight: 400;
@@ -266,6 +269,7 @@ h1::after {
     font-family: 'roboto', 'Arial', sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
+    color:  $color3;
 
 
 
@@ -274,6 +278,7 @@ h1::after {
 .btn:hover{
 
     border: 2px solid $color2;
+    color:  $color2;
 
 }
 

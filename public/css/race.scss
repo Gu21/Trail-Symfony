@@ -23,7 +23,7 @@ $color5: #000;
         padding-left: 34px;
         font-family: 'Lato', 'Arial', sans-serif;
         font-weight: 700; 
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
    
 
@@ -62,7 +62,7 @@ $color5: #000;
     display: block;
     margin: 0 auto;
     padding: 9px;
-    transition: 1s !important;
+    transition: 2s !important;
 
 
 
@@ -87,7 +87,7 @@ $color5: #000;
 .RunLink:hover {
     border: 1px solid #000;
     border-radius: 20px;
-    background: linear-gradient(90deg, #6b90bb 40%, #aad044 100%) !important;
+    background: linear-gradient(to left, orange, tomato) !important;
     box-shadow: 2px 2px 5px 0px;
     width: 40%;
     display: block;
@@ -96,7 +96,7 @@ $color5: #000;
 }
 
 
-.boximgRun {
+.boximgRun {z
 
     img {
 

@@ -18,8 +18,33 @@ class PicturesController extends AbstractController
     {
         return $this->render('pictures/index.html.twig', [
             'pictures' => $picturesRepository->findAll(),
+            
         ]);
+        
+
     }
+  
+        #[Route('/pictures_2017', name: 'pictures_2017', methods: ['GET'])]
+        public function page(PicturesRepository $picturesRepository): Response
+        {
+            return $this->render('pictures/pictures2017.html.twig', [
+                'pictures' => $picturesRepository->findAll(),
+                
+            ]);
+    
+        }
+
+        #[Route('/pictures_2016', name: 'pictures_2016', methods: ['GET'])]
+        public function page2(PicturesRepository $picturesRepository): Response
+        {
+            return $this->render('pictures/pictures2016.html.twig', [
+                'pictures' => $picturesRepository->findAll(),
+                
+            ]);
+    
+        }
+
+    
 
     #[Route('/new', name: 'pictures_new', methods: ['GET', 'POST'])]
     public function new(Request $request): Response
@@ -33,7 +58,7 @@ class PicturesController extends AbstractController
             $entityManager->persist($picture);
             $entityManager->flush();
 
-            return $this->redirectToRoute('pictures_index');
+            return $this->redirectToRoute('pictures_new');
         }
 
         return $this->render('pictures/new.html.twig', [

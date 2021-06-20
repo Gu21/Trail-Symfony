@@ -33,7 +33,7 @@ class Contacts
     private $emailContact;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
     private $phoneContact;
 
@@ -83,12 +83,12 @@ class Contacts
         return $this;
     }
 
-    public function getPhoneContact(): ?int
+    public function getPhoneContact(): ?string
     {
         return $this->phoneContact;
     }
 
-    public function setPhoneContact(int $phoneContact): self
+    public function setPhoneContact(string $phoneContact): self
     {
         $this->phoneContact = $phoneContact;
 

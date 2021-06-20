@@ -17,7 +17,38 @@ $color5: #000;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100vh;
+    height: 152vh;
+    flex-direction: column;
+
+    .titlePictures{
+
+        color: $color1;
+        margin-top: 50px;
+    }
+
+    .titlePictures::before{
+
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 6.3rem;
+        height: 4px;
+        background: $color1;
+        margin-right: 15px;
+    
+}
+
+.titlePictures::after{
+
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6.3rem;
+    height: 4px;
+    background: $color1;
+    margin-left: 15px;
+    
+}
 }
 
 // .testimotionals {
@@ -40,6 +71,7 @@ $color5: #000;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
     // margin-left: 40px;
+    margin-bottom: 30px;
 }
 
 .testimotionals .card .layer {
@@ -102,6 +134,10 @@ $color5: #000;
             text-decoration: none;
             transition: 0.5s;
         }
+        span {
+
+            margin-top: 5px;
+        }
     }
 
     .testimotionals .card:hover .content .details {
@@ -119,7 +155,7 @@ $color5: #000;
 
         h2{
 
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: $color3;
             margin-top: 10px;
         }

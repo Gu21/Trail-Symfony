@@ -19,7 +19,7 @@ body {
 
 // ---------NAV--------------------
 
-#navbar{
+#navbar {
 
     display: flex;
     justify-content: space-around;
@@ -27,7 +27,8 @@ body {
     font-size: 1.3em;
     transition: all 0.75s ease-in-out;
     height: 100PX;
-} 
+}
+
 .navbar-brand {
     display: inline-block;
     padding-top: .3125rem;
@@ -37,10 +38,12 @@ body {
     line-height: inherit;
     white-space: nowrap;
 }
+
 .navbar-light .navbar-brand {
-    color: rgba(0,0,0,.9);
+    color: rgba(0, 0, 0, .9);
     width: 100px;
 }
+
 .fixed-top {
     position: fixed;
     top: 0;
@@ -49,54 +52,57 @@ body {
     z-index: 1030;
 }
 
-.bg-light{
-    
-    background: rgba(0, 0, 0, 0.3)!important;
+.bg-light {
+
+    background: rgba(0, 0, 0, 0.3) !important;
 
 }
+
 .fixed-top.scrolled {
-    background-color: #000!important;
+    background-color: #000 !important;
     transition: background-color 200ms linear;
     height: 150px;
 }
 
 
-.dropdown:hover .dropdown-menu{
+.dropdown:hover .dropdown-menu {
 
     display: block;
     margin-top: 0;
-    
-   
+
+
 }
 
 
 
-.d-md-block{
-      
+.d-md-block {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 161px;
-   
+
 }
+
 .navbar-light .navbar-toggler {
-     
+
     border-color: $color3;
     color: $color3;
-   
+
 }
-.nav-link .dropdown-toggle .Nav{
-    color: $color3!important;
-    
-    
+
+.nav-link .dropdown-toggle .Nav {
+    color: $color3 !important;
+
+
 }
 
 
 
 .nav-item .dropdown:hover {
 
-    display: block!important;
+    display: block !important;
 
 }
 
@@ -104,15 +110,17 @@ body {
     display: block;
     padding: .5rem 1rem;
     text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
     color: $color3;
     // background-color: #000;
 }
+
 .navbar-light .navbar-toggler-icon {
 
-    color: $color3!important;
+    color: $color3 !important;
     background-color: $color3;
 }
+
 // .Box-Nav {
 //     padding: 0;
 //     // border-bottom: 1px solid $color1;
@@ -130,7 +138,7 @@ body {
 #Logo {
     width: 173px;
 
-   
+
 }
 
 .Container-Nav {
@@ -161,27 +169,29 @@ body {
     color: $color2 !important;
     // text-shadow: 1px 1px 1px $color2;
     font-size: 1.3rem;
- 
+
 }
 
-.Home.scrolled,.Nav.scrolled {
+.Home.scrolled,
+.Nav.scrolled {
     color: $color2 !important;
-     
-   
+
+
 }
 
 
- .dropdown-toggle,.nav-link:hover  {
-    
-   color: $color1 !important;
-  
+.dropdown-toggle,
+.nav-link:hover {
+
+    color: $color1 !important;
+
 }
 
 
 .Background-Nav {
     // background-color: transparent;
     background-color: #000;
-   
+
 }
 
 .Nav {
@@ -189,12 +199,12 @@ body {
     font-size: 1.3rem;
     // background-color: transparent;
     // background-color: #000 color: $color2 !important;
-    
+
 }
 
 .Subtitle {
     background-color: $color2;
-    
+
 
     .Subtitle-Item {
         color: $color3;
@@ -209,7 +219,7 @@ body {
 }
 
 .Subtitle-Item:hover {
-    
+
     background-color: $color1;
 }
 
@@ -261,7 +271,7 @@ body {
 
 
 // .Caption {
-   
+
 
 //     .Trail {
 
@@ -354,8 +364,8 @@ body {
 //         padding-top: 100px;
 //         color: $color1;
 //         padding: 50px;
-       
-      
+
+
 //     }
 
 // }
@@ -471,7 +481,7 @@ body {
 // }
 
 
- 
+
 
 
 .Footer {
@@ -488,6 +498,7 @@ body {
     justify-content: center;
     padding: 10px;
     margin-top: 50px;
+    
 
 
     i {
@@ -495,13 +506,53 @@ body {
         color: $color1;
         // padding: 9px;
         transition: 1s;
-        
+
     }
 
     i:hover {
-        color: $color2;  
+        color: $color2;
     }
+
+
+
+
+
+    .verticalLineFooterLeft {
+        display: inline-block;
+        border-left: 2px solid #aad044;
+        height: 86px;
+        margin-top: 50px;
+    }
+
+    .verticalLineFooteRight {
+
+
+        display: inline-block;
+        border-left: 2px solid #aad044;
+        height: 86px;
+        margin-top: 50px;
+        padding-right: 55px;
+
+    }
+
+    p , a {
+
+        transition: 1s;
+    }
+    
+    p:hover, a:hover {
+
+        color: $color2;
+    }
+
+
+
 }
+
+
+
+
+
 
 
 
@@ -514,7 +565,7 @@ body {
 //     border: 3px solid $color1;
 //     vertical-align: middle;
 //     width: 36rem;
-   
+
 //     // margin-top: 50px;
 // }
 
@@ -547,8 +598,3 @@ body {
 // }
 
 // ------END FOOTER-------------------
-
-
-
-
-

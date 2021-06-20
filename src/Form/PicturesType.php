@@ -26,9 +26,7 @@ class PicturesType extends AbstractType
                 'choice_label' => 'titleRace',
             ])
             ->add('yearsPicture')
-            ->add('yearsPicture', DateType::class, [
-                'years' => range(1960, date('Y')+20) 
-            ])
+           
         ;
     }
 

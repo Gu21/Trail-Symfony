@@ -41,9 +41,10 @@ class Pictures
      * @ORM\Column(type="string", length=255)
      */
     private $linkPicture;
+    
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="integer")
      */
     private $yearsPicture;
 
@@ -117,12 +118,12 @@ class Pictures
         return $this;
     }
 
-    public function getYearsPicture(): ?\DateTimeInterface
+    public function getYearsPicture(): ?int
     {
         return $this->yearsPicture;
     }
 
-    public function setYearsPicture(\DateTimeInterface $yearsPicture): self
+    public function setYearsPicture(int $yearsPicture): self
     {
         $this->yearsPicture = $yearsPicture;
 

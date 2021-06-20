@@ -11,7 +11,30 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 100vh;
+  height: 152vh;
+  flex-direction: column;
+}
+.boxPicture .titlePictures {
+  color: #aad044;
+  margin-top: 50px;
+}
+.boxPicture .titlePictures::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 6.3rem;
+  height: 4px;
+  background: #aad044;
+  margin-right: 15px;
+}
+.boxPicture .titlePictures::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 6.3rem;
+  height: 4px;
+  background: #aad044;
+  margin-left: 15px;
 }
 
 .testimotionals .card {
@@ -22,6 +45,7 @@
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
 }
 
 .testimotionals .card .layer {
@@ -71,6 +95,9 @@
   text-decoration: none;
   transition: 0.5s;
 }
+.testimotionals .card .content .details span {
+  margin-top: 5px;
+}
 
 .testimotionals .card:hover .content .details span a {
   color: #6b90bb;
@@ -78,7 +105,7 @@
 }
 
 .details h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
   margin-top: 10px;
 }/*# sourceMappingURL=pictures.css.map */
