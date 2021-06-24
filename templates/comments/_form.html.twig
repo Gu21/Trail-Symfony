@@ -1,4 +1,8 @@
-{{ form_start(form) }}
+{# {{ form_start(form) }}
+{{ form_widget( comment.nameComment,{'attr':{'placeholder':'Nom','class':'nameComment'}}) }}
+{{ form_errors(form) }}
+{{ form_widget(comment.emailComment,{'attr':{'placeholder':'Email','class':'emailComment'}}) }}
+{{ form_widget(comment.commentComments,{'attr':{'placeholder':'Message','class':'commentComments', 'rows' : '9' }}) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+    <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }} #}

@@ -3,24 +3,48 @@
 namespace App\Controller;
 
 use App\Entity\Comments;
+use App\Entity\Items;
 use App\Form\CommentsType;
+use App\Repository\ItemsRepository;
 use App\Repository\CommentsRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/comments')]
 class CommentsController extends AbstractController
 {
-    #[Route('/', name: 'comments_index', methods: ['GET'])]
-    public function index(CommentsRepository $commentsRepository): Response
+    #[Route('/', name: 'comments_index', methods: ['GET','POST'])]
+    public function index(CommentsRepository $commentsRepository, ItemsRepository $itemsRepository, SluggerInterface $slugger, Request $request): Response
     {
+     
+        $comment = new Comments();
+        $form = $this->createForm(CommentsType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            // $comment->setComment($comment);
+            // $comment->setDateItem(new \DateTime('now'));
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($comment);
+            $entityManager->flush();
+          
+           
+        }
+           
+        
+
         return $this->render('comments/index.html.twig', [
             'comments' => $commentsRepository->findAll(),
+            'items' => $itemsRepository->findAll(),
+            'form' => $form->createView(),
         ]);
     }
-
+    
     #[Route('/new', name: 'comments_new', methods: ['GET', 'POST'])]
     public function new(Request $request): Response
     {

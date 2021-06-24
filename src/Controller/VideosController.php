@@ -9,6 +9,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
+
+
+
+
 
 #[Route('/videos')]
 class VideosController extends AbstractController
@@ -22,13 +30,35 @@ class VideosController extends AbstractController
     }
 
     #[Route('/new', name: 'videos_new', methods: ['GET', 'POST'])]
-    public function new(Request $request): Response
+    public function new(Request $request, SluggerInterface $slugger): Response
+
     {
+
         $video = new Videos();
         $form = $this->createForm(VideosType::class, $video);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $pictureVideo = $form->get('pictureVideo')->getData();
+
+            if ($pictureVideo) {
+                $originalFilename = pathinfo($pictureVideo->getClientOriginalName(), PATHINFO_FILENAME);
+
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $pictureVideo->guessExtension();
+
+                try {
+                    $pictureVideo->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                }
+                $video->setPictureVideo($newFilename);
+            }
+
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($video);
             $entityManager->flush();
@@ -39,6 +69,7 @@ class VideosController extends AbstractController
         return $this->render('videos/new.html.twig', [
             'video' => $video,
             'form' => $form->createView(),
+
         ]);
     }
 
@@ -51,12 +82,32 @@ class VideosController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'videos_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Videos $video): Response
+    public function edit(Request $request, Videos $video, SluggerInterface $slugger): Response
     {
+
+
         $form = $this->createForm(VideosType::class, $video);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $pictureVideo = $form->get('pictureVideo')->getData();
+
+            if ($pictureVideo) {
+                $originalFilename = pathinfo($pictureVideo->getClientOriginalName(), PATHINFO_FILENAME);
+
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $pictureVideo->guessExtension();
+
+                try {
+                    $pictureVideo->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                }
+                $video->setPictureVideo($newFilename);
+            }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('videos_index');
@@ -71,7 +122,7 @@ class VideosController extends AbstractController
     #[Route('/{id}', name: 'videos_delete', methods: ['POST'])]
     public function delete(Request $request, Videos $video): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$video->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $video->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($video);
             $entityManager->flush();

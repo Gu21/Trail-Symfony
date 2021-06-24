@@ -1,45 +1,115 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Videos index{% endblock %}
+{% block title %}Videos index
+{% endblock %}
+
 
 {% block body %}
-    <h1>Videos index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>TitleVideo</th>
-                <th>SubtitleVideo</th>
-                <th>CategoryVideo</th>
-                <th>InfoVideo</th>
-                <th>LinkVideo</th>
-                <th>YearsVideo</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for video in videos %}
-            <tr>
-                <td>{{ video.id }}</td>
-                <td>{{ video.titleVideo }}</td>
-                <td>{{ video.subtitleVideo }}</td>
-                <td>{{ video.categoryVideo }}</td>
-                <td>{{ video.infoVideo }}</td>
-                <td>{{ video.linkVideo }}</td>
-                <td>{{ video.yearsVideo ? video.yearsVideo|date('Y-m-d') : '' }}</td>
-                <td>
-                    <a href="{{ path('videos_show', {'id': video.id}) }}">show</a>
-                    <a href="{{ path('videos_edit', {'id': video.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+{# ------------------------VIDEO---------------------------------#}
+<!-- {# 	
+							   <thead>
+									 <tr>
+										    <th>Id</th>
+											    <th>TitleVideo</th>
+										        <th>SubtitleVideo</th>
+											    <th>CategoryVideo</th>
+											    <th>InfoVideo</th>
+											    <th>LinkVideo</th>
+											    <th>YearsVideo</th>
+											    <th>actions</th>
+									 </tr>
+											    </thead>
+												  <tbody>
+													 {% for video in videos %}
+								    <tr>
+											    <td>{{ video.id }}</td>
+											    <td>{{ video.titleVideo }}</td>
+											    <td>{{ video.subtitleVideo }}</td>
+											    <td>{{ video.categoryVideo }}</td>
+											    <td>{{ video.infoVideo }}</td>
+											    <td>{{ video.linkVideo }}</td>
+											    <td><img src="{{ asset('uploads/photos/' ~ video.pictureVideo) }}" width="100"></td>
+											    <td>{{ video.yearsVideo }}</td>
+											    <td>
+																																								                    <a href="{{ path('videos_show', {'id': video.id}) }}">show</a>
+																																								                    <a href="{{ path('videos_edit', {'id': video.id}) }}">edit</a>
+											    </td>
+								    </tr>
+												 {% else %}
+								    <tr>
+											    <td colspan="8">no records found</td>
+								    </tr>
+											  {% endfor %}
+										    </tbody>
+												 </table>
+											
+								  <a href="{{ path('videos_new') }}">Create new</a> #} -->
 
-    <a href="{{ path('videos_new') }}">Create new</a>
+
+
+<section>
+
+	<div class="container">
+		<h1 class="titleVideo text-center  mb-5 py-5">VIDEOS</h1>
+		<div class="row row-cols-2">
+
+
+			{% for video in videos %}
+
+			{% if video.category.nameCategory == 'Videos'  %}
+			<div class=" mainVideo">
+				<div class="backFront">
+
+
+					<div class="back">
+						<a href="{{ video.linkVideo }}">Lien vidéo</a>
+						<h2>{{ video.subtitleVideo }}</h2>
+					</div>
+					<div class="front">
+						<div class="image">
+							<img src="{{ asset('uploads/photos/' ~ video.pictureVideo) }}" width="350">
+							<h3>{{ video.categoryVideo }}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endif %}
+
+			{% endfor %}
+
+
+		</div>
+
+
+		{# -----------------END-------VIDEO---------------------------------#}
+
+
+		{# ------------------------VIDEO-----TEASING----------------------------#}
+
+
+
+
+
+		<h1 class="titleVideo text-center mt-5 mb-5 py-5"> VIDÉOS TEASING</h1>
+		{% for video in videos %}
+		{% if video.category.nameCategory == 'Videos teaser'  %}
+		<div class="mainVideo">
+			<div class="backFront">
+				<div class="back">
+					<a href="{{ video.linkVideo }}">Lien vidéo</a>
+					<h2>{{ video.subtitleVideo }}</h2>
+				</div>
+				<div class="front">
+					<div class="image">
+						<img src="{{ asset('uploads/photos/' ~ video.pictureVideo) }}" width="350">
+						<h3>{{ video.categoryVideo }}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		{% endfor %}
+	</div>
+</section>
 {% endblock %}

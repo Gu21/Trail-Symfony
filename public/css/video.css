@@ -1,0 +1,121 @@
+.mainVideo {
+  height: 290px;
+  width: 275px;
+  margin: 30px;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mainVideo img {
+  border-radius: 10px;
+  height: 290px;
+  width: 275px;
+  filter: brightness(0.6);
+}
+
+.titleVideo, .teaserVideo {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  color: #aad044;
+  margin-top: 10rem;
+}
+
+.titleVideo::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.7rem;
+  height: 4px;
+  background: #6b90bb;
+  margin-left: 1rem;
+}
+
+.titleVideo::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.7rem;
+  height: 4px;
+  background: #6b90bb;
+  margin-right: 1rem;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.back h2 {
+  position: absolute;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+.back a {
+  position: absolute;
+  top: 50px;
+  font-size: 15px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #aad044;
+}
+.back a:hover {
+  background: linear-gradient(orange, tomato);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.front h3 {
+  position: absolute;
+  padding: 10px;
+  top: 200px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  background: -webkit-linear-gradient(orange, tomato);
+  text-transform: uppercase;
+  border-end-end-radius: 20px;
+}
+
+.backFront > .front {
+  transform: perspective(600px) rotateY(0deg);
+  width: 302px;
+  height: 290px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+  margin-right: 35px;
+}
+
+.backFront > .back {
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  background: #000;
+  color: #fff;
+  width: 302px;
+  height: 290px;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+
+.backFront:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.backFront:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.videoBox {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=video.css.map */

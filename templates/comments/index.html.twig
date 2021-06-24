@@ -1,41 +1,80 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Comments index{% endblock %}
+{% block title %}Comments index
+{% endblock %}
 
 {% block body %}
-    <h1>Comments index</h1>
+<!--   
+				{# 
+				    <table class="table">
+				        <thead>
+				            <tr>
+				                <th>Id</th>
+				                <th>TitleComment</th>
+				                <th>NameComment</th>
+				                <th>EmailComment</th>
+				                <th>CommentComments</th>
+				                <th>actions</th>
+				            </tr>
+				        </thead>
+				        <tbody>
+				        {% for comment in comments %}
+				            <tr>
+				                <td>{{ comment.id }}</td>
+				                <td>{{ comment.titleComment }}</td>
+				                <td>{{ comment.nameComment }}</td>
+				                <td>{{ comment.emailComment }}</td>
+				                <td>{{ comment.commentComments }}</td>
+				                <td>
+				                    <a href="{{ path('comments_show', {'id': comment.id}) }}">show</a>
+				                    <a href="{{ path('comments_edit', {'id': comment.id}) }}">edit</a>
+				                </td>
+				            </tr>
+				        {% else %}
+				            <tr>
+				                <td colspan="6">no records found</td>
+				            </tr>
+				        {% endfor %}
+				        </tbody>
+				    </table>
+				
+				    <a href="{{ path('comments_new') }}">Create new</a> #}
+				
+				div -->
+<div class="container">
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>TitleComment</th>
-                <th>NameComment</th>
-                <th>EmailComment</th>
-                <th>CommentComments</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for comment in comments %}
-            <tr>
-                <td>{{ comment.id }}</td>
-                <td>{{ comment.titleComment }}</td>
-                <td>{{ comment.nameComment }}</td>
-                <td>{{ comment.emailComment }}</td>
-                <td>{{ comment.commentComments }}</td>
-                <td>
-                    <a href="{{ path('comments_show', {'id': comment.id}) }}">show</a>
-                    <a href="{{ path('comments_edit', {'id': comment.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+	<div class="row boxCommentItems">
+		<div class="col-md-12 Comment">
+			<h1 class="titleComment">LE LIVRE D'OR DU TRAIL DES JAMBES ALLAIRE</h1>
+			<p class="infoItem">Laissez-nous vos commentaires, ou votre retour d'expérience avec nous : <a href=""><i
+						class="fas fa-arrow-circle-down"></i></a></p>
+			<h2 class="titleItems">Commentaires</h2>
 
-    <a href="{{ path('comments_new') }}">Create new</a>
+			{% for comment in comments %}
+			<div class="paragraphItems text-center">
+				<span>{{ comment.nameComment }}</span>
+				<div class="paragraph">
+					{{ comment.commentComments }}
+				</div>
+				
+			</div>
+			{% endfor %}
+			<div class="boxItems">
+
+				<!-- {% for item in items %}
+				<p>Commentaire écrit par
+					{{ item.nameItem }}
+					le
+					{{ item.dateItem ? item.dateItem|date('Y-m-d H:i:s') : '' }}</p>
+				<p>{{ item.commentItem }}</p>
+				{% endfor %} -->
+
+				<h2 class="subtitleItems mt-5">Ajouter un commentaire</h2>
+
+				{{ form(form) }}
+
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

@@ -58,7 +58,7 @@
   padding: 9px;
 }
 
-.boximgRun z img {
+.boximgRun img {
   margin-top: 55px;
   margin-left: 30px;
 }
@@ -72,6 +72,7 @@
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
+  color: #000;
 }
 .infoRun P::after {
   content: "";
@@ -99,4 +100,5 @@
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
+  color: #fff;
 }/*# sourceMappingURL=race.css.map */

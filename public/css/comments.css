@@ -1,0 +1,170 @@
+@charset "UTF-8";
+.boxCommentItems {
+  margin-top: 12rem;
+}
+.boxCommentItems form {
+  margin-top: 3%;
+}
+.boxCommentItems .titleComment {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #aad044;
+  margin-bottom: 10rem;
+}
+.boxCommentItems .titleComment:hover {
+  background: linear-gradient(orange, tomato);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.boxCommentItems .form-control {
+  display: block;
+  width: 90%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background: #7b7b7c;
+}
+.boxCommentItems .fas {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+.boxCommentItems .fa-arrow-circle-down:before {
+  content: "";
+  color: #000;
+}
+.boxCommentItems .titleItems, .boxCommentItems .subtitleItems {
+  font-family: "roboto", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6b90bb;
+  margin-top: 6rem;
+  margin-bottom: 7rem;
+}
+.boxCommentItems .titleItems::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 4rem;
+  height: 4px;
+  background: #6b90bb;
+  margin-left: 1rem;
+}
+.boxCommentItems .subtitleItems::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 4rem;
+  height: 4px;
+  background: #6b90bb;
+  margin-left: 1rem;
+}
+.boxCommentItems .titleItems::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 4rem;
+  height: 4px;
+  background: #6b90bb;
+  margin-right: 1rem;
+}
+.boxCommentItems .subtitleItems::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 4rem;
+  height: 4px;
+  background: #6b90bb;
+  margin-right: 1rem;
+}
+.boxCommentItems .infoItem {
+  font-family: "roboto", "Arial", sans-serif;
+  font-size: 1rem;
+}
+.boxCommentItems .btn {
+  display: block;
+  margin: 0 auto;
+  font-family: "roboto", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #000;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+}
+.boxCommentItems ::-moz-placeholder {
+  color: #aad044;
+}
+.boxCommentItems :-ms-input-placeholder {
+  color: #aad044;
+}
+.boxCommentItems ::placeholder {
+  color: #aad044;
+}
+.boxCommentItems .paragraphItems {
+  margin-bottom: 2rem;
+}
+.boxCommentItems .paragraphItems::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  border: 1px dashed #aad044;
+}
+.boxCommentItems .paragraph {
+  padding: 15px;
+  margin-bottom: 7rem;
+}
+.boxCommentItems label {
+  font-family: "roboto", "Arial", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: linear-gradient(orange, tomato);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.boxCommentItems #comments {
+  margin-top: 7rem;
+}
+.boxCommentItems .validate {
+  letter-spacing: 0;
+  border: none;
+}
+.boxCommentItems .validate:hover,
+.boxCommentItems .validate:active {
+  letter-spacing: 5px;
+  border: none;
+}
+.boxCommentItems .validate:after,
+.boxCommentItems .validate:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 1px solid rgba(170, 208, 68, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+.boxCommentItems .validate:hover:after,
+.boxCommentItems .validate:hover:before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-color: #aad044;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+.boxCommentItems .validate:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}/*# sourceMappingURL=comments.css.map */

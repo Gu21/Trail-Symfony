@@ -43,7 +43,7 @@ class Videos
     private $linkVideo;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="integer")
      */
     private $yearsVideo;
 
@@ -51,6 +51,16 @@ class Videos
      * @ORM\ManyToOne(targetEntity=Races::class, inversedBy="videos")
      */
     private $race;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $pictureVideo;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="videos")
+     */
+    private $category;
 
     public function getId(): ?int
     {
@@ -117,12 +127,13 @@ class Videos
         return $this;
     }
 
-    public function getYearsVideo(): ?\DateTimeInterface
+
+    public function getYearsVideo(): ?int
     {
         return $this->yearsVideo;
     }
 
-    public function setYearsVideo(\DateTimeInterface $yearsVideo): self
+    public function setYearsVideo(int $yearsVideo): self
     {
         $this->yearsVideo = $yearsVideo;
 
@@ -137,6 +148,30 @@ class Videos
     public function setRace(?Races $race): self
     {
         $this->race = $race;
+
+        return $this;
+    }
+
+    public function getPictureVideo(): ?string
+    {
+        return $this->pictureVideo;
+    }
+
+    public function setPictureVideo(string $pictureVideo): self
+    {
+        $this->pictureVideo = $pictureVideo;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

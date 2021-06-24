@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CommentsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,20 @@ class Comments
      * @ORM\Column(type="text")
      */
     private $commentComments;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Items::class, mappedBy="comment")
+     */
+    private $items;
+
+    public function __construct()
+    {
+        $this->items = new ArrayCollection();
+    }
+
+   
+
+  
 
     public function getId(): ?int
     {
@@ -89,4 +105,38 @@ class Comments
 
         return $this;
     }
+
+    /**
+     * @return Collection|Items[]
+     */
+    public function getItems(): Collection
+    {
+        return $this->items;
+    }
+
+    public function addItem(Items $item): self
+    {
+        if (!$this->items->contains($item)) {
+            $this->items[] = $item;
+            $item->setComment($this);
+        }
+
+        return $this;
+    }
+
+    public function removeItem(Items $item): self
+    {
+        if ($this->items->removeElement($item)) {
+            // set the owning side to null (unless already changed)
+            if ($item->getComment() === $this) {
+                $item->setComment(null);
+            }
+        }
+
+        return $this;
+    }
+
+ 
+
+  
 }
