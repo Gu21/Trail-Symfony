@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block title %}Partners index{% endblock %}
 
@@ -9,28 +9,28 @@
 
     <h1>Partners index</h1>
 
-    <table class="table table-dark table-hover table-striped">
+    <table id="myTable" class="table  table-Default table-hover table-striped">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>TitlePartner</th>
+                {# <th>TitlePartner</th> #}
                 <th>PicturePartner</th>
-                <th>DescriptionPartner</th>
-                <th>DownloadFolderPartner</th>
-                <th>actions</th>
+                {# <th>DescriptionPartner</th> #}
+                {# <th>DownloadFolderPartner</th> #}
+                <th>Modifier</th>
             </tr>
         </thead>
         <tbody>
         {% for partner in partners %}
             <tr>
-                <td>{{ partner.id }}</td>
-                <td>{{ partner.titlePartner }}</td>
-                <td><img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" width="100"></td>
-                <td>{{ partner.descriptionPartner }}</td>
-                <td>{{ partner.downloadFolderPartner }}</td>
-                <td>
-                    <a href="{{ path('partners_show', {'id': partner.id}) }}">show</a>
-                    <a href="{{ path('partners_edit', {'id': partner.id}) }}">edit</a>
+                <td class="subtitle">{{ partner.id }}</td>
+                {# <td>{{ partner.titlePartner }}</td> #}
+                <td class="subtitle"><img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" width="100"></td>
+                {# <td>{{ partner.descriptionPartner }}</td> #}
+                {# <td>{{ partner.downloadFolderPartner }}</td> #}
+                <td class="subtitle">
+                    {# <a class="" href="{{ path('partners_show', {'id': partner.id}) }}">show</a> #}
+                    <a  class="edit" href="{{ path('partners_edit', {'id': partner.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -41,7 +41,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('partners_new') }}">Create new</a>
+    <a class="backList" href="{{ path('partners_new') }}"><span> Créer un partenaire</span></a>
 
 </div>
 {% endblock %}

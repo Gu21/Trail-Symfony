@@ -4,20 +4,32 @@ namespace App\Form;
 
 use App\Entity\Races;
 use Symfony\Component\Form\AbstractType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class RacesType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titleRace')
-            ->add('descriptionRace')
-            ->add('infoRace')
-            ->add('linkRace')
+            ->add('titleRace', TextType::class, [
+                'label' => 'Titre',
+            ])
+            ->add('descriptionRace',CKEditorType::class, [
+                'label' => 'Description course',
+            ])
+            ->add('infoRace',CKEditorType::class, [
+                'label' => 'Info course',
+            ])
+
+            ->add('linkRace', TextType::class, [
+                'label' => 'Lien course',
+            ])
+
             ->add('pictureRace', FileType::class, [
                 'label' => 'Photo',
                 'mapped' => false,

@@ -1,11 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block title %}Races index{% endblock %}
 
 {% block body %}
     <h1>Races index</h1>
 
-    <table class="table">
+    <table id="myTable" class="table  table-Default table-hover table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -14,6 +14,7 @@
                 <th>InfoRace</th>
                 <th>LinkRace</th>
                 <th>PictureRace</th>
+
                 <th>actions</th>
             </tr>
         </thead>
@@ -22,14 +23,14 @@
             <tr>
                 <td>{{ race.id }}</td>
                 <td>{{ race.titleRace }}</td>
-                <td>{{ race.descriptionRace }}</td>
+                <td >{{ race.descriptionRace }}</td>
                 <td>{{ race.infoRace }}</td>
                 <td>{{ race.linkRace }}</td>
                 <td><img src="{{ asset('uploads/photos/' ~ race.pictureRace)}}" width="100"></td>
-                <td>{{ race.pictureRace }}</td>
+                {# <td>{{ race.pictureRace }}</td> #}
                 <td>
-                    <a href="{{ path('races_show', {'id': race.id}) }}">show</a>
-                    <a href="{{ path('races_edit', {'id': race.id}) }}">edit</a>
+                    {# <a href="{{ path('races_show', {'id': race.id}) }}">show</a> #}
+                    <a class="edit" href="{{ path('races_edit', {'id': race.id}) }}">ÉDITER</a>
                 </td>
             </tr>
         {% else %}
@@ -40,6 +41,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('races_new') }}">Create new</a>
+    <a class="backList" href="{{ path('races_new') }}"><span> Créer une nouvelle course</span></a>
    
 {% endblock %}

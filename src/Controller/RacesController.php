@@ -20,7 +20,7 @@ class RacesController extends AbstractController
     public function index(RacesRepository $racesRepository): Response
     {
         return $this->render('races/index.html.twig', [
-            'race' => $racesRepository->findAll(),
+            'races' => $racesRepository->findAll(),
         ]);
     }
 
@@ -29,7 +29,7 @@ class RacesController extends AbstractController
     public function menuHeader(RacesRepository $racesRepository): Response
     {
         return $this->render('races/menuHeader.html.twig', [
-            'races' => $racesRepository->findAll(),
+            'race' => $racesRepository->findAll(),
         ]);
 
     }

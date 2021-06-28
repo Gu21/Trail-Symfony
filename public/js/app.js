@@ -20,14 +20,6 @@ $(document).ready(function(){
 // END SCRIPT BARRE NAV     
 
 
-
-         
-   
- 
- 
-
-
-
   // ---SCRIPT----PRESENTATION------  
  
  var controller = new ScrollMagic.Controller();
@@ -51,3 +43,12 @@ reverse: false
 
 
 //  --END -SCRIPT----PRESENTATION------  
+
+    // ---SCRIPT----TABLE ADMIN------ 
+
+    $(document).ready( function () {
+      $('#myTable').DataTable();
+  } );
+    
+    //  --END -SCRIPT---TABLE ADMIN------ 
+    

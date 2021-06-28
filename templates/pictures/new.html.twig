@@ -1,11 +1,12 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
-{% block title %}New Pictures{% endblock %}
+{% block title %}Admin photo{% endblock %}
 
 {% block body %}
-    <h1>Create new Pictures</h1>
+    <h1>CREER UNE PHOTO</h1>
 
     {{ include('pictures/_form.html.twig') }}
 
-    <a href="{{ path('pictures_index') }}">back to list</a>
+    <a class="backList"  href="{{ path('pictures_index') }}"><span>retour à la liste</span></a>
+   
 {% endblock %}

@@ -1,13 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Edit Settings{% endblock %}
+{% block title %}Admin paramétre{% endblock %}
 
 {% block body %}
-    <h1>Edit Settings</h1>
+    <h1>MODIFIER LA DATE:</h1>
 
-    {{ include('settings/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('settings/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a href="{{ path('settings_index') }}">back to list</a>
+    <a class="backList" href="{{ path('settings_index') }}"><span>Retour à la liste</span></a>
 
     {{ include('settings/_delete_form.html.twig') }}
 {% endblock %}

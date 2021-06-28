@@ -1,16 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Settings index{% endblock %}
+{% block title %}Paramétere{% endblock %}
 
 {% block body %}
-    <h1>Settings index</h1>
+    <h1>PARAMETRE DATE</h1>
 
-    <table class="table">
+    <table id="myTable" class="table table-Default table-hover table-striped">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>EventSetting</th>
-                <th>actions</th>
+                <th>Date</th>
+                <th>Modifier</th>
             </tr>
         </thead>
         <tbody>
@@ -19,8 +19,8 @@
                 <td>{{ setting.id }}</td>
                 <td>{{ setting.eventSetting ? setting.eventSetting|date('Y-m-d') : '' }}</td>
                 <td>
-                    <a href="{{ path('settings_show', {'id': setting.id}) }}">show</a>
-                    <a href="{{ path('settings_edit', {'id': setting.id}) }}">edit</a>
+                    {# <a href="{{ path('settings_show', {'id': setting.id}) }}">show</a> #}
+                    <a class="edit"  href="{{ path('settings_edit', {'id': setting.id}) }}">ÉDITER</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('settings_new') }}">Create new</a>
+    <a class="backList" href="{{ path('settings_new') }}"><span> Créer une nouvelle date</span></a>
 {% endblock %}

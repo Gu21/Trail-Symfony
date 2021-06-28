@@ -1,23 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pictures index
+{% block title %}PHOTOS
 {% endblock %}
 
 {% block body %}
 
-	<body class="bodyPicture">
+	<section class="bodyPicture">
 
-		<div class="container boxPicture py-5">
+		<div class="container boxPicture">
 
-
-			<h1 class="titlePictures py-5">
-				LES PHOTOS 2016</h1>
-
-
+			<h1 class="titlePictures py-5">LES PHOTOS 2019</h1>
 			<div class="row">
 				{% for picture in pictures %}
-
-					{% if picture.yearsPicture == 2016 %}
+					{% if picture.yearsPicture == 2019 %}
 
 						<div class="col-6 col-md-2">
 
@@ -40,14 +35,13 @@
 								</div>
 							</div>
 						</div>
-
+						
+ 
 					{% endif %}
-
 				{% endfor %}
+
 
 			</div>
 		</div>
-
-
-	</body>
+	</section>
 {% endblock %}

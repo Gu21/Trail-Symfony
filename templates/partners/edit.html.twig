@@ -1,13 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block title %}Edit Partners{% endblock %}
 
 {% block body %}
-    <h1>Edit Partners</h1>
+    <h1>Modifier Partenaire</h1>
 
-    {{ include('partners/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('partners/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a href="{{ path('partners_index') }}">back to list</a>
+    <a class="backList" href="{{ path('partners_index') }}"><span>Retour à la liste</span></a>
 
     {{ include('partners/_delete_form.html.twig') }}
 {% endblock %}

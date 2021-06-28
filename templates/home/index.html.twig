@@ -1,18 +1,18 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Home index{% endblock %}
+{% block title %}Admin accueil{% endblock %}
 
 {% block body %}
-    <h1>HOME ACTUALITE</h1>
+    <h1>ACCUEIL ACTUALITE</h1>
 
-    <table class="table">
+    <table id="myTable" class="table table-Default table-hover table-striped">
         <thead>
             <tr>
                 <th>Id</th>
                 <!-- <th>Title</th> -->
-                <th>Subtitle</th>
+                <th class="subtitle">Sous-titre</th>
                 <th>Description</th>
-                <th>actions</th>
+                <th>Modifier</th>
             </tr>
         </thead>
         <tbody>
@@ -22,8 +22,8 @@
                 <td>{{ home.subtitle }}</td>
                 <td>{{ home.description }}</td>
                 <td>
-                    <a href="{{ path('home_show', {'id': home.id}) }}">show</a>
-                    <a href="{{ path('home_edit', {'id': home.id}) }}">edit</a>
+                    {# <a href="{{ path('home_show', {'id': home.id}) }}">show</a> #}
+                    <a class="edit" href="{{ path('home_edit', {'id': home.id}) }}">ÉDITER</a>
                 </td>
             </tr>
         {% else %}
@@ -34,5 +34,10 @@
         </tbody>
     </table>
 
-    <a href="{{ path('home_new') }}">Créer une nouvelle actualité</a>
+  
+        <a class="backList" href="{{ path('home_new') }}"><span> Créer une nouvelle actualité</span></a>
+  
+   
+</div>
+   
 {% endblock %}

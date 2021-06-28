@@ -1,11 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
-{% block title %}New Home{% endblock %}
+{% block title %}Admin accueil{% endblock %}
 
 {% block body %}
-    <h1>Create new Home</h1>
+    <h1>Créer un nouvel accueil</h1>
 
     {{ include('home/_form.html.twig') }}
 
-    <a href="{{ path('home_index') }}">back to list</a>
+    <a class="backList" href="{{ path('home_index') }}"><span>Retour à la liste</span></a>
 {% endblock %}

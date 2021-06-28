@@ -1,11 +1,11 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
-{% block title %}New Races{% endblock %}
+{% block title %}Nouvelle course{% endblock %}
 
 {% block body %}
-    <h1>Create new Races</h1>
+    <h1>CREER UNE NOUVELLE COURSE</h1>
 
     {{ include('races/_form.html.twig') }}
 
-    <a href="{{ path('races_index') }}">back to list</a>
+    <a class="backList" href="{{ path('races_index') }}"><span>retour à la liste</span></a>
 {% endblock %}

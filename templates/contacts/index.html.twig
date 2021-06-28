@@ -25,7 +25,7 @@
                 <td>{{ contact.firstNameContact }}</td>
                 <td>{{ contact.emailContact }}</td>
                 <td>{{ contact.phoneContact }}</td>
-                <td>{{ contact.commentContact }}</td>
+                {# <td>{{ contact.commentContact }}</td> #}
                 <td>
                     <a href="{{ path('contacts_show', {'id': contact.id}) }}">show</a>
                     <a href="{{ path('contacts_edit', {'id': contact.id}) }}">edit</a>

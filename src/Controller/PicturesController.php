@@ -23,14 +23,24 @@ class PicturesController extends AbstractController
         
 
     }
+
+    #[Route('/pictures_2019', name: 'pictures_2019', methods: ['GET'])]
+    public function page1(PicturesRepository $picturesRepository): Response
+    {
+        return $this->render('pictures/pictures2019.html.twig', [
+            'pictures' => $picturesRepository->findAll(),
+            
+        ]);
+
+    }
   
-        #[Route('/pictures_2017', name: 'pictures_2017', methods: ['GET'])]
-        public function page(PicturesRepository $picturesRepository): Response
-        {
-            return $this->render('pictures/pictures2017.html.twig', [
+     #[Route('/pictures_2017', name: 'pictures_2017', methods: ['GET'])]
+     public function page(PicturesRepository $picturesRepository): Response
+     {
+        return $this->render('pictures/pictures2017.html.twig', [
                 'pictures' => $picturesRepository->findAll(),
                 
-            ]);
+        ]);
     
         }
 
@@ -58,7 +68,7 @@ class PicturesController extends AbstractController
             $entityManager->persist($picture);
             $entityManager->flush();
 
-            return $this->redirectToRoute('pictures_new');
+            return $this->redirectToRoute('pictures_index');
         }
 
         return $this->render('pictures/new.html.twig', [
@@ -71,7 +81,7 @@ class PicturesController extends AbstractController
     public function show(Pictures $picture): Response
     {
         return $this->render('pictures/show.html.twig', [
-            'pictures' => $picture,
+            'picture' => $picture,
         ]);
     }
 

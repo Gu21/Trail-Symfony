@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class SettingsType extends AbstractType
 {
@@ -21,7 +22,8 @@ class SettingsType extends AbstractType
                 'format' => 'dd-MM-yyyy',
             ])
             ->add('eventSetting', DateType::class, [
-                'years' => range(1960, date('Y')+20) 
+                'years' => range(1960, date('Y')+20),
+                'label' => 'Date',
             ])
             
         ;
