@@ -4,10 +4,15 @@ $color3: #fff;
 $color4: #4c63a4;
 $color5: #000;
 
+body{
+
+width: 100%;
+}
 
 .barAdmin{
 
-    background-color: $color4;
+    background: linear-gradient(to right, #bbd2c5, #536976);
+   
 }
 
 .paragraphAdmin {
@@ -53,7 +58,7 @@ $color5: #000;
     img{
 
         border-radius: 50%;
-        width: 100%;
+        width: 153%;
     }
 }
 
@@ -65,6 +70,7 @@ $color5: #000;
     font-weight: 700;
     font-size: 1.4rem;
     padding-right: 10px;
+    color: $color3;
 
 }
 
@@ -78,7 +84,7 @@ $color5: #000;
 
     list-style: none;
     padding: 0;
-    margin-top: 9rem;
+    margin-top: 6rem;
 
 
 }
@@ -88,6 +94,11 @@ $color5: #000;
     border-right: 2px solid black;
     height: 700px;
 
+}
+
+.boxDashboard{
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -124,8 +135,15 @@ $color5: #000;
 
 .backgroundDashboard {
 
-    background: linear-gradient(-90deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+    background: hsla(208, 7%, 55%, 1);
+    
 
+}
+.table{
+    // width: 100px; 
+  overflow: scroll;
+  
+  
 }
 
 .table td, .table th {
@@ -133,6 +151,8 @@ $color5: #000;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
     text-align: center;
+    
+   
 }
 
 th,
@@ -140,6 +160,7 @@ td {
 
 
     text-align: justify;
+ 
     
    
 }
@@ -180,13 +201,19 @@ tbody {
         color: $color3;
         font-family: "Roboto", "Arial", sans-serif;
         font-weight: 700;
-        font-size: 1.2rem;
+        // font-size: 1.1rem;
         display: block;
         margin: 0 auto;
         text-decoration: none;
         transition: color 0.3s;
 
 
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        float: right;
+        text-align: right;
+        margin-left: 1rem;
     }
 
     .btn-outline-success {
@@ -203,6 +230,8 @@ tbody {
         position: relative;
         overflow: hidden;
         cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 5px;
 
         span {
 
@@ -281,4 +310,3 @@ tbody {
     background: #fff!important;
     margin-bottom: 5rem;
 }
-

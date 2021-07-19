@@ -14,9 +14,16 @@ use Symfony\Component\Form\Extension\Core\Type\checkboxType;
 
 class CommentsType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options,)
     {
         $builder
+
+
+        //Rajout id formulaire       
+        ->add('titleComment',TextType::class, [
+            'attr' => ['id' => 'formForm']
+        ]) 
+             
             ->add('titleComment', TextType::class, [
                 'label' => 'Titre commentaire',
                 'attr' => [
@@ -50,6 +57,7 @@ class CommentsType extends AbstractType
                 'attr' => [
                 'class' => 'form-control',
                 'placeholder' => 'Commentaire','commentComments',
+                 
                 
             ]
         ])
@@ -68,6 +76,7 @@ class CommentsType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Comments::class,
+            'attr' => ['id' => 'formForm'] // Rajout id formulaire
         ]);
     }
 }

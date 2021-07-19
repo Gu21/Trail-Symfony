@@ -29,9 +29,15 @@ class Category
      */
     private $videos;
 
+   
+
+   
+
     public function __construct()
     {
         $this->videos = new ArrayCollection();
+       
+        
     }
 
 
@@ -81,5 +87,9 @@ class Category
 
         return $this;
     }
+
+
+
+  
 
 }

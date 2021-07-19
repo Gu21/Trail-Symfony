@@ -12,8 +12,15 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
-#[Route('/comments')]
+
+
+
+
+
+
+     #[Route('/comments')]
 class CommentsController extends AbstractController
 {
     #[Route('/', name: 'comments_index', methods: ['GET','POST'])]
@@ -21,13 +28,13 @@ class CommentsController extends AbstractController
     {
      
         $comment = new Comments();
-        $form = $this->createForm(CommentsType::class, $comment);
+        $form = $this->createForm(CommentsType::class, $comment );
+        (['attr' => ['id' => 'formForm']]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            // $comment->setComment($comment);
-            // $comment->setDateItem(new \DateTime('now'));
+         
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($comment);
@@ -44,6 +51,8 @@ class CommentsController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+ 
     
     #[Route('/new', name: 'comments_new', methods: ['GET', 'POST'])]
     public function new(Request $request): Response

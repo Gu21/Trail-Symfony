@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Videos
+{% endblock %}
+
+
+{% block body %}
+
+	<section class="videoSection">
+
+		<div class="container">
+			<h1 class="titleVideo text-center">VIDEOS</h1>
+			<div class="row col-sm-12 boxVideos">
+
+
+				{% for video in videos %}
+
+					{% if video.category.nameCategory == 'Videos'  %}
+						<div class=" mainVideo">
+							<div class="backFront">
+
+
+								<div class="back">
+									<a href="{{ video.linkVideo }}">Lien vidéo</a>
+									<h2>{{ video.subtitleVideo }}</h2>
+								</div>
+								<div class="front">
+									<div class="image">
+										<img src="{{ asset('uploads/photos/' ~ video.pictureVideo) }}" width="350">
+										<h3>{{ video.categoryVideo }}</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						{# <a href="{{ path('videos_show', {'id': video.id}) }}">show</a>
+																								<a href="{{ path('videos_edit', {'id': video.id}) }}">edit</a> #}
+					{% endif %}
+
+				{% endfor %}
+
+
+			</div>
+
+
+			{# -----------------END-------VIDEO---------------------------------#}
+
+
+			{# ------------------------VIDEO-----TEASING----------------------------#}
+
+
+			<h1 class="titleVideo text-center">VIDÉOS TEASING</h1>
+			<div class="row col-sm-12 boxVideos">
+				{% for video in videos %}
+					{% if video.category.nameCategory == 'Videos teaser' %}
+						<div class="mainVideo">
+							<div class="backFront">
+								<div class="back">
+									<a href="{{ video.linkVideo }}">Lien vidéo</a>
+									<h2>{{ video.subtitleVideo }}</h2>
+								</div>
+								<div class="front">
+									<div class="image">
+										<img src="{{ asset('uploads/photos/' ~ video.pictureVideo) }}" width="350">
+										<h3>{{ video.categoryVideo }}</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						{# <a href="{{ path('videos_show', {'id': video.id}) }}">show</a>
+																					<a href="{{ path('videos_edit', {'id': video.id}) }}">edit</a> #}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,8 @@
+.CreateAdmin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.CreateAdmin img {
+  width: 55%;
+}/*# sourceMappingURL=admin.css.map */

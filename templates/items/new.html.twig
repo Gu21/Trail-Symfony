@@ -1,11 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Items{% endblock %}
+{% block title %}New Items
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Items</h1>
 
-    {{ include('items/_form.html.twig') }}
+	<body class="backgroundGoldenBook">
+	<div class="container pageGoldenBook py-5">
+        <div class="linkGoldenBook">
+            <a href="{{ path('comments_index') }}"><span>Retour livre d'or</span></a>
+        </div>
+        
+       
+    <div class="titleGoldenBook mt-5">
+        <h1>Nouveau message</h1>
+    </div>
+		<div class="row boxGoldenBook mt-5 py-5">
+			<div class="col-sm-6  formGoldenBook">
+				{{ include('items/_form.html.twig') }}
 
-    <a href="{{ path('items_index') }}">back to list</a>
-{% endblock %}
+			</div>
+			<div class="col-sm-6 logoGoldenBook">
+				<img src="/img/messageTrailLivredor.png" alt="logoCoureur">
+			</div>
+		</div>
+	</div>
+
+</body>	
+
+    {% endblock %}
+	

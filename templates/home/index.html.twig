@@ -20,7 +20,7 @@
             <tr>
                 <td>{{ home.id }}</td>
                 <td>{{ home.subtitle }}</td>
-                <td>{{ home.description }}</td>
+                <td>{{ home.description|raw }}</td>
                 <td>
                     {# <a href="{{ path('home_show', {'id': home.id}) }}">show</a> #}
                     <a class="edit" href="{{ path('home_edit', {'id': home.id}) }}">ÉDITER</a>

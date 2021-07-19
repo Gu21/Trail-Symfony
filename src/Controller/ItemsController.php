@@ -24,6 +24,35 @@ class ItemsController extends AbstractController
         ]);
     }
 
+    //route pour la relation entre item et le comment (Livre d'or)
+    #[Route('/comments/{id}/items', name: 'addItem', methods: ['GET','POST'])]
+    public function addItem(Request $request, $id)
+    {
+
+        $comment = $this->getDoctrine()->getRepository(Comments::class)->find($id);
+		$item = new Items();
+		$item-> setComment($comment);
+        //date auto du jour
+		$item-> setDateItem(new \DateTime());
+
+		$form = $this->createForm(ItemsType::class, $item);
+
+		$form->handleRequest($request);
+
+		if ($form->isSubmitted() && $form->isValid()) {
+			$item = $form->getData();
+
+			$entityManager = $this->getDoctrine()->getManager();
+			$entityManager->persist($item);
+			$entityManager->flush();
+
+			return $this->redirectToRoute('comments_index', ["id"=> $item]);
+		}
+		return $this->render('items/new.html.twig', ["form"=>$form->createView(),]);
+    }
+
+
+
     #[Route('/new', name: 'items_new', methods: ['GET', 'POST'])]
     public function new(Request $request): Response
     {

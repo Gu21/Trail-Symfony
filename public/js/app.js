@@ -42,13 +42,36 @@ reverse: false
 
 
 
+ var scene2 = new ScrollMagic.Scene({
+
+  triggerElement: '.boxActualityNew ',
+  reverse: false
+  
+  
+   })
+  
+   .setClassToggle('.boxActualityNew ','fade-in')
+  //  .addIndicators({
+  // name: 'INDICATIONS',
+  // incident: 200,
+  // colorStart: '#fff'
+  //  })
+   .addTo(controller);
+
+
+   
+
+
+
+
 //  --END -SCRIPT----PRESENTATION------  
 
     // ---SCRIPT----TABLE ADMIN------ 
 
     $(document).ready( function () {
-      $('#myTable').DataTable();
+      $('#myTable').DataTable({responsive:true});
   } );
     
     //  --END -SCRIPT---TABLE ADMIN------ 
-    
+
+

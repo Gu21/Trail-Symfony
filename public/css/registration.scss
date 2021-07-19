@@ -1,0 +1,169 @@
+$color1: #aad044;
+$color2: #6b90bb;
+$color3: #fff;
+$color4: #60ae46;
+$color5: #000;
+
+
+.bodyRegister{
+
+    background-color: #222222;
+    background: repeating-linear-gradient(
+        45deg,
+        #2b2b2b 0%,
+        #2b2b2b 10%,
+        #222222 0%,
+        #222222 50%
+      )
+      0 / 15px 15px; 
+      margin-top: 0;
+
+}
+
+*,
+::before ::after {
+  //le selecteur selectionne tous sauf les pseudos elements donc ils sont placés aprés
+
+  box-sizing: border-box; //Prend en compte le padding et les bordures des éléments dans le calcul de la hauteur et la largeur
+  padding: 0;
+  margin: 0; //supprime les paddings et les margins de base
+}
+
+.sectionRegister {
+  font-family: "Roboto", "Arial", sans-serif;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxRegister {
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  background-color: $color3;
+  border-radius: 3px;
+ 
+
+
+  h1 span{
+
+color: $color1;
+font-weight: 700;
+  }
+
+  .formBloc h1{
+
+    color: #666;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 45px;
+  }
+
+  .formBloc .form-group{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+  }
+
+  .formBloc .form-group label{
+
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 1.3rem;
+    transition: 0.4s ease-out;
+
+  }
+  .form-check-label{
+
+    margin-top: -5px;
+  
+  }
+
+  #registration_form_email,input {
+
+    display: block;
+    // width: 100%;
+    padding: 10px 0px;
+    border: none!important;
+    outline: none!important;
+    background: none!important;
+    border-bottom: 3px solid $color1!important;
+    
+  }
+
+  .btnRegister{
+
+    margin-bottom: 65px;
+    justify-content: center;
+
+  }
+
+  .formBloc .btnRegister{
+
+    display: block;
+    width: auto;
+    padding: 15px 60px;
+    border: 3px solid $color1;
+    border-radius: 999px;
+    background-image: linear-gradient(to right,transparent 50%,orange 50%,tomato);
+    background-size: 202%;
+    color: $color1;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s ease-out!important;
+  
+
+  }
+
+  .formBloc .btnRegister:hover{
+
+   color: $color3; 
+   background-position: 100%;
+   border: 3px solid $color3;
+   font-family: "Roboto", "Arial", sans-serif;
+  }
+
+  .forgetPasswordRegister {
+
+    a{
+
+      color: $color1;
+      font-family: "Roboto", "Arial", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+    }
+
+
+    a:hover{
+
+      border-bottom-color: $color1;
+    }
+
+    .required{
+
+      transition: transform 0.6s ease;
+    }
+
+  
+}
+
+
+
+
+
+
+}

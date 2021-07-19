@@ -53,6 +53,7 @@ class Pictures
      */
     private $race;
 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -141,4 +142,6 @@ class Pictures
 
         return $this;
     }
+
+  
 }

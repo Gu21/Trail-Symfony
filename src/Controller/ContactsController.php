@@ -36,6 +36,30 @@ class ContactsController extends AbstractController
             ]);
     }
 
+
+    #[Route('/form_Contact', name: 'form_Contact', methods: ['GET','POST'])]
+    public function form(Request $request, ContactsRepository $contactsRepository, SluggerInterface $slugger): Response
+    {
+       
+            $contact = new Contacts();
+            $form = $this->createForm(ContactsType::class, $contact);
+            $form->handleRequest($request);
+    
+            if ($form->isSubmitted() && $form->isValid()) {
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($contact);
+                $entityManager->flush();
+    
+                // return $this->redirectToRoute('contacts_index');
+            }
+            return $this->render('contacts/formContact.html.twig', [
+                'contacts' => $contactsRepository->findAll(),
+                'form' => $form->createView(),
+            ]);
+    }
+
+  
+
     #[Route('/new', name: 'contacts_new', methods: ['GET', 'POST'])]
     public function new(Request $request): Response
     {

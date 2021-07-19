@@ -1,0 +1,80 @@
+.pictureRegisterTrail {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("../img/inscriptionTrail.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 47vh;
+}
+
+.titleRegisterTrail {
+  text-align: center;
+  color: #aad044;
+  letter-spacing: 0.5rem;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.titleRegisterTrail::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 6.3rem;
+  height: 4px;
+  background: #aad044;
+  margin-right: 1rem;
+}
+
+.titleRegisterTrail::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 6.3rem;
+  height: 4px;
+  background: #aad044;
+  margin-left: 1rem;
+}
+
+.boxParagraphRegister {
+  text-align: justify;
+  color: #303030;
+  display: block;
+  margin: 0 auto;
+}
+
+.boxDocumentRegister {
+  text-align: center;
+  margin-right: 3rem;
+}
+
+.titleTableRegisterTrail {
+  color: #303030;
+  letter-spacing: 0.5rem;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.linkRegisterTrail a {
+  color: #aad044;
+  text-decoration: none;
+}
+.linkRegisterTrail a:hover {
+  background: #6b90bb;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.table thead th {
+  text-align: center;
+  border-top: none;
+}
+
+.paragraphRegister {
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #303030;
+  font-size: 1rem;
+}/*# sourceMappingURL=reg2021.css.map */

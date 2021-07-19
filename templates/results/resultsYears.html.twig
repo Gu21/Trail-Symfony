@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %} {% block title %} Inscription {% endblock %}
+{% block body %}
+
+<section>
+    <div class="imgResults"></div>
+    <h1 class="titleResults mt-5">RESULTATS</h1>
+    <div class="container">
+
+        <div class="row">
+            {% for result in results %}
+            <div class="col-sm-12 text-center mt-5 py-5 boxResults">
+                <h2 class="pictureResults mt-5 mb-5">{{ result.titleResult }}</h2>
+                <div class="overlay-pictureResults">
+                    <a href="{{ result.linkResult }}">
+                        <img class="image" src="{{ asset('uploads/photos/' ~ result.pictureResult ) }}" width="900"
+                            alt="Alt text" />
+
+                        <div class="hover">
+                            <div class="text">{{ result.SubtitleResult}}
+                            </div>
+                        </div>
+
+
+                    </a>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <script>
+		$(function () {
+			/**
+			 * Défilement fluide
+			 **/
+			$("a[href*='#']:not([href='#'])").click(function () {
+				if (
+					location.hostname == this.hostname &&
+					this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
+				) {
+					var anchor = $(this.hash);
+					anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+					if (anchor.length) {
+						$("html, body").animate({
+							scrollTop: anchor.offset().top
+						}, 1500);
+					}
+				}
+			});
+		});
+	</script>
+    </section>
+</section>
+
+{% endblock %}

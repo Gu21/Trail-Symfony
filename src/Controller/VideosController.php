@@ -29,6 +29,16 @@ class VideosController extends AbstractController
         ]);
     }
 
+
+    
+        #[Route('/videos_Teaser', name: 'videos_Teaser', methods: ['GET'])]
+        public function video1(VideosRepository $videosRepository): Response
+        {
+            return $this->render('videos/Teaser.html.twig', [
+                'videos' => $videosRepository->findAll(),
+            ]);
+        }
+
     #[Route('/new', name: 'videos_new', methods: ['GET', 'POST'])]
     public function new(Request $request, SluggerInterface $slugger): Response
 

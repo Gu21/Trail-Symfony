@@ -6,5 +6,7 @@
 {{ form_widget(form.phoneContact,{'attr':{'placeholder':'Téléphone','class':'phoneContact' }}) }}
 {{ form_widget(form.commentContact,{'attr':{'placeholder':'Message','class':'commentContact', 'rows' : '9' }}) }}
     {{ form_widget(form) }}
+  <div class="formboxContact">
     <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+</div>
 {{ form_end(form) }}

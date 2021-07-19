@@ -3,13 +3,14 @@ $color2: #6b90bb;
 $color3: #fff;
 $color4: #60ae46;
 $color5: #000;
+$color6:#303030;
 
 // ---------CAROUSEL--------------------
-body{
+body {
 
     padding: 0;
     margin: 0;
-    background-color:  #FFF;
+    background-color: #FFF;
 }
 
 .Container-Carousel {
@@ -48,7 +49,7 @@ body{
 
 
     color: $color3;
-    font-family: 'Lato',"Arial" sans-serif;
+    font-family: 'Lato', "Arial"sans-serif;
     font-weight: 700;
     letter-spacing: 5px;
     text-shadow: 0 2px 0 BLACK,
@@ -67,7 +68,7 @@ body{
 
 .Legs-alaire {
     color: $color3;
-    font-family: "Lato","Arial" sans-serif;
+    font-family: "Lato", "Arial"sans-serif;
     font-weight: 700;
     letter-spacing: 5px;
     text-shadow: 0 2px 0 BLACK,
@@ -115,6 +116,11 @@ body{
 
 // ------COMPTEUR--------------------
 
+.sectionCounter {
+
+    background: linear-gradient(-90deg, rgba(236, 233, 230), rgba(255, 255, 255));
+}
+
 #numbers {
 
     display: flex;
@@ -126,29 +132,36 @@ body{
 
 }
 
-.dateCounter{
+
+.dateCounter {
 
     text-align: center;
     margin-bottom: 108px;
-    color: $color2;
+    color: $color6;
     font-size: 4em;
     font-family: 'Roboto', 'Arial', sans-serif;
     font-weight: 700;
 
 }
 
+
+
 .titleCounter {
 
     text-align: center;
     margin-top: 0;
     margin-bottom: 117px;
-    font-size: 3rem;
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-weight: 700;
     color: $color1;
     letter-spacing: 0.5rem;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    text-transform: uppercase;
+
 
 }
+
+
 
 .titleCounter::after {
     content: "";
@@ -159,8 +172,15 @@ body{
     padding-right: 100px;
     margin-bottom: 50px;
     margin-top: 27px;
+    transition: .5s;
 
 }
+
+.titleCounter:hover::after {
+
+    width: 50%;
+}
+
 
 #days,
 #hours,
@@ -180,9 +200,20 @@ body{
 .blockMinutes,
 .blockSeconds {
 
-    background: #000;
-    width: 18%;
-    box-shadow: -5px 12px 9px rgba(0, 0, 0, 0.6);
+    // background: #000;
+    // width: 18%;
+    // box-shadow: -5px 12px 9px rgba(0, 0, 0, 0.6);
+    // -----------------------------------
+    padding: 15px 60px;
+    color: $color6;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    // border: none;
+    border-radius: 26px;
+    background: #f2f2f2;
+    box-shadow: inset 5px 5px 10px #d5d5d5,
+        inset -5px -5px 10px #ffffff;
 
 }
 
@@ -361,8 +392,8 @@ body{
 
 .Video-Trail {
 
-    border-top: 4px solid $color2;
-    border-bottom: 4px solid $color2;
+    // border-top: 4px solid $color2;
+    // border-bottom: 4px solid $color2;
     padding: 0;
 }
 
@@ -381,6 +412,18 @@ body{
 
 
 // <!-- --------------------NEW------------------------ -->
+
+.boxActualityNew {
+    opacity: 0;
+    transition: all 0.4s linear;
+
+}
+
+.fade-in {
+
+    opacity: 1;
+}
+
 
 .News-Trail {
 
@@ -431,7 +474,7 @@ body{
 .Paragraph-Actualite {
 
     text-align: justify;
-    color: $color2;
+    color: $color6;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 500;
     line-height: 1.7em;
@@ -488,7 +531,7 @@ body{
 
         padding-top: 96px;
         text-align: justify;
-        color: $color2;
+        color: $color6;
         // margin-left: 60px;
         padding-left: 34px;
         font-family: 'Lato', 'Arial', sans-serif;
@@ -523,7 +566,7 @@ body{
     text-align: center;
     text-align: center;
     padding-top: 100px;
-    color: $color2;
+    color: $color1;
     width: 82%;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 700;
@@ -537,7 +580,8 @@ body{
     vertical-align: middle;
     width: 6.3rem;
     height: 4px;
-    background: $color2;
+    background: $color1;
+    margin-right: 1rem;
 }
 
 
@@ -548,7 +592,9 @@ body{
     vertical-align: middle;
     width: 6.3rem;
     height: 4px;
-    background: $color2;
+    background: $color1;
+    margin-left: 1rem;
+
 }
 
 .img-thumbnail {
@@ -590,18 +636,13 @@ body{
 
 .teamChallenge {
 
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courseChallengeParEquipe.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courseChallengeParEquipe.jpg");
     background-size: cover;
     height: 72vh;
     background-repeat: no-repeat;
     position: relative;
     margin: 5px 2px 2px 0px;
     transition: all 1s
-   
-   
- 
-
-
 }
 
 
@@ -618,14 +659,14 @@ body{
     bottom: 18rem;
     right: 16rem;
     z-index: 10;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 
 
 
     a {
         font-family: "Roboto", "Arial", sans-serif;
         font-weight: 700;
-        font-size: 3em;
+        font-size: 3rem;
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
@@ -633,15 +674,15 @@ body{
     }
 }
 
-.teamChallenge:hover{
+.teamChallenge:hover {
 
     // -webkit-transition: all 2s;
     // -o-transition: all 2s;
     // transition: all 2s;
     // -webkit-transform: scale(1.0);
     // -ms-transform: scale(1.0);
-    transform: scale(0.95)!important;
-   
+    transform: scale(0.95) !important;
+
 }
 
 
@@ -652,9 +693,9 @@ body{
 .ChildrenRaces {
 
 
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/CourseDuoEnfantsParents.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/CourseDuoEnfantsParents.JPG");
     background-size: cover;
-    height: 40vh;
+    height: 50vh;
     background-repeat: no-repeat;
     position: relative;
     width: 50%;
@@ -690,15 +731,15 @@ body{
     }
 }
 
-.ChildrenRaces:hover{
+.ChildrenRaces:hover {
 
     // -webkit-transition: all 2s;
     // -o-transition: all 2s;
     // transition: all 2s;
     // -webkit-transform: scale(1.0);
     // -ms-transform: scale(1.0);
-    transform: scale(0.95)!important;
-   
+    transform: scale(0.95) !important;
+
 }
 
 
@@ -707,9 +748,9 @@ body{
 .run15 {
 
 
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courses15Km.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courses15Km.JPG");
     background-size: cover;
-    height: 40vh;
+    height: 50vh;
     background-repeat: no-repeat;
     position: relative;
     width: 50%;
@@ -747,22 +788,22 @@ body{
     }
 }
 
-.run15:hover{
+.run15:hover {
 
     // -webkit-transition: all 2s;
     // -o-transition: all 2s;
     // transition: all 2s;
     // -webkit-transform: scale(1.0);
     // -ms-transform: scale(1.0);
-    transform: scale(0.95)!important;
-   
+    transform: scale(0.95) !important;
+
 }
 
 
 .run9 {
 
 
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course\ 9Km.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course\ 9Km.jpg");
     background-size: cover;
     height: 40vh;
     background-repeat: no-repeat;
@@ -772,21 +813,21 @@ body{
     transition: all 1s
 }
 
-.run9:hover{
+.run9:hover {
 
     // -webkit-transition: all 2s;
     // -o-transition: all 2s;
     // transition: all 2s;
     // -webkit-transform: scale(1.0);
     // -ms-transform: scale(1.0);
-    transform: scale(0.95)!important;
-   
+    transform: scale(0.95) !important;
+
 }
 
 .run25 {
 
 
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course25Km.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course25Km.jpg");
     background-size: cover;
     height: 40vh;
     background-repeat: no-repeat;
@@ -796,21 +837,21 @@ body{
     transition: all 2s
 }
 
-.run25:hover{
+.run25:hover {
 
     // -webkit-transition: all 2s;
     // -o-transition: all 2s;
     // transition: all 2s;
     // -webkit-transform: scale(1.0);
     // -ms-transform: scale(1.0);
-    transform: scale(0.95)!important;
-   
+    transform: scale(0.95) !important;
+
 }
 
 .run17 {
 
 
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course17Nocturne.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/Course17Nocturne.jpg");
     background-size: cover;
     height: 72vh;
     background-repeat: no-repeat;
@@ -818,20 +859,21 @@ body{
     margin: 2px 2px 2px 2px;
     transition: all 1s
 }
-.run17:hover{
+
+.run17:hover {
 
     // -webkit-transition: all 2s;
     // -o-transition: all 2s;
     // transition: all 2s;
     // -webkit-transform: scale(1.0);
     // -ms-transform: scale(1.0);
-    transform: scale(0.95)!important;
-   
+    transform: scale(0.95) !important;
+
 }
 
 .runSociosChallenges {
 
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courseDefisSocio.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/courseDefisSocio.jpg");
     background-size: cover;
     height: 72vh;
     background-repeat: no-repeat;
@@ -839,15 +881,16 @@ body{
     margin: 5px 2px 5px 0px;
     transition: all 1s
 }
-.runSociosChallenges:hover{
+
+.runSociosChallenges:hover {
 
     // -webkit-transition: all 2s;
     // -o-transition: all 2s;
     // transition: all 2s;
     // -webkit-transform: scale(1.0);
     // -ms-transform: scale(1.0);
-    transform: scale(0.95)!important;
-   
+    transform: scale(0.95) !important;
+
 }
 
 .linkSociosChallenges,
@@ -879,25 +922,398 @@ body{
 }
 
 .runYoung {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/coursesJeunes.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/coursesJeunes.jpg");
     background-size: cover;
     height: 72vh;
     background-repeat: no-repeat;
     position: relative;
     margin: 5px 5px 5px 3px;
     transition: all 1s
-
 }
 
-.runYoung:hover{
+.runYoung:hover {
 
     // -webkit-transition: all 2s;
     // -o-transition: all 2s;
     // transition: all 2s;
     // -webkit-transform: scale(1.0);
     // -ms-transform: scale(1.0);
-    transform: scale(0.95)!important;
-   
+    transform: scale(0.95) !important;
+
 }
 
 // <!-- ----------END------GALERY---RUN------------- -->
+
+// -------------MEDIA QUERY---------------------
+
+@media screen and (max-width: 2560px) {
+
+    .run9,.run25 {
+      
+        height: 64vh;
+     
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 1440px) {
+
+    .boxpresentation {
+
+        height: 39em;
+
+        
+       line-height: 1.5em;
+        
+    }
+
+    .linkRun,
+    .linkRun17,.linkSociosChallenges,
+    .linkRunYoung,.linkRun15 a, .linkRun9 a, .linkRun25 a {
+
+        right: 5rem;
+
+    }
+
+ 
+
+    .sponsor {
+
+        margin-bottom: -9rem;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+    // .boxCounter {
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+
+
+    .blockDays,
+    .blockHours,
+    .blockMinutes,
+    .blockSeconds {
+
+        width: 21%;
+    }
+
+    .carousel-caption {
+
+        padding-top: 91px;
+    }
+
+
+    .boxpresentation {
+     
+        padding: 1rem;
+    }
+
+    .sponsor {
+        margin-bottom: -16rem;
+    }
+
+    .Video-Trail {
+       
+        height: 52rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .blockDays, .blockHours, .blockMinutes, .blockSeconds {
+        width: 23%;
+    }
+
+    .Actualite-Title::after {
+     
+        margin-bottom: 49px;
+    }
+
+    .Actualite-Title::before {
+     
+        margin-top: 0px;
+    }
+    .Paragraph-Socio {
+        margin-top: 2px;
+    }
+
+    .sponsor {
+        margin-bottom: -20rem;
+    }
+}
+
+
+
+
+@media screen and (max-width: 778px) {
+
+    #days, #hours, #minutes, #seconds {
+   
+        font-size: 2em;
+     
+    }
+
+    .blockDays, .blockHours, .blockMinutes, .blockSeconds {
+      
+        font-size: 1rem;
+       
+    }
+
+    .dateCounter {
+      
+        font-size: 3rem;
+        
+    }
+    .boxpresentation {
+      
+        height: 40em;
+        
+    }
+
+    .Actualite-Title::after {
+      
+        margin-bottom: 26px;
+    }
+
+    .Actualite-Title::before {
+     
+        margin-top: 0px;
+    }
+     
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .boxpresentation {
+        line-height: 1.3rem;
+    }
+
+    .Legs-alaire {
+
+        font-size: 1.5rem;
+    }
+    .trail {
+     
+       
+        font-size: 3em;
+    }
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ChildrenRaces,.run15,.run9,.run25 {
+       
+        height: 72vh;
+        width: 100%;
+      
+    }
+
+    .linkRace a {
+
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+   
+    }
+
+    .linkRace,.linkRun15,.linkRun9,.linkRun25{
+
+        overflow: hidden;
+       
+        right: none;
+      
+        font-size: 0.7rem;
+    }
+
+    .Paragraph-Breaking-News {
+        border-left: none;
+       
+    }
+
+    
+}
+
+@media screen and (max-width: 690px ){
+
+    .blockDays, .blockHours, .blockMinutes, .blockSeconds {
+        width: 32%;
+    }
+
+    .blockDays, .blockHours, .blockMinutes, .blockSeconds {
+        padding: 1px 2px;
+        font-size: 1rem;
+      
+        
+      
+       
+    }
+    .h2, h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .run {
+      
+        font-size: 2em;
+    }
+
+    .run::after {
+
+       
+        width: 1.9rem;
+    }
+
+    .run::before {
+       
+        width: 1.9rem;   
+    }
+ 
+    .linkRun a, .linkRun17 a,.linkSociosChallenges a, .linkRunYoung a{
+       
+        font-size: 1.9rem;
+      
+    }
+
+    .Actualite-Title h2 {
+       
+        padding: 19px;
+    }
+
+    .Actualite-Title::after {
+        margin-bottom: 18px;
+    }
+
+    .Actualite-Title::before {
+        margin-top: -19px;
+    }
+    .boxpresentation {
+        line-height: 1.3rem;
+    }
+}
+
+
+@media screen and (max-width: 425px ){
+
+    .sponsor {
+        margin-bottom: -26rem;
+    }
+
+    .Video-Trail {
+        height: 46rem;
+    }
+
+    .linkRun a, .linkRun17 a, .linkSociosChallenges a, .linkRunYoung a {
+        font-size: 1.7rem;
+    }
+    .linkRace, .linkRun15, .linkRun9, .linkRun25 {
+      
+        font-size: 0.7rem;
+    }
+
+    .linkRace {
+       
+        height: 178px;
+     
+    }
+    .Paragraph-Breaking-News p {
+      
+        padding-left: 0px;
+   
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .boxpresentation {
+        line-height: 1.1rem;
+    }
+
+    .partenaires {
+        margin-top: 1px;
+    }
+
+    .sponsor {
+        margin-bottom: -27rem;
+    }
+
+    .run {
+        font-size: 1.5em;
+    }
+ 
+
+}
+
+
+@media screen and (max-width: 320px) {
+
+    .partenaires {
+    
+        margin-top: 100px;
+        
+    }
+    .boxpresentation {
+        line-height: 0.93rem;
+    }
+
+    .partenaires {
+        margin-top: 1px;
+    }
+
+    .sponsor {
+        margin-bottom: -28rem;
+    }
+    .Video-Trail {
+        height: 41rem;
+    }
+
+    .run {
+        font-size: 1.4em;
+    }
+
+    .linkRace, .linkRun15, .linkRun9, .linkRun25 {
+        font-size: 0.6rem;
+    }
+    .linkRun, .linkRun17, .linkSociosChallenges, .linkRunYoung, .linkRun15 a, .linkRun9 a, .linkRun25 a {
+        right: 1.5rem;
+    }
+
+    .linkSociosChallenges, .linkRunYoung {
+      
+        bottom: 13rem;
+     
+    }
+    .linkRun15, .linkRun9, .linkRun25 {
+       
+        bottom: 16rem;
+        right: 6rem;
+    
+    }
+    .linkRace {
+     
+        right: -1rem;
+      
+    }
+    .Paragraph-Breaking-News p {
+    
+        padding-left: 0px;
+      
+    }
+}
+

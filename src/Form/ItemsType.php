@@ -6,15 +6,19 @@ use App\Entity\Items;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class ItemsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nameItem')
+            // ->add('nameItem')
+         
             ->add('commentItem')
-            ->add('dateItem')
+            // ->add('dateItem')
+            //mettre en commentaire la date déjà présente dans le controller items
+
         ;
     }
 

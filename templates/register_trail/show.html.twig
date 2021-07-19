@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RegisterTrail{% endblock %}
+
+{% block body %}
+    <h1>RegisterTrail</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ register_trail.id }}</td>
+            </tr>
+            <tr>
+                <th>NewletterRegisterTrail</th>
+                <td>{{ register_trail.newletterRegisterTrail }}</td>
+            </tr>
+            {# <tr>
+                <th>InfoRegisterTrail</th>
+                <td>{{ register_trail.infoRegisterTrail }}</td>
+            </tr> #}
+            <tr>
+                <th>LinkRegisterTrail</th>
+                <td>{{ register_trail.linkRegisterTrail }}</td>
+            </tr>
+            <tr>
+                <th>LinkVolunteerRegisterTrail</th>
+                <td>{{ register_trail.linkVolunteerRegisterTrail }}</td>
+            </tr>
+            <tr>
+                <th>NewletterPartnerRegisterTrail</th>
+                <td>{{ register_trail.newletterPartnerRegisterTrail }}</td>
+            </tr>
+            <tr>
+                <th>InternalRulesRegisterTrail</th>
+                <td>{{ register_trail.internalRulesRegisterTrail }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('register_trail_index') }}">back to list</a>
+
+    <a href="{{ path('register_trail_edit', {'id': register_trail.id}) }}">edit</a>
+
+    {{ include('register_trail/_delete_form.html.twig') }}
+{% endblock %}

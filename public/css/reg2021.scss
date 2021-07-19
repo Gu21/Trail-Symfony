@@ -1,0 +1,127 @@
+$color1 : #aad044;
+$color2: #6b90bb;
+$color3: #fff;
+$color4: #60ae46;
+$color5: #000;
+$color6: #303030;
+
+
+// .sectionRegisterTrail{
+
+//     background-color: #222222;
+//     background: repeating-linear-gradient(
+//         45deg,
+//         #2b2b2b 0%,
+//         #2b2b2b 10%,
+//         #222222 0%,
+//         #222222 50%
+//       )
+//       0 / 15px 15px; 
+//       margin-top: 0;
+
+// }
+
+.pictureRegisterTrail {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("../img/inscriptionTrail.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 47vh;
+}
+
+.titleRegisterTrail {
+
+    text-align: center;
+    color: $color1;
+    letter-spacing: 0.5rem;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    text-transform: uppercase;
+
+}
+
+.titleRegisterTrail::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6.3rem;
+    height: 4px;
+    background: $color1;
+    margin-right: 1rem;
+}
+
+.titleRegisterTrail::after{
+
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6.3rem;
+    height: 4px;
+    background: $color1;
+    margin-left: 1rem;
+
+} 
+
+.boxParagraphRegister {
+
+    text-align: justify;
+    color: $color6;
+    display: block;
+    margin:0 auto;
+
+}
+
+.boxDocumentRegister {
+
+    text-align: center;
+    margin-right: 3rem;
+}
+
+.titleTableRegisterTrail {
+
+    color: $color6;
+    letter-spacing: 0.5rem;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+
+ 
+  
+}
+
+.linkRegisterTrail {
+
+    
+
+    a {
+
+        color: $color1;
+        text-decoration: none;
+       
+
+    }
+
+    a:hover {
+
+        background: $color2;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+}
+
+.table thead th {
+    text-align: center;
+    border-top: none;
+}
+
+.paragraphRegister{
+
+    font-family: "Roboto", "Arial", sans-serif;
+    color: $color6;
+    font-size: 1rem;
+}

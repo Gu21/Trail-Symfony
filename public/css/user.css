@@ -1,0 +1,90 @@
+*,
+::before ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.bodyUser {
+  background-color: #222222;
+  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0/15px 15px;
+  margin-top: 0;
+}
+
+.userAdminBox {
+  margin-top: 11rem;
+}
+
+.sectionUser {
+  font-family: "Roboto", "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxUser {
+  width: 100%;
+  padding: 80px 40px;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  height: 90vh;
+}
+.boxUser .col-form-label {
+  padding-top: calc(.375rem + 1px);
+  padding-bottom: calc(.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+  color: #aad044;
+  font-size: 1.5rem;
+}
+.boxUser .form-group {
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.linkUser {
+  font-family: "Roboto", "Arial", sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+.imgUser {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  top: calc(-300px/2);
+  left: 186px;
+}
+
+.titleUser {
+  text-align: center;
+  color: #fff;
+}
+
+.btnUser {
+  display: block;
+  width: auto;
+  padding: 15px 60px;
+  border: 3px solid #aad044;
+  border-radius: 999px;
+  color: #aad044;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#user_roles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-check-input {
+  position: relative;
+  margin-top: 0.3rem;
+  margin-left: -1.25rem;
+}/*# sourceMappingURL=user.css.map */

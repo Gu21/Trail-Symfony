@@ -1,0 +1,54 @@
+{# //{% extends 'baseAdmin.html.twig' %} pour voir la partie index dans  l'administration #}
+
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Admin inscription
+{% endblock %}
+
+{% block body %}
+
+	<h1>INSCRIPTION TRAIL</h1>
+
+
+	<table id="myTable" class="table table-Default table-hover table-striped">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Inscription Trail</th>
+				<th>Info Trail</th>
+				<th>Lien inscription Trail</th>
+				<th>bénévoles</th>
+				<th>Inscription partenaires</th>
+				<th>Réglement intérieur</th>
+				<th>Modifier</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for register_trail in register_trail %}
+				<tr>
+					<td>{{ register_trail.id }}</td>
+					<td><img src="{{ asset('uploads/photos/' ~ register_trail.newletterRegisterTrail) }}" width="100"></td>
+					<td>{{ register_trail.infoRegisterTrail|raw }}</td>
+					<td>{{ register_trail.linkRegisterTrail }}</td>
+					<td>{{ register_trail.linkVolunteerRegisterTrail }}</td>
+					<td><img src="{{ asset('uploads/photos/' ~ register_trail.newletterPartnerRegisterTrail ) }}" width="100"></td>
+					<td><img src="{{ asset('uploads/photos/' ~ register_trail.internalRulesRegisterTrail ) }}" width="100"></td>
+					<td>
+						{# <a href="{{ path('register_trail_show', {'id': register_trail.id}) }}">show</a> #}
+						<a class="edit" href="{{ path('register_trail_edit', {'id': register_trail.id}) }}">ÉDITER</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="8">no records found</td>
+
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a class="backList" href="{{ path('register_trail_new') }}">
+		<span>
+			Créer une nouvelle inscription</span>
+	</a>
+{% endblock %}

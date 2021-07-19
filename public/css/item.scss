@@ -1,0 +1,133 @@
+$color1: #aad044;
+$color2: #6b90bb;
+$color3: #fff;
+$color5: #000;
+$color6: #303030;
+
+* {
+    box-sizing: border-box;
+}
+
+// .backgroundGoldenBook{
+
+
+//     background-color: #222222;
+//     background: repeating-linear-gradient(
+//         45deg,
+//         #2b2b2b 0%,
+//         #2b2b2b 10%,
+//         #222222 0%,
+//         #222222 50%
+//       )
+//       0 / 15px 15px; 
+//       margin-top: 0;
+// }
+
+
+.logoGoldenBook {
+    img {
+        width: 100%;
+    }
+}
+
+.pageGoldenBook {
+    margin-top: 6rem;
+}
+
+.titleGoldenBook {
+    h1 {
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        color: $color1;
+    }
+
+    h1::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 6.3rem;
+        height: 4px;
+        background: $color1;
+        margin-left: 1rem;
+
+    }
+
+    h1::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 6.3rem;
+        height: 4px;
+        background: $color1;
+        margin-right: 1rem;
+
+    }
+}
+
+
+
+.linkGoldenBook {
+
+    text-align: end;
+
+}
+
+.btnGoldenBook {
+    width: 40%;
+    padding: 15px 38px;
+    color: $color1;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5rem;
+    transition: 1s;
+
+}
+
+.btnGoldenBook:hover {
+
+    color: $color2;
+    // background-color: $color6;
+
+}
+
+
+
+.linkGoldenBook {
+
+
+
+    a {
+
+        color: $color1;
+        font-family: "roboto", "Arial", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: 1s;
+
+    }
+
+    a:hover {
+
+        color: $color2;
+    }
+
+
+}
+
+.formGoldenBook {
+
+    textarea.form-control {
+        height: auto;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
+    }
+}

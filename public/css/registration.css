@@ -1,0 +1,105 @@
+.bodyRegister {
+  background-color: #222222;
+  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0/15px 15px;
+  margin-top: 0;
+}
+
+*,
+::before ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.sectionRegister {
+  font-family: "Roboto", "Arial", sans-serif;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxRegister {
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.boxRegister h1 span {
+  color: #aad044;
+  font-weight: 700;
+}
+.boxRegister .formBloc h1 {
+  color: #666;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+.boxRegister .formBloc .form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.boxRegister .formBloc .form-group label {
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 1.3rem;
+  transition: 0.4s ease-out;
+}
+.boxRegister .form-check-label {
+  margin-top: -5px;
+}
+.boxRegister #registration_form_email, .boxRegister input {
+  display: block;
+  padding: 10px 0px;
+  border: none !important;
+  outline: none !important;
+  background: none !important;
+  border-bottom: 3px solid #aad044 !important;
+}
+.boxRegister .btnRegister {
+  margin-bottom: 65px;
+  justify-content: center;
+}
+.boxRegister .formBloc .btnRegister {
+  display: block;
+  width: auto;
+  padding: 15px 60px;
+  border: 3px solid #aad044;
+  border-radius: 999px;
+  background-image: linear-gradient(to right, transparent 50%, orange 50%, tomato);
+  background-size: 202%;
+  color: #aad044;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s ease-out !important;
+}
+.boxRegister .formBloc .btnRegister:hover {
+  color: #fff;
+  background-position: 100%;
+  border: 3px solid #fff;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+.boxRegister .forgetPasswordRegister a {
+  color: #aad044;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+.boxRegister .forgetPasswordRegister a:hover {
+  border-bottom-color: #aad044;
+}
+.boxRegister .forgetPasswordRegister .required {
+  transition: transform 0.6s ease;
+}/*# sourceMappingURL=registration.css.map */

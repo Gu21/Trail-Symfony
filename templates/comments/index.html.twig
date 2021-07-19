@@ -4,77 +4,170 @@
 {% endblock %}
 
 {% block body %}
-<!--   
-				{# 
-				    <table class="table">
-				        <thead>
-				            <tr>
-				                <th>Id</th>
-				                <th>TitleComment</th>
-				                <th>NameComment</th>
-				                <th>EmailComment</th>
-				                <th>CommentComments</th>
-				                <th>actions</th>
-				            </tr>
-				        </thead>
-				        <tbody>
-				        {% for comment in comments %}
-				            <tr>
-				                <td>{{ comment.id }}</td>
-				                <td>{{ comment.titleComment }}</td>
-				                <td>{{ comment.nameComment }}</td>
-				                <td>{{ comment.emailComment }}</td>
-				                <td>{{ comment.commentComments }}</td>
-				                <td>
-				                    <a href="{{ path('comments_show', {'id': comment.id}) }}">show</a>
-				                    <a href="{{ path('comments_edit', {'id': comment.id}) }}">edit</a>
-				                </td>
-				            </tr>
-				        {% else %}
-				            <tr>
-				                <td colspan="6">no records found</td>
-				            </tr>
-				        {% endfor %}
-				        </tbody>
-				    </table>
-				
-				    <a href="{{ path('comments_new') }}">Create new</a> #}
-				
-				div -->
-<div class="container">
 
-	<div class="row boxCommentItems">
-		<div class="col-md-12 Comment">
-			<h1 class="titleComment">LE LIVRE D'OR DU TRAIL DES JAMBES ALLAIRE</h1>
-			<p class="infoItem">Laissez-nous vos commentaires, ou votre retour d'expérience avec nous : <a href=""><i
-						class="fas fa-arrow-circle-down"></i></a></p>
-			<h2 class="titleItems">Commentaires</h2>
+{# {
+												<table class="table">
+													<thead>
+														<tr>
+															<th>Id</th>
+															<th>TitleComment</th>
+															<th>NameComment</th>
+															<th>EmailComment</th>
+															<th>CommentComments</th>
+															<th>actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														{% for comment in comments %}
+															<tr>
+																<td>{{ comment.id }}</td>
+																<td>{{ comment.titleComment }}</td>
+																<td>{{ comment.nameComment }}</td>
+																<td>{{ comment.emailComment }}</td>
+																<td>{{ comment.commentComments }}</td>
+																<td>
+																	<a href="{{ path('comments_show', {'id': comment.id}) }}">show</a>
+																	<a href="newcommentaires.php?ID_post=<?php echo $value1['Id'] ?>">Ajouter un commentaire</a>
+																</td>
+															</tr>
+														{% else %}
+															<tr>
+																<td colspan="6">no records found</td>
+															</tr>
+														{% endfor %}
+													</tbody>
+												</table>
+											
+												<a href="{{ path('comments_new') }}">Create new</a> #}
 
-			{% for comment in comments %}
-			<div class="paragraphItems text-center">
-				<span>{{ comment.nameComment }}</span>
-				<div class="paragraph">
-					{{ comment.commentComments }}
-				</div>
-				
+<section class="blog">
+
+
+	<div class="container boxCommentItems">
+		<div class="blog">
+			<h1 class="titleComment">
+				LE LIVRE D'OR DU TRAIL DES JAMBES ALLAIRE!</h1>
+		</div>
+
+		<p class="infoItem">Laissez-nous vos commentaires, ou votre retour d'expérience avec nous :
+			{# <a href="#formBlog">
+				<i class="fas fa-arrow-circle-down"></i>
+			</a> #}
+		</p>
+
+
+		{% for comment in comments %}
+
+		<div class="title">
+			<div class="boxPost">
+				<h2>{{ comment.nameComment }}</h2>
+
+				<P>{{ comment.commentComments }}</P>
+
 			</div>
-			{% endfor %}
-			<div class="boxItems">
-
-				<!-- {% for item in items %}
-				<p>Commentaire écrit par
-					{{ item.nameItem }}
-					le
-					{{ item.dateItem ? item.dateItem|date('Y-m-d H:i:s') : '' }}</p>
-				<p>{{ item.commentItem }}</p>
-				{% endfor %} -->
-
-				<h2 class="subtitleItems mt-5">Ajouter un commentaire</h2>
-
-				{{ form(form) }}
-
+			<div class="link_Post">
+				<a href="{{ path('addItem', {'id': comment.id}) }}">Répondre</a>
+				{# //Récupére l'id dans l'url #}
 			</div>
 		</div>
+
+		{# ------------------ITEM (MESSAGE)---------------------------------------- #}
+		<div class="content">
+			<button class="accordion">Réponse</button>
+			<div class="panel">
+				<div class="dateContent">
+
+					{% for item in items %}
+
+					{% if comment.id == item.comment.id %}
+
+					<p class="paragraphItems">Posté le:
+						{{ item.dateItem ? item.dateItem|date('m-d-Y') }}</p>
+
+					{# //Pour changer le format de la date | #}
+
+					<h2>{{ item.nameItem }}</h2>
+
+					<P>{{item.commentItem}}</P>
+
+					{% endif %}
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+
+		{% endfor %}
+
+		{# --------------END----ITEM (MESSAGE)---------------------------------------- #}
+
+
+		<div class="row boxCommentItems">
+			<div class="col-md-12 Comment">
+
+				<h2 id="formBlog" class="titleItems">Ajouter un commentaire</h2>
+				<!-- <div class="buttonReload">
+					<button type="button" class="reset">Rafraîchir le formulaire</button>  //Bouton pour rafraîchir le formulaire
+				</div> -->
+				
+				<div class="boxFormComment mt-5 mb-5">
+					{# ------------------------FORMULAIRE  AJOUTER UN COMMENTAIRE-------------- #}
+					{{ form(form) }}
+
+					
+
+					{# // Lien  RegisterTrailType.php #}
+
+					
+
+				
+
+				
+
+				{# ------------------END------FORMULAIRE  AJOUTER UN COMMENTAIRE-------------- #}
+			</div>
+		</div>
+
 	</div>
-</div>
+	</div>
+
+	{# --------------------RESET FORMULAIRE------ #}
+
+	<script>
+		// $(".reset").bind("click", function () { Avec recharge que du formulaire
+			$("input[type=text], textarea,input[type=email]").val("");//reset au chargement de la page
+		// });
+	</script>
+
+{# -------------END-------RESET FORMULAIRE------ #}
+
+
+	{# --------------------script commentaire------ #}
+
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				/* Toggle between adding and removing the "active" class,
+				to highlight the button that controls the panel */
+				this.classList.toggle("active");
+
+				/* Toggle between hiding and showing the active panel */
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			});
+		}
+	</script>
+	{# ------------END--------script commentaire------ #}
+
+
+
+
+</section>
 {% endblock %}

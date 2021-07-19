@@ -2,9 +2,6 @@
 .boxCommentItems {
   margin-top: 12rem;
 }
-.boxCommentItems form {
-  margin-top: 3%;
-}
 .boxCommentItems .titleComment {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 3rem;
@@ -12,26 +9,23 @@
   color: #aad044;
   margin-bottom: 10rem;
 }
-.boxCommentItems .titleComment:hover {
-  background: linear-gradient(orange, tomato);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+.boxCommentItems .boxPost {
+  padding: 10px;
 }
 .boxCommentItems .form-control {
   display: block;
-  width: 90%;
+  width: 70%;
   height: calc(2.25rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #fff;
+  color: #495057;
+  background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #aad044;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  background: #7b7b7c;
 }
 .boxCommentItems .fas {
   font-size: 2rem;
@@ -41,11 +35,11 @@
   content: "";
   color: #000;
 }
-.boxCommentItems .titleItems, .boxCommentItems .subtitleItems {
+.boxCommentItems .titleItems {
   font-family: "roboto", "Arial", sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #6b90bb;
+  color: #aad044;
   margin-top: 6rem;
   margin-bottom: 7rem;
 }
@@ -55,16 +49,7 @@
   vertical-align: middle;
   width: 4rem;
   height: 4px;
-  background: #6b90bb;
-  margin-left: 1rem;
-}
-.boxCommentItems .subtitleItems::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 4rem;
-  height: 4px;
-  background: #6b90bb;
+  background: #aad044;
   margin-left: 1rem;
 }
 .boxCommentItems .titleItems::before {
@@ -73,98 +58,128 @@
   vertical-align: middle;
   width: 4rem;
   height: 4px;
-  background: #6b90bb;
-  margin-right: 1rem;
-}
-.boxCommentItems .subtitleItems::before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 4rem;
-  height: 4px;
-  background: #6b90bb;
+  background: #aad044;
   margin-right: 1rem;
 }
 .boxCommentItems .infoItem {
   font-family: "roboto", "Arial", sans-serif;
   font-size: 1rem;
+  color: #303030;
 }
-.boxCommentItems .btn {
-  display: block;
-  margin: 0 auto;
-  font-family: "roboto", "Arial", sans-serif;
+.boxCommentItems .accordion {
+  background-color: #aad044;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
   font-size: 2rem;
-  font-weight: 500;
+  transition: 0.4s;
+  font-family: "Luckiest Guy", "Arial", cursive;
+  border-radius: 9px;
+}
+.boxCommentItems .active, .boxCommentItems .accordion:hover {
+  background-color: #000;
   color: #fff;
-  margin-top: 3rem;
-  margin-bottom: 10rem;
 }
-.boxCommentItems ::-moz-placeholder {
-  color: #aad044;
-}
-.boxCommentItems :-ms-input-placeholder {
-  color: #aad044;
-}
-.boxCommentItems ::placeholder {
-  color: #aad044;
-}
-.boxCommentItems .paragraphItems {
-  margin-bottom: 2rem;
-}
-.boxCommentItems .paragraphItems::before {
+.boxCommentItems .active, .boxCommentItems .accordion::after {
   content: "";
   display: block;
+  height: 2px;
+  background-color: #aad044;
+  width: 25%;
   margin: 0 auto;
-  border: 1px dashed #aad044;
+  margin-top: 20px;
 }
-.boxCommentItems .paragraph {
+.boxCommentItems .content {
+  border: 1px solid #000;
+  color: #fff;
+  border-radius: 11px;
+}
+.boxCommentItems .title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #303030;
+  border: 1px solid #000;
+  border-radius: 14px;
+  padding: 10px;
+}
+.boxCommentItems h2 {
+  font-size: 2rem;
+  font-family: "Luckiest Guy", "Arial", cursive;
+  color: #303030;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #000 !important;
+  display: none;
+  overflow: hidden;
+}
+.panel .paragraphItems {
+  text-align: center;
   padding: 15px;
-  margin-bottom: 7rem;
+  font-family: "Luckiest Guy", "Arial", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  text-align: end;
+  letter-spacing: 0.2rem;
 }
-.boxCommentItems label {
+.panel h2 {
+  text-align: center;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.panel p {
+  text-align: center;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.link_Post {
+  text-align: end;
+  padding: 40px;
+  font-size: 2rem;
+  font-family: "Luckiest Guy", "Arial", cursive;
+}
+.link_Post a {
+  text-decoration: none;
+  color: #6b90bb;
+}
+
+label {
   font-family: "roboto", "Arial", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  background: linear-gradient(orange, tomato);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #aad044;
 }
-.boxCommentItems #comments {
+
+#comments {
   margin-top: 7rem;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
+  width: 50%;
 }
-.boxCommentItems .validate {
-  letter-spacing: 0;
+
+.boxFormComment .validate {
+  width: 40%;
+  padding: 15px 38px;
+  color: #aad044;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
   border: none;
-}
-.boxCommentItems .validate:hover,
-.boxCommentItems .validate:active {
-  letter-spacing: 5px;
-  border: none;
-}
-.boxCommentItems .validate:after,
-.boxCommentItems .validate:before {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border: 1px solid rgba(0, 0, 0, 0);
-  bottom: 0px;
-  content: " ";
+  border-radius: 999px;
+  box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
   display: block;
   margin: 0 auto;
-  position: relative;
-  transition: all 280ms ease-in-out;
-  width: 0;
+  margin-top: 5rem;
 }
-.boxCommentItems .validate:hover:after,
-.boxCommentItems .validate:hover:before {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border-color: #000;
-  transition: width 350ms ease-in-out;
-  width: 70%;
-}
-.boxCommentItems .validate:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 70%;
+.boxFormComment .validate:hover {
+  color: #6b90bb;
 }/*# sourceMappingURL=comments.css.map */

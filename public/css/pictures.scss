@@ -1,45 +1,62 @@
-$color1 : #aad044;
+$color1: #aad044;
 $color2: #6b90bb;
 $color3: #fff;
 $color4: #60ae46;
 $color5: #000;
+$color6: #303030;
 
-.bodyPicture {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
-    background-color: #262626
-}
+// .bodyPicture {
+//     margin: 0;
+//     padding: 0;
+//     width: 100%;
+//     height: 100%;
+//     font-family: sans-serif;
 
-.boxPicture{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 152vh;
-    flex-direction: column;
+// }
 
-    .titlePictures{
+// .bodyPicture{
 
-        color: $color1;
-        margin-top: 50px;
-    }
+//     // background: linear-gradient(-90deg, rgba(0, 0, 0, 1), rgba(67, 67, 67, .8 ));
+//     background-color: #222222;
+//     background: repeating-linear-gradient(
+//         45deg,
+//         #2b2b2b 0%,
+//         #2b2b2b 10%,
+//         #222222 0%,
+//         #222222 50%
+//       )
+//       0 / 15px 15px;
+//       margin-top: 0;
+// }
 
-    .titlePictures::before{
+.boxPicture {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        width: 6.3rem;
-        height: 4px;
-        background: $color1;
-        margin-right: 15px;
-    
-}
+  .titlePictures {
+    color: $color1;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    letter-spacing: 0.5rem;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    text-transform: uppercase;
+  }
 
-.titlePictures::after{
+  .titlePictures::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6.3rem;
+    height: 4px;
+    background: $color1;
+    margin-right: 15px;
+  }
 
+  .titlePictures::after {
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -47,8 +64,11 @@ $color5: #000;
     height: 4px;
     background: $color1;
     margin-left: 15px;
-    
+  }
 }
+
+.tidyPicture {
+  margin-bottom: 10rem;
 }
 
 // .testimotionals {
@@ -58,107 +78,166 @@ $color5: #000;
 //     margin-top: 50px;
 // }
 
-
 .testimotionals .card {
-
-    position: relative;
-    overflow: hidden;
-    // width: 200px;
-    // margin: 0 auto;
-    background: #333;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
-    // margin-left: 40px;
-    margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  // width: 200px;
+  // margin: 0 auto;
+  // background: #333;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  // box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+  // margin-left: 40px;
+  margin-bottom: 30px;
+  border-radius: 26px;
+  background: #f2f2f2;
+  box-shadow: inset 5px 5px 10px #d5d5d5, inset -5px -5px 10px #ffffff;
 }
 
 .testimotionals .card .layer {
-    z-index: 1;
-    position: absolute;
-    top: calc(100% - 2px);
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background: linear-gradient(to left, orange, tomato);
-    transition: 0.5s;
-
+  z-index: 1;
+  position: absolute;
+  top: calc(100% - 2px);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  // background: linear-gradient(to left, orange, tomato);
+  background: $color1;
+  transition: 0.5s;
 }
 
 .testimotionals .card .content {
-    z-index: 1;
-    position: relative;
+  z-index: 1;
+  position: relative;
 }
 
-.testimotionals .card:hover  .layer{
-    top:0;
+.testimotionals .card:hover .layer {
+  top: 0;
+}
+
+.testimotionals .card .content {
+  p {
+    font-size: 1rem;
+    line-height: 24px;
+    color: $color6;
   }
-
-.testimotionals .card .content {
-
-    p {
-        font-size: 1rem;
-        line-height: 24px;
-        color: $color3;
-
-
-    }
 }
 
-    .testimotionals .card .content .image {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 4px solid $color3;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+.testimotionals .card .content .image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid $color3;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
 
-    }
+.testimotionals .card .conte nt .details {
+  h2 {
+    font-size: 2rem;
+    color: $color3;
+  }
+}
 
-    .testimotionals .card .conte nt .details {
+.testimotionals .card .content .details {
+  span a {
+    color: $color1;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  span {
+    margin-top: 5px;
+  }
+}
 
-        h2 {
-            font-size: 2rem;
-            color: $color3;
+.testimotionals .card:hover .content .details {
+  span a {
+    color: $color2;
+    position: relative;
+  }
+}
 
-        }
-    }
-
-    .testimotionals .card .content .details {
-
-        span a {
-            color: $color1;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: 0.5s;
-        }
-        span {
-
-            margin-top: 5px;
-        }
-    }
-
-    .testimotionals .card:hover .content .details {
+.details {
+  h2 {
+    font-size: 1.2rem;
+    color: $color6;
+    margin-top: 10px;
+  }
+}
 
 
-        span a {
-            color: $color2;
-            position: relative;
-           
-        }
+// --------MEDIA QUERY------
 
-    }
+@media screen and (max-width: 768px) {
 
-    .details{
+  .boxPicture .titlePictures {
+   
+    font-size: 2rem;
+    
+}
 
-        h2{
+}
 
-            font-size: 1.2rem;
-            color: $color3;
-            margin-top: 10px;
-        }
-       
 
-    }
+@media screen and (max-width: 530px) {
+
+
+  .boxPicture .titlePictures {
+    font-size: 2rem;
+}
+
+.boxPicture .titlePictures::after {
+ 
+  width: 3rem;
+
+}
+.boxPicture .titlePictures::before {
+ 
+  width: 3rem;
+ 
+  
+ 
+}
+
+
+}
+
+
+
+@media screen and (max-width: 425px) {
+
+  .boxPicture .titlePictures {
+    font-size: 1.3rem;
+  }
+  .boxPicture .titlePictures::before {
+    width: 2rem;
+}
+
+.boxPicture .titlePictures::after {
+  width: 2rem;
+}
+
+}
+
+
+
+@media screen and (max-width: 325px) {
+
+
+  .boxPicture .titlePictures::before {
+    width: 1.3rem;
+}
+
+.boxPicture .titlePictures::after {
+  width: 1.3rem;
+}
+
+.boxPicture .titlePictures {
+  font-size: 1.4rem;
+}
+
+
+}

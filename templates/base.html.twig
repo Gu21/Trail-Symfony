@@ -1,258 +1,284 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}{% endblock %}</title>
-    {% block stylesheets %}
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		{% block stylesheets %}
 
-    <!-- -----LINK  BOOTSTRAP-------------- -->
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-    <!-- --END---LINK BOOTSTRAP-------------- -->
+			<!-- -----LINK  BOOTSTRAP-------------- -->
+			<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+			<!-- --END---LINK BOOTSTRAP-------------- -->
 
-    <!-- -----LINK CSS------------- -->
-    <link rel="stylesheet" href="{{ asset('css/base.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/homes.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/partners.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/contact.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/race.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/pictures.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/video.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/comments.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" />
-     
+			<!-- -----LINK CSS------------- -->
+			<link rel="stylesheet" href="{{ asset('css/base.css') }}"/> <link rel="stylesheet" href="{{ asset('css/homes.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/partners.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/contact.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/race.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/pictures.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/video.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/comments.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/item.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/reg2021.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/registration.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/user.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/login.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/results.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/praticalInfo.css') }}"/>
 
-    <!-- ---END--LINK CSS------------- -->
+			<!-- ---END--LINK CSS------------- -->
 
-    <!-- ------------FONT-------------------- -->
+			<!-- ------------FONT-------------------- -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,700;1,300&display=swap"
-        rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.gstatic.com"/> <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,700;1,300&display=swap" rel="stylesheet"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com"/>
+			<link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com"/>
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link
+			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 
-    <!-- -----END-------FONT-------------------- -->
+		<!-- -----END-------FONT-------------------- -->
 
-    {% endblock %} {% block javascripts %}
-    <!-- -----SCRIPT BOOTSTRAP------------- -->
+		{% endblock %}
+		{% block javascripts %}
+			<!-- -----SCRIPT BOOTSTRAP------------- -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
-        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+			<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-    <!-- ------SCROLLMAGIC-------------- -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <!-- --END----SCROLLMAGIC-------------- -->
+			<!-- ------SCROLLMAGIC-------------- -->
+			<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+			<!-- --END----SCROLLMAGIC-------------- -->
 
 
+			<!-- ----END -SCRIPT BOOTSTRAP------------- -->
 
-    <!-- ----END -SCRIPT BOOTSTRAP------------- -->
+			<!-- -----SCRIPT JS------------- --><script src="{{ asset('js/app.js') }}"> </script>
+			<script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"></script>
 
-    <!-- -----SCRIPT JS------------- -->
+			<!-- ----END -SCRIPT JS------------- -->
+		{% endblock %}
+	</head>
 
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"></script>
+	<body id="body">
+		<!-- ---------------------------------------HEADER-------------------------- -->
 
-    <!-- ----END -SCRIPT JS------------- -->
-    {% endblock %}
-</head>
+		<header>
+			<!-- ---------------------------------------NAV-------------------------- -->
 
-<body>
-    <!-- ---------------------------------------HEADER-------------------------- -->
+			<nav id="navbar" class="navbar-expand-lg navbar-light bg-light fixed-top Box-Nav">
+				<div class="container">
+					<!-- <div class="Background-Nav"> -->
 
-    <header>
-        <!-- ---------------------------------------NAV-------------------------- -->
+					<!-- </div> -->
+					<!-- <div class="carousel-caption d-md-block Caption"> -->
+						<div class="titleNav"> <!-- <div class="Title-Trail">
+																												                    <h1 class="Trail">TRAIL</h1>
+																												                </div> -->
+						<!-- <div class="Title-Legs">
+																								                    <h2 class="Legs-alaire">DES JAMBES ALLAIRE</h2>
+																								                </div> -->
+							<div class="button-Nav"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+						</div>
+					</div>
 
-        <nav id="navbar" class="navbar-expand-lg navbar-light bg-light fixed-top Box-Nav">
-            <div class="container">
-                <!-- <div class="Background-Nav"> -->
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul
+							class="navbar-nav ml-auto justify-content-start w-100">
+							<!-- <li class="nav-item Home-Nav">
+																												                        <a class="nav-link active Home" aria-current="page" href="#">Accueil</a>
+																												                    </li> -->
+							<li class="nav-item dropdown">
+								<a class="nav-link Nav" href="/practical/info">
+									Infos</a>
 
-                <!-- </div> -->
-                <!-- <div class="carousel-caption d-md-block Caption"> -->
-                <div class="titleNav">
-                    <!-- <div class="Title-Trail">
-                    <h1 class="Trail">TRAIL</h1>
-                </div> -->
-                    <!-- <div class="Title-Legs">
-                    <h2 class="Legs-alaire">DES JAMBES ALLAIRE</h2>
-                </div> -->
-                    <div class="button-Nav">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                </div>
+								{# <ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink"> #}
+									{# <li>
+																												<a class="dropdown-item Subtitle-Item" href="#who">Qui sommes-nous?</a>
+																											</li> #}
+									{# <li>
+																												<a class="dropdown-item Subtitle-Item" href="#">Horaires/Tarifs</a>
+																											</li> #}
+										{# <li>
+											<a class="dropdown-item Subtitle-Item" href="#"> Infos pratiques</a>
+									</li> #}
+									{# <li>
+										<a class="dropdown-item Subtitle-Item" href="#">Nos aventures</a>
+									</li>
+									{# <li> 
+																												<a class="dropdown-item Subtitle-Item" href="#">Règlement</a>
+																											</li> #}
+								{# </ul> #}
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Photos et Vidéos</a>
+								<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
+									<li>
+										<a class="dropdown-item Subtitle-Item" href="/pictures/pictures_2019">Photos</a>
+									</li>
+									<li>
+										<a class="dropdown-item Subtitle-Item" href="/videos/videos_Teaser">Videos</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link Nav" href="/register/trail/register/trail_2021">Inscriptions</a>
+							</li>
+						</ul>
+						<div id="logo">
+							<a class="nav-link active Home" aria-current="page" href="{{path ('homes')}}"><img class="navbar-brand" src="/img/LOGO.png" alt="LOGO" width="150px"/></a>
+						</div>
 
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto justify-content-start w-100">
-                        <!-- <li class="nav-item Home-Nav">
-                        <a class="nav-link active Home" aria-current="page" href="#">Accueil</a>
-                    </li> -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link Nav" href="{{path ('homes')}}" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Présentation</a>
+						<ul class="navbar-nav ml-auto justify-content-center w-100">
+							<li class="nav-item dropdown">
+								<a class="nav-link Nav" href="/results/results_years">Les résultats</a>
+							</li>
 
-                            <ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="#who">Qui sommes-nous?</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="#">Horaires/Tarifs</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="#">Infos pratiques</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="#">Nos aventures</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="#">Règlement</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Photos et Vidéos</a>
-                            <ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="/pictures/pictures_2019">Photos 2019</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="/pictures/pictures_2017">Photos 2017</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="/pictures/pictures_2016">Photos 2016</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="/videos">Videos</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link Nav" href="#">Inscriptions</a>
-                        </li>
-                    </ul>
-                    <div id="logo">
-                        <a class="nav-link active Home" aria-current="page" href="{{path ('homes')}}"><img class="navbar-brand"
-                                src="/img/LOGO.png" alt="LOGO" width="150px" /></a>
-                    </div>
+							<!-- <li class="nav-item dropdown">
+																												                        <a class="nav-link Nav" href="#">Bénévoles</a>
+																												                    </li> -->
+							<!-- <li class="nav-item dropdown">
+																												                        <a class="nav-link Nav" href="#">Partenaires</a>
+																												                    </li> -->
+							<li class="nav-item dropdown">
+								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Les courses</a>
+								<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
 
-                    <ul class="navbar-nav ml-auto justify-content-center w-100">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link Nav" href="#">Les résultats</a>
-                        </li>
-
-                        <!-- <li class="nav-item dropdown">
-                        <a class="nav-link Nav" href="#">Bénévoles</a>
-                    </li> -->
-                        <!-- <li class="nav-item dropdown">
-                        <a class="nav-link Nav" href="#">Partenaires</a>
-                    </li> -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Les courses</a>
-                            <ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
-                               
-                                {{ render(controller(
+									{{ render(controller(
                                     'App\\Controller\\RacesController::menuHeader'
                                     )) }}
-                             
-                            </ul>
-                        </li>
-                      
-                        <!-- <li class="nav-item dropdown">
-                        <a class="nav-link Nav" href="#">Livre d'or</a>
-                    </li> -->
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Contact
-                            </a>
-                            <ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item"  href="{{path ('contacts_index')}}">Contact</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item Subtitle-Item" href="#">Livre d'or</a>
-                                </li>
-                                <!-- <li><a class="dropdown-item Subtitle-Item" href="#">Inscription</a></li> -->
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-           <!-- -----------------------------END-----NAV-------------------------- -->
-    </header>
+								</ul>
+							</li>
 
-  <!-- -------------------------END-----HEADER-------------------------- -->
-  {% block body %}{% endblock %}
-    
-    <!-- -----------------------------------FOOTER----------------------- -->
-    <footer class="Footer py-5">
+							<!-- <li class="nav-item dropdown">
+																												                        <a class="nav-link Nav" href="#">Livre d'or</a>
+																												                    </li> -->
 
-        <div class="container-fluid Container-Footer">
-            <div class="Box-Contact">
+							<li class="nav-item dropdown">
+								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact
+								</a>
+								<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
+									<li>
+										<a class="dropdown-item Subtitle-Item" href="{{path ('form_Contact')}}">Contact</a>
+									</li>
+									<li>
+										<a class="dropdown-item Subtitle-Item" href="{{path ('comments_index')}}">Livre d'or</a>
+									</li>
+									<!-- <li><a class="dropdown-item Subtitle-Item" href="#">Inscription</a></li> -->
+								</ul>
+							</li>
+							
+							{% if not app.user %}
+							<li class="nav-item dropdown">
+								<a class="nav-link Nav"  href="{{path ('admin')}}">
+									<i class="far fa-user"></i>
+								</a>
+							</li>
 
-                <div class="row Box-Footer">
-                    <div class="col-sm-3 Footer">
-                        <a href="/">Nous Contacter</a>
-                    </div>
-                    <div class="verticalLineFooterLeft"></div>
-                    <div class="col-sm-3 Footer">
-                        <p>Mention Legales</p>
-                    </div>
-                    <div class="verticalLineFooteRight"></div>
-                    <div class="col-sm-3 Footer">
-                        <a href="/">Politique de Confidentialité</a>
-                    </div>
-                   
-                </div>
-                
-            </div>
-            
-            <div class="container-fluid">
-                
-                <div class="row">
+							{% else %}
+								<li class="nav-item dropdown">
+								<a class="nav-link Nav" href="{{path ('app_logout')}}"><i class="fas fa-user-lock"></i>
+								</a>
+							</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- -----------------------------END-----NAV-------------------------- -->
+		</header>
 
-                    <div class="col-sm-12 Footer">
-                        <a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2FTRAIL-Jambes-Allaire-1504243399878176%2F"><i class="fab fa-2x fa-facebook Icon-Footer"></i></a>
-                    </div>
-                    
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        
-                        <div class="copyright">
-                            <p class="Paragraphe-Footer">Bisson Guillaume | 2021 © Tous droits réservés</p>
-                        </div>
-                    </div>
-                </div>   
+		<!-- -------------------------END-----HEADER-------------------------- -->
+		{% block body %}{% endblock %}
 
-            </div>
+		<!-- -----------------------------------FOOTER----------------------- -->
+		<footer class="Footer py-5">
 
-        </div>
-    </footer>
-    <!-- -----------------------------END------FOOTER----------------------- -->
+			<div class="container-fluid Container-Footer">
+				<div class="Box-Contact">
 
-  
-</body>
+					<div class="row Box-Footer">
+						<div class="col-sm-3 Footer">
+							<a href="/">Nous Contacter</a>
+						</div>
+						<div class="verticalLineFooterLeft"></div>
+						<div class="col-sm-3 Footer">
+							<p>Mention Legales</p>
+						</div>
+						<div class="verticalLineFooteRight"></div>
+						<div class="col-sm-3 Footer">
+							<a href="/">Politique de Confidentialité</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="container-fluid">
+
+					<div class="row">
+
+						<div class="col-sm-12 Footer">
+							<a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2FTRAIL-Jambes-Allaire-1504243399878176%2F">
+								<i class="fab fa-2x fa-facebook Icon-Footer"></i>
+							</a>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+
+							<div class="copyright">
+								<p class="Paragraphe-Footer">Bisson Guillaume | 2021 © Tous droits réservés</p>
+								 <a href="#body"><i class="fas fa-arrow-alt-circle-up"></i></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</footer>
+		<!-- -----------------------------END------FOOTER----------------------- -->
+				<script>
+		$(function () {
+			/**
+			 * Défilement fluide
+			 **/
+			$("a[href*='#']:not([href='#'])").click(function () {
+				if (
+					location.hostname == this.hostname &&
+					this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
+				) {
+					var anchor = $(this.hash);
+					anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+					if (anchor.length) {
+						$("html, body").animate({
+							scrollTop: anchor.offset().top
+						}, 1500);
+					}
+				}
+			});
+		});
+	</script>
+
+	</body>
 
 </html>

@@ -1,0 +1,185 @@
+$color1: #aad044;
+$color2: #6b90bb;
+$color3: #fff;
+$color4: #60ae46;
+$color5: #000;
+$color6: #ff9900;
+
+
+*{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.bodyLogin{
+
+    background: #f1f1f1;
+}
+
+
+.pictureLogin{
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),url('/img/pictureLogin.JPG');
+    background-position: center;
+}
+
+.boxLogin{
+
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow:  -15px -15px 30px #cccccc,
+                 15px 15px 30px #f4f4f4;
+
+
+}
+
+.cardLogin,.pictureLogin{
+
+    border: 1px solid $color3;
+    border-radius: 4px;
+}
+
+.cardLogin{
+background: #f1f1f1;
+
+
+form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .titleLogin{
+
+        color:$color1;
+        font-family: "Roboto", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+
+    .cardLogin .form-control {
+        display: block;
+        width: 70%;
+        height: calc(2.25rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid $color1!important;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    button{
+
+        padding: 20px;
+    }
+
+    .btnLogin{
+
+        // display: block;
+        // width: auto;
+        padding: 15px 60px;
+        // border: 3px solid $color1;
+        // border-radius: 999px;
+        // background: $color2;
+        color: #cacaca;
+        font-size: 1.3rem;
+        font-weight: 500;
+        cursor: pointer;
+        // transition: 0.4s ease-out!important;
+        border: none;
+        border-radius: 12px;
+        // background: linear-gradient(45deg, #cacaca, #f0f0f0);
+        box-shadow:  6px 6px 12px #c9c9c9,
+                     -6px -6px 12px #fff;
+
+
+                      
+    
+    }
+
+    // .btnLogin:hover{
+
+    //     color: $color3; 
+    //     border: 3px solid $color3;
+    //     font-family: "Roboto", "Arial", sans-serif;
+    // }
+
+    
+
+    } 
+
+    .inputLogin{
+
+        position: relative;  
+    }
+
+    .inputLogin i{
+
+        position: absolute;
+        left: 34px;
+        top: 25px;
+        color: $color1;
+        
+
+    }
+
+
+
+
+    .BoxInputLogin{
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: CENTER; */
+        //  align-items: center;
+        width: 97%;
+    }
+}
+
+.form-control {
+    display: block;
+    width: 95%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid $color1;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.faceBookLogin{
+
+    i{
+        color: $color2;
+    }
+
+    .fa-2x {
+        font-size: 4em!important;
+    }
+}
+
+
+.inputLogin{
+
+    input[type=email],input[type=password]{
+
+        padding-left: 40px;
+    }
+
+
+}

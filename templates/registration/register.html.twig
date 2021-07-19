@@ -1,21 +1,60 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-    {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
+{% for flashError in app.flashes('verify_email_error') %}
+<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+{% endfor %}
 
-    <h1>Register</h1>
+<body class="bodyRegister">
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+    <section class="sectionRegister mt-5 py-5">
+
+        <div class="container">
+            <div class="row RegisterFormBox mt-5">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="boxRegister">
+                        <div class="formBloc">
+
+
+                            <h1><span>Identifiez</span>-vous</h1>
+
+                            {{ form_start(registrationForm) }}
+                            {{ form_row(registrationForm.email,{'label':'Email','attr':{'id':'emailRegister'}})
+                            }}
+                            {{ form_row(registrationForm.plainPassword,{'label':'Mot de passe','attr':{'class':'passwordRegister'}})
+                            }}
+                            {{ form_row(registrationForm.agreeTerms,{'label':'Accepter','attr':{'class':'termsRegister'}})
+                            }}
+
+                            <button class="btn btnRegister">{{ button_label|default('Enregistrer') }}</button>
+                            {{ form_end(registrationForm) }}
+
+                            <div class="forgetPasswordRegister">
+                                <a href="#">Mot de passe perdu ?</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+                $('#registration_form_email').click(function () {
+                    $('.required').css("transform", "translateY(-50px)");
+                });
+            });
+        </script>
+
+    </section>
+</body>
 {% endblock %}

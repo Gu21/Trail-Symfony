@@ -5,43 +5,42 @@
 
 {% block body %}
 
-	<section class="bodyPicture">
+<section class="bodyPicture">
+	
 
-		<div class="container boxPicture">
+	<div class="container boxPicture">
+		<h1 class="titlePictures py-5">LES PHOTOS</h1>
 
-			<h1 class="titlePictures py-5">LES PHOTOS 2019</h1>
-			<div class="row">
-				{% for picture in pictures %}
-					{% if picture.yearsPicture == 2019 %}
+		<div class="row tidyPicture">
+			{% for picture in pictures %}
+				{# {% if picture.yearsPicture == 2019 %} #}
+				<div class=" col-lg-2 col-md-6 ">
 
-						<div class="col-6 col-md-2">
-
-							<div class="testimotionals">
-								<div class="card">
-									<div class="layer"></div>
-									<div class="content">
-										<p>{{ picture.infoPicture }}</p>
-										<div class="image">
-											<img src="/img/coureur.png" alt="vignette coureur">
-										</div>
-										<div class="details">
-											<h2>
-												{{ picture.subtitlePicture }}<br><span>
-													<a href="{{ picture.linkPicture }}">Lien google</a>
-												</span>
-											</h2>
-										</div>
-									</div>
+					<div class="testimotionals">
+						<div class="card">
+							<div class="layer"></div>
+							<div class="content">
+								<p>{{ picture.yearsPicture }}</p>
+								<div class="image">
+									<img src="/img/coureur.png" alt="vignette coureur">
+								</div>
+								<div class="details">
+									<h2>
+										{{ picture.subtitlePicture }}<br><span>
+											<a href="{{ picture.linkPicture }}">Lien google</a>
+										</span>
+									</h2>
 								</div>
 							</div>
 						</div>
-						
- 
-					{% endif %}
-				{% endfor %}
+					</div>
+				</div>
+				{# {% endif %} #}
+			{% endfor %}
 
 
-			</div>
 		</div>
-	</section>
+	</div>
+</section>
+
 {% endblock %}

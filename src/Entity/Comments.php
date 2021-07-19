@@ -58,6 +58,8 @@ class Comments
         return $this->id;
     }
 
+    
+
     public function getTitleComment(): ?string
     {
         return $this->titleComment;

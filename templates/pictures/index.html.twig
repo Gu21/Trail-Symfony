@@ -1,9 +1,11 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}PHOTOS
+{% block title %}Admin photos
 {% endblock %}
 
 {% block body %}
+
+  <h1>PHOTOS</h1>
 	
 	<table  id="myTable" class="table table-Default table-hover table-striped">
 		<thead>
@@ -25,7 +27,7 @@
 					<td>{{ picture.titlePicture }}</td>
 					<td>{{ picture.subtitlePicture }}</td>
 					<td>{{ picture.categoryPicture }}</td>
-					{# <td>{{ picture.infoPicture }}</td> #}
+					{# <td>{{ picture.infoPicture|raw }}</td> #}
 					<td>{{ picture.linkPicture }}</td>
 					<td>{{ picture.yearsPicture ? picture.yearsPicture|date('Y-m-d') : '' }}</td>
 					<td>

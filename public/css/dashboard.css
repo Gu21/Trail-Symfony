@@ -1,5 +1,9 @@
+body {
+  width: 100%;
+}
+
 .barAdmin {
-  background-color: #4c63a4;
+  background: linear-gradient(to right, #bbd2c5, #536976);
 }
 
 .paragraphAdmin {
@@ -31,7 +35,7 @@
 
 .profile img {
   border-radius: 50%;
-  width: 100%;
+  width: 153%;
 }
 
 .titleAdmin {
@@ -39,6 +43,7 @@
   font-weight: 700;
   font-size: 1.4rem;
   padding-right: 10px;
+  color: #fff;
 }
 
 .addAdmin {
@@ -49,13 +54,18 @@
 .DashboardNav {
   list-style: none;
   padding: 0;
-  margin-top: 9rem;
+  margin-top: 6rem;
 }
 
 .vertical {
   display: inline-block;
   border-right: 2px solid black;
   height: 700px;
+}
+
+.boxDashboard {
+  display: block;
+  margin: 0 auto;
 }
 
 .dashboardItem {
@@ -80,7 +90,11 @@
 }
 
 .backgroundDashboard {
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  background: #848d94;
+}
+
+.table {
+  overflow: scroll;
 }
 
 .table td, .table th {
@@ -122,11 +136,15 @@ tbody {
   color: #fff;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
   display: block;
   margin: 0 auto;
   text-decoration: none;
   transition: color 0.3s;
+}
+.CreateAdmin .dataTables_wrapper .dataTables_filter {
+  float: right;
+  text-align: right;
+  margin-left: 1rem;
 }
 .CreateAdmin .btn-outline-success {
   color: #aad044 !important;
@@ -140,6 +158,8 @@ tbody {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 .CreateAdmin .backList span {
   position: relative;

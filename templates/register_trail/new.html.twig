@@ -1,0 +1,11 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Admin inscription trail{% endblock %}
+
+{% block body %}
+    <h1>CREER UNE INSCRIPTION</h1>
+
+    {{ include('register_trail/_form.html.twig') }}
+
+    <a class="backList" href="{{ path('register_trail_index') }}"><span>Retour à la liste</span></a>
+{% endblock %}

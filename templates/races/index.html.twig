@@ -1,9 +1,9 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Races index{% endblock %}
+{% block title %}Admin courses{% endblock %}
 
 {% block body %}
-    <h1>Races index</h1>
+    <h1>COURSES</h1>
 
     <table id="myTable" class="table  table-Default table-hover table-striped">
         <thead>
@@ -23,8 +23,8 @@
             <tr>
                 <td>{{ race.id }}</td>
                 <td>{{ race.titleRace }}</td>
-                <td >{{ race.descriptionRace }}</td>
-                <td>{{ race.infoRace }}</td>
+                <td >{{ race.descriptionRace|raw }}</td>
+                <td>{{ race.infoRace|raw }}</td>
                 <td>{{ race.linkRace }}</td>
                 <td><img src="{{ asset('uploads/photos/' ~ race.pictureRace)}}" width="100"></td>
                 {# <td>{{ race.pictureRace }}</td> #}
