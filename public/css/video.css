@@ -100,7 +100,7 @@
 
 .backFront > .front {
   transform: perspective(600px) rotateY(0deg);
-  width: 302px;
+  width: 276px;
   height: 290px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -136,37 +136,4 @@
 .videoBox {
   display: flex;
   justify-content: center;
-}
-
-@media screen and (max-width: 778px) {
-  .container {
-    max-width: none;
-  }
-}
-@media screen and (max-width: 542px) {
-  .titleVideo, .teaserVideo {
-    font-size: 1.8em;
-  }
-}
-@media screen and (max-width: 425px) {
-  .titleVideo, .teaserVideo {
-    font-size: 0.8rem;
-  }
-
-  .titleVideo::after {
-    width: 1rem;
-  }
-
-  .titleVideo::before {
-    width: 1rem;
-  }
-
-  .mainVideo {
-    width: 268px;
-  }
-}
-@media screen and (max-width: 378px) {
-  .mainVideo {
-    width: 275px;
-  }
 }/*# sourceMappingURL=video.css.map */

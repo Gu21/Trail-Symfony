@@ -13,7 +13,7 @@ class ItemsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            // ->add('nameItem')
+            ->add('nameItem')
          
             ->add('commentItem')
             // ->add('dateItem')

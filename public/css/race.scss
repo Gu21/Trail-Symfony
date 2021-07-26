@@ -205,6 +205,12 @@ $color6:#303030;
 // -----------END------RUN--------------------
 
 // ------MEDIA QUERY-----
+
+
+
+
+
+
 @media screen and (min-width: 1024px) {
 
     .boximgRun .verticalPicture {
@@ -293,12 +299,14 @@ $color6:#303030;
         width: 93%;
         
     }
-
-    .boximgRun .verticalLine {
+      .boximgRun .verticalLine {
         display: inline-block;
         border-left: 0;
         height: 0px;
     }
+
+  
+    
     .boximgRun .verticalPicture{
         margin-top: 5rem;
         margin-left: 0px;

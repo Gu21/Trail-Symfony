@@ -210,14 +210,14 @@ $color6: #303030;
 @media screen and (max-width: 425px) {
 
   .boxPicture .titlePictures {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   .boxPicture .titlePictures::before {
-    width: 2rem;
+    width: 1rem;
 }
 
 .boxPicture .titlePictures::after {
-  width: 2rem;
+  width: 1rem;
 }
 
 }

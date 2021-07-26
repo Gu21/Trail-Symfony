@@ -164,7 +164,7 @@ $color6:#303030;
 .backFront>.front {
     // position: absolute;
     transform: perspective(600px) rotateY(0deg);
-    width: 302px;
+    width: 276px;
     height: 290px;
     backface-visibility: hidden;
     transition: transform .5s linear 0s;
@@ -221,67 +221,83 @@ $color6:#303030;
 
 // ------MEDIA QUERY------
 
-@media screen and (max-width: 778px) {
+// @media screen and (max-width: 778px) {
 
   
-    .container {
-        max-width: none;
-    }
-
-}
-
-// @media screen and (max-width: 768px) {
-
-//     .titleVideo, .teaserVideo {
-      
-//         font-size: 2em;
-      
+//     .container {
+//         max-width: none;
 //     }
+
 // }
 
-@media screen and (max-width: 542px) {
-    .titleVideo, .teaserVideo {
-        font-size: 1.8em;
-    }
+// // @media screen and (max-width: 768px) {
 
-}
+// //     .titleVideo, .teaserVideo {
+      
+// //         font-size: 2em;
+      
+// //     }
+// // }
+
+// @media screen and (max-width: 542px) {
+//     .titleVideo, .teaserVideo {
+//         font-size: 1.8em;
+//     }
+
+// }
 
 
 
-@media screen and (max-width: 425px) {
+// @media screen and (max-width: 425px) {
 
 
-    .titleVideo, .teaserVideo {
+//     .titleVideo, .teaserVideo {
        
-        font-size: 0.8rem;
+//         font-size: 1.7rem;
             
-        }
-        .titleVideo::after {
-            width: 1rem;
-        }
-        .titleVideo::before {
-            width: 1rem;
-        }
-        .mainVideo {
+//         }
+//         .titleVideo::after {
+//             width: 0rem;
+//         }
+//         .titleVideo::before {
+//             width: 0rem;
+//         }
+//         .mainVideo {
           
-            width: 268px;
-        }
+//             width: 268px;
+//         }
         
            
-        }
+//         }
      
-        @media screen and (max-width: 378px) {
+//         @media screen and (max-width: 378px){
 
 
-            .mainVideo {
-                width: 275px;
-            }
+//             .mainVideo {
+//                 width: 273px;
+//             }
             
-        }
+//         }
+
+//         @media screen and (max-width: 356px){
+
+
+//             .mainVideo {
+//                 width: 276px;
+//             }
+            
+//         }
 
 
 
+//         @media screen and (max-width: 319px){
 
+
+//             .mainVideo {
+//                 width: 273px;
+//             }
+            
+//         }
 
 
   

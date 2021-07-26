@@ -8,7 +8,7 @@ body {
 }
 
 .BoxForm {
-  height: 200vh;
+  height: 155vh;
   background-color: rgba(0, 0, 0, 0.3);
   padding-top: 0px;
 }
@@ -204,12 +204,12 @@ iframe {
 
 @media screen and (max-width: 2560px) {
   .BoxForm {
-    height: 165vh;
+    height: 179vh;
   }
 }
 @media screen and (max-width: 1440px) {
   .BoxForm {
-    height: 210vh;
+    height: 201vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -238,7 +238,7 @@ iframe {
   }
 
   .BoxForm {
-    height: 206vh;
+    height: 199vh;
   }
 
   iframe {
@@ -259,7 +259,11 @@ iframe {
   }
 
   .BoxForm {
-    height: 306vh;
+    height: 349vh;
+  }
+
+  iframe {
+    margin-top: 152px;
   }
 }
 @media screen and (max-width: 425px) {
@@ -288,6 +292,6 @@ iframe {
   }
 
   .BoxForm {
-    height: 297vh;
+    height: 296vh;
   }
 }/*# sourceMappingURL=contact.css.map */

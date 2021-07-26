@@ -77,4 +77,66 @@
   font-family: "Roboto", "Arial", sans-serif;
   color: #303030;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .titleTableRegisterTrail {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .table td,
+.table th {
+    padding: 1.75rem;
+  }
+
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    margin-top: 0rem;
+  }
+}
+@media screen and (max-width: 762px) {
+  .boxDocumentRegister {
+    text-align: center;
+    margin-right: 3rem;
+    margin-top: 7rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .table-responsive {
+    margin-top: 7rem;
+  }
+
+  .titleRegisterTrail {
+    font-size: 2em;
+  }
+
+  .titleRegisterTrail::before {
+    width: 2rem;
+  }
+
+  .titleRegisterTrail::after {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .boxDocumentRegister {
+    margin-right: 0rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .titleRegisterTrail::before {
+    height: 0px;
+  }
+
+  .titleRegisterTrail::after {
+    height: 0px;
+  }
+
+  .table td,
+.table th {
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=reg2021.css.map */

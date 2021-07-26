@@ -8,7 +8,7 @@
 
     <div class="container mt-5 py-5">
         <div class="row boxLogin mt-5 mb-5">
-            <div class="col-6 cardLogin">
+            <div class="col-sm-6 cardLogin">
                 <form method="post">
                     {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -23,10 +23,10 @@
 
 
                     <h1 class="h3 mb-5  titleLogin">LOGIN</h1>
-                    <a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2FTRAIL-Jambes-Allaire-1504243399878176%2F"
+                    {# <a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2FTRAIL-Jambes-Allaire-1504243399878176%2F"
                         class="faceBookLogin mb-5">
                         <i class="fab fa-2x fa-facebook IconLogin"></i>
-                    </a>
+                    </a> #}
 
                     <div class="BoxInputLogin">
                         <label for="inputEmail">Email</label>
@@ -68,7 +68,7 @@
 
 
             </div>
-            <div class="col-6 pictureLogin"></div>
+            <div class="col-sm-6 pictureLogin"></div>
         </div>
     </div>
 

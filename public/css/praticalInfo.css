@@ -53,4 +53,20 @@
   font-family: "Roboto", "Arial", sans-serif;
   color: #303030;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .pictureInfoPratical {
+    width: 89%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pictureInfoPratical {
+    width: 89%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .titlePraticalInfo {
+    font-size: 2em;
+  }
 }/*# sourceMappingURL=praticalInfo.css.map */

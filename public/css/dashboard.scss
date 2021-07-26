@@ -93,13 +93,14 @@ width: 100%;
     display: inline-block;
     border-right: 2px solid black;
     height: 700px;
+    margin-top: 15rem;
 
 }
 
-.boxDashboard{
-    display: block;
-    margin: 0 auto;
-}
+// .boxDashboard{
+//     display: block;
+//     margin: 0 auto;
+// }
 
 
 
@@ -124,6 +125,7 @@ width: 100%;
 .pageAdmin {
 
     padding: 0;
+    width: 207%;
 
 }
 
@@ -186,6 +188,8 @@ tbody {
 
 .CreateAdmin {
 
+   
+
     .h1,
     h1 {
         font-size: 1.5rem;
@@ -223,7 +227,7 @@ tbody {
 
     .backList {
         border: 1px solid $color3;
-        width: 20%;
+        width: 26%;
         padding: 10px;
         text-align: center;
         border-radius: 3px;
@@ -309,4 +313,201 @@ tbody {
     margin-left: 3px;
     background: #fff!important;
     margin-bottom: 5rem;
+}
+// -----------MEDIA QUERY------------
+
+@media screen and (max-width: 1440px) {
+
+    table,
+    tbody,
+    tr,
+    td {
+      display: block;
+      width: auto!important;
+     
+  
+  }
+  .adminVew {
+       
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+   
+}
+
+
+ 
+  
+
+    .Dashboardlink {
+  
+        padding: 4px!important;
+       
+    }
+  }
+  
+ 
+
+
+
+@media screen and (max-width: 1024px) {
+
+
+
+    .dataTables_wrapper{
+
+        width: 102%;
+    }
+
+    .vertical {
+       
+        border-right: 0px solid black;
+    }
+
+    .adminVew {
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+
+    .adminPosition{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+    
+}
+    
+
+    .adminVew {
+      
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+     
+    }
+
+    .vertical {
+      
+        height: 500px;
+       
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+    table.dataTable thead th, table.dataTable thead td {
+        padding: 10px 6px!important;
+       
+    }
+
+    .adminVew {
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+    .dataTables_wrapper {
+        width: 103%;
+        
+    }
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: auto!important;
+    padding: 10px 2px!important;
+
+}
+
+.paragraphAdmin {
+  
+    font-size: 0.7rem;
+}
+
+
+
+
+}
+
+@media screen and (max-width: 425px) {
+
+
+    .CreateAdmin {
+        display: none;
+        
+    }
+
+    .CreateAdmin .backList {
+       
+        width: 38%;
+  
+    }
+    table.dataTable thead th, table.dataTable thead td {
+        padding: 10px 6px!important;
+       
+    }
+    .dataTables_wrapper {
+        width: 57%;
+        margin-left: -1rem;
+    }
+    .dataTables_wrapper {
+        width: 103%;
+        
+    }
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: auto!important;
+    padding: 10px 2px!important;
+
+}
+
+.paragraphAdmin {
+   
+    font-size: 0.7rem;
+}
+
+ 
+}
+
+@media screen and (max-width: 320px) {
+
+    //  th,  td {
+    //     padding: 10px 2px!important;
+    // }
+
+    .dataTables_wrapper {
+        width: 111%;
+        
+    }
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: auto!important;
+    padding: 10px 2px!important;
+
+}
+
+.paragraphAdmin {
+   
+    font-size: 0.7rem;
+}
+
 }

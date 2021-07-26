@@ -125,13 +125,13 @@ a:hover .hover {
 @media screen and (max-width: 425px) {
   .overlay-pictureResults .hover {
     width: 82.9%;
-    left: 35px;
+    left: 34px;
   }
 }
 @media screen and (max-width: 375px) {
   .overlay-pictureResults .hover {
     width: 82.8%;
-    left: 30px;
+    left: 29px;
   }
 
   .titleResults {

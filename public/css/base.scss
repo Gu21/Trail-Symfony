@@ -3,6 +3,9 @@ $color2: #6b90bb;
 $color3: #fff;
 $color4: #60ae46;
 $color5: #000;
+$color6:#303030;
+
+
 
 // ---------VARIABLES--------------------
 
@@ -45,6 +48,7 @@ body {
     white-space: nowrap;
 }
 
+
 .navbar-light .navbar-brand {
     color: rgba(0, 0, 0, 0.9);
     width: 100px;
@@ -70,7 +74,8 @@ body {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 0;
+    margin-left: 140px;
+  
 }
 
 .d-md-block {
@@ -84,7 +89,9 @@ body {
 .navbar-light .navbar-toggler {
     border-color: $color3;
     color: $color3;
+    margin-top: 57px;
 }
+
 
 .nav-link .dropdown-toggle .Nav {
     color: $color3 !important;
@@ -176,17 +183,21 @@ body {
 }
 
 .Subtitle {
-    background-color: $color2;
+    background-color: $color3;
 
     .Subtitle-Item {
-        color: $color3;
+        color: $color6;
         transition: 0.3s;
+       text-align: center;
+      
+       
     }
 
     .Subtitle-Item::after {
         content: "";
         display: block;
         border-bottom: 1px solid $color1;
+        width: 100%;
     }
 }
 
@@ -544,9 +555,9 @@ body {
     }
 
     .navbar-light .navbar-brand {
-        top: -2rem;
+        top: -5.5rem;
         position: absolute;
-        right: -14rem;
+        right: -29rem;
     }
 
     .Nav {
@@ -558,6 +569,11 @@ body {
     .nav-link:hover {
         text-align: center;
     }
+
+    .navbar-light .navbar-brand {
+        top: -4rem;
+       
+    }
 }
 
 
@@ -567,10 +583,37 @@ body {
         text-align: center;
     }
 
+    // .navbar-light .navbar-brand {
+       
+    //     width: 58px;
+    // }
+
+  
+
+    .dropdown-item {
+    
+        text-align: center;
+       
+    }
+
+    .navbar-light .navbar-brand {
+        top: -3.9rem;
+       
+    }
+
+    .navbar-light .navbar-brand {
+     
+        right: -12rem;
+      
+        width: 39%;
+    }
+    
+ 
+
 
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     .navbar-light .navbar-nav .nav-link {
         text-align: center;
     }
@@ -580,6 +623,13 @@ body {
         width: 38%;
       
     }
+    .navbar-light .navbar-brand {
+     
+        right: -12rem;
+       
+    }
+
+  
 }
 
 @media screen and (max-width: 375px){
@@ -587,6 +637,31 @@ body {
     .navbar-light .navbar-brand {
      
         right: -12rem;
+      
+        width: 52%;
     }
+  
+
+}
+
+
+// -------------MEDIA QUERY FOOTER---------
+
+
+@media screen and (max-width: 425px){
+
+
+    .Footer .verticalLineFooterLeft {
+        
+        border-left: 0px solid #aad044;
+       
+    }
+
+    .Footer .verticalLineFooteRight {
+      
+        border-left: 0px solid #aad044;
+    
+    }
+
 
 }

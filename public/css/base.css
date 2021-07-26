@@ -56,7 +56,7 @@ body {
 
 .dropdown:hover .dropdown-menu {
   display: block;
-  margin-top: 0;
+  margin-left: 140px;
 }
 
 .d-md-block {
@@ -70,6 +70,7 @@ body {
 .navbar-light .navbar-toggler {
   border-color: #fff;
   color: #fff;
+  margin-top: 57px;
 }
 
 .nav-link .dropdown-toggle .Nav {
@@ -146,16 +147,18 @@ body {
 }
 
 .Subtitle {
-  background-color: #6b90bb;
+  background-color: #fff;
 }
 .Subtitle .Subtitle-Item {
-  color: #fff;
+  color: #303030;
   transition: 0.3s;
+  text-align: center;
 }
 .Subtitle .Subtitle-Item::after {
   content: "";
   display: block;
   border-bottom: 1px solid #aad044;
+  width: 100%;
 }
 
 .Subtitle-Item:hover {
@@ -258,9 +261,9 @@ body {
   }
 
   .navbar-light .navbar-brand {
-    top: -2rem;
+    top: -5.5rem;
     position: absolute;
-    right: -14rem;
+    right: -29rem;
   }
 
   .Nav {
@@ -272,13 +275,30 @@ body {
 .nav-link:hover {
     text-align: center;
   }
+
+  .navbar-light .navbar-brand {
+    top: -4rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .navbar-light .navbar-nav .nav-link {
     text-align: center;
   }
+
+  .dropdown-item {
+    text-align: center;
+  }
+
+  .navbar-light .navbar-brand {
+    top: -3.9rem;
+  }
+
+  .navbar-light .navbar-brand {
+    right: -12rem;
+    width: 39%;
+  }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .navbar-light .navbar-nav .nav-link {
     text-align: center;
   }
@@ -286,9 +306,23 @@ body {
   .navbar-collapse {
     width: 38%;
   }
+
+  .navbar-light .navbar-brand {
+    right: -12rem;
+  }
 }
 @media screen and (max-width: 375px) {
   .navbar-light .navbar-brand {
     right: -12rem;
+    width: 52%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .Footer .verticalLineFooterLeft {
+    border-left: 0px solid #aad044;
+  }
+
+  .Footer .verticalLineFooteRight {
+    border-left: 0px solid #aad044;
   }
 }/*# sourceMappingURL=base.css.map */

@@ -1,7 +1,8 @@
 .CreateAdmin {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: none;
+  justify-content: center;
 }
 .CreateAdmin img {
   width: 55%;

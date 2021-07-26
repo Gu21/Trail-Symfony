@@ -22,7 +22,7 @@ body {
 .BoxForm {
     // height: 1600px;
     // height: 1915px;
-    height: 200vh;
+    height: 155vh;
     background-color: rgba(0, 0, 0, 0.3);
     padding-top: 0px;
 }
@@ -315,7 +315,7 @@ h1::after {
 @media screen and (max-width: 2560px) {
 
     .BoxForm {
-        height: 165vh;
+        height: 179vh;
        
     }
 
@@ -324,7 +324,7 @@ h1::after {
 @media screen and (max-width: 1440px) {
 
     .BoxForm {
-        height: 210vh;
+        height: 201vh;
     }
 
 }
@@ -369,7 +369,7 @@ h1::after {
     }
 
     .BoxForm {
-        height: 206vh;
+        height: 199vh;
     }
 
     iframe {
@@ -380,6 +380,9 @@ h1::after {
 
 
 }
+
+
+
 @media screen and (max-width: 576px) {
 
     .Title-Form h1::before {
@@ -402,7 +405,13 @@ h1::after {
     }
 
     .BoxForm {
-        height: 306vh;
+        height: 349vh;
+    }
+
+    iframe {
+     
+        margin-top: 152px;
+        
     }
 
 }
@@ -445,7 +454,7 @@ h1::after {
         
     }
     .BoxForm {
-        height: 297vh;
+        height: 296vh;
     }
 
 }
