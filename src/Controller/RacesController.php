@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 #[Route('/races')]
 class RacesController extends AbstractController
@@ -37,6 +38,11 @@ class RacesController extends AbstractController
 
 
     #[Route('/new', name: 'races_new', methods: ['GET', 'POST'])]
+          /**
+     * Route('/new', name: 'races_new', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
+    
     public function new(Request $request, SluggerInterface $slugger): Response
     {
         $race = new Races();
@@ -88,6 +94,10 @@ class RacesController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'races_edit', methods: ['GET','POST'])]
+          /**
+     * Route('/{id}/edit', name: 'races_edit', methods: ['GET','POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function edit(Request $request, Races $race, SluggerInterface $slugger): Response
     {
       
@@ -134,6 +144,10 @@ class RacesController extends AbstractController
     }
 
     #[Route('/{id}', name: 'races_delete', methods: ['POST'])] 
+          /**
+     * Route('/{id}', name: 'races_delete', methods: ['POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function delete(Request $request, Races $race):Response
     {
         if ($this->isCsrfTokenValid('delete'.$race->getId(), $request->request->get('_token'))) {

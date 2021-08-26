@@ -1,135 +1,127 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-        {% block title %}{% endblock %}
-    </title>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+			{% block title %}{% endblock %}
+		</title>
 
 
-    <!-- -----LINK  BOOTSTRAP-------------- -->
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-    <!-- --END---LINK BOOTSTRAP-------------- -->
+		<!-- -----LINK  BOOTSTRAP-------------- -->
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+		<!-- --END---LINK BOOTSTRAP-------------- -->
 
-    <!-- -----LINK CSS------------- -->
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/dataTables.responsive.css">
-    <!-- -END----LINK CSS------------- -->
+		<!-- -----LINK CSS------------- -->
+		<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"/> <link rel="stylesheet" href="{{ asset('css/admin.css') }}"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/dataTables.responsive.css"><!-- -END----LINK CSS------------- -->
+		<!-- -----SCRIPT JS------------- --><script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"> </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+		<!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.js"> -->
+	</head>
+</html></script><script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script><script src="{{ asset('js/app.js') }}"></script><!-- --END---SCRIPT JS------------- --></head>{% block stylesheets %}{% endblock %}<body class="backgroundDashboard"><div class="pageAdmin container-fluid ">
 
-    <!-- -----SCRIPT JS------------- -->
-    <script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"> </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js">
-    </script>
-    <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.js"> -->
-     </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <!-- --END---SCRIPT JS------------- -->
+<div class="barAdmin">
 
-</head>
+	<div class="boxDashboard">
 
-{% block stylesheets %}{% endblock %}
+		<h1 class="paragraphAdmin">Administration</h1>
 
-<body class="backgroundDashboard">
-    <div class="pageAdmin container-fluid ">
-
-        <nav class="navbar navbar-light barAdmin">
-          
-    <div class="boxDashboard">
-
-        <P class="paragraphAdmin mt-5">Bienvenue dans l'interface d'administration de votre site internet</P>
-
-    </div>
+	</div>
 
 
+	<div class="boxAdminHome">
+		<a class="nav-link active Home" aria-current="page" href="/admin">Accueil</a>
+	</div>
 
-            {# <div class="container-fluid">
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                                </div>
-                                <div> #}
-        </nav>
-    </div>
+	<div class="boxAdminHome">
+		<a class="nav-link active Home" aria-current="page" href="{{ path('homes') }}">Retour au site</a>
+	</div>
 
+	<div class="boxAdminHome">
+		<a class="nav-link Nav" href="{{ path('app_logout') }}">
+			<i class="fas fa-user-lock"></i>
+		</a>
+	</div>
+</div></div><div class="row adminVew">
 
+<div class="col-sm-2 menu">
+	<span
+		class="vertical">
+		<!-- <h1 class="titleAdmin">ADMINISTRATION</h1> -->
+		<nav class="navbar">
 
-
-
-
-
-
-    <div class="row adminVew">
-
-        <div class="col-sm-2">
-            <span class="vertical">
-                <h1 class="titleAdmin">ADMINISTRATION</h1>
-
-
-                <ul class="DashboardNav">
-
-                    <li class="dashboardItem">
-                        <i class="fas fa-home"></i>
-                        <a class="Dashboardlink" href="{{ path('home_index') }}">Accueil</a>
-                    </li>
-                    <li class="dashboardItem">
-                        <i class="fas fa-search"></i>
-                        <a class="linkDashboard" href="{{ path('category_index') }}">Categories</a>
-                    </li>
-                   
-                    <li class="dashboardItem">
-                        <i class="fas fa-envelope"></i>
-                        <a class="Dashboardlink" href="{{ path('contacts_index') }}">Contacts</a>
-                    </li>
-                    <li class="dashboardItem">
-                        <i class="fas fa-handshake"></i>
-                        <a class="Dashboardlink" href="{{ path('partners_index') }}">Partenaires</a>
-                    </li>
-                    <li class="dashboardItem">
-                        <i class="fas fa-image"></i>
-                        <a class="Dashboardlink" href="{{ path('pictures_index') }}">Photos</a>
-                    </li>
-                    <li class="dashboardItem">
-                        <i class="fas fa-running"></i>
-                        <a class="Dashboardlink" href="{{ path('races_index') }}">Courses</a>
-                    </li>
-                    <li class="dashboardItem">
-                        <i class="fas fa-cog"></i>
-                        <a class="Dashboardlink" href="{{ path('settings_index') }}">compte à rebours</a>
-                    </li>
-                    <li class="dashboardItem">
-                        <i class="fas fa-video"></i>
-                        <a class="Dashboardlink" href="{{ path('videos_index') }}">Videos</a>
-                    </li>
-                      <li class="dashboardItem">
-                        <i class="fas fa-edit"></i>
-                        <a class="Dashboardlink" href="{{ path('register_trail_index') }}">Inscription</a>
-                    </li>
-                        <li class="dashboardItem">
-                        <i class="fas fa-user-circle"></i>
-                        <a class="Dashboardlink" href="{{ path('user_index') }}">Utilisateurs</a>
-                    </li>
-                </ul>
-            </span>
-
-        </div>
-
-      <!-- <div class="adminPosition"> -->
-    
-            <div  class="col-sm-10 CreateAdmin table table-Primary table-hover table-striped  mt-5">
-                {% block body %}{% endblock %}
-            </div>
-        <!-- </div> -->
-    </div>
+			<div class="openMenu">
+				<i class="fa fa-bars"></i>
+			</div>
 
 
-</body>
+			<ul class="DashboardNav ">
 
-</html>
+
+				<li class="dashboardItem">
+					<i class="fas fa-home"></i>
+					<a class="Dashboardlink" href="{{ path('home_index') }}">
+						Accueil</a>
+				</li>
+				<li class="dashboardItem">
+					<i class="fas fa-search"></i>
+					<a class="Dashboardlink" href="{{ path('category_index') }}">Categories</a>
+				</li>
+
+				<li class="dashboardItem">
+					<i class="fas fa-envelope"></i>
+					<a class="Dashboardlink" href="{{ path('contacts_index') }}">Contacts</a>
+				</li>
+				<li class="dashboardItem">
+					<i class="fas fa-handshake"></i>
+					<a class="Dashboardlink" href="{{ path('partners_index') }}">Partenaires</a>
+				</li>
+				<li class="dashboardItem">
+					<i class="fas fa-image"></i>
+					<a class="Dashboardlink" href="{{ path('pictures_index') }}">Photos</a>
+				</li>
+				<li class="dashboardItem">
+					<i class="fas fa-running"></i>
+					<a class="Dashboardlink" href="{{ path('races_index') }}">Courses</a>
+				</li>
+				<li class="dashboardItem">
+					<i class="fas fa-cog"></i>
+					<a class="Dashboardlink" href="{{ path('settings_index') }}">compte à rebours</a>
+				</li>
+				<li class="dashboardItem">
+					<i class="fas fa-video"></i>
+					<a class="Dashboardlink" href="{{ path('videos_index') }}">Videos</a>
+				</li>
+				<li class="dashboardItem">
+					<i class="fas fa-edit"></i>
+					<a class="Dashboardlink" href="{{ path('register_trail_index') }}">Inscription</a>
+				</li>
+				<li class="dashboardItem">
+					<i class="fas fa-user-circle"></i>
+					<a class="Dashboardlink" href="{{ path('user_index') }}">Utilisateurs</a>
+				</li>
+				  <div class="closeMenu"><i class="fa fa-times"></i></div>
+				
+
+			</ul>
+
+
+		</nav>
+	</span>
+
+</div>
+
+<!-- <div class="adminPosition"> -->
+
+<div class="col-sm-10  CreateAdmin table table-Primary table-hover table-striped  mt-5"> {% block body %}{% endblock %}
+	</div>
+	<!-- </div> -->
+
+</div>
+
+
+<script src="{{ asset('js/hamburgerAdmin.js') }}"></script></body></html>

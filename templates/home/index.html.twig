@@ -23,7 +23,7 @@
                 <td>{{ home.description|raw }}</td>
                 <td>
                     {# <a href="{{ path('home_show', {'id': home.id}) }}">show</a> #}
-                    <a class="edit" href="{{ path('home_edit', {'id': home.id}) }}">ÉDITER</a>
+                    <a class="edit" href="{{ path('home_edit', {'id': home.id}) }}"><i class="fas fa-pencil-alt"></i></a>
                 </td>
             </tr>
         {% else %}

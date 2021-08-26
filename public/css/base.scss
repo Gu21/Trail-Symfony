@@ -74,9 +74,11 @@ body {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    margin-left: 140px;
-  
+    // margin-left: 140px;
+    margin-left: 65px;
 }
+  
+
 
 .d-md-block {
     display: flex;

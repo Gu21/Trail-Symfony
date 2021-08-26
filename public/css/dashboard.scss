@@ -1,100 +1,107 @@
-$color1 : #aad044;
+$color1: #aad044;
 $color2: #6b90bb;
 $color3: #fff;
 $color4: #4c63a4;
-$color5: #000;
+$color5: #909090;
+$color6: #ececec;
 
-body{
-
-width: 100%;
+body {
+  width: 100%;
+}
+.navbar {
+  // width: 8rem;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  box-shadow: rgba(12, 43, 30, 0.2) 0 4px 14px;
+  transition: width 0.5s;
 }
 
-.barAdmin{
+.navbar:hover {
+  width: 13rem;
+}
 
-    background: linear-gradient(to right, #bbd2c5, #536976);
-   
+.navbar:not(:hover) .Dashboardlink {
+  display: none;
+}
+
+.barAdmin {
+  background: linear-gradient(to right, #bbd2c5, #536976);
+  display: flex;
+}
+
+.boxAdminHome {
+  padding-left: 100px;
+
+  a{
+    color: $color2;
+    font-weight: 700;
+    font-family: "Roboto", "Arial", sans-serif;
+  }
 }
 
 .paragraphAdmin {
-
-    text-align: center;
-    font-family: "Roboto", "Arial", sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-
-
+  // text-align: center;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 24rem;
+  color: $color3;
 }
 
 .userAdmin {
+  text-align: end;
+  margin-right: 7rem;
+  margin: 0 auto;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
 
-    text-align: end;
-    margin-right: 7rem;
-    margin: 0 auto;
-    margin-top: 5px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
+  a {
+    color: $color1;
+    text-decoration: none;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+  }
 
-    a {
-        color: $color1;
-        text-decoration: none;
-        font-family: "Roboto", "Arial", sans-serif;
-        font-weight: 700;
-
-
-
-    }
-
-    i {
-
-        margin-right: 10px;
-    }
-
+  i {
+    margin-right: 10px;
+  }
 }
 
-.profile{
-
-    img{
-
-        border-radius: 50%;
-        width: 153%;
-    }
+.profile {
+  img {
+    border-radius: 50%;
+    width: 153%;
+  }
 }
-
 
 .titleAdmin {
-
-
-    font-family: 'Lato', 'Arial', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    padding-right: 10px;
-    color: $color3;
-
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding-right: 10px;
+  color: $color3;
 }
 
 .addAdmin {
-
-    text-align: end;
-    margin-right: 20rem;
+  text-align: end;
+  margin-right: 20rem;
 }
 
 .DashboardNav {
-
-    list-style: none;
-    padding: 0;
-    margin-top: 6rem;
-
-
+  list-style: none;
+  padding: 0;
+  // margin-top: 6rem;
 }
 
 .vertical {
-    display: inline-block;
-    border-right: 2px solid black;
-    height: 700px;
-    margin-top: 15rem;
-
+  display: inline-block;
+  border-right: 2px solid black;
+  height: 823px;
+  //  margin-top: 15rem;
 }
 
 // .boxDashboard{
@@ -102,412 +109,494 @@ width: 100%;
 //     margin: 0 auto;
 // }
 
-
-
 .dashboardItem {
-    margin: 10px 10px 30px 10px;
+  width: 98%;
+  height: 3rem;
+  transition: background-color 0.2s;
+  margin: 10px 10px 30px 10px;
+
+  a {
+    text-decoration: none;
+    padding: 10px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: $color1;
+  }
+
+i{
+    color: $color6;
+}
 
 
-    a {
+}
 
-        text-decoration: none;
-        padding: 10px;
-        font-family: "Roboto", "Arial", sans-serif;
-        font-weight: 700;
-        font-size: 1rem;
-        color: $color1;
+.dashboardItem:hover {
+  background-color: $color3;
+  display: flex;
+  align-items: center;
+  color: $color2;
+  padding: 0.4rem;
 
+  i{
+    color: $color2;
+}
 
-
-    }
 }
 
 .pageAdmin {
-
-    padding: 0;
-    width: 207%;
-
+  padding: 0;
+  width: 207%;
 }
 
 .adminVew {
-
-    margin-right: 0px;
-    margin-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .backgroundDashboard {
-
-    background: hsla(208, 7%, 55%, 1);
-    
-
+  background: hsla(208, 7%, 55%, 1);
 }
-.table{
-    // width: 100px; 
+.table {
+  // width: 100px;
   overflow: scroll;
-  
-  
 }
 
-.table td, .table th {
-    padding: .75rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
-    text-align: center;
-    
-   
+.table td,
+.table th {
+  padding: 0.4rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
 }
 
 th,
 td {
-
-
-    text-align: justify;
- 
-    
-   
+  text-align: justify;
 }
 
 .subtitle {
-
-    width: 75px;
+  width: 75px;
 }
 
 .table thead th {
-    text-align: center;
-
+  text-align: center;
 }
 
 thead {
-    color: $color2;
+  color: $color2;
 }
+
 
 tbody {
-    color: $color4;
+  color: $color4;
 }
 
-
 .CreateAdmin {
+  .h1,
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+  }
 
-   
+  label,
+  .btn,
+  .backList {
+    color: $color3;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 700;
+    // font-size: 1.1rem;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
 
-    .h1,
-    h1 {
-        font-size: 1.5rem;
-        margin-bottom: 4rem;
+  .dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+    margin-left: 1rem;
+  }
 
+  .btn-outline-success {
+    color: $color1 !important;
+  }
 
+  .backList {
+    border: 1px solid $color3;
+    width: 26%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 5px;
+
+    span {
+      position: relative;
+      z-index: 2;
+      color: $color3;
+      transition: color 0.3s ease-in-out;
     }
+  }
 
-    label,
-    .btn,
-    .backList {
+  .backList::after {
+    content: "";
+    position: absolute;
+    background: $color5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+  }
 
-        color: $color3;
-        font-family: "Roboto", "Arial", sans-serif;
-        font-weight: 700;
-        // font-size: 1.1rem;
-        display: block;
-        margin: 0 auto;
-        text-decoration: none;
-        transition: color 0.3s;
+  .backList:hover::after {
+    transform: translateY(-100%);
+  }
 
+  .backList:hover span {
+    color: $color1;
+  }
 
-    }
+  .btn:hover {
+    color: $color1;
+  }
 
-    .dataTables_wrapper .dataTables_filter {
-        float: right;
-        text-align: right;
-        margin-left: 1rem;
-    }
-
-    .btn-outline-success {
-        color: $color1!important;
-        
-    }
-
-    .backList {
-        border: 1px solid $color3;
-        width: 26%;
-        padding: 10px;
-        text-align: center;
-        border-radius: 3px;
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-        margin-bottom: 10px;
-        margin-top: 5px;
-
-        span {
-
-            position: relative;
-            z-index: 2;
-            color: $color3;
-            transition: color 0.3s ease-in-out;
-
-        }
-
-      
-    }
-
-    .backList::after {
-        content: "";
-        position: absolute;
-        background: $color5;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        transition: transform 0.3s ;
-
-
-    }
-
-    .backList:hover::after {
-
-        transform: translateY(-100%);
-    }
-
-    .backList:hover span{
-        color: $color1;
-    }
-
- 
-
-    .btn:hover {
-
-        color: $color1;
-    }
-
-
-    textarea {
-
-        height: 300px;
-    }
-
+  textarea {
+    height: 300px;
+  }
 }
 
 .edit {
-
-    text-decoration: none !important;
-    list-style: none !important;
-    color: $color1;
-    font-family: "Roboto", "Arial", sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: 1s;
-
+  text-decoration: none !important;
+  list-style: none !important;
+  color: $color1;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 1s;
 }
 
 .col-2 {
-    -ms-flex: 0 0 16.666667%;
-    flex: 0 0 12.666667%;
-    max-width: 16.666667%;
-    margin-top: 8rem;
+  -ms-flex: 0 0 16.666667%;
+  flex: 0 0 12.666667%;
+  max-width: 16.666667%;
+  margin-top: 8rem;
 }
 
 .dataTables_wrapper .dataTables_filter input {
-    border: 1px solid #000;
-    border-radius: 3px;
-    padding: 5px;
-    background-color: transparent;
-    margin-left: 3px;
-    background: #fff!important;
-    margin-bottom: 5rem;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: transparent;
+  margin-left: 3px;
+  background: #fff !important;
+  margin-bottom: 5rem;
 }
+
+.fa-pencil-alt,
+.fa-trash-alt,
+.fa-sync-alt {
+  font-size: 2rem;
+  
+}
+
+.openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+nav .DashboardNav .closeMenu , .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+   
+    
+}
+
 // -----------MEDIA QUERY------------
 
 @media screen and (max-width: 1440px) {
-
-    table,
-    tbody,
-    tr,
-    td {
-      display: block;
-      width: auto!important;
-     
-  
-  }
-  .adminVew {
-       
-    display: flex;
-    // flex-direction: column;
-    align-items: center;
-   
-}
-
-
- 
-  
-
-    .Dashboardlink {
-  
-        padding: 4px!important;
-       
-    }
-  }
-  
- 
-
-
-
-@media screen and (max-width: 1024px) {
-
-
-
-    .dataTables_wrapper{
-
-        width: 102%;
-    }
-
-    .vertical {
-       
-        border-right: 0px solid black;
-    }
-
-    .adminVew {
-       
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-       
-    }
-
-
-    .adminPosition{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   
-    
-}
-    
-
-    .adminVew {
-      
-        display: flex;
-        flex-direction: column;
-        // align-items: center;
-     
-    }
-
-    .vertical {
-      
-        height: 500px;
-       
-    }
-
-
-}
-
-
-
-@media screen and (max-width: 768px) {
-
-
-    table.dataTable thead th, table.dataTable thead td {
-        padding: 10px 6px!important;
-       
-    }
-
-    .adminVew {
-       
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-       
-    }
-
-    .dataTables_wrapper {
-        width: 103%;
-        
-    }
   table,
   tbody,
   tr,
   td {
     display: block;
-    width: auto!important;
-    padding: 10px 2px!important;
+    width: auto !important;
+  }
+  .adminVew {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+  }
 
-}
-
-.paragraphAdmin {
+  .Dashboardlink {
+    padding: 4px !important;
+  }
+  thead {
   
-    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+  }
 }
 
+@media screen and (max-width: 1024px) {
+  .navbar {
+    top: auto;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  thead {
+  
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar:hover {
+    width: 100%;
+  }
+
+  .navbar:not(:hover) .Dashboardlink {
+    display: none;
+  }
+
+  .DashboardNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .dataTables_wrapper {
+    width: 102%;
+  }
+
+  .vertical {
+    border-right: 0px solid black;
+  }
+
+  .adminVew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .adminPosition {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .adminVew {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+  }
+
+  .vertical {
+    height: 130px;
+  }
+  .paragraphAdmin {
+    margin-left: 12rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+ .DashboardNav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $color5;
+    transition: top 1s ease;
+    display: none;
+  }
+  .navbar {
+ 
+    box-shadow: none;
+    
+  }
+
+  nav  .openMenu {
+    display: block;
+  }
+
+ 
+
+  nav .DashboardNav .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 57rem;
+  }
+    
+
+}
+
+.icons i {
+    display: inline-block;
+    padding: 12px;
+}
+.dashboardItem {
+ 
+  height: 3rem;
+  
+}
+  
 
 
+@media screen and (max-width: 768px) {
+  table.dataTable thead th,
+  table.dataTable thead td {
+    padding: 10px 6px !important;
+  }
+
+  .adminVew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dataTables_wrapper {
+    width: 103%;
+  }
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: auto !important;
+    padding: 10px 2px !important;
+  }
+
+  .paragraphAdmin {
+    font-size: 1.5rem;
+    margin-left: 0rem;
+  }
+  .boxAdminHome {
+    padding-left: 0px;
+  }
 
 }
 
 @media screen and (max-width: 425px) {
+  .CreateAdmin {
+    display: none;
+  }
 
-
-    .CreateAdmin {
-        display: none;
-        
-    }
-
-    .CreateAdmin .backList {
-       
-        width: 38%;
-  
-    }
-    table.dataTable thead th, table.dataTable thead td {
-        padding: 10px 6px!important;
-       
-    }
-    .dataTables_wrapper {
-        width: 57%;
-        margin-left: -1rem;
-    }
-    .dataTables_wrapper {
-        width: 103%;
-        
-    }
+  .CreateAdmin .backList {
+    width: 38%;
+  }
+  table.dataTable thead th,
+  table.dataTable thead td {
+    padding: 11px 2px !important;
+  }
+  .dataTables_wrapper {
+    width: 57%;
+    margin-left: -1rem;
+  }
+  .dataTables_wrapper {
+    width: 108%;
+  }
   table,
   tbody,
   tr,
   td {
     display: block;
-    width: auto!important;
-    padding: 10px 2px!important;
+    width: auto !important;
+    padding: 10px 2px !important;
+  }
 
-}
+  .paragraphAdmin {
+    font-size: 1.5rem;
+  }
+  .menu {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .dashboardItem {
+    margin: 10px 6px 30px 6px;
 
-.paragraphAdmin {
-   
-    font-size: 0.7rem;
-}
-
+  }
  
+  th
+  {
+     font-size: 0.7rem;
+   }
+
+   nav .DashboardNav .closeMenu {
+ 
+    right: 32rem;
+}
+}
+
+@media screen and (max-width: 375px) {
+ 
+  th
+  {
+     font-size: 0.6rem;
+   }
+
+   nav .DashboardNav .closeMenu {
+    right: 28rem;
+}
+.barAdmin {
+  display: flex;
+  flex-direction: column;
+}
+
 }
 
 @media screen and (max-width: 320px) {
+  //  th,  td {
+  //     padding: 10px 2px!important;
+  // }
 
-    //  th,  td {
-    //     padding: 10px 2px!important;
-    // }
-
-    .dataTables_wrapper {
-        width: 111%;
-        
-    }
-  table,
-  tbody,
-  tr,
-  td {
-    display: block;
-    width: auto!important;
-    padding: 10px 2px!important;
-
-}
-
-.paragraphAdmin {
+  .dataTables_wrapper {
+    width: 111%;
+  }
+  th
+ {
+    font-size: 0.55rem;
+  }
+   .table th {
+    padding: 1rem;
    
-    font-size: 0.7rem;
+}
+.table td,
+.table th {
+  padding: 0.3rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
 }
 
+  .paragraphAdmin {
+    font-size: 1.5rem;
+    margin-left: 7rem;
+  }
+  .dashboardItem {
+    margin: 10px 6px 30px 6px;
+  }
+  .barAdmin {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .DashboardNav .closeMenu {
+    right: 23rem;
+}
 }

@@ -9,6 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
 
 #[Route('/home')]
 class HomeController extends AbstractController
@@ -22,6 +24,10 @@ class HomeController extends AbstractController
     }
 
     #[Route('/new', name: 'home_new', methods: ['GET', 'POST'])]
+       /**
+     * Route('/new', name: 'home_new', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function new(Request $request): Response
     {
         $home = new Home();
@@ -51,6 +57,10 @@ class HomeController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'home_edit', methods: ['GET', 'POST'])]
+       /**
+     * Route('/{id}/edit', name: 'home_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function edit(Request $request, Home $home): Response
     {
         $form = $this->createForm(HomeType::class, $home);
@@ -69,6 +79,10 @@ class HomeController extends AbstractController
     }
 
     #[Route('/{id}', name: 'home_delete', methods: ['POST'])]
+       /**
+     * Route('/{id}', name: 'home_delete', methods: ['POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function delete(Request $request, Home $home): Response
     {
         if ($this->isCsrfTokenValid('delete'.$home->getId(), $request->request->get('_token'))) {

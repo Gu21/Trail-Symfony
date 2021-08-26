@@ -307,6 +307,20 @@ h1::after {
 }
 
 
+.grecaptcha-badge{
+    
+   
+    display: block;
+    transition: right 0.3s ease 0s;
+    position: fixed;
+    bottom: 14px;
+    right: -186px;
+    border-radius: 2px;
+    overflow: hidden;
+
+}
+
+
 // --END---FORMULAIRE------------------
 
 

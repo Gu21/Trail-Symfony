@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 #[Route('/pictures')]
 class PicturesController extends AbstractController
@@ -56,6 +57,10 @@ class PicturesController extends AbstractController
     
 
     #[Route('/new', name: 'pictures_new', methods: ['GET', 'POST'])]
+        /**
+     * Route('/new', name: 'pictures_new', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function new(Request $request): Response
     {
         $picture = new Pictures();
@@ -85,6 +90,10 @@ class PicturesController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'pictures_edit', methods: ['GET', 'POST'])]
+        /**
+     * Route('/{id}/edit', name: 'pictures_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function edit(Request $request, Pictures $picture): Response
     {
         $form = $this->createForm(PicturesType::class, $picture);
@@ -103,6 +112,10 @@ class PicturesController extends AbstractController
     }
 
     #[Route('/{id}', name: 'pictures_delete', methods: ['POST'])]
+        /**
+     * Route('/{id}', name: 'pictures_delete', methods: ['POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function delete(Request $request, Pictures $picture): Response
     {
         if ($this->isCsrfTokenValid('delete'.$picture->getId(), $request->request->get('_token'))) {

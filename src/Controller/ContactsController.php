@@ -10,61 +10,84 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 #[Route('/contacts')]
 class ContactsController extends AbstractController
 {
-    #[Route('/', name: 'contacts_index', methods: ['GET','POST'])]
+    #[Route('/', name: 'contacts_index', methods: ['GET', 'POST'])]
     public function index(Request $request, ContactsRepository $contactsRepository, SluggerInterface $slugger): Response
     {
-       
-            $contact = new Contacts();
-            $form = $this->createForm(ContactsType::class, $contact);
-            $form->handleRequest($request);
-    
-            if ($form->isSubmitted() && $form->isValid()) {
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($contact);
-                $entityManager->flush();
-    
-                return $this->redirectToRoute('contacts_index');
-            }
-            return $this->render('contacts/index.html.twig', [
-                'contacts' => $contactsRepository->findAll(),
-                'form' => $form->createView(),
-            ]);
+
+        $contact = new Contacts();
+        $form = $this->createForm(ContactsType::class, $contact);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($contact);
+            $entityManager->flush();
+
+
+            return $this->redirectToRoute('contacts_index');
+        }
+        return $this->render('contacts/index.html.twig', [
+            'contacts' => $contactsRepository->findAll(),
+            'form' => $form->createView(),
+        ]);
     }
 
+   
 
-    #[Route('/form_Contact', name: 'form_Contact', methods: ['GET','POST'])]
+
+
+    #[Route('/form_Contact', name: 'form_Contact', methods: ['GET', 'POST'])]
     public function form(Request $request, ContactsRepository $contactsRepository, SluggerInterface $slugger): Response
     {
-       
-            $contact = new Contacts();
-            $form = $this->createForm(ContactsType::class, $contact);
-            $form->handleRequest($request);
-    
-            if ($form->isSubmitted() && $form->isValid()) {
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($contact);
-                $entityManager->flush();
-    
-                // return $this->redirectToRoute('contacts_index');
-            }
-            return $this->render('contacts/formContact.html.twig', [
-                'contacts' => $contactsRepository->findAll(),
-                'form' => $form->createView(),
-            ]);
+
+        $contact = new Contacts();
+        $form = $this->createForm(ContactsType::class, $contact);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($contact);
+            $entityManager->flush();
+
+            // return $this->redirectToRoute('contacts_index');
+        }
+
+
+        return $this->render('contacts/formContact.html.twig', [
+            'contacts' => $contactsRepository->findAll(),
+            'form' => $form->createView(),
+        ]);
     }
 
-  
+
+
+    #[Route('/form_recaptcha', name: 'contacts_recaptcha', methods: ['GET', 'POST'])]
+    public function captcha(ContactsRepository $contactsRepository): Response
+    {
+        return $this->render('contacts/form_recaptcha.html.twig', [
+            'contacts' => $contactsRepository->findAll(),
+            
+        ]);
+
+    }
+
+
 
     #[Route('/new', name: 'contacts_new', methods: ['GET', 'POST'])]
+    /**
+     * Route('/new', name: 'contacts_new', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function new(Request $request): Response
     {
-       
-     
+
+
         $contact = new Contacts();
         $form = $this->createForm(ContactsType::class, $contact);
         $form->handleRequest($request);
@@ -82,7 +105,7 @@ class ContactsController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-  
+
 
     #[Route('/{id}', name: 'contacts_show', methods: ['GET'])]
     public function show(Contacts $contact): Response
@@ -93,6 +116,10 @@ class ContactsController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'contacts_edit', methods: ['GET', 'POST'])]
+    /**
+     * Route('/{id}/edit', name: 'contacts_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function edit(Request $request, Contacts $contact): Response
     {
         $form = $this->createForm(ContactsType::class, $contact);
@@ -111,9 +138,13 @@ class ContactsController extends AbstractController
     }
 
     #[Route('/{id}', name: 'contacts_delete', methods: ['POST'])]
+    /**
+     * Route('/{id}', name: 'contacts_delete', methods: ['POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function delete(Request $request, Contacts $contact): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$contact->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $contact->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($contact);
             $entityManager->flush();

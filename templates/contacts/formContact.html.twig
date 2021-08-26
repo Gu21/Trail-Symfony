@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contacts{% endblock %}
+{% block title %}Contacts
+{% endblock %}
 
 {% block body %}
-
 
 
 <!-- --------------------------------------CONTACT------------------------ -->
@@ -11,154 +11,152 @@
 <!-- ---------------------------PRESIDENT----------------------------- -->
 
 <section class="Body-parallax  parallaxAnim">
+	<div class="container BoxForm">
+		<div class="row">
+			{% for contact in contacts %}
+			{% if contact.id == 1 %}
+			<div class=" col-sm-12 ">
+				<div class="Title-Form">
+					<h1>CONTACT</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="President">
+					<h2>PRÉSIDENTS</h2>
+					<P>{{ contact.nameContact }}
+						&nbsp
+						{{ contact.firstNameContact }}</P>
+				</div>
+
+				<div class="address">
+					<address>
+						<div class="mail">
+							<a href="mailto:{{ contact.emailContact }}">{{ contact.emailContact }}</a>
+						</div>
+						<div class="phone">
+							<a href="tel:{{ contact.phoneContact }}">{{ contact.phoneContact }}</a>
+						</div>
+					</address>
+				</div>
+				{%endif %}
+				{% endfor %}
+
+				{% for contact in contacts %}
+				{% if contact.id == 2 %}
+
+				<div class="sub">
+					<p>{{ contact.nameContact }}
+						&nbsp
+						{{ contact.firstNameContact }}</p>
+				</div>
+
+				<div class="address">
+					<address>
+						<div class="mail">
+							<a href="mailto:{{ contact.emailContact }}">{{ contact.emailContact }}</a>
+						</div>
+						<div class="phone">
+							<a href="tel:{{ contact.phoneContact }}">{{ contact.phoneContact }}</a>
+						</div>
+					</address>
+				</div>
+			</div>
+			{%endif %}
+			{% endfor %}
+
+			<!-- ------------------END---------PRESIDENT----------------------------- -->
+
+			<!-- ------------------TREASURER----------------------------- -->
+
+			{% for contact in contacts %}
+			{% if contact.id == 3 %}
+			<div class="col-sm-6 ">
+				<div class="treasurer">
+					<h2>TRÉSORIERS</h2>
+					<P>{{ contact.nameContact }}
+						&nbsp
+						{{ contact.firstNameContact }}</P>
+				</div>
+				<div class="address">
+					<address>
+						<div class="mail">
+							<a href="mailto:{{ contact.emailContact }}">{{ contact.emailContact }}</a>
+						</div>
+						<div class="phone">
+							<a href="tel:{{ contact.phoneContact }}" ">{{ contact.phoneContact }}</a>
+									</div>
+								</address>
+							</div>
+						{%endif %}
+					{% endfor %}
+
+					{% for contact in contacts %}
+						{% if contact.id == 4 %}
+
+							<div class=" sub">
+								<p>{{ contact.nameContact }}
+									&nbsp
+									{{ contact.firstNameContact }}</p>
+						</div>
+
+						<div class="address">
+							<address>
+								<div class="mail">
+									<a href="mailto:{{ contact.emailContact }}">{{ contact.emailContact }}</a>
+								</div>
+								<div class="phone">
+									<a href="tel:{{ contact.phoneContact }}">{{ contact.phoneContact }}</a>
+								</div>
+							</address>
+						</div>
+						{%endif %}
+						{% endfor %}
+				</div>
+
+			</div>
+
+			<div class="container">
 
 
+				<div class="row py-5">
+
+					<div class=" col-sm-6 formboxContact">
 
 
-
-    <div class="container BoxForm">
-        <div class="row">
-            {% for contact in contacts %}
-            {% if contact.id == 1 %}
-            <div class=" col-sm-12 ">
-                <div class="Title-Form">
-                    <h1>CONTACT</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="President">
-                    <h2>PRÉSIDENTS</h2>
-                    <P>{{ contact.nameContact }} &nbsp {{ contact.firstNameContact }}</P>
-                </div>
-
-                <div class="address">
-                    <address>
-                        <div class="mail">
-                            <a href="mailto:{{ contact.emailContact }}">{{ contact.emailContact }}</a>
-                        </div>
-                        <div class="phone">
-                            <a href="tel:{{ contact.phoneContact }}">{{ contact.phoneContact }}</a>
-                        </div>
-                    </address>
-                </div>
-                {%endif %}
-                {% endfor %}
-
-                {% for contact in contacts %}
-                {% if contact.id == 2 %}
-
-                <div class="sub">
-                    <p>{{ contact.nameContact }} &nbsp {{ contact.firstNameContact }}</p>
-                </div>
-
-                <div class="address">
-                    <address>
-                        <div class="mail">
-                            <a href="mailto:{{ contact.emailContact }}">{{ contact.emailContact }}</a>
-                        </div>
-                        <div class="phone">
-                            <a href="tel:{{ contact.phoneContact }}">{{ contact.phoneContact }}</a>
-                        </div>
-                    </address>
-                </div>
-            </div>
-            {%endif %}
-            {% endfor %}
-
-            <!-- ------------------END---------PRESIDENT----------------------------- -->
-
-            <!-- ------------------TREASURER----------------------------- -->
-
-            {% for contact in contacts %}
-            {% if contact.id == 3 %}
-            <div class="col-sm-6 ">
-                <div class="treasurer">
-                    <h2>TRÉSORIERS</h2>
-                    <P>{{ contact.nameContact }} &nbsp {{ contact.firstNameContact }}</P>
-                </div>
-                <div class="address">
-                    <address>
-                        <div class="mail">
-                            <a href="mailto:{{ contact.emailContact }}">{{ contact.emailContact }}</a>
-                        </div>
-                        <div class="phone">
-                            <a href="tel:{{ contact.phoneContact }}"">{{ contact.phoneContact }}</a>
-                            </div>
-                        </address>
-                    </div>
-                    {%endif %}
-                    {% endfor %}
-
-                    {% for contact in contacts %}
-                    {% if contact.id == 4 %}
-
-                    <div class=" sub">
-                                <p>{{ contact.nameContact }} &nbsp {{ contact.firstNameContact }}</p>
-                        </div>
-
-                        <div class="address">
-                            <address>
-                                <div class="mail">
-                                    <a href="mailto:{{ contact.emailContact }}">{{ contact.emailContact }}</a>
-                                </div>
-                                <div class="phone">
-                                    <a href="tel:{{ contact.phoneContact }}">{{ contact.phoneContact }}</a>
-                                </div>
-                            </address>
-                        </div>
-                        {%endif %}
-                        {% endfor %}
-                </div>
-
-            </div>
-
-            <div class="container">
+						{{ include('contacts/_form.html.twig') }}
 
 
-
-                <div class="row py-5">
-
-                    <div class=" col-sm-6 formboxContact">
-
-                        {{ include('contacts/_form.html.twig') }}
+					</div>
 
 
-                    </div>
+					<div class=" col-sm-6">
 
-                    <div class=" col-sm-6">
-
-                        <img class="contactEnvelope" src="/img/enveloppeContact.jpg" alt="enveloppe contact">
+						<img class="contactEnvelope" src="/img/enveloppeContact.jpg" alt="enveloppe contact">
 
 
-                    </div>
+					</div>
 
 
+				</div>
+			</div>
 
-                </div>
-            </div>
-
-            <!-- ------------END------TREASURER----------------------------- -->
-
+			<!-- ------------END------TREASURER----------------------------- -->
 
 
-        </div>
+		</div>
 
 
-        <div class="container-Iframe">
-            <iframe class="frame"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25578.946284288526!2d-2.18658585460974!3d47.63282692276445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480f908272896aef%3A0x40ca5cd36e2ca00!2s56350%20Allaire!5e0!3m2!1sfr!2sfr!4v1623752186402!5m2!1sfr!2sfr"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+		<div class="container-Iframe">
+			<iframe class="frame"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25578.946284288526!2d-2.18658585460974!3d47.63282692276445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480f908272896aef%3A0x40ca5cd36e2ca00!2s56350%20Allaire!5e0!3m2!1sfr!2sfr!4v1623752186402!5m2!1sfr!2sfr"
+				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
 
 
 </section>
 
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <!-- -----------------------------END---------CONTACT--------------------- -->
-
-
-
-</section>
-
-{% endblock %}
+</section>{% endblock %}

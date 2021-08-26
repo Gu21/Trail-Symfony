@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 #[Route('/settings')]
 class SettingsController extends AbstractController
@@ -22,6 +23,10 @@ class SettingsController extends AbstractController
     }
 
     #[Route('/new', name: 'settings_new', methods: ['GET', 'POST'])]
+         /**
+     * Route('/new', name: 'settings_new', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function new(Request $request): Response
     {
         $setting = new Settings();
@@ -51,6 +56,10 @@ class SettingsController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'settings_edit', methods: ['GET', 'POST'])]
+         /**
+     *Route('/{id}/edit', name: 'settings_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function edit(Request $request, Settings $setting): Response
     {
         $form = $this->createForm(SettingsType::class, $setting);
@@ -69,6 +78,10 @@ class SettingsController extends AbstractController
     }
 
     #[Route('/{id}', name: 'settings_delete', methods: ['POST'])]
+         /**
+     * Route('/{id}', name: 'settings_delete', methods: ['POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function delete(Request $request, Settings $setting): Response
     {
         if ($this->isCsrfTokenValid('delete'.$setting->getId(), $request->request->get('_token'))) {

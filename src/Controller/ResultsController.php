@@ -11,6 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 #[Route('/results')]
 class ResultsController extends AbstractController
@@ -35,6 +36,10 @@ class ResultsController extends AbstractController
 
 
     #[Route('/new', name: 'results_new', methods: ['GET', 'POST'])]
+          /**
+     * Route('/new', name: 'results_new', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function new(Request $request, SluggerInterface $slugger): Response
     {
         $result = new Results();
@@ -83,6 +88,10 @@ class ResultsController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'results_edit', methods: ['GET', 'POST'])]
+          /**
+     * Route('/{id}/edit', name: 'results_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function edit(Request $request, Results $result, SluggerInterface $slugger): Response
     {
         $form = $this->createForm(ResultsType::class, $result);
@@ -120,6 +129,10 @@ class ResultsController extends AbstractController
     }
 
     #[Route('/{id}', name: 'results_delete', methods: ['POST'])]
+          /**
+     * Route('/{id}', name: 'results_delete', methods: ['POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function delete(Request $request, Results $result): Response
     {
         if ($this->isCsrfTokenValid('delete' . $result->getId(), $request->request->get('_token'))) {

@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 
@@ -40,6 +41,10 @@ class VideosController extends AbstractController
         }
 
     #[Route('/new', name: 'videos_new', methods: ['GET', 'POST'])]
+         /**
+     * Route('/new', name: 'videos_new', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function new(Request $request, SluggerInterface $slugger): Response
 
     {
@@ -92,6 +97,10 @@ class VideosController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'videos_edit', methods: ['GET', 'POST'])]
+         /**
+     * Route('/{id}/edit', name: 'videos_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function edit(Request $request, Videos $video, SluggerInterface $slugger): Response
     {
 
@@ -130,6 +139,10 @@ class VideosController extends AbstractController
     }
 
     #[Route('/{id}', name: 'videos_delete', methods: ['POST'])]
+         /**
+     * Route('/{id}', name: 'videos_delete', methods: ['POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function delete(Request $request, Videos $video): Response
     {
         if ($this->isCsrfTokenValid('delete' . $video->getId(), $request->request->get('_token'))) {

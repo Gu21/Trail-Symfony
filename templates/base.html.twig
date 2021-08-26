@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -29,6 +28,7 @@
 			<link rel="stylesheet" href="{{ asset('css/login.css') }}"/>
 			<link rel="stylesheet" href="{{ asset('css/results.css') }}"/>
 			<link rel="stylesheet" href="{{ asset('css/praticalInfo.css') }}"/>
+			<link rel="stylesheet" href="{{ asset('css/privacyPolicy.css') }}"/>
 
 			<!-- ---END--LINK CSS------------- -->
 
@@ -39,12 +39,12 @@
 			<link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet"/>
 			<link rel="preconnect" href="https://fonts.gstatic.com"/>
 			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
-			<link rel="preconnect" href="https://fonts.gstatic.com">
-			<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link rel="preconnect" href="https://fonts.gstatic.com"/>
+			<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+			<link rel="preconnect" href="https://fonts.googleapis.com"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 			<link
-			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"/>
 
 		<!-- -----END-------FONT-------------------- -->
 
@@ -63,17 +63,18 @@
 			<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 			<!-- --END----SCROLLMAGIC-------------- -->
 
-
 			<!-- ----END -SCRIPT BOOTSTRAP------------- -->
 
-			<!-- -----SCRIPT JS------------- --><script src="{{ asset('js/app.js') }}"> </script>
+			<!-- -----SCRIPT JS------------- -->
+			<script src="https://www.google.com/recaptcha/api.js"></script>
 			<script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"></script>
 
 			<!-- ----END -SCRIPT JS------------- -->
 		{% endblock %}
 	</head>
 
-	<body id="body">
+	<body
+		id="body">
 		<!-- ---------------------------------------HEADER-------------------------- -->
 
 		<header>
@@ -86,11 +87,11 @@
 					<!-- </div> -->
 					<!-- <div class="carousel-caption d-md-block Caption"> -->
 						<div class="titleNav"> <!-- <div class="Title-Trail">
-																												                    <h1 class="Trail">TRAIL</h1>
-																												                </div> -->
+																																																																						                    <h1 class="Trail">TRAIL</h1>
+																																																																						                </div> -->
 						<!-- <div class="Title-Legs">
-																								                    <h2 class="Legs-alaire">DES JAMBES ALLAIRE</h2>
-																								                </div> -->
+																																																												                    <h2 class="Legs-alaire">DES JAMBES ALLAIRE</h2>
+																																																												                </div> -->
 							<div class="button-Nav"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
 							</button>
@@ -101,29 +102,55 @@
 						<ul
 							class="navbar-nav ml-auto justify-content-start w-100">
 							<!-- <li class="nav-item Home-Nav">
-																												                        <a class="nav-link active Home" aria-current="page" href="#">Accueil</a>
-																												                    </li> -->
+																																																																						                        <a class="nav-link active Home" aria-current="page" href="#">Accueil</a>
+																																																																						                    </li> -->
 							<li class="nav-item dropdown">
 								<a class="nav-link Nav" href="/practical/info">
 									Infos</a>
 
-								{# <ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink"> #}
-									{# <li>
-																												<a class="dropdown-item Subtitle-Item" href="#who">Qui sommes-nous?</a>
-																											</li> #}
-									{# <li>
-																												<a class="dropdown-item Subtitle-Item" href="#">Horaires/Tarifs</a>
-																											</li> #}
-										{# <li>
-											<a class="dropdown-item Subtitle-Item" href="#"> Infos pratiques</a>
-									</li> #}
-									{# <li>
-										<a class="dropdown-item Subtitle-Item" href="#">Nos aventures</a>
-									</li>
-									{# <li> 
-																												<a class="dropdown-item Subtitle-Item" href="#">Règlement</a>
-																											</li> #}
-								{# </ul> #}
+								{#
+																																								                <ul
+																																								                  class="dropdown-menu Subtitle"
+																																								                  aria-labelledby="navbarDropdownMenuLink"
+																																								                >
+																																								                  #}
+							{#
+																																			                  <li>
+																																			                    <a class="dropdown-item Subtitle-Item" href="#who"
+																																			                      >Qui sommes-nous?</a
+																																			                    >
+																																			                  </li>
+																																			                  #}
+								{#
+																																								                  <li>
+																																								                    <a class="dropdown-item Subtitle-Item" href="#"
+																																								                      >Horaires/Tarifs</a
+																																								                    >
+																																								                  </li>
+																																								                  #}
+								{#
+																																								                  <li>
+																																								                    <a class="dropdown-item Subtitle-Item" href="#">
+																																								                      Infos pratiques</a
+																																								                    >
+																																								                  </li>
+																																								                  #}
+								{#
+																																								                  <li>
+																																								                    <a class="dropdown-item Subtitle-Item" href="#"
+																																								                      >Nos aventures</a
+																																								                    >
+																																								                  </li>
+																																								                  {#
+																																								                  <li>
+																																								                    <a class="dropdown-item Subtitle-Item" href="#"
+																																								                      >Règlement</a
+																																								                    >
+																																								                  </li>
+																																								                  #}
+								{#
+																																								                </ul>
+																																								                #}
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -142,61 +169,63 @@
 							</li>
 						</ul>
 						<div id="logo">
-							<a class="nav-link active Home" aria-current="page" href="{{path ('homes')}}"><img class="navbar-brand" src="/img/LOGO.png" alt="LOGO" width="150px"/></a>
+							<a class="nav-link active Home" aria-current="page" href="{{ path('homes') }}"><img class="navbar-brand" src="/img/LOGO.png" alt="LOGO" width="150px"/></a>
 						</div>
 
 						<ul class="navbar-nav ml-auto justify-content-center w-100">
 							<li class="nav-item dropdown">
-								<a class="nav-link Nav" href="/results/results_years"> résultats</a>
+								<a class="nav-link Nav" href="/results/results_years">
+									résultats</a>
 							</li>
 
 							<!-- <li class="nav-item dropdown">
-																												                        <a class="nav-link Nav" href="#">Bénévoles</a>
-																												                    </li> -->
+																																																																						                        <a class="nav-link Nav" href="#">Bénévoles</a>
+																																																																						                    </li> -->
 							<!-- <li class="nav-item dropdown">
-																												                        <a class="nav-link Nav" href="#">Partenaires</a>
-																												                    </li> -->
+																																																																						                        <a class="nav-link Nav" href="#">Partenaires</a>
+																																																																						                    </li> -->
 							<li class="nav-item dropdown">
 								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Les courses</a>
 								<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
-
-									{{ render(controller(
-                                    'App\\Controller\\RacesController::menuHeader'
-                                    )) }}
-
+									{{
+                    render(
+                      controller("App\\Controller\\RacesController::menuHeader")
+                    )
+                  }}
 								</ul>
 							</li>
 
 							<!-- <li class="nav-item dropdown">
-																												                        <a class="nav-link Nav" href="#">Livre d'or</a>
-																												                    </li> -->
+																																																																						                        <a class="nav-link Nav" href="#">Livre d'or</a>
+																																																																						                    </li> -->
 
 							<li class="nav-item dropdown">
 								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact
 								</a>
 								<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
 									<li>
-										<a class="dropdown-item Subtitle-Item" href="{{path ('form_Contact')}}">Contact</a>
+										<a class="dropdown-item Subtitle-Item" href="{{ path('form_Contact') }}">Contact</a>
 									</li>
 									<li>
-										<a class="dropdown-item Subtitle-Item" href="{{path ('comments_index')}}">Livre d'or</a>
+										<a class="dropdown-item Subtitle-Item" href="{{ path('comments_index') }}">Livre d'or</a>
 									</li>
 									<!-- <li><a class="dropdown-item Subtitle-Item" href="#">Inscription</a></li> -->
 								</ul>
 							</li>
-							
+
 							{% if not app.user %}
-							<li class="nav-item dropdown">
-								<a class="nav-link Nav"  href="{{path ('admin')}}">
-									<i class="far fa-user"></i>
-								</a>
-							</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link Nav" href="{{ path('admin') }}">
+										<i class="far fa-user"></i>
+									</a>
+								</li>
 
 							{% else %}
 								<li class="nav-item dropdown">
-								<a class="nav-link Nav" href="{{path ('app_logout')}}"><i class="fas fa-user-lock"></i>
-								</a>
-							</li>
+									<a class="nav-link Nav" href="{{ path('app_logout') }}">
+										<i class="fas fa-user-lock"></i>
+									</a>
+								</li>
 							{% endif %}
 						</ul>
 					</div>
@@ -210,13 +239,11 @@
 
 		<!-- -----------------------------------FOOTER----------------------- -->
 		<footer class="Footer py-5">
-
 			<div class="container-fluid Container-Footer">
 				<div class="Box-Contact">
-
 					<div class="row Box-Footer">
 						<div class="col-sm-3 Footer">
-							<a href="/">Nous Contacter</a>
+							<a href="{{ path('form_Contact') }}">Nous Contacter</a>
 						</div>
 						<div class="verticalLineFooterLeft"></div>
 						<div class="col-sm-3 Footer">
@@ -224,61 +251,35 @@
 						</div>
 						<div class="verticalLineFooteRight"></div>
 						<div class="col-sm-3 Footer">
-							<a href="/">Politique de Confidentialité</a>
+							<a href="/privacy/policy">Politique de Confidentialité</a>
 						</div>
-
 					</div>
-
 				</div>
 
 				<div class="container-fluid">
-
 					<div class="row">
-
 						<div class="col-sm-12 Footer">
 							<a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2FTRAIL-Jambes-Allaire-1504243399878176%2F">
 								<i class="fab fa-2x fa-facebook Icon-Footer"></i>
 							</a>
 						</div>
-
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
-
 							<div class="copyright">
-								<p class="Paragraphe-Footer">Bisson Guillaume | 2021 © Tous droits réservés</p>
-								 <a href="#body"><i class="fas fa-arrow-alt-circle-up"></i></a>
+								<p class="Paragraphe-Footer">
+									Bisson Guillaume | 2021 © Tous droits réservés
+								</p>
+								<a href="#body">
+									<i class="fas fa-arrow-alt-circle-up"></i>
+								</a>
 							</div>
 						</div>
 					</div>
-
 				</div>
-
 			</div>
 		</footer>
 		<!-- -----------------------------END------FOOTER----------------------- -->
-				<script>
-		$(function () {
-			/**
-			 * Défilement fluide
-			 **/
-			$("a[href*='#']:not([href='#'])").click(function () {
-				if (
-					location.hostname == this.hostname &&
-					this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
-				) {
-					var anchor = $(this.hash);
-					anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
-					if (anchor.length) {
-						$("html, body").animate({
-							scrollTop: anchor.offset().top
-						}, 1500);
-					}
-				}
-			});
-		});
-	</script>
-
+		<script src="{{ asset('js/app.js') }}"> </script>
 	</body>
-
-</html>
+</html></body></html>

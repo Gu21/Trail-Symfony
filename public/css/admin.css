@@ -5,5 +5,17 @@
   justify-content: center;
 }
 .CreateAdmin img {
-  width: 55%;
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .CreateAdmin img {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .menu {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=admin.css.map */

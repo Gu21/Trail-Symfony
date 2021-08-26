@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 #[Route('/register/trail')]
@@ -41,6 +42,10 @@ class RegisterTrailController extends AbstractController
     
 
     #[Route('/new', name: 'register_trail_new', methods: ['GET', 'POST'])]
+         /**
+     * Route('/new', name: 'register_trail_new', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function new(Request $request, SluggerInterface $slugger): Response
     {
         $registerTrail = new RegisterTrail();
@@ -145,6 +150,10 @@ class RegisterTrailController extends AbstractController
     //------------------ Upload fichier $newletterRegisterTrail  PDF---------------------------
 
     #[Route('/{id}/edit', name: 'register_trail_edit', methods: ['GET', 'POST'])]
+         /**
+     * Route('/{id}/edit', name: 'register_trail_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function edit(Request $request, RegisterTrail $registerTrail, SluggerInterface $slugger): Response
     {
         $form = $this->createForm(RegisterTrailType::class, $registerTrail);
@@ -231,6 +240,10 @@ class RegisterTrailController extends AbstractController
     }
 
     #[Route('/{id}', name: 'register_trail_delete', methods: ['POST'])]
+         /**
+     * Route('/{id}', name: 'register_trail_delete', methods: ['POST'])
+     * @isGranted("ROLE_ADMIN")
+     */
     public function delete(Request $request, RegisterTrail $registerTrail): Response
     {
         if ($this->isCsrfTokenValid('delete' . $registerTrail->getId(), $request->request->get('_token'))) {

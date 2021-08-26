@@ -4,6 +4,10 @@ namespace App\Entity;
 
 use App\Repository\ContactsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+
+
 
 /**
  * @ORM\Entity(repositoryClass=ContactsRepository::class)
@@ -18,29 +22,38 @@ class Contacts
     private $id;
 
     /**
+     * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
      * @ORM\Column(type="string", length=255)
      */
     private $nameContact;
 
     /**
+     * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
      * @ORM\Column(type="string", length=255)
      */
     private $firstNameContact;
 
     /**
+     * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
      * @ORM\Column(type="string", length=255)
      */
     private $emailContact;
 
     /**
+     * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
      * @ORM\Column(type="string", length=255)
      */
     private $phoneContact;
 
     /**
+     * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
      * @ORM\Column(type="text")
      */
     private $commentContact;
+
+
+
+
 
     public function getId(): ?int
     {
@@ -106,4 +119,6 @@ class Contacts
 
         return $this;
     }
+
+ 
 }
