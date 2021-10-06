@@ -13,10 +13,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-#[Route('/results')]
+#[Route('trail-des-jambes-allaire/Resultats')]
 class ResultsController extends AbstractController
 {
-    #[Route('/', name: 'results_index', methods: ['GET'])]
+    #[Route('/Admin', name: 'results_index', methods: ['GET'])]
     public function index(ResultsRepository $resultsRepository): Response
     {
         return $this->render('results/index.html.twig', [
@@ -25,7 +25,7 @@ class ResultsController extends AbstractController
     }
 
 
-    #[Route('/results_years', name: 'results_years', methods: ['GET'])]
+    #[Route('', name: 'results_years', methods: ['GET'])]
     public function registerTrail(ResultsRepository $resultsRepository): Response
     {
         return $this->render('results/resultsYears.html.twig', [
@@ -35,9 +35,9 @@ class ResultsController extends AbstractController
     }
 
 
-    #[Route('/new', name: 'results_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'results_new', methods: ['GET', 'POST'])]
           /**
-     * Route('/new', name: 'results_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'results_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     public function new(Request $request, SluggerInterface $slugger): Response
@@ -87,10 +87,10 @@ class ResultsController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'results_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modification', name: 'results_edit', methods: ['GET', 'POST'])]
           /**
-     * Route('/{id}/edit', name: 'results_edit', methods: ['GET', 'POST'])
-     * @isGranted("ROLE_ADMIN")
+     * Route('/{id}/Modification', name: 'results_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, Results $result, SluggerInterface $slugger): Response
     {

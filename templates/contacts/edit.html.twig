@@ -1,6 +1,6 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin contact{% endblock %}
+{% block title %}Admin modifier contact | Trail des jambes Allaire{% endblock %}
 
 {% block body %}
     <h1>MODIFIER CONTACT</h1>
@@ -8,6 +8,8 @@
     {{ include('contacts/_form.html.twig', {'button_label': 'Modifier'}) }}
 
     <a class="backList"  href="{{ path('contacts_index') }}"><span>Retour à la liste</span></a>
-
-    {{ include('contacts/_delete_form.html.twig') }}
+   {% if  is_granted('ROLE_ADMIN') %}
+		  {{ include('contacts/_delete_form.html.twig') }}
+	{% endif %}
+  
 {% endblock %}

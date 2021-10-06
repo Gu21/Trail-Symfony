@@ -1,9 +1,9 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin contacts{% endblock %}
+{% block title %}Admin contact | Trail des jambes Allaire{% endblock %}
 
 {% block body %}
- <h1>CONTACT</h1>
+ <h1>CONTACTS</h1>
 
     <table  id="myTable" class="table table-Default table-hover table-striped">
         <thead>
@@ -28,7 +28,7 @@
                 {# <td>{{ contact.commentContact }}</td> #}
                 <td>
                     {# <a href="{{ path('contacts_show', {'id': contact.id}) }}">show</a> #}
-                    <a  class="edit" href="{{ path('contacts_edit', {'id': contact.id}) }}">ÉDITER</a>
+                    <a  class="edit" href="{{ path('contacts_edit', {'id': contact.id}) }}"><i class="fas fa-pencil-alt"></i></a>
                 </td>
             </tr>
         {% else %}

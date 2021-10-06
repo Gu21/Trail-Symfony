@@ -1,285 +1,366 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>
-			{% block title %}{% endblock %}
-		</title>
-		{% block stylesheets %}
+<html lang="fr">
 
-			<!-- -----LINK  BOOTSTRAP-------------- -->
-			<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
-			<!-- --END---LINK BOOTSTRAP-------------- -->
+<head>
 
-			<!-- -----LINK CSS------------- -->
-			<link rel="stylesheet" href="{{ asset('css/base.css') }}"/> <link rel="stylesheet" href="{{ asset('css/homes.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/partners.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/contact.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/race.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/pictures.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/video.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/comments.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/item.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/reg2021.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/registration.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/user.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/login.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/results.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/praticalInfo.css') }}"/>
-			<link rel="stylesheet" href="{{ asset('css/privacyPolicy.css') }}"/>
 
-			<!-- ---END--LINK CSS------------- -->
+	<meta charset="UTF-8" />
+	<meta name="description" content="Venez participer chaque année au trail des jambes Allaire organisé par l'association pour un partage
+																															de la convivialité et de l'esprit festif." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>
+		{% block title %}{% endblock %}
+	</title>
+	{% block stylesheets %}
+	<!-- -----LINK  FAVICON-------------- -->
+	<link rel="shortcut icon" href="/img/favicon.ico" type="images/x-icon" />
+	<!-- -----LINK  BOOTSTRAP-------------- -->
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+	<!-- --END---LINK BOOTSTRAP-------------- -->
 
-			<!-- ------------FONT-------------------- -->
+	<!-- -----LINK CSS------------- -->
+	<link rel="stylesheet" href="{{ asset('css/base.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/homes.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/partners.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/contact.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/race.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/pictures.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/video.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/comments.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/item.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/reg2021.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/user.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/login.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/results.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/praticalInfo.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/privacyPolicy.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/legalNotice.css') }}" />
+	<!-- ---END--LINK CSS------------- -->
 
-			<link rel="preconnect" href="https://fonts.gstatic.com"/> <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,700;1,300&display=swap" rel="stylesheet"/>
-			<link rel="preconnect" href="https://fonts.gstatic.com"/>
-			<link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet"/>
-			<link rel="preconnect" href="https://fonts.gstatic.com"/>
-			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
-			<link rel="preconnect" href="https://fonts.gstatic.com"/>
-			<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
-			<link rel="preconnect" href="https://fonts.googleapis.com"/>
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-			<link
-			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"/>
+	<!-- ------------FONT-------------------- -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,700;1,300&display=swap"
+		rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
 
-		<!-- -----END-------FONT-------------------- -->
+	<!-- ------------DATA TABLE-------------------- -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css">
+	<!-- --------END----DATA TABLE-------------------- -->
 
-		{% endblock %}
-		{% block javascripts %}
-			<!-- -----SCRIPT BOOTSTRAP------------- -->
+	<!-- -----END-------FONT-------------------- -->
 
-			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-			<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	{% endblock %}
+	{% block javascripts %}
 
-			<!-- ------SCROLLMAGIC-------------- -->
-			<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-			<!-- --END----SCROLLMAGIC-------------- -->
+	<!-- -------------------------TARTE AU CITRON COOKIE -->
+	<script type="text/javascript" src="{{asset('tarteaucitron/tarteaucitron.js')}}"></script>
 
-			<!-- ----END -SCRIPT BOOTSTRAP------------- -->
+	<script>
+		tarteaucitron.init({
+			"privacyUrl": "",
+			/* URL de la page de la politique de vie privée */
+			"hashtag": "#tarteaucitron",
+			/* Ouvrir le panneau contenant ce hashtag */
+			"cookieName": "tarteaucitron",
+			/* Nom du Cookie */
+			"orientation": "bottom",
+			/* Position de la banniére (top - bottom) */
+			"showAlertSmall": false,
+			/* Voir la bannière réduite en bas à droite */
+			"cookieslist": true,
+			/* Voir la liste des cookies */
+			"adblocker": false,
+			/* Voir une alerte si un bloqueur de publicités est détecté */
+			"AcceptAllCta": true,
+			/* Voir le bouton accepter tout (quand highPrivacy est à true) */
+			"highPrivacy": true,
+			/* Désactiver le consentement automatique */
+			"handleBrowserDNTRequest": false,
+			/* Si la protection du suivi du navigateur est activée, tout interdire */
+			"removeCredit": false,
+			/* Retirer le lien vers tarteaucitron.js */
+			"moreInfoLink": true,
+			/* Afficher le lien 'voir plus d'infos' */
+			"useExternalCss": false,
+			/* Si false, tarteaucitron.css sera chargé*/
+			// "cookieDomain": '.my-multisite-domaine.fr', /* Cookie multisite */
+			"readmoreLink": '/cookiespolicy' /* Lien vers la page 'Lire plus' */
+		});
+	</script>
 
-			<!-- -----SCRIPT JS------------- -->
-			<script src="https://www.google.com/recaptcha/api.js"></script>
-			<script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"></script>
+	<!-- -------------------END-----TARTE AU CITRON COOKIE -->
 
-			<!-- ----END -SCRIPT JS------------- -->
-		{% endblock %}
-	</head>
 
-	<body
-		id="body">
-		<!-- ---------------------------------------HEADER-------------------------- -->
+	<!-- -------------------------- Global site tag (gtag.js) - Google Analytics -->
 
-		<header>
-			<!-- ---------------------------------------NAV-------------------------- -->
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE15MTRSZY"></script> -->
 
-			<nav id="navbar" class="navbar-expand-lg navbar-light bg-light fixed-top Box-Nav">
-				<div class="container">
-					<!-- <div class="Background-Nav"> -->
+	<script type="text/javascript">
+		tarteaucitron.user.gtagUa = 'G-GE15MTRSZY';
+		// tarteaucitron.user.gtagCrossdomain = ['example.com', 'example2.com'];
+		tarteaucitron.user.gtagMore = function () {
+			/* add here your optionnal gtag() */
+		};
+		(tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+	</script>
 
-					<!-- </div> -->
-					<!-- <div class="carousel-caption d-md-block Caption"> -->
-						<div class="titleNav"> <!-- <div class="Title-Trail">
-																																																																						                    <h1 class="Trail">TRAIL</h1>
-																																																																						                </div> -->
-						<!-- <div class="Title-Legs">
-																																																												                    <h2 class="Legs-alaire">DES JAMBES ALLAIRE</h2>
-																																																												                </div> -->
-							<div class="button-Nav"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-						</div>
+	<!-- ------------------------END Global site tag (gtag.js) - Google Analytics -->
+
+
+	<!-- -----SCRIPT RECAPTCHA------------- -->
+	<script src="https://www.google.com/recaptcha/api.js?render=6LdkvxIcAAAAACe3P5yebsbFn637hVTlSbRWN8dn"></script>
+
+
+	<script>
+		function onClick(e) {
+			e.preventDefault();
+			grecaptcha.ready(function () {
+				grecaptcha.execute('6LdkvxIcAAAAACe3P5yebsbFn637hVTlSbRWN8dn', {
+					action: 'submit'
+				}).then(function (token) {
+					console.log('captacha');
+				});
+			});
+		}
+	</script>
+	<!-- ---END --SCRIPT RECAPTCHA------------- -->
+	<!-- -----SCRIPT BOOTSTRAP------------- -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- ----END -SCRIPT BOOTSTRAP------------- -->
+
+	<!-- ------SCROLLMAGIC-------------- -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+	<!-- --END----SCROLLMAGIC-------------- -->
+
+
+	<!-- -----SCRIPT JS------------- -->
+	<script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"></script>
+	<!-- ----END -SCRIPT JS------------- -->
+
+	<!-- -----SCRIPT JS--DATA TABLE----------- -->
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.js">
+	</script>
+	<!-- ----END---SCRIPT JS--DATA TABLE----------- -->
+
+	{% endblock %}
+</head>
+
+<body id="haut-de-page">
+
+
+	<!-- ---------------------------------------HEADER-------------------------- -->
+
+	<header>
+		<!-- ---------------------------------------NAV-------------------------- -->
+
+		<nav id="navbar" class="navbar-expand-lg navbar-light bg-light fixed-top Box-Nav">
+
+
+			<div class="container">
+				<!-- <div class="Background-Nav"> -->
+
+				<!-- </div> -->
+				<!-- <div class="carousel-caption d-md-block Caption"> -->
+				<div class="titleNav">
+					<!-- <div class="Title-Trail">
+																																																																																																																																																										                    <h1 class="Trail">TRAIL</h1>
+																																																																																																																																																										                </div> -->
+					<!-- <div class="Title-Legs">
+																																																																																																																																				                    <h2 class="Legs-alaire">DES JAMBES ALLAIRE</h2>
+																																																																																																																																				                </div> -->
+					<div class="button-Nav"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav ml-auto -start">
+						<!-- <li class="nav-item Home-Nav">
+																																																																																																																																																										                        <a class="nav-link active Home" aria-current="page" href="#">Accueil</a>
+																																																																																																																																																										                    </li> -->
+						<li class="nav-item dropdown">
+							<a class="nav-link Nav" href="{{ path('practical_info') }}">
+								Infos</a>
+
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link Nav" href="Galerie-photos-videos" id="navbarDropdownMenuLink"
+								role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Photos et Vidéos</a>
+							<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
+								<li>
+									<a class="dropdown-item Subtitle-Item" href="{{ path('pictures_2019') }}">Photos</a>
+								</li>
+								<li>
+									<a class="dropdown-item Subtitle-Item" href="{{ path('videos_Teaser') }}">Videos</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link Nav" href="{{ path('trail_2021') }}">Inscriptions</a>
+						</li>
+					</ul>
+					<div id="logo">
+						<a class="nav-link active Home" aria-current="page" href="{{ path('homes') }}"><img
+								class="navbar-brand" src="/img/LOGO.png" alt="LOGO" width="150px" /></a>
 					</div>
 
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul
-							class="navbar-nav ml-auto justify-content-start w-100">
-							<!-- <li class="nav-item Home-Nav">
-																																																																						                        <a class="nav-link active Home" aria-current="page" href="#">Accueil</a>
-																																																																						                    </li> -->
-							<li class="nav-item dropdown">
-								<a class="nav-link Nav" href="/practical/info">
-									Infos</a>
+					<ul class="navbar-nav ml-auto justify-content-center">
+						<li class="nav-item dropdown">
+							<a class="nav-link Nav" href="{{ path('results_years') }}">
+								résultats</a>
+						</li>
 
-								{#
-																																								                <ul
-																																								                  class="dropdown-menu Subtitle"
-																																								                  aria-labelledby="navbarDropdownMenuLink"
-																																								                >
-																																								                  #}
-							{#
-																																			                  <li>
-																																			                    <a class="dropdown-item Subtitle-Item" href="#who"
-																																			                      >Qui sommes-nous?</a
-																																			                    >
-																																			                  </li>
-																																			                  #}
-								{#
-																																								                  <li>
-																																								                    <a class="dropdown-item Subtitle-Item" href="#"
-																																								                      >Horaires/Tarifs</a
-																																								                    >
-																																								                  </li>
-																																								                  #}
-								{#
-																																								                  <li>
-																																								                    <a class="dropdown-item Subtitle-Item" href="#">
-																																								                      Infos pratiques</a
-																																								                    >
-																																								                  </li>
-																																								                  #}
-								{#
-																																								                  <li>
-																																								                    <a class="dropdown-item Subtitle-Item" href="#"
-																																								                      >Nos aventures</a
-																																								                    >
-																																								                  </li>
-																																								                  {#
-																																								                  <li>
-																																								                    <a class="dropdown-item Subtitle-Item" href="#"
-																																								                      >Règlement</a
-																																								                    >
-																																								                  </li>
-																																								                  #}
-								{#
-																																								                </ul>
-																																								                #}
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									Photos et Vidéos</a>
-								<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
-									<li>
-										<a class="dropdown-item Subtitle-Item" href="/pictures/pictures_2019">Photos</a>
-									</li>
-									<li>
-										<a class="dropdown-item Subtitle-Item" href="/videos/videos_Teaser">Videos</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link Nav" href="/register/trail/register/trail_2021">Inscriptions</a>
-							</li>
-						</ul>
-						<div id="logo">
-							<a class="nav-link active Home" aria-current="page" href="{{ path('homes') }}"><img class="navbar-brand" src="/img/LOGO.png" alt="LOGO" width="150px"/></a>
-						</div>
-
-						<ul class="navbar-nav ml-auto justify-content-center w-100">
-							<li class="nav-item dropdown">
-								<a class="nav-link Nav" href="/results/results_years">
-									résultats</a>
-							</li>
-
-							<!-- <li class="nav-item dropdown">
-																																																																						                        <a class="nav-link Nav" href="#">Bénévoles</a>
-																																																																						                    </li> -->
-							<!-- <li class="nav-item dropdown">
-																																																																						                        <a class="nav-link Nav" href="#">Partenaires</a>
-																																																																						                    </li> -->
-							<li class="nav-item dropdown">
-								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Les courses</a>
-								<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
-									{{
+						<!-- <li class="nav-item dropdown">
+																																																																																																																																																										                        <a class="nav-link Nav" href="#">Bénévoles</a>
+																																																																																																																																																										                    </li> -->
+						<!-- <li class="nav-item dropdown">
+																																																																																																																																																										                        <a class="nav-link Nav" href="#">Partenaires</a>
+																																																																																																																																																										                    </li> -->
+						<li class="nav-item dropdown">
+							<a class="nav-link Nav" href="/Les-courses" id="navbarDropdownMenuLink" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Les courses</a>
+							<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
+								{{
                     render(
                       controller("App\\Controller\\RacesController::menuHeader")
                     )
                   }}
-								</ul>
-							</li>
+							</ul>
+						</li>
 
-							<!-- <li class="nav-item dropdown">
-																																																																						                        <a class="nav-link Nav" href="#">Livre d'or</a>
-																																																																						                    </li> -->
+						<!-- <li class="nav-item dropdown">
+																																																																																																																																																										                        <a class="nav-link Nav" href="#">Livre d'or</a>
+																																																																																																																																																										                    </li> -->
 
-							<li class="nav-item dropdown">
-								<a class="nav-link Nav" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact
-								</a>
-								<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
-									<li>
-										<a class="dropdown-item Subtitle-Item" href="{{ path('form_Contact') }}">Contact</a>
-									</li>
-									<li>
-										<a class="dropdown-item Subtitle-Item" href="{{ path('comments_index') }}">Livre d'or</a>
-									</li>
-									<!-- <li><a class="dropdown-item Subtitle-Item" href="#">Inscription</a></li> -->
-								</ul>
-							</li>
-
-							{% if not app.user %}
-								<li class="nav-item dropdown">
-									<a class="nav-link Nav" href="{{ path('admin') }}">
-										<i class="far fa-user"></i>
-									</a>
-								</li>
-
-							{% else %}
-								<li class="nav-item dropdown">
-									<a class="nav-link Nav" href="{{ path('app_logout') }}">
-										<i class="fas fa-user-lock"></i>
-									</a>
-								</li>
-							{% endif %}
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<!-- -----------------------------END-----NAV-------------------------- -->
-		</header>
-
-		<!-- -------------------------END-----HEADER-------------------------- -->
-		{% block body %}{% endblock %}
-
-		<!-- -----------------------------------FOOTER----------------------- -->
-		<footer class="Footer py-5">
-			<div class="container-fluid Container-Footer">
-				<div class="Box-Contact">
-					<div class="row Box-Footer">
-						<div class="col-sm-3 Footer">
-							<a href="{{ path('form_Contact') }}">Nous Contacter</a>
-						</div>
-						<div class="verticalLineFooterLeft"></div>
-						<div class="col-sm-3 Footer">
-							<p>Mention Legales</p>
-						</div>
-						<div class="verticalLineFooteRight"></div>
-						<div class="col-sm-3 Footer">
-							<a href="/privacy/policy">Politique de Confidentialité</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-12 Footer">
-							<a href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2FTRAIL-Jambes-Allaire-1504243399878176%2F">
-								<i class="fab fa-2x fa-facebook Icon-Footer"></i>
+						<li class="nav-item dropdown">
+							<a class="nav-link Nav" href="/contacts" id="navbarDropdownMenuLink" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Contacts
 							</a>
-						</div>
+							<ul class="dropdown-menu Subtitle" aria-labelledby="navbarDropdownMenuLink">
+								<li>
+									<a class="dropdown-item Subtitle-Item" href="{{ path('form_Contact') }}">Contact</a>
+								</li>
+								<li>
+									<a class="dropdown-item Subtitle-Item" href="{{ path('comments_index') }}">Livre
+										d'or</a>
+								</li>
+								<!-- <li><a class="dropdown-item Subtitle-Item" href="#">Inscription</a></li> -->
+							</ul>
+						</li>
+
+
+						{% if is_granted('ROLE_USER') %}
+
+						{# {% if not app.user %} #}
+						<li class="nav-item dropdown">
+							<a class="nav-link Nav" href="{{ path('user_index') }}">
+								<i class="far fa-user"></i>
+							</a>
+						</li>
+
+						{# {% else %}
+																																						<li class="nav-item dropdown">
+																																							<a class="nav-link Nav" href="{{ path('app_logout') }}">
+																																								<i class="fas fa-user-lock"></i>
+																																							</a>
+																																						</li> #}
+						{% endif %}
+
+						<li class="nav-item dropdown"></li>
+					</ul>
+
+
+				</div>
+
+			</div>
+
+		</nav>
+		<!-- -----------------------------END-----NAV-------------------------- -->
+	</header>
+
+	<!-- -------------------------END-----HEADER-------------------------- -->
+
+	{% block body %}{% endblock %}
+
+
+	<!-- -----------------------------------FOOTER----------------------- -->
+	<footer class="Footer py-5">
+		<div class="container-fluid Container-Footer">
+			<div class="Box-Contact">
+				<div class="row Box-Footer">
+					<div class="col-sm-3 Footer">
+						<a href="{{ path('form_Contact') }}">Nous Contacter</a>
 					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="copyright">
-								<p class="Paragraphe-Footer">
-									Bisson Guillaume | 2021 © Tous droits réservés
-								</p>
-								<a href="#body">
-									<i class="fas fa-arrow-alt-circle-up"></i>
-								</a>
-							</div>
+					<div class="verticalLineFooterLeft"></div>
+					<div class="col-sm-3 Footer">
+						<a href="{{ path('legalNotice') }}">Mentions Legales</a>
+					</div>
+					<div class="verticalLineFooteRight"></div>
+					<div class="col-sm-3 Footer">
+						<a href="{{ path('privacyPolicy') }}">Politique de Confidentialité</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 Footer">
+						<a
+							href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2FTRAIL-Jambes-Allaire-1504243399878176%2F">
+							<i class="fab fa-2x fa-facebook Icon-Footer" aria-hidden="true"></i>
+							<span class="visually-hidden">Facebook</span>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="copyright">
+							<p class="Paragraphe-Footer">
+								Bisson Guillaume | 2021 © Tous droits réservés
+							</p>
+							<a href="#haut-de-page">
+								<i class="fas fa-arrow-alt-circle-up" aria-hidden="true"></i>
+								<span class="visually-hidden">Retour haut de page</span>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</footer>
-		<!-- -----------------------------END------FOOTER----------------------- -->
-		<script src="{{ asset('js/app.js') }}"> </script>
-	</body>
-</html></body></html>
+		</div>
+	</footer>
+	<!-- -----------------------------END------FOOTER----------------------- -->
+
+	<!-- -----------------------------SCRIPT JS----------------------- -->
+
+	<script src="{{ asset('js/app.js') }}"></script>
+
+
+</body>
+
+</html>
+
+</html>

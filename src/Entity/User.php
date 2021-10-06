@@ -25,6 +25,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $id;
 
+       /**
+     * @ORM\Column(type="string", length=180, unique=true)
+     */
+    private $name;
+
+       /**
+     * @ORM\Column(type="string", length=180, unique=true)
+     */
+    private $firstname;
+
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
@@ -52,6 +62,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name= $name;
+
+        return $this;
+    }
+
+    public function getfirstName(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setfirstName(string $firstname): self
+    {
+        $this->firstname= $firstname;
+
+        return $this;
     }
 
     public function getEmail(): ?string

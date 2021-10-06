@@ -2,7 +2,7 @@
 
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin inscription
+{% block title %}Admin inscription | Trail des jambes Allaire
 {% endblock %}
 
 {% block body %}
@@ -35,7 +35,9 @@
 					<td><img src="{{ asset('uploads/photos/' ~ register_trail.internalRulesRegisterTrail ) }}" width="100"></td>
 					<td>
 						{# <a href="{{ path('register_trail_show', {'id': register_trail.id}) }}">show</a> #}
-						<a class="edit" href="{{ path('register_trail_edit', {'id': register_trail.id}) }}">ÉDITER</a>
+						<a class="edit" href="{{ path('register_trail_edit', {'id': register_trail.id}) }}">
+							<i class="fas fa-pencil-alt"></i>
+						</a>
 					</td>
 				</tr>
 			{% else %}
@@ -46,9 +48,11 @@
 			{% endfor %}
 		</tbody>
 	</table>
+	{% if  is_granted('ROLE_ADMIN') %}
+		<a class="backList" href="{{ path('register_trail_new') }}">
+			<span>
+				Créer une nouvelle inscription</span>
+		</a>
+	{% endif %}
 
-	<a class="backList" href="{{ path('register_trail_new') }}">
-		<span>
-			Créer une nouvelle inscription</span>
-	</a>
 {% endblock %}

@@ -44,6 +44,11 @@ class Comments
      */
     private $items;
 
+    // /**
+    //  * @ORM\Column(type="boolean", nullable=true)
+    //  */
+    // private $verified;
+
     public function __construct()
     {
         $this->items = new ArrayCollection();
@@ -137,6 +142,18 @@ class Comments
 
         return $this;
     }
+
+    // public function getVerified(): ?bool
+    // {
+    //     return $this->verified;
+    // }
+
+    // public function setVerified(?bool $verified): self
+    // {
+    //     $this->verified = $verified;
+
+    //     return $this;
+    // }
 
  
 

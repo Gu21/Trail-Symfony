@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/items')]
+#[Route('/trail-des-jambes-allaire/Messages')]
 class ItemsController extends AbstractController
 {
     #[Route('/', name: 'items_index', methods: ['GET','POST'])]
@@ -25,7 +25,7 @@ class ItemsController extends AbstractController
     }
 
     //route pour la relation entre item et le comment (Livre d'or)
-    #[Route('/comments/{id}/items', name: 'addItem', methods: ['GET','POST'])]
+    #[Route('/Commentaires/{id}/article', name: 'addItem', methods: ['GET','POST'])]
     public function addItem(Request $request, $id)
     {
 

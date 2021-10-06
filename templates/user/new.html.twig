@@ -1,46 +1,25 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Utilisateur{% endblock %}
+{% block title %}Admin création utilisateur | Trail des jambes Allaire{% endblock %}
 
 {% block body %}
-
-
-
-
-
-
+  <h1> ADMINISTRATEUR & UTILISATEUR</h1>
 <body class="bodyUser">
-
-
-
-
     <section class="sectionUser">
-
-
-        <div class="container userAdminBox py-5">
-
-
-            <div class="row mt-5">
-                <div class="col-md-3"></div>
-
-                <div class="col-md-6 boxUser mt-5 mb-5 py-5">
+        <div class="container userAdminBox">
+            <div class="row">
+                 <div class="col-md-2"></div> 
+                <div class="col-md-6 boxUser">
                     <div class="pictureUser ">
-                        <img src="/img/adminLogin.png" alt="image login" class="imgUser">
+                        <img src="/img/adminLogin.png" alt="image connexion" class="imgUser">
                     </div>
-                    <h1 class="titleUser mt-3">ADMIN</h1>
-
-
+                    <h1 class="titleUser mt-3">ADMINISTRATEUR | UTILISATEUR</h1>
                     {{ include('user/_form.html.twig') }}
-
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-4"></div>
             </div>
-            <a href="{{ path('user_index') }}" class="linkUser">Retour administrateur</a>
-
+            <a  class="backList" href="{{ path('user_index') }}" ><span>Retour à la liste</span></a>
         </div>
-
-        
     </section>
-
 </body>
 {% endblock %}

@@ -11,10 +11,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-#[Route('/category')]
+#[Route('/Categories')]
 class CategoryController extends AbstractController
 {
-    #[Route('/', name: 'category_index', methods: ['GET'])]
+    #[Route('/Admin', name: 'category_index', methods: ['GET'])]
     public function index(CategoryRepository $categoryRepository): Response
     {
         return $this->render('category/index.html.twig', [
@@ -22,10 +22,10 @@ class CategoryController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'category_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'category_new', methods: ['GET', 'POST'])]
 
     /**
-     * Route('/new', name: 'category_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'category_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     public function new(Request $request): Response
@@ -56,10 +56,10 @@ class CategoryController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'category_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modification', name: 'category_edit', methods: ['GET', 'POST'])]
      /**
-     * Route('/{id}/edit', name: 'category_edit', methods: ['GET', 'POST'])
-     * @isGranted("ROLE_ADMIN")
+     * Route('/{id}/Modification', name: 'category_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, Category $category): Response
     {

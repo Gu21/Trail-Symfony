@@ -1,27 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Videos
+{% block title %}Vidéos | Trail des jambes Allaire
 {% endblock %}
 
 
 {% block body %}
-
 	<section class="videoSection">
-
 		<div class="container">
 			<h1 class="titleVideo text-center">VIDEOS</h1>
 			<div class="row col-sm-12 boxVideos">
-
-
 				{% for video in videos %}
-
 					{% if video.category.nameCategory == 'Videos'  %}
 						<div class=" mainVideo">
 							<div class="backFront">
-
-
 								<div class="back">
-									<a href="{{ video.linkVideo }}">Lien vidéo</a>
+									<a href="{{ video.linkVideo }}" target="bank">Lien vidéo</a>
 									<h2>{{ video.subtitleVideo }}</h2>
 								</div>
 								<div class="front">
@@ -33,12 +26,9 @@
 							</div>
 						</div>
 						{# <a href="{{ path('videos_show', {'id': video.id}) }}">show</a>
-																								<a href="{{ path('videos_edit', {'id': video.id}) }}">edit</a> #}
+						<a href="{{ path('videos_edit', {'id': video.id}) }}">edit</a> #}
 					{% endif %}
-
 				{% endfor %}
-
-
 			</div>
 
 
@@ -48,14 +38,14 @@
 			{# ------------------------VIDEO-----TEASING----------------------------#}
 
 
-			<h1 class="titleVideo text-center">VIDÉOS TEASING</h1>
+			<h2 class="titleVideo text-center">VIDÉOS TEASING</h2>
 			<div class="row col-sm-12 boxVideos">
 				{% for video in videos %}
 					{% if video.category.nameCategory == 'Videos teaser' %}
 						<div class="mainVideo">
 							<div class="backFront">
 								<div class="back">
-									<a href="{{ video.linkVideo }}">Lien vidéo</a>
+									<a href="{{ video.linkVideo }}" target="bank">Lien vidéo</a>
 									<h2>{{ video.subtitleVideo }}</h2>
 								</div>
 								<div class="front">
@@ -67,7 +57,7 @@
 							</div>
 						</div>
 						{# <a href="{{ path('videos_show', {'id': video.id}) }}">show</a>
-																					<a href="{{ path('videos_edit', {'id': video.id}) }}">edit</a> #}
+						<a href="{{ path('videos_edit', {'id': video.id}) }}">edit</a> #}
 					{% endif %}
 				{% endfor %}
 			</div>

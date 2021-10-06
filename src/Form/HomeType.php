@@ -21,15 +21,15 @@ class HomeType extends AbstractType
             ])
             ->add('description', CKEditorType::class)
 
-            ->add('Envoyer', SubmitType::class, [
-                'label' => "Valider",
-                'attr' => [
-                'class' => 'btnSave',
+        //     ->add('Envoyer', SubmitType::class, [
+        //         'label' => "Valider",
+        //         'attr' => [
+        //         'class' => 'btnSave',
                 
                 
                 
-            ]
-        ])
+        //     ]
+        // ])
         ;
     }
 

@@ -38,7 +38,8 @@ $color6: #303030;
   .titlePictures {
     color: $color1;
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    // margin-bottom: 10rem;
+    margin-bottom: 5rem;
     letter-spacing: 0.5rem;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 700;
@@ -210,7 +211,8 @@ $color6: #303030;
 @media screen and (max-width: 425px) {
 
   .boxPicture .titlePictures {
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
+    font-size: 2.4rem;
   }
   .boxPicture .titlePictures::before {
     width: 1rem;
@@ -222,6 +224,13 @@ $color6: #303030;
 
 }
 
+@media screen and (max-width: 375px) {
+
+  .boxPicture .titlePictures {
+    font-size: 2.1rem;
+}
+
+}
 
 
 @media screen and (max-width: 325px) {
@@ -236,8 +245,10 @@ $color6: #303030;
 }
 
 .boxPicture .titlePictures {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
 }
 
+  
 
 }

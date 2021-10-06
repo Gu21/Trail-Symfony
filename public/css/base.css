@@ -31,6 +31,10 @@ body {
   white-space: nowrap;
 }
 
+.nav-item .dropdown:hover {
+  display: block;
+}
+
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
   width: 100px;
@@ -55,8 +59,14 @@ body {
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
-  margin-left: 65px;
+  margin-left: -59px;
+}
+
+.dropdown-menu .Subtitle .show {
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate3d(-37px, 49px, 0px);
 }
 
 .d-md-block {
@@ -71,6 +81,7 @@ body {
   border-color: #fff;
   color: #fff;
   margin-top: 57px;
+  margin-left: 1rem;
 }
 
 .nav-link .dropdown-toggle .Nav {
@@ -125,6 +136,7 @@ body {
 .Home {
   color: #6b90bb !important;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .Home.scrolled,
@@ -247,6 +259,18 @@ body {
   margin-top: 30px;
 }
 
+.visually-hidden, .visually-hidden-focusable:not(:focus) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 @media screen and (max-width: 992px) {
   .navbar-nav {
     flex-direction: column;
@@ -295,7 +319,7 @@ body {
 
   .navbar-light .navbar-brand {
     right: -12rem;
-    width: 39%;
+    width: 36%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -304,7 +328,7 @@ body {
   }
 
   .navbar-collapse {
-    width: 38%;
+    width: 52%;
   }
 
   .navbar-light .navbar-brand {
@@ -313,8 +337,8 @@ body {
 }
 @media screen and (max-width: 375px) {
   .navbar-light .navbar-brand {
-    right: -12rem;
-    width: 52%;
+    right: -8rem;
+    width: 36%;
   }
 }
 @media screen and (max-width: 425px) {

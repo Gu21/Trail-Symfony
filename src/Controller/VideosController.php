@@ -19,10 +19,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 
-#[Route('/videos')]
+#[Route('trail-des-jambes-allaire/Videos')]
 class VideosController extends AbstractController
 {
-    #[Route('/', name: 'videos_index', methods: ['GET'])]
+    #[Route('/Admin', name: 'videos_index', methods: ['GET'])]
     public function index(VideosRepository $videosRepository): Response
     {
         return $this->render('videos/index.html.twig', [
@@ -32,7 +32,7 @@ class VideosController extends AbstractController
 
 
     
-        #[Route('/videos_Teaser', name: 'videos_Teaser', methods: ['GET'])]
+        #[Route('/', name: 'videos_Teaser', methods: ['GET'])]
         public function video1(VideosRepository $videosRepository): Response
         {
             return $this->render('videos/Teaser.html.twig', [
@@ -40,9 +40,9 @@ class VideosController extends AbstractController
             ]);
         }
 
-    #[Route('/new', name: 'videos_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'videos_new', methods: ['GET', 'POST'])]
          /**
-     * Route('/new', name: 'videos_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'videos_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     public function new(Request $request, SluggerInterface $slugger): Response
@@ -96,10 +96,10 @@ class VideosController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'videos_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modification', name: 'videos_edit', methods: ['GET', 'POST'])]
          /**
-     * Route('/{id}/edit', name: 'videos_edit', methods: ['GET', 'POST'])
-     * @isGranted("ROLE_ADMIN")
+     * Route('/{id}/Modification', name: 'videos_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, Videos $video, SluggerInterface $slugger): Response
     {

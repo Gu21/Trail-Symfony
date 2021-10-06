@@ -15,10 +15,10 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
-#[Route('/register/trail')]
+#[Route('trail-des-jambes-allaire/Inscription')]
 class RegisterTrailController extends AbstractController
 {
-    #[Route('/', name: 'register_trail_index', methods: ['GET'])]
+    #[Route('/Admin', name: 'register_trail_index', methods: ['GET'])]
     public function index(RegisterTrailRepository $registerTrailRepository): Response
     {
         return $this->render('register_trail/index.html.twig', [
@@ -26,7 +26,7 @@ class RegisterTrailController extends AbstractController
         ]);
     }
 
-    #[Route('/register/trail_2021', name: 'trail_2021', methods: ['GET'])]
+    #[Route('', name: 'trail_2021', methods: ['GET'])]
     public function registerTrail(RegisterTrailRepository $registerTrailRepository): Response
     {
         return $this->render('/register_trail/Reg2021.html.twig', [
@@ -41,9 +41,9 @@ class RegisterTrailController extends AbstractController
 
     
 
-    #[Route('/new', name: 'register_trail_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'register_trail_new', methods: ['GET', 'POST'])]
          /**
-     * Route('/new', name: 'register_trail_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'register_trail_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     public function new(Request $request, SluggerInterface $slugger): Response
@@ -149,10 +149,10 @@ class RegisterTrailController extends AbstractController
 
     //------------------ Upload fichier $newletterRegisterTrail  PDF---------------------------
 
-    #[Route('/{id}/edit', name: 'register_trail_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modification', name: 'register_trail_edit', methods: ['GET', 'POST'])]
          /**
-     * Route('/{id}/edit', name: 'register_trail_edit', methods: ['GET', 'POST'])
-     * @isGranted("ROLE_ADMIN")
+     * Route('/{id}/Modification', name: 'register_trail_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, RegisterTrail $registerTrail, SluggerInterface $slugger): Response
     {

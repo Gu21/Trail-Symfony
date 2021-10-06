@@ -1,6 +1,6 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin courses{% endblock %}
+{% block title %}Admin courses | Trail des jambes Allaire{% endblock %}
 
 {% block body %}
     <h1>COURSES</h1>
@@ -30,7 +30,7 @@
                 {# <td>{{ race.pictureRace }}</td> #}
                 <td>
                     {# <a href="{{ path('races_show', {'id': race.id}) }}">show</a> #}
-                    <a class="edit" href="{{ path('races_edit', {'id': race.id}) }}">ÉDITER</a>
+                    <a class="edit" href="{{ path('races_edit', {'id': race.id}) }}"><i class="fas fa-pencil-alt"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -40,7 +40,9 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a class="backList" href="{{ path('races_new') }}"><span> Créer une nouvelle course</span></a>
+	{% if  is_granted('ROLE_ADMIN') %}
+		<a class="backList" href="{{ path('races_new') }}"><span> Créer une nouvelle course</span></a>
+	{% endif %}
+    
    
 {% endblock %}

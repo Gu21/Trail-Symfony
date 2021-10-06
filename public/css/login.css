@@ -106,6 +106,6 @@
   font-size: 4em !important;
 }
 
-.inputLogin input[type=email], .inputLogin input[type=password] {
+.inputLogin input[type=email], .inputLogin input[type=password], .inputLogin input[type=text] {
   padding-left: 40px;
 }/*# sourceMappingURL=login.css.map */

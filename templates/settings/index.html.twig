@@ -1,6 +1,6 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin date{% endblock %}
+{% block title %}Admin date du trail | Trail des jambes Allaire{% endblock %}
 
 {% block body %}
     <h1>PARAMETRE DATE</h1>
@@ -20,7 +20,7 @@
                 <td>{{ setting.eventSetting ? setting.eventSetting|date('Y-m-d') : '' }}</td>
                 <td>
                     {# <a href="{{ path('settings_show', {'id': setting.id}) }}">show</a> #}
-                    <a class="edit"  href="{{ path('settings_edit', {'id': setting.id}) }}">ÉDITER</a>
+                    <a class="edit"  href="{{ path('settings_edit', {'id': setting.id}) }}"><i class="fas fa-pencil-alt"></i></a>
                 </td>
             </tr>
         {% else %}

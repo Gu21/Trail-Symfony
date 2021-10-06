@@ -14,11 +14,20 @@ body {
   left: 0px;
   bottom: 0px;
   box-shadow: rgba(12, 43, 30, 0.2) 0 4px 14px;
-  transition: width 0.5s;
+  transition: all 1s ease-out;
 }
 
 .navbar:hover {
   width: 13rem;
+}
+
+.HelloAdmin{
+
+  margin-left: 1rem;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+
 }
 
 .navbar:not(:hover) .Dashboardlink {
@@ -28,17 +37,22 @@ body {
 .barAdmin {
   background: linear-gradient(to right, #bbd2c5, #536976);
   display: flex;
+  align-items: center;
+  align-items: center;
 }
 
 .boxAdminHome {
-  padding-left: 100px;
+  // padding-left: 100px;
+  padding-left: 28px;
+}
 
   a{
     color: $color2;
     font-weight: 700;
     font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.3em;
   }
-}
+
 
 .paragraphAdmin {
   // text-align: center;
@@ -146,7 +160,7 @@ i{
 
 .pageAdmin {
   padding: 0;
-  width: 207%;
+  // width: 207%;
 }
 
 .adminVew {
@@ -157,10 +171,10 @@ i{
 .backgroundDashboard {
   background: hsla(208, 7%, 55%, 1);
 }
-.table {
-  // width: 100px;
-  overflow: scroll;
-}
+// .table {
+//   // width: 100px;
+//   overflow: scroll;
+// }
 
 .table td,
 .table th {
@@ -193,10 +207,11 @@ tbody {
 }
 
 .CreateAdmin {
-  .h1,
+  // .h1,
   h1 {
     font-size: 1.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
   }
 
   label,
@@ -239,6 +254,7 @@ tbody {
       z-index: 2;
       color: $color3;
       transition: color 0.3s ease-in-out;
+      font-size: 1rem;
     }
   }
 
@@ -299,7 +315,8 @@ tbody {
 
 .fa-pencil-alt,
 .fa-trash-alt,
-.fa-sync-alt {
+.fa-sync-alt,
+.fa-save {
   font-size: 2rem;
   
 }
@@ -318,6 +335,16 @@ nav .DashboardNav .closeMenu , .icons i {
    
     
 }
+
+.table thead th {
+       
+  border-bottom: 0px solid #dee2e6; 
+}
+
+
+
+
+
 
 // -----------MEDIA QUERY------------
 
@@ -440,7 +467,7 @@ nav .DashboardNav .closeMenu , .icons i {
   nav .DashboardNav .closeMenu {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 3rem;
     right: 57rem;
   }
     
@@ -485,17 +512,33 @@ nav .DashboardNav .closeMenu , .icons i {
 
   .paragraphAdmin {
     font-size: 1.5rem;
-    margin-left: 0rem;
+    margin-left: 2rem;
   }
   .boxAdminHome {
     padding-left: 0px;
+    // padding-left: 40px;
+    padding-left: 15px;
   }
+  nav .DashboardNav .closeMenu {
+ 
+    right: 10rem;
+}
 
 }
 
 @media screen and (max-width: 425px) {
   .CreateAdmin {
     display: none;
+  }
+
+  .HelloAdmin {
+
+    margin-left: 8rem;
+}
+
+  .barAdmin {
+    display: flex;
+    flex-direction: column;
   }
 
   .CreateAdmin .backList {
@@ -510,6 +553,8 @@ nav .DashboardNav .closeMenu , .icons i {
     margin-left: -1rem;
   }
   .dataTables_wrapper {
+    // width: 108%;
+    // width: 111%;
     width: 108%;
   }
   table,
@@ -524,10 +569,10 @@ nav .DashboardNav .closeMenu , .icons i {
   .paragraphAdmin {
     font-size: 1.5rem;
   }
-  .menu {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+  // .menu {
+  //   padding-left: 0px!important;
+  //   padding-right: 0px;
+  // }
   .dashboardItem {
     margin: 10px 6px 30px 6px;
 
@@ -540,19 +585,27 @@ nav .DashboardNav .closeMenu , .icons i {
 
    nav .DashboardNav .closeMenu {
  
-    right: 32rem;
+    right: 7rem;
 }
+
+a {
+  .linkPrivacy{
+    font-size: 0.8em;
+  }
+
+
 }
 
 @media screen and (max-width: 375px) {
  
   th
   {
-     font-size: 0.6rem;
+    font-size: 0.56rem;
    }
 
    nav .DashboardNav .closeMenu {
-    right: 28rem;
+    // right: 28rem;
+    right: 4rem;
 }
 .barAdmin {
   display: flex;
@@ -566,9 +619,10 @@ nav .DashboardNav .closeMenu , .icons i {
   //     padding: 10px 2px!important;
   // }
 
-  .dataTables_wrapper {
-    width: 111%;
-  }
+  // .dataTables_wrapper {
+  //   // width: 111%;
+  //   right: 11rem;
+  // }
   th
  {
     font-size: 0.55rem;
@@ -597,6 +651,18 @@ nav .DashboardNav .closeMenu , .icons i {
     flex-direction: column;
   }
   nav .DashboardNav .closeMenu {
-    right: 23rem;
+    // right: 23rem;
+    right: 3rem;
+}
+
+.dataTables_wrapper {
+  width: 111%;
+}
+a {
+  .linkPrivacy{
+    font-size: 0.7em;
+  }
+  
+}
 }
 }

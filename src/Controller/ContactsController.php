@@ -13,10 +13,10 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
-#[Route('/contacts')]
+#[Route('/Contact')]
 class ContactsController extends AbstractController
 {
-    #[Route('/', name: 'contacts_index', methods: ['GET', 'POST'])]
+    #[Route('/Admin', name: 'contacts_index', methods: ['GET', 'POST'])]
     public function index(Request $request, ContactsRepository $contactsRepository, SluggerInterface $slugger): Response
     {
 
@@ -42,7 +42,7 @@ class ContactsController extends AbstractController
 
 
 
-    #[Route('/form_Contact', name: 'form_Contact', methods: ['GET', 'POST'])]
+    #[Route('', name: 'form_Contact', methods: ['GET', 'POST'])]
     public function form(Request $request, ContactsRepository $contactsRepository, SluggerInterface $slugger): Response
     {
 
@@ -55,7 +55,9 @@ class ContactsController extends AbstractController
             $entityManager->persist($contact);
             $entityManager->flush();
 
-            // return $this->redirectToRoute('contacts_index');
+            //Reponse d'envoi de massage formulaire de contact
+            $this->addFlash('success','Votre message a bien été envoyé');
+            return $this->redirectToRoute('homes');
         }
 
 
@@ -67,21 +69,13 @@ class ContactsController extends AbstractController
 
 
 
-    #[Route('/form_recaptcha', name: 'contacts_recaptcha', methods: ['GET', 'POST'])]
-    public function captcha(ContactsRepository $contactsRepository): Response
-    {
-        return $this->render('contacts/form_recaptcha.html.twig', [
-            'contacts' => $contactsRepository->findAll(),
-            
-        ]);
-
-    }
 
 
 
-    #[Route('/new', name: 'contacts_new', methods: ['GET', 'POST'])]
+
+    #[Route('/Creation', name: 'contacts_new', methods: ['GET', 'POST'])]
     /**
-     * Route('/new', name: 'contacts_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'contacts_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     public function new(Request $request): Response
@@ -115,10 +109,10 @@ class ContactsController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'contacts_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modification', name: 'contacts_edit', methods: ['GET', 'POST'])]
     /**
-     * Route('/{id}/edit', name: 'contacts_edit', methods: ['GET', 'POST'])
-     * @isGranted("ROLE_ADMIN")
+     * Route('/{id}/Modification', name: 'contacts_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, Contacts $contact): Response
     {

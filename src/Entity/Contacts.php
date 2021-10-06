@@ -34,6 +34,7 @@ class Contacts
     private $firstNameContact;
 
     /**
+     * @Assert\Email( message = "The email '{{ value }}' is not a valid email.") 
      * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
      * @ORM\Column(type="string", length=255)
      */

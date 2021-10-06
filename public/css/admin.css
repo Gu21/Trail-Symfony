@@ -4,15 +4,12 @@
   align-items: none;
   justify-content: center;
 }
-.CreateAdmin img {
-  width: 50%;
-}
 
 @media screen and (max-width: 1024px) {
   .CreateAdmin img {
-    width: 75%;
     display: block;
     margin: 0 auto;
+    width: 100%;
   }
 
   .menu {

@@ -7,11 +7,18 @@ body {
   left: 0px;
   bottom: 0px;
   box-shadow: rgba(12, 43, 30, 0.2) 0 4px 14px;
-  transition: width 0.5s;
+  transition: all 1s ease-out;
 }
 
 .navbar:hover {
   width: 13rem;
+}
+
+.HelloAdmin {
+  margin-left: 1rem;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .navbar:not(:hover) .Dashboardlink {
@@ -21,15 +28,19 @@ body {
 .barAdmin {
   background: linear-gradient(to right, #bbd2c5, #536976);
   display: flex;
+  align-items: center;
+  align-items: center;
 }
 
 .boxAdminHome {
-  padding-left: 100px;
+  padding-left: 28px;
 }
-.boxAdminHome a {
+
+a {
   color: #6b90bb;
   font-weight: 700;
   font-family: "Roboto", "Arial", sans-serif;
+  font-size: 1.3em;
 }
 
 .paragraphAdmin {
@@ -120,7 +131,6 @@ body {
 
 .pageAdmin {
   padding: 0;
-  width: 207%;
 }
 
 .adminVew {
@@ -130,10 +140,6 @@ body {
 
 .backgroundDashboard {
   background: #848d94;
-}
-
-.table {
-  overflow: scroll;
 }
 
 .table td,
@@ -165,10 +171,10 @@ tbody {
   color: #4c63a4;
 }
 
-.CreateAdmin .h1,
 .CreateAdmin h1 {
   font-size: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
 }
 .CreateAdmin label,
 .CreateAdmin .btn,
@@ -206,6 +212,7 @@ tbody {
   z-index: 2;
   color: #fff;
   transition: color 0.3s ease-in-out;
+  font-size: 1rem;
 }
 .CreateAdmin .backList::after {
   content: "";
@@ -258,7 +265,8 @@ tbody {
 
 .fa-pencil-alt,
 .fa-trash-alt,
-.fa-sync-alt {
+.fa-sync-alt,
+.fa-save {
   font-size: 2rem;
 }
 
@@ -273,6 +281,10 @@ nav .DashboardNav .closeMenu, .icons i {
   font-size: 2rem;
   display: none;
   cursor: pointer;
+}
+
+.table thead th {
+  border-bottom: 0px solid #dee2e6;
 }
 
 @media screen and (max-width: 1440px) {
@@ -387,7 +399,7 @@ td {
   nav .DashboardNav .closeMenu {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 3rem;
     right: 57rem;
   }
 }
@@ -427,16 +439,30 @@ td {
 
   .paragraphAdmin {
     font-size: 1.5rem;
-    margin-left: 0rem;
+    margin-left: 2rem;
   }
 
   .boxAdminHome {
     padding-left: 0px;
+    padding-left: 15px;
+  }
+
+  nav .DashboardNav .closeMenu {
+    right: 10rem;
   }
 }
 @media screen and (max-width: 425px) {
   .CreateAdmin {
     display: none;
+  }
+
+  .HelloAdmin {
+    margin-left: 8rem;
+  }
+
+  .barAdmin {
+    display: flex;
+    flex-direction: column;
   }
 
   .CreateAdmin .backList {
@@ -470,11 +496,6 @@ td {
     font-size: 1.5rem;
   }
 
-  .menu {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .dashboardItem {
     margin: 10px 6px 30px 6px;
   }
@@ -484,16 +505,20 @@ td {
   }
 
   nav .DashboardNav .closeMenu {
-    right: 32rem;
+    right: 7rem;
+  }
+
+  a .linkPrivacy {
+    font-size: 0.8em;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) and (max-width: 375px) {
   th {
-    font-size: 0.6rem;
+    font-size: 0.56rem;
   }
 
   nav .DashboardNav .closeMenu {
-    right: 28rem;
+    right: 4rem;
   }
 
   .barAdmin {
@@ -501,11 +526,7 @@ td {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 320px) {
-  .dataTables_wrapper {
-    width: 111%;
-  }
-
+@media screen and (max-width: 425px) and (max-width: 320px) {
   th {
     font-size: 0.55rem;
   }
@@ -537,6 +558,14 @@ td {
   }
 
   nav .DashboardNav .closeMenu {
-    right: 23rem;
+    right: 3rem;
+  }
+
+  .dataTables_wrapper {
+    width: 111%;
+  }
+
+  a .linkPrivacy {
+    font-size: 0.7em;
   }
 }/*# sourceMappingURL=dashboard.css.map */

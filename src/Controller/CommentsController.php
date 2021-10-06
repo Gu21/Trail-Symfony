@@ -20,10 +20,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 
 
-     #[Route('/comments')]
+     #[Route('/trail-des-jambes-allaire/Commentaires')]
 class CommentsController extends AbstractController
 {
-    #[Route('/', name: 'comments_index', methods: ['GET','POST'])]
+    #[Route('', name: 'comments_index', methods: ['GET','POST'])]
     public function index(CommentsRepository $commentsRepository, ItemsRepository $itemsRepository, SluggerInterface $slugger, Request $request): Response
     {
      
@@ -43,6 +43,7 @@ class CommentsController extends AbstractController
            
         }
            
+
         
 
         return $this->render('comments/index.html.twig', [
@@ -54,7 +55,7 @@ class CommentsController extends AbstractController
 
  
     
-    #[Route('/new', name: 'comments_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'comments_new', methods: ['GET', 'POST'])]
     public function new(Request $request): Response
     {
         $comment = new Comments();
@@ -83,7 +84,7 @@ class CommentsController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'comments_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modifier', name: 'comments_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Comments $comment): Response
     {
         $form = $this->createForm(CommentsType::class, $comment);
@@ -112,4 +113,30 @@ class CommentsController extends AbstractController
 
         return $this->redirectToRoute('comments_index');
     }
+
+
+    // #[Route('/verifier', name: 'comments_verified', methods: ['GET','POST'])]
+    // public function verified(CommentsRepository $commentsRepository, ItemsRepository $itemsRepository, SluggerInterface $slugger, Request $request): Response
+    // {
+     
+    //     $comment = new Comments();
+    //     $form = $this->createForm(CommentsType::class, $comment );
+    //     (['attr' => ['id' => 'formForm']]);
+    //     $form->handleRequest($request);
+
+    //     if ($form->isSubmitted() && $form->isValid()) {
+    //         $entityManager = $this->getDoctrine()->getManager();
+    //         $entityManager->persist($comment);
+    //         $entityManager->flush();
+          
+           
+    //     }
+           
+    //     return $this->render('comments/verified.html.twig', [
+    //         'comments' => $commentsRepository->findAll(),
+    //         'items' => $itemsRepository->findAll(),
+    //         'form' => $form->createView(),
+    //     ]);
+    // }
+
 }

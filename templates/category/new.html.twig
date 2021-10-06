@@ -1,11 +1,11 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin catégorie{% endblock %}
+{% block title %}Admin création catégorie | Trail des jambes Allaire{% endblock %}
 
 {% block body %}
     <h1>CREER UNE CATEGORIE</h1>
 
     {{ include('category/_form.html.twig') }}
-
+  
     <a class="backList" href="{{ path('category_index') }}"><span>Retour à la liste</span></a>
 {% endblock %}

@@ -8,10 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PrivacyPolicyController extends AbstractController
 {
-    #[Route('/privacy/policy', name: 'privacyPolicy')]
+    #[Route('/trail-des-jambes-allaire/Politique/Confidentialite', name: 'privacyPolicy')]
     public function index(): Response
     {
-        return $this->render('privacyPolicy/index.html.twig', [
+        return $this->render('privacypolicy/index.html.twig', [
             'controller_name' => 'PrivacyPolicyController',
         ]);
     }

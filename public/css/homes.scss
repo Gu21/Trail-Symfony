@@ -144,13 +144,73 @@ body {
 
 }
 
+#weather {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+    p {
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 800;
+        color: $color3;
+        margin-bottom: 0;
+    }
+
+    .weather_ico {
+        display: inline-block;
+        height: 70px;
+        width: 70px;
+        left: 0;
+    }
+
+    .weather_temperature {
+        color: $color3;
+        font-weight: 800;
+        font-size: 2rem;
+        margin-right: 4px;
+        line-height: 46px;
+
+    }
+
+    .weather_hour {
+        color: $color3;
+        font-weight: 800;
+        font-size: 2rem;
+        line-height: 46px;
+        margin-right: 25px;
+    }
+
+    .boxWeather {
+
+        display: flex;
+        align-items: center;
+
+    }
+
+    .weatherHomes {
+
+        padding: 6px 9px;
+        color: #b4b1b1;
+        font-size: 1.3rem;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 26px;
+        background: rgba(146, 145, 145, 0.3);
+        box-shadow: inset 5px 5px 10px #d5d5d5, inset -5px -5px 10px #ffffff;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+}
 
 
 .titleCounter {
 
     text-align: center;
     margin-top: 0;
-    margin-bottom: 117px;
+    margin-bottom: 84px;
     color: $color1;
     letter-spacing: 0.5rem;
     font-family: "Roboto", "Arial", sans-serif;
@@ -187,7 +247,7 @@ body {
 #minutes,
 #seconds {
 
-    color: $color1;
+    color: $color6;
     font-size: 4em;
     display: flex;
     flex-direction: column;
@@ -234,7 +294,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 85vh;
+    // height: 85vh;
+    height: 131vh;
 
 }
 
@@ -254,7 +315,7 @@ body {
 .Actualite-Title::before {
     content: "";
     display: block;
-    border: 3px solid $color1;
+    border: 2px solid $color1;
     width: 30%;
     margin: 0 auto;
     margin-top: 50px;
@@ -263,7 +324,7 @@ body {
 .Actualite-Title::after {
     content: "";
     display: block;
-    border: 3px solid $color1;
+    border: 2px solid $color1;
     width: 30%;
     margin: 0 auto;
     margin-bottom: 68px;
@@ -287,7 +348,7 @@ body {
 .Paragraph-Socio::after {
     content: "";
     display: block;
-    border: 3px solid $color1;
+    border: 2px solid $color1;
     width: 30%;
     margin: 0 auto;
     margin-top: 68px;
@@ -356,6 +417,10 @@ body {
 .sponsor {
 
     background-color: #000;
+    margin-bottom: -5em;
+
+
+
 }
 
 .titlePartner {
@@ -363,10 +428,6 @@ body {
     text-align: center;
     color: $color3;
 }
-
-
-
-
 
 
 
@@ -378,7 +439,7 @@ body {
 
     content: "";
     display: block;
-    border: 3px solid $color1;
+    border: 2px solid $color1;
     width: 30%;
     margin: 0 auto;
     margin-top: 50px;
@@ -625,7 +686,7 @@ body {
 
     content: "";
     display: block;
-    border: 3px solid $color1;
+    border: 2px solid $color1;
     width: 30%;
     margin: 0 auto;
     margin-top: 50px;
@@ -948,10 +1009,11 @@ body {
 
 @media screen and (max-width: 2560px) {
 
-    .run9,.run25 {
-      
+    .run9,
+    .run25 {
+
         height: 64vh;
-     
+
     }
 
 }
@@ -965,20 +1027,24 @@ body {
 
         height: 39em;
 
-        
-       line-height: 1.5em;
-        
+
+        line-height: 1.5em;
+
     }
 
     .linkRun,
-    .linkRun17,.linkSociosChallenges,
-    .linkRunYoung,.linkRun15 a, .linkRun9 a, .linkRun25 a {
+    .linkRun17,
+    .linkSociosChallenges,
+    .linkRunYoung,
+    .linkRun15 a,
+    .linkRun9 a,
+    .linkRun25 a {
 
         right: 5rem;
 
     }
 
- 
+
 
     .sponsor {
 
@@ -1012,7 +1078,7 @@ body {
 
 
     .boxpresentation {
-     
+
         padding: 1rem;
     }
 
@@ -1021,28 +1087,34 @@ body {
     }
 
     .Video-Trail {
-       
+
         height: 52rem;
     }
 
-    
+
+
+
 }
 
 @media screen and (max-width: 992px) {
 
-    .blockDays, .blockHours, .blockMinutes, .blockSeconds {
+    .blockDays,
+    .blockHours,
+    .blockMinutes,
+    .blockSeconds {
         width: 23%;
     }
 
     .Actualite-Title::after {
-     
+
         margin-bottom: 49px;
     }
 
     .Actualite-Title::before {
-     
+
         margin-top: 0px;
     }
+
     .Paragraph-Socio {
         margin-top: 2px;
     }
@@ -1057,39 +1129,46 @@ body {
 
 @media screen and (max-width: 778px) {
 
-    #days, #hours, #minutes, #seconds {
-   
+    #days,
+    #hours,
+    #minutes,
+    #seconds {
+
         font-size: 2em;
-     
+
     }
 
-    .blockDays, .blockHours, .blockMinutes, .blockSeconds {
-      
+    .blockDays,
+    .blockHours,
+    .blockMinutes,
+    .blockSeconds {
+
         font-size: 1rem;
-       
+
     }
 
     .dateCounter {
-      
+
         font-size: 3rem;
-        
+
     }
+
     .boxpresentation {
-      
+
         height: 40em;
-        
+
     }
 
     .Actualite-Title::after {
-      
+
         margin-bottom: 26px;
     }
 
     .Actualite-Title::before {
-     
+
         margin-top: 0px;
     }
-     
+
 
 }
 
@@ -1104,22 +1183,27 @@ body {
 
         font-size: 1.5rem;
     }
+
     .trail {
-     
-       
+
+
         font-size: 3em;
     }
+
     .gallery {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .ChildrenRaces,.run15,.run9,.run25 {
-       
+    .ChildrenRaces,
+    .run15,
+    .run9,
+    .run25 {
+
         height: 72vh;
         width: 100%;
-      
+
     }
 
     .linkRace a {
@@ -1130,69 +1214,83 @@ body {
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
-   
+
     }
 
-    .linkRace,.linkRun15,.linkRun9,.linkRun25{
+    .linkRace,
+    .linkRun15,
+    .linkRun9,
+    .linkRun25 {
 
         overflow: hidden;
-       
+
         right: none;
-      
+
         font-size: 0.7rem;
     }
 
     .Paragraph-Breaking-News {
         border-left: none;
-       
+
     }
 
-    
+
 }
 
-@media screen and (max-width: 690px ){
+@media screen and (max-width: 690px) {
 
-    .blockDays, .blockHours, .blockMinutes, .blockSeconds {
+    .blockDays,
+    .blockHours,
+    .blockMinutes,
+    .blockSeconds {
         width: 32%;
     }
 
-    .blockDays, .blockHours, .blockMinutes, .blockSeconds {
+    .blockDays,
+    .blockHours,
+    .blockMinutes,
+    .blockSeconds {
         padding: 1px 2px;
         font-size: 1rem;
-      
-        
-      
-       
+
+
+
+
     }
-    .h2, h2 {
+
+    .h2,
+    h2 {
         font-size: 1.5rem;
     }
 
 
     .run {
-      
+
         font-size: 2em;
     }
 
     .run::after {
 
-       
+
         width: 1.9rem;
     }
 
     .run::before {
-       
-        width: 1.9rem;   
+
+        width: 1.9rem;
     }
- 
-    .linkRun a, .linkRun17 a,.linkSociosChallenges a, .linkRunYoung a{
-       
+
+    .linkRun a,
+    .linkRun17 a,
+    .linkSociosChallenges a,
+    .linkRunYoung a {
+
         font-size: 1.9rem;
-      
+
     }
 
     .Actualite-Title h2 {
-       
+
         padding: 19px;
     }
 
@@ -1203,13 +1301,14 @@ body {
     .Actualite-Title::before {
         margin-top: -19px;
     }
+
     .boxpresentation {
         line-height: 1.3rem;
     }
 }
 
 
-@media screen and (max-width: 425px ){
+@media screen and (max-width: 425px) {
 
     .sponsor {
         margin-bottom: -26rem;
@@ -1219,24 +1318,33 @@ body {
         height: 46rem;
     }
 
-    .linkRun a, .linkRun17 a, .linkSociosChallenges a, .linkRunYoung a {
+    .linkRun a,
+    .linkRun17 a,
+    .linkSociosChallenges a,
+    .linkRunYoung a {
         font-size: 1.7rem;
     }
-    .linkRace, .linkRun15, .linkRun9, .linkRun25 {
-      
+
+    .linkRace,
+    .linkRun15,
+    .linkRun9,
+    .linkRun25 {
+
         font-size: 0.7rem;
     }
 
     .linkRace {
-       
+
         height: 178px;
-     
+
     }
+
     .Paragraph-Breaking-News p {
-      
+
         padding-left: 0px;
-   
+
     }
+ 
 }
 
 @media screen and (max-width: 375px) {
@@ -1256,7 +1364,7 @@ body {
     .run {
         font-size: 1.5em;
     }
- 
+
 
 }
 
@@ -1264,13 +1372,14 @@ body {
 @media screen and (max-width: 320px) {
 
     .partenaires {
-    
+
         margin-top: 100px;
-        
+
     }
-    .boxpresentation {
-        line-height: 0.93rem;
-    }
+
+    // .boxpresentation {
+    //     line-height: 0.93rem;
+    // }
 
     .partenaires {
         margin-top: 1px;
@@ -1279,6 +1388,7 @@ body {
     .sponsor {
         margin-bottom: -28rem;
     }
+
     .Video-Trail {
         height: 41rem;
     }
@@ -1287,33 +1397,51 @@ body {
         font-size: 1.4em;
     }
 
-    .linkRace, .linkRun15, .linkRun9, .linkRun25 {
+    .linkRace,
+    .linkRun15,
+    .linkRun9,
+    .linkRun25 {
         font-size: 0.6rem;
     }
-    .linkRun, .linkRun17, .linkSociosChallenges, .linkRunYoung, .linkRun15 a, .linkRun9 a, .linkRun25 a {
+
+    .linkRun,
+    .linkRun17,
+    .linkSociosChallenges,
+    .linkRunYoung,
+    .linkRun15 a,
+    .linkRun9 a,
+    .linkRun25 a {
         right: 1.5rem;
     }
 
-    .linkSociosChallenges, .linkRunYoung {
-      
+    .linkSociosChallenges,
+    .linkRunYoung {
+
         bottom: 13rem;
-     
+
     }
-    .linkRun15, .linkRun9, .linkRun25 {
-       
+
+    .linkRun15,
+    .linkRun9,
+    .linkRun25 {
+
         bottom: 16rem;
         right: 6rem;
-    
-    }
-    .linkRace {
-     
-        right: -1rem;
-      
-    }
-    .Paragraph-Breaking-News p {
-    
-        padding-left: 0px;
-      
-    }
-}
 
+    }
+
+    .linkRace {
+
+        right: -1rem;
+
+    }
+
+    .Paragraph-Breaking-News p {
+
+        padding-left: 0px;
+
+    }
+
+
+   
+}

@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-#[Route('/races')]
+#[Route('trail-des-jambes-allaire/Course')]
 class RacesController extends AbstractController
 {
     #[Route('/', name: 'races_index', methods: ['GET'])]
@@ -37,9 +37,9 @@ class RacesController extends AbstractController
 
 
 
-    #[Route('/new', name: 'races_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'races_new', methods: ['GET', 'POST'])]
           /**
-     * Route('/new', name: 'races_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'races_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     
@@ -93,10 +93,10 @@ class RacesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'races_edit', methods: ['GET','POST'])]
+    #[Route('/{id}/Modification', name: 'races_edit', methods: ['GET','POST'])]
           /**
-     * Route('/{id}/edit', name: 'races_edit', methods: ['GET','POST'])
-     * @isGranted("ROLE_ADMIN")
+     * Route('/{id}/Modification', name: 'races_edit', methods: ['GET','POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, Races $race, SluggerInterface $slugger): Response
     {

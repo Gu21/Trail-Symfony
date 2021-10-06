@@ -1,47 +1,56 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin partenaires{% endblock %}
+{% block title %}Admin partenaires | Trail des jambes Allaire
+{% endblock %}
 
 {% block body %}
 
-<div class="container">
+	<div class="container">
 
 
-    <h1>PARTENAIRES</h1>
+		<h1>PARTENAIRES</h1>
 
-    <table id="myTable" class="table  table-Default table-hover table-striped">
-        <thead>
-            <tr>
-                <th>Id</th>
-                {# <th>TitlePartner</th> #}
-                <th>ImagePartnenaire</th>
-                {# <th>DescriptionPartner</th> #}
-                {# <th>DownloadFolderPartner</th> #}
-                <th>Modifier</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for partner in partners %}
-            <tr>
-                <td class="subtitle">{{ partner.id }}</td>
-                {# <td>{{ partner.titlePartner }}</td> #}
-                <td class="subtitle"><img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" width="100"></td>
-                {# <td>{{ partner.descriptionPartner }}</td> #}
-                {# <td>{{ partner.downloadFolderPartner }}</td> #}
-                <td class="subtitle">
-                    {# <a class="" href="{{ path('partners_show', {'id': partner.id}) }}">show</a> #}
-                    <a  class="edit" href="{{ path('partners_edit', {'id': partner.id}) }}">Modifier</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+		<table id="myTable" class="table  table-Default table-hover table-striped">
+			<thead>
+				<tr>
+					<th>Id</th>
+					{# <th>TitlePartner</th> #}
+					<th>ImagePartnenaire</th>
+					{# <th>DescriptionPartner</th> #}
+					{# <th>DownloadFolderPartner</th> #}
+					<th>Modifier</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for partner in partners %}
+					<tr>
+						<td class="subtitle">{{ partner.id }}</td>
+						{# <td>{{ partner.titlePartner }}</td> #}
+						<td class="subtitle"><img src="{{ asset('uploads/photos/' ~ partner.picturePartner) }}" loading="lazy" width="150"></td>
+						{# <td>{{ partner.descriptionPartner }}</td> #}
+						{# <td>{{ partner.downloadFolderPartner }}</td> #}
+						<td
+							class="subtitle">
+							{# <a class="" href="{{ path('partners_show', {'id': partner.id}) }}">show</a> #}
+							<a class="edit" href="{{ path('partners_edit', {'id': partner.id}) }}">
+								<i class="fas fa-pencil-alt"></i>
+							</a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="6">no records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% if  is_granted('ROLE_ADMIN') %}
+			<a class="backList" href="{{ path('partners_new') }}">
+				<span>
+					Créer un partenaire</span>
+			</a>
+		{% endif %}
 
-    <a class="backList" href="{{ path('partners_new') }}"><span> Créer un partenaire</span></a>
 
-</div>
+	</div>
 {% endblock %}

@@ -11,10 +11,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-#[Route('/pictures')]
+#[Route('trail-des-jambes-allaire/Photos')]
 class PicturesController extends AbstractController
 {
-    #[Route('/', name: 'pictures_index', methods: ['GET'])]
+    #[Route('/Admin', name: 'pictures_index', methods: ['GET'])]
     public function index(PicturesRepository $picturesRepository): Response
     {
         return $this->render('pictures/index.html.twig', [
@@ -24,7 +24,7 @@ class PicturesController extends AbstractController
         
     }
 
-    #[Route('/pictures_2019', name: 'pictures_2019', methods: ['GET'])]
+    #[Route('/', name: 'pictures_2019', methods: ['GET'])]
     public function page1(PicturesRepository $picturesRepository): Response
     {
         return $this->render('pictures/pictures2019.html.twig', [
@@ -56,9 +56,9 @@ class PicturesController extends AbstractController
 
     
 
-    #[Route('/new', name: 'pictures_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'pictures_new', methods: ['GET', 'POST'])]
         /**
-     * Route('/new', name: 'pictures_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'pictures_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     public function new(Request $request): Response
@@ -89,10 +89,10 @@ class PicturesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'pictures_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modification', name: 'pictures_edit', methods: ['GET', 'POST'])]
         /**
-     * Route('/{id}/edit', name: 'pictures_edit', methods: ['GET', 'POST'])
-     * @isGranted("ROLE_ADMIN")
+     * Route('/{id}/Modification', name: 'pictures_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, Pictures $picture): Response
     {

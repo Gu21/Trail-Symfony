@@ -1,69 +1,74 @@
 {% extends 'base.html.twig' %}
 {% block title %}
-	Inscription
+Inscription
 {% endblock %}
 {% block body %}
 
-	<section class="sectionRegisterTrail">
-		<div class="pictureRegisterTrail"></div>
-		<div class="container-fluid">
-			<div class="titleRegisterTrailTitle mt-5 py-5">
-				<h1 class="titleRegisterTrail mb-5">INSCRIPTION</h1>
-			</div>
-			<div class="row RegisterTrailRegister mb-5 py-5">
-				{% for register_trail in register_trail %}
-					<div class="col-sm-6 col-md-6  boxParagraphRegister">
-						<p class="paragraphRegister">
-							{{ register_trail.infoRegisterTrail | raw }}
-						</p>
-					</div>
-
-
-					<div class="col-sm-5 d-flex align-items-center boxDocumentRegister">
-						<div class="table-responsive">
-							<table class="table table-sm">
-								<thead>
-									<tr>
-										<th class="text-center titleTableRegisterTrail">
-											Documents pour l'inscription
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th scope="row" class="linkRegisterTrail">
-											<a href="{{ asset('uploads/photos/' ~ register_trail.newletterRegisterTrail ) }}">Bulletin d'inscription trail</a>
-											<!-- <a href="/uploads/photos/bulletininscriptionversojambesallaire2020-60dc6a8bba1b0.pdf">1</a> -->
-										</th>
-									</tr>
-									<tr>
-										<th scope="row" class="linkRegisterTrail">
-											<a href="https://www.klikego.com/inscription/trail-des-jambes-allaire-2020/course-a-pied-running/1463865764159-5" target="blank">Inscription trail sur KLIKEGO</a>
-										</th>
-									</tr>
-									<tr>
-										<th scope="row" class="linkRegisterTrail">
-											<a href="{{ asset('uploads/photos/' ~ register_trail.newletterPartnerRegisterTrail ) }}" target="blank">Bulletin d'inscription partenaires</a>
-										</th>
-									</tr>
-									<tr>
-										<th scope="row" class="linkRegisterTrail">
-											<a href="https://docs.google.com/forms/d/e/1FAIpQLSdxhpEXdEbOOUARyrgLgIWjnnK6EERVBShFh8CMEuF3nnJD7Q/viewform" target="blank">Recrutement bénévoles</a>
-										</th>
-									</tr>
-									<tr>
-										<th scope="row" class="linkRegisterTrail">
-											<a href="{{ asset('uploads/photos/' ~ register_trail.internalRulesRegisterTrail ) }}" target="blank">Réglement trail des jambes Allaire</a>
-										</th>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				{% endfor %}
-			</div>
+<section class="sectionRegisterTrail">
+	<div class="pictureRegisterTrail"></div>
+	<div class="container-fluid">
+		<div class="titleRegisterTrailTitle mt-5 py-5">
+			<h1 class="titleRegisterTrail mb-5">INSCRIPTION</h1>
 		</div>
+		<div class="row RegisterTrailRegister mb-5 py-5">
+			{% for register_trail in register_trail %}
+			<div class="col-sm-6 col-md-6  boxParagraphRegister">
+				<p class="paragraphRegister">
+					{{ register_trail.infoRegisterTrail | raw }}
+				</p>
+			</div>
 
 
-	</section>
+			<div class="col-sm-5 boxDocumentRegister">
+				<div class="table-responsive">
+					<table class="table table-sm ">
+						<thead>
+							<tr>
+								<th class="text-center titleTableRegisterTrail">
+									Documents pour l'inscription
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row" class="linkRegisterTrail">
+									<a href="{{ asset('uploads/photos/' ~ register_trail.newletterRegisterTrail ) }}" target="bank">Bulletin
+										d'inscription trail</a>
+								
+								</th>
+							</tr>
+							<tr>
+								<th scope="row" class="linkRegisterTrail">
+									<a href="https://www.klikego.com/inscription/trail-des-jambes-allaire-2020/course-a-pied-running/1463865764159-5"
+										target="blank">Inscription trail sur KLIKEGO</a>
+								</th>
+							</tr>
+							<tr>
+								<th scope="row" class="linkRegisterTrail">
+									<a href="{{ asset('uploads/photos/' ~ register_trail.newletterPartnerRegisterTrail ) }}"
+										target="blank">Bulletin d'inscription partenaires</a>
+								</th>
+							</tr>
+							<tr>
+								<th scope="row" class="linkRegisterTrail">
+									<a href="https://docs.google.com/forms/d/e/1FAIpQLSdxhpEXdEbOOUARyrgLgIWjnnK6EERVBShFh8CMEuF3nnJD7Q/viewform"
+										target="blank">Recrutement bénévoles</a>
+								</th>
+							</tr>
+							<tr>
+								<th scope="row" class="linkRegisterTrail">
+									<a href="{{ asset('uploads/photos/' ~ register_trail.internalRulesRegisterTrail ) }}"
+										target="blank">Réglement trail des jambes Allaire</a>
+								</th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+
+</section>
 {% endblock %}

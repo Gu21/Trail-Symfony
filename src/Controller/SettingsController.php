@@ -11,10 +11,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-#[Route('/settings')]
+#[Route('/Date')]
 class SettingsController extends AbstractController
 {
-    #[Route('/', name: 'settings_index', methods: ['GET'])]
+    #[Route('/Paramètre/Admin', name: 'settings_index', methods: ['GET'])]
     public function index(SettingsRepository $settingsRepository): Response
     {
         return $this->render('settings/index.html.twig', [
@@ -22,9 +22,9 @@ class SettingsController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'settings_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'settings_new', methods: ['GET', 'POST'])]
          /**
-     * Route('/new', name: 'settings_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'settings_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     public function new(Request $request): Response
@@ -55,10 +55,10 @@ class SettingsController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'settings_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modification', name: 'settings_edit', methods: ['GET', 'POST'])]
          /**
-     *Route('/{id}/edit', name: 'settings_edit', methods: ['GET', 'POST'])
-     * @isGranted("ROLE_ADMIN")
+     *Route('/{id}/Modification', name: 'settings_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, Settings $setting): Response
     {

@@ -7,6 +7,8 @@ use App\Entity\Contacts;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 
 
@@ -19,8 +21,15 @@ class ContactsType extends AbstractType
         $builder
             ->add('nameContact')
             ->add('firstNameContact')
-            ->add('emailContact')
-            ->add('phoneContact')
+            // ->add('emailContact')
+            
+            ->add('emailContact', EmailType::class, [
+             
+            ])
+            // ->add('phoneContact')
+            ->add('phoneContact', TelType::class, [
+             
+                ])
             ->add('commentContact');
       
             

@@ -6,20 +6,7 @@ $color5: #000;
 $color6: #303030;
 
 
-// .sectionRegisterTrail{
 
-//     background-color: #222222;
-//     background: repeating-linear-gradient(
-//         45deg,
-//         #2b2b2b 0%,
-//         #2b2b2b 10%,
-//         #222222 0%,
-//         #222222 50%
-//       )
-//       0 / 15px 15px; 
-//       margin-top: 0;
-
-// }
 
 .pictureRegisterTrail {
 
@@ -70,13 +57,14 @@ $color6: #303030;
     color: $color6;
     display: block;
     margin: 0 auto;
+    font-size: 17px;
 
 }
 
 .boxDocumentRegister {
 
     text-align: center;
-    margin-right: 3rem;
+    // margin-right: 3rem;
 }
 
 .titleTableRegisterTrail {
@@ -100,6 +88,7 @@ $color6: #303030;
 
         color: $color1;
         text-decoration: none;
+        font-size: 1rem;
 
 
     }
@@ -125,6 +114,8 @@ $color6: #303030;
     color: $color6;
     font-size: 1rem;
 }
+
+
 
 // ----------------MEDIA QUERY-------------
 
@@ -228,7 +219,8 @@ $color6: #303030;
 
     .table td,
     .table th {
-        padding: 1rem;
+        // padding: 1rem;
+        padding: 0.5rem;
     }
 
 }

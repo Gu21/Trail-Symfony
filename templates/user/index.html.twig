@@ -1,45 +1,70 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin utilisateur{% endblock %}
+{% block title %}Admin utilisateur | Trail des jambes Allaire
+{% endblock %}
 
 {% block body %}
-    <h1> UTILISATEUR ADMIN</h1>
+	<h1>
+		UTILISATEUR ADMIN</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Email</th>
-                <th>Rôles</th>
-                {# <th>Password</th> #}
-                <th>Modifier</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for user in users %}
-            <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-                {# <td>{{ user.password }}</td> #}
-                <td>
-                    {# <a href="{{ path('user_show', {'id': user.id}) }}">show</a> #}
-                    <a class="edit" href="{{ path('user_edit', {'id': user.id}) }}">ÉDITER</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>name</th>
+				<th>first name</th>
+				<th>Email</th>
+				<th>Rôles</th>
+				{# <th>Password</th> #}
+				{% if  is_granted('ROLE_ADMIN') %}
+					<th>Modifier</th>
+				{% endif %}
 
-    {# <a href="{{ path('user_new') }}">Create new</a> #}
+			</tr>
+		</thead>
+		<tbody>
+			{% for user in users %}
+				<tr>
+					<td>{{ user.id }}</td>
+					<td>{{ user.name }}</td>
+					<td>{{ user.firstname }}</td>
+					<td>{{ user.email }}</td>
+					<td>
+						{# {{ user.roles ? user.roles|json_encode : '' }} #}
+						{% for role in user.roles %}
+							{% if role == 'ROLE_USER' %}
+								Utilisateur
+								{# {% elseif role == 'ROLE_EDITOR' %}
+																															Editeur #}
+							{% elseif role == 'ROLE_ADMIN' %}
+								Administrateur
+							{% endif %}
+						{% endfor %}
+					</td>
+					{# <td>{{ user.password }}</td> #}
+					<td>
+						{# <a href="{{ path('user_show', {'id': user.id}) }}">show</a> #}
+						{% if  is_granted('ROLE_ADMIN') %}
+							<a class="edit" href="{{ path('user_edit', {'id': user.id}) }}">
+								<i class="fas fa-pencil-alt"></i>
+							</a>
+						{% endif %}
 
-
-
-
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="5">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% if  is_granted('ROLE_ADMIN') %}
+		<a class="backList" href="{{ path('user_new') }}">
+			<span>
+				Créer un nouvel utilisateur</span>
+		</a>
+	{% endif %}
 
 
 {% endblock %}

@@ -41,11 +41,11 @@
   color: #303030;
   display: block;
   margin: 0 auto;
+  font-size: 17px;
 }
 
 .boxDocumentRegister {
   text-align: center;
-  margin-right: 3rem;
 }
 
 .titleTableRegisterTrail {
@@ -60,6 +60,7 @@
 .linkRegisterTrail a {
   color: #aad044;
   text-decoration: none;
+  font-size: 1rem;
 }
 .linkRegisterTrail a:hover {
   background: #6b90bb;
@@ -137,6 +138,6 @@
 
   .table td,
 .table th {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 }/*# sourceMappingURL=reg2021.css.map */

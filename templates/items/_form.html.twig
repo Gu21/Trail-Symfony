@@ -1,10 +1,12 @@
 {{ form_start(form) }}
+{{ form_start(form, {'action': path('comments_index'), 'method': 'POST'}) }}
 {{ form_widget(form.nameItem,{'attr':{'placeholder':'Nom','class':'nameItem'}}) }}
 {{ form_errors(form) }}
 {{ form_widget(form.commentItem,{'attr':{'placeholder':'Message','class':'commentItem', 'rows' : '9' }}) }}
 {{ form_widget(form) }}
 <div class="boxBtnGoldenBook d-flex justify-content-center ">
-    <button class=" btnGoldenBook  mt-5 "><span
-            class="text">{{ button_label|default('Valider') }}</span></button>
+	<button class=" btnGoldenBook  mt-5 ">
+		<span class="text">{{ button_label|default('Valider') }}</span>
+	</button>
 </div>
 {{ form_end(form) }}

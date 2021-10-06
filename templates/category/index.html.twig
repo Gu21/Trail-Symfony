@@ -1,6 +1,6 @@
 {% extends 'baseAdmin.html.twig' %}
 
-{% block title %}Admin catégories{% endblock %}
+{% block title %}Admin catégories | Trail des jambes Allaire{% endblock %}
 
 {% block body %}
     <h1>CATEGORIES</h1>
@@ -20,7 +20,7 @@
                 <td>{{ category.nameCategory }}</td>
                 <td>
                     <!-- <a href="{{ path('category_show', {'id': category.id}) }}">show</a> -->
-                    <a class="edit" href="{{ path('category_edit', {'id': category.id}) }}">ÉDITER</a>
+                    <a class="edit" href="{{ path('category_edit', {'id': category.id}) }}"><i class="fas fa-pencil-alt"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -30,6 +30,8 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a class="backList" href="{{ path('category_new') }}"><span>Créer une nouvelle catégorie</span></a>
+  {% if  is_granted('ROLE_ADMIN') %}
+		<a class="backList" href="{{ path('category_new') }}"><span>Créer une nouvelle catégorie</span></a>
+	{% endif %}
+    
 {% endblock %}

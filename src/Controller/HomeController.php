@@ -12,10 +12,10 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
-#[Route('/home')]
+#[Route('/Accueil')]
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'home_index', methods: ['GET'])]
+    #[Route('/admin', name: 'home_index', methods: ['GET'])]
     public function index(HomeRepository $homeRepository): Response
     {
         return $this->render('home/index.html.twig', [
@@ -23,9 +23,9 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'home_new', methods: ['GET', 'POST'])]
+    #[Route('/Creation', name: 'home_new', methods: ['GET', 'POST'])]
        /**
-     * Route('/new', name: 'home_new', methods: ['GET', 'POST'])
+     * Route('/Creation', name: 'home_new', methods: ['GET', 'POST'])
      * @isGranted("ROLE_ADMIN")
      */
     public function new(Request $request): Response
@@ -56,10 +56,10 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'home_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/Modification', name: 'home_edit', methods: ['GET', 'POST'])]
        /**
-     * Route('/{id}/edit', name: 'home_edit', methods: ['GET', 'POST'])
-     * @isGranted("ROLE_ADMIN")
+     * Route('/{id}/Modification', name: 'home_edit', methods: ['GET', 'POST'])
+     * @isGranted("ROLE_USER")
      */
     public function edit(Request $request, Home $home): Response
     {

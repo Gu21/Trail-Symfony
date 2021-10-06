@@ -49,6 +49,13 @@ body {
 }
 
 
+
+.nav-item .dropdown:hover{
+
+    display: block;
+}
+
+
 .navbar-light .navbar-brand {
     color: rgba(0, 0, 0, 0.9);
     width: 100px;
@@ -73,11 +80,21 @@ body {
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block;
+    // display: block;
     // margin-left: 140px;
-    margin-left: 65px;
+    // margin-left: 65px;
+    margin-left: -59px;
 }
+
+
   
+.dropdown-menu .Subtitle .show{
+
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate3d(-37px, 49px, 0px);
+}
 
 
 .d-md-block {
@@ -92,7 +109,9 @@ body {
     border-color: $color3;
     color: $color3;
     margin-top: 57px;
+    margin-left: 1rem;
 }
+
 
 
 .nav-link .dropdown-toggle .Nav {
@@ -160,7 +179,9 @@ body {
     color: $color2 !important;
     // text-shadow: 1px 1px 1px $color2;
     font-size: 1.3rem;
+    text-align: center;
 }
+
 
 .Home.scrolled,
 .Nav.scrolled {
@@ -534,6 +555,20 @@ body {
     }
 }
 
+
+    .visually-hidden, .visually-hidden-focusable:not(:focus) {
+        position: absolute!important;
+        width: 1px!important;
+        height: 1px!important;
+        padding: 0!important;
+        margin: -1px!important;
+        overflow: hidden!important;
+        clip: rect(0,0,0,0)!important;
+        white-space: nowrap!important;
+        border: 0!important;
+    }
+
+
 // // .Box-Contact {
 // //     margin-top: 87px;
 
@@ -607,7 +642,7 @@ body {
      
         right: -12rem;
       
-        width: 39%;
+        width: 36%;
     }
     
  
@@ -622,7 +657,7 @@ body {
 
     .navbar-collapse {
        
-        width: 38%;
+        width: 52%;
       
     }
     .navbar-light .navbar-brand {
@@ -638,9 +673,8 @@ body {
 
     .navbar-light .navbar-brand {
      
-        right: -12rem;
-      
-        width: 52%;
+        right: -8rem;
+        width: 36%;
     }
   
 

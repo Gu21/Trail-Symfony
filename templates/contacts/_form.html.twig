@@ -1,5 +1,6 @@
 
-{{ form_start(form, {'action':('contacts_recaptcha'), 'method': 'POST','id': 'recaptcha'}) }}
+{{ form_start(form) }}
+{# {{ form_start(form, {'action': path('contacts_index'), 'method': 'POST'}) }} #}
 {{ form_widget(form.nameContact,{'attr':{'placeholder':'Nom','class':'nameContact'}}) }}
 {{ form_errors(form) }}
 {{ form_widget(form.firstNameContact,{'attr':{'placeholder':'Prenom','class':'firstNameContact'}}) }}
@@ -7,5 +8,5 @@
 {{ form_widget(form.phoneContact,{'attr':{'placeholder':'Téléphone','class':'phoneContact' }}) }}
 {{ form_widget(form.commentContact,{'attr':{'placeholder':'Message','class':'commentContact', 'rows' : '9' }}) }}
     {{ form_widget(form) }}
-   <button type="submit" class="g-recaptcha btn" data-sitekey="6LdkvxIcAAAAACe3P5yebsbFn637hVTlSbRWN8dn" data-callback='onSubmit' data-action='submit'>Enregistrer</button>
+   <button type="submit" class="btn" >Enregistrer</button>
 {{ form_end(form) }}

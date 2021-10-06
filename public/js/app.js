@@ -58,20 +58,16 @@ reverse: false
   //  })
    .addTo(controller);
 
-
-   
-
-
-
-
 //  --END -SCRIPT----PRESENTATION------  
+
+
 
     // ---SCRIPT----TABLE ADMIN------ 
 
     $(document).ready( function () {
-      $('#myTable').DataTable({responsive:true});
-  } );
-    
+      $('#myTable').DataTable(
+       );
+  } );  
     //  --END -SCRIPT---TABLE ADMIN------
     
     

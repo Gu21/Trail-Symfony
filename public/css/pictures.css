@@ -7,7 +7,7 @@
 .boxPicture .titlePictures {
   color: #aad044;
   margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   letter-spacing: 0.5rem;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
@@ -131,7 +131,7 @@
 }
 @media screen and (max-width: 425px) {
   .boxPicture .titlePictures {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
   }
 
   .boxPicture .titlePictures::before {
@@ -140,6 +140,11 @@
 
   .boxPicture .titlePictures::after {
     width: 1rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .boxPicture .titlePictures {
+    font-size: 2.1rem;
   }
 }
 @media screen and (max-width: 325px) {
@@ -152,6 +157,7 @@
   }
 
   .boxPicture .titlePictures {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
   }
 }/*# sourceMappingURL=pictures.css.map */

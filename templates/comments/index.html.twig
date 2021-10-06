@@ -1,55 +1,15 @@
-{% extends 'base.html.twig' %} {% block title %}Comments index {% endblock %} {%
-block body %} {# {
-<!-- <table class="table">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>TitleComment</th>
-      <th>NameComment</th>
-      <th>EmailComment</th>
-      <th>CommentComments</th>
-      <th>actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for comment in comments %}
-    <tr>
-      <td>{{ comment.id }}</td>
-      <td>{{ comment.titleComment }}</td>
-      <td>{{ comment.nameComment }}</td>
-      <td>{{ comment.emailComment }}</td>
-      <td>{{ comment.commentComments }}</td>
-      <td>
-        <a href="{{ path('comments_show', { id: comment.id }) }}">show</a>
-        <a href="newcommentaires.php?ID_post=<?php echo $value1['Id'] ?>"
-          >Ajouter un commentaire</a
-        >
-      </td>
-    </tr>
-    {% else %}
-    <tr>
-      <td colspan="6">no records found</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table> -->
+{% extends 'base.html.twig' %} {% block title %} Livre d'or | Trail des jambes Allaire {% endblock %} {%
+block body %}
 
-<a href="{{ path('comments_new') }}">Create new</a> #}
 
 <section class="blog">
 	<div class="container boxCommentItems">
 		<div class="blog">
 			<h1 class="titleComment">LE LIVRE D'OR DU TRAIL DES JAMBES ALLAIRE!</h1>
 		</div>
-
 		<p class="infoItem">
-			Laissez-nous vos commentaires, ou votre retour d'expérience avec nous : {#
-      <a href="#formBlog">
-        <i class="fas fa-arrow-circle-down"></i>
-      </a>
-      #}
+			Laissez-nous vos commentaires, ou votre retour d'expérience avec nous :
 		</p>
-
 		{% for comment in comments %}
 
 		<div class="title">
@@ -64,16 +24,18 @@ block body %} {# {
 			</div>
 		</div>
 
-		{# ------------------ITEM (MESSAGE)----------------------------------------
-    #}
+		{# ------------------ITEM (MESSAGE)---------------------------------------- #}
+   
 		<div class="content">
 			<button class="accordion">Réponse</button>
 			<div class="panel">
 				<div class="dateContent">
-					{% for item in items %} {% if comment.id == item.comment.id %}
+					{% for item in items %}
+					
+					{% if comment.id == item.comment.id %}
 
 					<p class="paragraphItems">
-						Posté le: {{ item.dateItem ? item.dateItem|date('m-d-Y') }}
+						Posté le: {{ item.dateItem ? item.dateItem|date('d-m-Y') }}
 					</p>
 
 					{# //Pour changer le format de la date | #}
@@ -82,34 +44,34 @@ block body %} {# {
 
 					<P>{{ item.commentItem }}</P>
 
-					{% endif %} {% endfor %}
+					{% endif %}
+				
+					 {% endfor %}
 				</div>
 			</div>
 		</div>
 
-		{% endfor %} {# --------------END----ITEM
-    (MESSAGE)---------------------------------------- #}
+		{% endfor %} {# --------------END----ITEM (MESSAGE)---------------------------------------- #}
+    
 
 		<div class="row boxCommentItems">
 			<div class="col-sm-12 Comment">
 				<h2 id="formBlog" class="titleItems">Ajouter un commentaire</h2>
-				<!-- <div class="buttonReload">
-					<button type="button" class="reset">Rafraîchir le formulaire</button>  //Bouton pour rafraîchir le formulaire
-				</div> -->
+
 
 				<div class="boxFormComment mt-5 mb-5">
-					{# ------------------------FORMULAIRE AJOUTER UN
-          COMMENTAIRE-------------- #}
+					{# ------------------------FORMULAIRE AJOUTER UN COMMENTAIRE-------------- #}
+          
 					{{ form(form) }}
 
-					{# // Lien RegisterTrailType.php #} {#
-          ------------------END------FORMULAIRE AJOUTER UN
-          COMMENTAIRE-------------- #}
+					{# // Lien RegisterTrailType.php #} {#  ------------------END------FORMULAIRE AJOUTER UN COMMENTAIRE-------------- #}
+					
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<script src="{{ asset('js/goldenBook.js') }}"></script>
+	
 </section>
 {% endblock %}
