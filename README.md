@@ -1,5 +1,5 @@
 
-![](img/carrousel1.JPG)
+![](Trail-Symfony/public/img/carrousel1.JPG)
 
 # Projet Trail Symfony
 
