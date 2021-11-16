@@ -1,4 +1,4 @@
-![](carrousel1.JPG)
+<img src="img/carrousel1.JPG" class=" d-block w-100  pictureCarrousel" alt="coureur1">
 
 # Projet Trail Symfony
 
