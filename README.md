@@ -1,5 +1,6 @@
 
-![alt text](https://github.com/[Gu21]/[Trail-Symfony]/blob/[branch]/carrousel1.jpg?raw=true)
+![carrousel1](carrousel1.jpg)
+
 # Projet Trail Symfony
 
 Le projet Trail Symfony est un projet réalisé  en fin de formation de développeur web et web mobile de 6 mois à ARINFO dans le cadre d'une reconversion professionnelle.
