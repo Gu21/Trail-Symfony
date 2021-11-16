@@ -1,4 +1,4 @@
-<img src="img/carrousel1.JPG" width="350" alt="coureur1">
+<img src="./img/carrousel1.JPG" width="350" alt="coureur1">
 
 # Projet Trail Symfony
 
