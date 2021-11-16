@@ -1,5 +1,4 @@
-
-![coureur1](Github/Trail-Symfony/public/img/carrousel1.JPG)
+![](https://github.com/[Gu21]/[Trail-Symfony]/blob/[branch]/carrousel1.JPG?raw=true)
 
 # Projet Trail Symfony
 
