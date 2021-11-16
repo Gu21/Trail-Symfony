@@ -1,5 +1,5 @@
 
-![alt text](https://github.com/[Gu21]/[Trai-Symfony]/blob/[branch]/carrousel1.jpg?raw=true)
+![alt text](https://github.com/[Gu21]/[Trail-Symfony]/blob/[branch]/carrousel1.jpg?raw=true)
 # Projet Trail Symfony
 
 Le projet Trail Symfony est un projet réalisé  en fin de formation de développeur web et web mobile de 6 mois à ARINFO dans le cadre d'une reconversion professionnelle.
@@ -23,4 +23,4 @@ Site encore en amélioration a ce jour.
 
 ### Lien du site
 
-[lien] (https://trail-allaire-bisson.fr)
+(https://trail-allaire-bisson.fr)
