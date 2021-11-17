@@ -32,6 +32,16 @@ Site encore en amélioration a ce jour.
 * Git / Github
 
 
+### Réalisation d'une interface utilisateur
+
+![admin](https://user-images.githubusercontent.com/79690181/142187976-6433b94b-bfce-4d5a-a9a5-b2a4e7f82bba.png)
+
+Pour répondre au besoin de l'association sur la personnalisation du site j'ai mis en place un
+système de gestion de contenu.
+L'association aura la possibilité d'importer des photos, de mettre du texte, de le modifier ou
+de le supprimer.
+
+
 
 #### Lien du site
 
