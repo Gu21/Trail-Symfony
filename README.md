@@ -40,7 +40,7 @@ Page d’accueil de la partie « Administration » du site.
 Pour répondre au besoin de l'association sur la personnalisation du site j'ai mis en place un
 système de gestion de contenu.
 L'association aura la possibilité d'importer des photos, de mettre du texte, de le modifier ou
-de le supprimer et pagination a été mise en place.
+de le supprimer et une pagination a été mise en place.
 
 La barre de navigation lorsque la souris passe par dessus:
 
