@@ -12,16 +12,6 @@
 
 		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-
-			{# <div class="carousel-indicators">																				
-			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-			aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-		    aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-			aria-label="Slide 3"></button>
-			</div> #}
-
 			<div class="carousel-inner">
 
 
@@ -107,9 +97,7 @@
 	</div>
 </div>
 
-
 <!-- ------------------END-------API WEATHERMAP-------------------------- -->
-
 <!-- -------------------------------END--CARROUSEL-------------------------- -->
 
 <!-- -------------------------------COMPTEUR-------------------------- -->
@@ -118,36 +106,6 @@
 
 
 		<h2 class="titleCounter">PROCHAIN TRAIL!</h2>
-
-		<!-- -------------------------API WEATHERMAP-------------------------- -->
-
-		{# <form id="weather">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="form-group">
-						<label for="city" class="sr-only">Renseigner une ville</label>
-						<input type="text" class="form-control" id="city" placeholder="Renseigner une ville">
-						<div class="invalid-feedback">Merci de renseigner une ville valide</div>
-					</div>
-				</div>
-				<div class="col-md-8 mt-3">
-					<button type="submit" class="btn btn-primary ">METEO DU TRAIL</button>
-				</div>
-
-				<div class="card d-none" style="width: 11rem;">
-					<div class="text-center">
-						<img class="image-weather" alt="image  temps" width="50" height="50">
-					</div> #}
-
-
-		{# </form> #}
-		{# <div class="weather">
-			<p>Allaire</p>
-			<span class="weather_temperature"></span>
-			<span class="weather_hour"></span>																														
-			</div> #}
-
-		<!-- ------------------END-------API WEATHERMAP-------------------------- -->
 
 
 		{% for setting in settings %}
@@ -243,7 +201,7 @@
 							{% for partner in partners %}
 							{% set x = x + 1 %}
 							{% if x == 1 %}
-							{# <!-- <h3>{{ partner.titlePartner }}</h3> --> #}
+
 							<div
 								class="carousel-item tex-center align-middle {% if loop.index0 == 0 %} active  {% endif %}">
 								{% if isFirst == true %}
@@ -294,13 +252,6 @@
 			<div class="col-sm-12 Box-Video">
 				<div class="col-sm-12 Video-Trail">
 
-					<!-- -----VIDEO IFRAME---- -->
-					<!-- <iframe width="1903" height="1070"
-																																																																																																	                        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftraildesjambesallaire%2Fvideos%2F372733490362214%2F&show_text=false&width=560&t=0"
-																																																																																																	                        allowfullscreen="autoplay=1&loop=1" muted="true" preload="auto" class="d-block"
-																																																																																																	                        style="border:none;overflow:hidden" scrolling="no" frameborder="0" allow="autoplay;"
-																																																																																																	                        allowFullScreen="true"></iframe> -->
-					<!-- ---END--VIDEO IFRAME---- -->
 
 					<video width="1903" height="1070" loop autoplay="true" muted="true" preload="auto"
 						class="d-block w-100 ">
@@ -381,10 +332,8 @@
 					</div>
 				</div>
 
-
-				<!-- <div class="infos-hover">
 																																																																																																							                    <i class="fa fa-eye"></i>
-																																																																																																							                    <a href="/" class="linkRun"></a>
+																																																																																																			                    <a href="/" class="linkRun"></a>
 																																																																																																							                </div> -->
 				<div class="gallery">
 					<div class="ChildrenRaces">
@@ -394,10 +343,10 @@
 						</div>
 					</div>
 
-					<!-- <div class="infos-hover">
+					
 																																																																																																																				                    <i class="fa fa-eye"></i>
 																																																																																																																				                    <a href="/" class="linkRun"></a>
-																																																																																																																				                </div> -->
+																																																																																																																                </div> -->
 
 					<div class="run15">
 						<div class="linkRun15">
@@ -405,7 +354,7 @@
 						</div>
 					</div>
 
-					<!-- <div class="infos-hover">
+				
 																																																																																																																				                    <i class="fa fa-eye"></i>
 																																																																																																																				                    <a href="/" class="linkRun"></a>
 																																																																																																																				                </div> -->
@@ -421,7 +370,7 @@
 						</div>
 					</div>
 
-					<!-- <div class="infos-hover">
+				
 																																																																																																																				                        <i class="fa fa-eye"></i>
 																																																																																																																				                        <a href="/" class="linkRun"></a>
 																																																																																																																				                    </div> -->
@@ -431,7 +380,7 @@
 						</div>
 					</div>
 
-					<!-- <div class="infos-hover">
+					
 																																																																																																																				                        <i class="fa fa-eye"></i>
 																																																																																																																				                        <a href="/" class="linkRun"></a>
 																																																																																																																				                    </div> -->
@@ -443,7 +392,7 @@
 					</div>
 				</div>
 
-				<!-- <div class="infos-hover">
+				
 																																																																																																							                    <i class="fa fa-eye"></i>
 																																																																																																							                    <a href="/" class="linkRun"></a>
 																																																																																																							                </div> -->
@@ -499,18 +448,18 @@
 		function setDate() {
 
 			var now = new Date();
-			                                             //1000 car le getTime sort la durée en milliseconde
+			                                            //1000 car le GetTime sort la durée en millisecondes
 			var s = ((launch.getTime() - now.getTime()) / 1000) - now.getTimezoneOffset();//différence de temps entre l'heure UTC et l'heure locale, en minutes.
-			                       //86400 qui correspond a une journée de 24 heure*60minutes*60secondes
+			                       //86400 qui correspondent a une journée de 24 heures *60minutes*60secondes
 			var d = Math.floor(s / 86400);
 			days.html('<strong>' + d + '</strong>JR');
 			
-			s -= d * 86400;//Elimine la durée now.getTime())
-                                   //3600 qui correspond a une heure 60minutes*60secondes
+			s -= d * 86400;//Elimine la durée now.GetTime())
+                                   //3600 qui correspondent a une heure 60minutes*60secondes
 			var h = Math.floor(s / 3600);
 			hours.html('<strong>' + h + '</strong>HR');
 			s -= h * 3600;
-                                  //60 qui correspond a une minute 60secondes
+                                  //60 qui correspondent a une minute 60secondes
 			var m = Math.floor(s / 60);
 			minutes.html('<strong>' + m + '</strong>MIN');
 			s -= m * 60;
