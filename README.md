@@ -63,8 +63,9 @@ croix noire en haut à droite:
 
 Une fois mon lien Accueil sélectionné, j'arrive sur la page index de mon template home
 pour modifier ou créer une nouvelle rubrique.
-La page est représentée sous la forme d'un tableau avec des boutons et des icônes afin
-d'interagir avec la rubrique.
+La page est représentée sous la forme d'un tableau avec des boutons et des icônes afin d'interagir avec la rubrique.
+
+
 L'Administrateur a la possibilité de modifier une rubrique ou une photo   ![icone-editer](https://user-images.githubusercontent.com/79690181/142191330-e9bb3603-6480-445e-8057-4b4f0a17001c.png).
 
 ### Exemple de la page d'ajout de contenu:
