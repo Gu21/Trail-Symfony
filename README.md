@@ -1,4 +1,4 @@
-<img src="/img/carrousel1.JPG" width="350" alt="coureur1">
+![projet-trail](https://user-images.githubusercontent.com/79690181/142174993-346f7110-c2e1-4040-b822-c4d6ae63bd11.png)
 
 
 # Projet Trail Symfony
