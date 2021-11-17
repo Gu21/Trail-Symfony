@@ -18,32 +18,35 @@ class UserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('name', TextType::class, [
-            'label' => 'Nom',
-            'attr' => [
-                'class' => 'form-control','nameUser',
-                'placeholder' => 'Nom',
-            ]
-        ] )
-        
-        ->add('firstname', TextType::class, [
-            'label' => 'Prénom',
-            'attr' => [
-                'class' => 'form-control','firstnameUser',
-                'placeholder' => 'Prénom',
-            ]
-        ] )
-        
-            ->add('email', EmailType::class, [
-                'label' => 'Email',
+            ->add('name', TextType::class, [
+                'label' => 'Nom',
                 'attr' => [
-                    'class' => 'emailUser',
-                    'placeholder' => 'Email',
-                    
-                    
+                    'class' => 'form-control', 'nameUser',
+                    'placeholder' => 'Nom',
                 ]
-            ]
-            
+            ])
+
+            ->add('firstname', TextType::class, [
+                'label' => 'Prénom',
+                'attr' => [
+                    'class' => 'form-control', 'firstnameUser',
+                    'placeholder' => 'Prénom',
+                ]
+            ])
+
+            ->add(
+                'email',
+                EmailType::class,
+                [
+                    'label' => 'Email',
+                    'attr' => [
+                        'class' => 'emailUser',
+                        'placeholder' => 'Email',
+
+
+                    ]
+                ]
+
             )
 
             ->add('roles')
@@ -52,9 +55,11 @@ class UserType extends AbstractType
                 // this is read and encoded in the controller
                 'mapped' => false,
                 'label' => 'Mot de passe',
-                'attr' => ['autocomplete' => 'new-password',
-                'class' => 'passwordUser',
-                'placeholder' => 'Mot de passe'],
+                'attr' => [
+                    'autocomplete' => 'new-password',
+                    'class' => 'passwordUser',
+                    'placeholder' => 'Mot de passe'
+                ],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',
@@ -68,29 +73,16 @@ class UserType extends AbstractType
                 ],
             ])
 
-            
-            // ->add('password', PasswordType::class, [
-            //     'label' => 'Mot de passe',
-            //     'attr' => [
-            //         'class' => 'passwordUser',
-            //         'placeholder' => 'Mot de passe',
-                    
-                    
-            //     ]
-            // ]
-            
-            // )
 
             ->add('roles', ChoiceType::class, [
                 'choices' => [
-                'Administrateur' => User::ROLE_ADMIN,
-                'Utilisateur' => User::ROLE_USER,
+                    'Administrateur' => User::ROLE_ADMIN,
+                    'Utilisateur' => User::ROLE_USER,
                 ],
                 'multiple' => true,
                 'expanded' => true,
                 'required' => true,
-                ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -21,9 +21,7 @@ class ParticipantsType extends AbstractType
                 'class' => Races::class,
                 'choice_label' => 'titleRace',
             ])
-            ->add('downloadRegistrationParticipant')
-            
-        ;
+            ->add('downloadRegistrationParticipant');
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -14,7 +14,7 @@ class ResultsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            // ->add('pictureResult')
+
             ->add('titleResult')
             ->add('linkResult')
             ->add('SubtitleResult')
@@ -23,18 +23,16 @@ class ResultsType extends AbstractType
                 'mapped' => false,
                 'required' => false,
                 'constraints' => [
-                new File([
-                'maxSize' => '1024k',
-                'mimeTypes' => [
-                'image/*',
-                ],
-                'mimeTypesMessage' => 'Veuillez entrer un format de document valide',
-                
-                ])
-            ],
-                ]);
+                    new File([
+                        'maxSize' => '1024k',
+                        'mimeTypes' => [
+                            'image/*',
+                        ],
+                        'mimeTypesMessage' => 'Veuillez entrer un format de document valide',
 
-        ;
+                    ])
+                ],
+            ]);;
     }
 
     public function configureOptions(OptionsResolver $resolver)

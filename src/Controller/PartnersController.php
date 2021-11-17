@@ -94,7 +94,7 @@ class PartnersController extends AbstractController
 
             if ($picturePartner) {
                 $originalFilename = pathinfo($picturePartner->getClientOriginalName(), PATHINFO_FILENAME);
-// ceci est nécessaire pour inclure en toute sécurité le nom de fichier dans l'URL
+// ceci est nécessaire pour inclure en toute sécurité le nom du fichier dans l'URL
                 $safeFilename = $slugger->slug($originalFilename);
                 $newFilename = $safeFilename . '-' . uniqid() . '.' . $picturePartner->guessExtension();
 // Déplacez le fichier dans le répertoire où les brochures sont stockées

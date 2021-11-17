@@ -34,25 +34,6 @@ class PicturesController extends AbstractController
 
     }
   
-    //  #[Route('/pictures_2017', name: 'pictures_2017', methods: ['GET'])]
-    //  public function page(PicturesRepository $picturesRepository): Response
-    //  {
-    //     return $this->render('pictures/pictures2017.html.twig', [
-    //             'pictures' => $picturesRepository->findAll(),
-                
-    //     ]);
-    
-    //     }
-
-    //     #[Route('/pictures_2016', name: 'pictures_2016', methods: ['GET'])]
-    //     public function page2(PicturesRepository $picturesRepository): Response
-    //     {
-    //         return $this->render('pictures/pictures2016.html.twig', [
-    //             'pictures' => $picturesRepository->findAll(),
-                
-    //         ]);
-    
-    //     }
 
     
 

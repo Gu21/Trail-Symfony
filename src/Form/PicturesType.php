@@ -41,9 +41,7 @@ class PicturesType extends AbstractType
             ])
             ->add('yearsPicture', TextType::class, [
                 'label' => 'Année',
-            ])
-           
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

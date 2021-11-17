@@ -15,22 +15,11 @@ class HomeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            // ->add('title')
+
             ->add('subtitle', TextType::class, [
                 'label' => 'Titre',
             ])
-            ->add('description', CKEditorType::class)
-
-        //     ->add('Envoyer', SubmitType::class, [
-        //         'label' => "Valider",
-        //         'attr' => [
-        //         'class' => 'btnSave',
-                
-                
-                
-        //     ]
-        // ])
-        ;
+            ->add('description', CKEditorType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

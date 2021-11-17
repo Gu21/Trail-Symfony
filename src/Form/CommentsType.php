@@ -65,14 +65,6 @@ class CommentsType extends AbstractType
                 ]
             ])
 
-            // ->add('verified', CheckboxType::class, array(
-            //     'label' => 'Vérification',
-                
-            //     'required' => false,
-            //     'value' => 1,
-            // ))
-
-
             ->add('Envoyer', SubmitType::class, [
                 'attr' => [
                     'class' => 'validate',

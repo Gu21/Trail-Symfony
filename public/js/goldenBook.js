@@ -2,7 +2,7 @@
 
 //--------------------RESET FORMULAIRE------
 
-// $(".reset").bind("click", function () { Avec recharge que du formulaire
+// $(".reset").bind("click", function () {  recharge que du formulaire
 $("input[type=text], textarea,input[type=email]").val(""); //reset au chargement de la page
 // });
 

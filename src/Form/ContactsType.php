@@ -21,18 +21,12 @@ class ContactsType extends AbstractType
         $builder
             ->add('nameContact')
             ->add('firstNameContact')
-            // ->add('emailContact')
-            
-            ->add('emailContact', EmailType::class, [
-             
-            ])
-            // ->add('phoneContact')
-            ->add('phoneContact', TelType::class, [
-             
-                ])
+
+
+            ->add('emailContact', EmailType::class, [])
+
+            ->add('phoneContact', TelType::class, [])
             ->add('commentContact');
-      
-            
     }
 
     public function configureOptions(OptionsResolver $resolver)

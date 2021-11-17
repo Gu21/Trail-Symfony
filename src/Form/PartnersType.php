@@ -15,27 +15,22 @@ class PartnersType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            // ->add('titlePartner', TextType::class, [
-            //     'label' => 'Titre',])
-            // ->add('picturePartner')
-            // ->add('descriptionPartner')
-            // ->add('downloadFolderPartner')
+
             ->add('picturePartner', FileType::class, [
                 'label' => 'Photo',
                 'mapped' => false,
                 'required' => false,
                 'constraints' => [
-                new File([
-                'maxSize' => '1024k',
-                'mimeTypes' => [
-                'image/*',
+                    new File([
+                        'maxSize' => '1024k',
+                        'mimeTypes' => [
+                            'image/*',
+                        ],
+                        'mimeTypesMessage' => 'Veuillez entrer un format de document valide',
+
+                    ])
                 ],
-                'mimeTypesMessage' => 'Veuillez entrer un format de document valide',
-                
-                ])
-            ],
-                ]);
-        ;
+            ]);;
     }
 
     public function configureOptions(OptionsResolver $resolver)

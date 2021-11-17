@@ -54,16 +54,16 @@ class Comments
         $this->items = new ArrayCollection();
     }
 
-   
 
-  
+
+
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    
+
 
     public function getTitleComment(): ?string
     {
@@ -142,20 +142,4 @@ class Comments
 
         return $this;
     }
-
-    // public function getVerified(): ?bool
-    // {
-    //     return $this->verified;
-    // }
-
-    // public function setVerified(?bool $verified): self
-    // {
-    //     $this->verified = $verified;
-
-    //     return $this;
-    // }
-
- 
-
-  
 }

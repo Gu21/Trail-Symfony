@@ -41,11 +41,11 @@ class RegisterTrailType extends AbstractType
                 'label' => 'Info trail', //Changer le label
             ])
 
-            ->add('linkRegisterTrail',TextType::class, [
+            ->add('linkRegisterTrail', TextType::class, [
                 'label' => 'Lien inscription trail', //Changer le label
             ])
 
-            ->add('linkVolunteerRegisterTrail',TextType::class, [
+            ->add('linkVolunteerRegisterTrail', TextType::class, [
                 'label' => 'Lien inscription bénévoles', //Changer le label
             ])
 

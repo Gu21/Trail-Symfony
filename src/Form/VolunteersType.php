@@ -18,8 +18,7 @@ class VolunteersType extends AbstractType
             ->add('firstNameVolunteer')
             ->add('phoneVolunteer')
             ->add('objectVolunteer')
-            ->add('messageVolunteer')
-        ;
+            ->add('messageVolunteer');
     }
 
     public function configureOptions(OptionsResolver $resolver)

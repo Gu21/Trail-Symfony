@@ -14,9 +14,9 @@ class ItemsType extends AbstractType
     {
         $builder
             ->add('nameItem')
-         
+
             ->add('commentItem')
-            // ->add('dateItem')
+
             //mettre en commentaire la date déjà présente dans le controller items
 
         ;
