@@ -9,7 +9,6 @@ body {
   width: 100%;
 }
 .navbar {
-  // width: 8rem;
   top: 0px;
   left: 0px;
   bottom: 0px;
@@ -42,7 +41,6 @@ body {
 }
 
 .boxAdminHome {
-  // padding-left: 100px;
   padding-left: 28px;
 }
 
@@ -55,7 +53,6 @@ body {
 
 
 .paragraphAdmin {
-  // text-align: center;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
@@ -108,20 +105,14 @@ body {
 .DashboardNav {
   list-style: none;
   padding: 0;
-  // margin-top: 6rem;
 }
 
 .vertical {
   display: inline-block;
   border-right: 2px solid black;
   height: 823px;
-  //  margin-top: 15rem;
 }
 
-// .boxDashboard{
-//     display: block;
-//     margin: 0 auto;
-// }
 
 .dashboardItem {
   width: 98%;
@@ -160,7 +151,7 @@ i{
 
 .pageAdmin {
   padding: 0;
-  // width: 207%;
+ 
 }
 
 .adminVew {
@@ -171,10 +162,7 @@ i{
 .backgroundDashboard {
   background: hsla(208, 7%, 55%, 1);
 }
-// .table {
-//   // width: 100px;
-//   overflow: scroll;
-// }
+
 
 .table td,
 .table th {
@@ -358,7 +346,6 @@ nav .DashboardNav .closeMenu , .icons i {
   }
   .adminVew {
     display: flex;
-    // flex-direction: column;
     align-items: center;
   }
 
@@ -425,7 +412,7 @@ nav .DashboardNav .closeMenu , .icons i {
   .adminVew {
     display: flex;
     flex-direction: column;
-    // align-items: center;
+    
   }
 
   .vertical {
@@ -516,7 +503,6 @@ nav .DashboardNav .closeMenu , .icons i {
   }
   .boxAdminHome {
     padding-left: 0px;
-    // padding-left: 40px;
     padding-left: 15px;
   }
   nav .DashboardNav .closeMenu {
@@ -553,8 +539,6 @@ nav .DashboardNav .closeMenu , .icons i {
     margin-left: -1rem;
   }
   .dataTables_wrapper {
-    // width: 108%;
-    // width: 111%;
     width: 108%;
   }
   table,
@@ -569,10 +553,7 @@ nav .DashboardNav .closeMenu , .icons i {
   .paragraphAdmin {
     font-size: 1.5rem;
   }
-  // .menu {
-  //   padding-left: 0px!important;
-  //   padding-right: 0px;
-  // }
+ 
   .dashboardItem {
     margin: 10px 6px 30px 6px;
 
@@ -604,7 +585,6 @@ a {
    }
 
    nav .DashboardNav .closeMenu {
-    // right: 28rem;
     right: 4rem;
 }
 .barAdmin {
@@ -615,14 +595,6 @@ a {
 }
 
 @media screen and (max-width: 320px) {
-  //  th,  td {
-  //     padding: 10px 2px!important;
-  // }
-
-  // .dataTables_wrapper {
-  //   // width: 111%;
-  //   right: 11rem;
-  // }
   th
  {
     font-size: 0.55rem;
@@ -651,7 +623,7 @@ a {
     flex-direction: column;
   }
   nav .DashboardNav .closeMenu {
-    // right: 23rem;
+    
     right: 3rem;
 }
 

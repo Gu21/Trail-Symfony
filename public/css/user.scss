@@ -8,7 +8,7 @@ $color5: #000;
 
 *,
 ::before ::after {
-    //le selecteur selectionne tous sauf les pseudos elements donc ils sont placés aprés
+    //le sélecteur selectionne tout sauf les pseudos éléments donc ils sont placés après
 
     box-sizing: border-box; //Prend en compte le padding et les bordures des éléments dans le calcul de la hauteur et la largeur
     padding: 0;

@@ -8,19 +8,7 @@ $color6: #303030;
   box-sizing: border-box;
 }
 
-// .backgroundGoldenBook{
 
-//     background-color: #222222;
-//     background: repeating-linear-gradient(
-//         45deg,
-//         #2b2b2b 0%,
-//         #2b2b2b 10%,
-//         #222222 0%,
-//         #222222 50%
-//       )
-//       0 / 15px 15px;
-//       margin-top: 0;
-// }
 
 .logoGoldenBook {
   img {
@@ -83,7 +71,7 @@ $color6: #303030;
 
 .btnGoldenBook:hover {
   color: $color2;
-  // background-color: $color6;
+ 
 }
 
 .linkGoldenBook {

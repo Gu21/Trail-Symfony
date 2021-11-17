@@ -106,10 +106,7 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.55))
 }
 
-// .carousel-control-next i, .carousel-control-prev i{
 
-//     font-size: 2rem;
-//  }
 
 
 // ------END--CAROUSEL--------------------
@@ -260,10 +257,6 @@ body {
 .blockMinutes,
 .blockSeconds {
 
-    // background: #000;
-    // width: 18%;
-    // box-shadow: -5px 12px 9px rgba(0, 0, 0, 0.6);
-    // -----------------------------------
     padding: 15px 60px;
     color: $color6;
     font-size: 1.3rem;
@@ -453,21 +446,9 @@ body {
 
 .Video-Trail {
 
-    // border-top: 4px solid $color2;
-    // border-bottom: 4px solid $color2;
     padding: 0;
 }
 
-
-// .Box-Video::before {
-//     content: "";
-//     display: block;
-//     border: 3px solid $color1;
-//     width: 30%;
-//     margin: 0 auto;
-//     margin-bottom: 50px;
-
-// }
 
 // <!-- -------------END------VIDEO-------------------------- -->
 
@@ -498,7 +479,6 @@ body {
 .Menu {
     display: flex;
     flex-direction: row;
-    // align-items: center;
     margin-top: 110px;
 
 
@@ -566,7 +546,6 @@ body {
         font-family: "Roboto", "Arial", sans-serif;
         font-weight: 700;
 
-        // padding-left: 50px;
 
     }
 }
@@ -593,7 +572,6 @@ body {
         padding-top: 96px;
         text-align: justify;
         color: $color6;
-        // margin-left: 60px;
         padding-left: 34px;
         font-family: 'Lato', 'Arial', sans-serif;
         font-weight: 500;
@@ -736,12 +714,6 @@ body {
 }
 
 .teamChallenge:hover {
-
-    // -webkit-transition: all 2s;
-    // -o-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-transform: scale(1.0);
-    // -ms-transform: scale(1.0);
     transform: scale(0.95) !important;
 
 }
@@ -765,8 +737,7 @@ body {
 }
 
 .linkRace {
-    // top: 17rem;
-    // left: 24rem;
+   
     overflow: hidden;
     background-position: center center;
     background-size: cover;
@@ -794,11 +765,6 @@ body {
 
 .ChildrenRaces:hover {
 
-    // -webkit-transition: all 2s;
-    // -o-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-transform: scale(1.0);
-    // -ms-transform: scale(1.0);
     transform: scale(0.95) !important;
 
 }
@@ -822,8 +788,7 @@ body {
 .linkRun15,
 .linkRun9,
 .linkRun25 {
-    // top: 17rem;
-    // left: 24rem;
+   
     overflow: hidden;
     background-position: center center;
     background-size: cover;
@@ -851,11 +816,6 @@ body {
 
 .run15:hover {
 
-    // -webkit-transition: all 2s;
-    // -o-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-transform: scale(1.0);
-    // -ms-transform: scale(1.0);
     transform: scale(0.95) !important;
 
 }
@@ -876,11 +836,6 @@ body {
 
 .run9:hover {
 
-    // -webkit-transition: all 2s;
-    // -o-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-transform: scale(1.0);
-    // -ms-transform: scale(1.0);
     transform: scale(0.95) !important;
 
 }
@@ -900,11 +855,6 @@ body {
 
 .run25:hover {
 
-    // -webkit-transition: all 2s;
-    // -o-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-transform: scale(1.0);
-    // -ms-transform: scale(1.0);
     transform: scale(0.95) !important;
 
 }
@@ -923,11 +873,6 @@ body {
 
 .run17:hover {
 
-    // -webkit-transition: all 2s;
-    // -o-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-transform: scale(1.0);
-    // -ms-transform: scale(1.0);
     transform: scale(0.95) !important;
 
 }
@@ -945,11 +890,6 @@ body {
 
 .runSociosChallenges:hover {
 
-    // -webkit-transition: all 2s;
-    // -o-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-transform: scale(1.0);
-    // -ms-transform: scale(1.0);
     transform: scale(0.95) !important;
 
 }
@@ -994,11 +934,6 @@ body {
 
 .runYoung:hover {
 
-    // -webkit-transition: all 2s;
-    // -o-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-transform: scale(1.0);
-    // -ms-transform: scale(1.0);
     transform: scale(0.95) !important;
 
 }
@@ -1056,11 +991,7 @@ body {
 
 @media screen and (max-width: 1024px) {
 
-    // .boxCounter {
-    //     flex-direction: row;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
+
 
 
     .blockDays,
@@ -1377,9 +1308,7 @@ body {
 
     }
 
-    // .boxpresentation {
-    //     line-height: 0.93rem;
-    // }
+  
 
     .partenaires {
         margin-top: 1px;

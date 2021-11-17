@@ -85,20 +85,14 @@ form{
 
     .btnLogin{
 
-        // display: block;
-        // width: auto;
+       
         padding: 15px 60px;
-        // border: 3px solid $color1;
-        // border-radius: 999px;
-        // background: $color2;
         color: #cacaca;
         font-size: 1.3rem;
         font-weight: 500;
         cursor: pointer;
-        // transition: 0.4s ease-out!important;
         border: none;
         border-radius: 12px;
-        // background: linear-gradient(45deg, #cacaca, #f0f0f0);
         box-shadow:  6px 6px 12px #c9c9c9,
                      -6px -6px 12px #fff;
 
@@ -106,15 +100,6 @@ form{
                       
     
     }
-
-    // .btnLogin:hover{
-
-    //     color: $color3; 
-    //     border: 3px solid $color3;
-    //     font-family: "Roboto", "Arial", sans-serif;
-    // }
-
-    
 
     } 
 
@@ -140,8 +125,6 @@ form{
 
         display: flex;
         flex-direction: column;
-        /* justify-content: CENTER; */
-        //  align-items: center;
         width: 97%;
     }
 }
