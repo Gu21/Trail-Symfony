@@ -12,14 +12,14 @@
 		{% block title %}{% endblock %}
 	</title>
 	{% block stylesheets %}
-	<!-- -----LINK  FAVICON-------------- -->
+	{# <!-- -----LINK  FAVICON-------------- --> #}
 	<link rel="shortcut icon" href="/img/favicon.ico" type="images/x-icon" />
-	<!-- -----LINK  BOOTSTRAP-------------- -->
+	{# <!-- -----LINK  BOOTSTRAP-------------- --> #}
 	<link rel="stylesheet" type="text/css"
 		href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-	<!-- --END---LINK BOOTSTRAP-------------- -->
+	{# <!-- --END---LINK BOOTSTRAP-------------- --> #}
 
-	<!-- -----LINK CSS------------- -->
+	{# <!-- -----LINK CSS------------- --> #}
 	<link rel="stylesheet" href="{{ asset('css/base.css') }}" />
 	<link rel="stylesheet" href="{{ asset('css/homes.css') }}" />
 	<link rel="stylesheet" href="{{ asset('css/partners.css') }}" />
@@ -38,9 +38,9 @@
 	<link rel="stylesheet" href="{{ asset('css/praticalInfo.css') }}" />
 	<link rel="stylesheet" href="{{ asset('css/privacyPolicy.css') }}" />
 	<link rel="stylesheet" href="{{ asset('css/legalNotice.css') }}" />
-	<!-- ---END--LINK CSS------------- -->
+	{# <!-- ---END--LINK CSS------------- --> #}
 
-	<!-- ------------FONT-------------------- -->
+	{# <!-- ------------FONT-------------------- --> #}
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,700;1,300&display=swap"
 		rel="stylesheet" />
@@ -54,16 +54,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
 
-	<!-- ------------DATA TABLE-------------------- -->
+	{# <!-- ------------DATA TABLE-------------------- --> #}
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css">
-	<!-- --------END----DATA TABLE-------------------- -->
+	{# <!-- --------END----DATA TABLE-------------------- --> #}
 
-	<!-- -----END-------FONT-------------------- -->
+	{# <!-- -----END-------FONT-------------------- --> #}
 
 	{% endblock %}
 	{% block javascripts %}
 
-	<!-- -------------------------TARTE AU CITRON COOKIE -->
+	{# <!-- -----------TARTE AU CITRON COOKIE ----------------> #}
 	<script type="text/javascript" src="{{asset('tarteaucitron/tarteaucitron.js')}}"></script>
 
 	<script>
@@ -99,10 +99,10 @@
 		});
 	</script>
 
-	<!-- -------------------END-----TARTE AU CITRON COOKIE -->
+	{# <!-- -------------------END-----TARTE AU CITRON COOKIE ----------------> #}
 
 
-	<!-- -------------------------- Global site tag (gtag.js) - Google Analytics -->
+	{# <!-- -------------------------- Global site tag (gtag.js) - Google Analytics ----------------> #}
 
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE15MTRSZY"></script> -->
 
@@ -115,10 +115,10 @@
 		(tarteaucitron.job = tarteaucitron.job || []).push('gtag');
 	</script>
 
-	<!-- ------------------------END Global site tag (gtag.js) - Google Analytics -->
+	{# <!-- ------------------------END Global site tag (gtag.js) - Google Analytics ----------------> #}
 
 
-	<!-- -----SCRIPT RECAPTCHA------------- -->
+	{# <!-- -----SCRIPT RECAPTCHA------------- --> #}
 	<script src="https://www.google.com/recaptcha/api.js?render=6LdkvxIcAAAAACe3P5yebsbFn637hVTlSbRWN8dn"></script>
 
 
@@ -134,8 +134,8 @@
 			});
 		}
 	</script>
-	<!-- ---END --SCRIPT RECAPTCHA------------- -->
-	<!-- -----SCRIPT BOOTSTRAP------------- -->
+	{# <!-- ---END --SCRIPT RECAPTCHA------------- --> #}
+	{# <!-- -----SCRIPT BOOTSTRAP------------- --> #}
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
 		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
 	</script>
@@ -145,22 +145,22 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- ----END -SCRIPT BOOTSTRAP------------- -->
+	{# <!-- ----END -SCRIPT BOOTSTRAP------------- --> #}
 
-	<!-- ------SCROLLMAGIC-------------- -->
+	{# <!-- ------SCROLLMAGIC-------------- --> #}
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-	<!-- --END----SCROLLMAGIC-------------- -->
+	{# <!-- --END----SCROLLMAGIC-------------- --> #}
 
 
-	<!-- -----SCRIPT JS------------- -->
+	{# <!-- -----SCRIPT JS------------- --> #}
 	<script src="https://kit.fontawesome.com/4d2daebcf2.js" crossorigin="anonymous"></script>
-	<!-- ----END -SCRIPT JS------------- -->
+	{# <!-- ----END -SCRIPT JS------------- --> #}
 
-	<!-- -----SCRIPT JS--DATA TABLE----------- -->
+	{# <!-- -----SCRIPT JS--DATA TABLE----------- --> #}
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.js">
 	</script>
-	<!-- ----END---SCRIPT JS--DATA TABLE----------- -->
+	{# <!-- ----END---SCRIPT JS--DATA TABLE----------- --> #}
 
 	{% endblock %}
 </head>
@@ -168,10 +168,10 @@
 <body id="haut-de-page">
 
 
-	<!-- ---------------------------------------HEADER-------------------------- -->
+	{# <!-- ---------------------------------------HEADER-------------------------- --> #}
 
 	<header>
-		<!-- ---------------------------------------NAV-------------------------- -->
+		{# <!-- ---------------------------------------NAV-------------------------- --> #}
 
 		<nav id="navbar" class="navbar-expand-lg navbar-light bg-light fixed-top Box-Nav">
 
@@ -299,15 +299,15 @@
 			</div>
 
 		</nav>
-		<!-- -----------------------------END-----NAV-------------------------- -->
+		{# <!-- -----------------------------END-----NAV-------------------------- --> #}
 	</header>
 
-	<!-- -------------------------END-----HEADER-------------------------- -->
+	{# <!-- -------------------------END-----HEADER-------------------------- --> #}
 
 	{% block body %}{% endblock %}
 
 
-	<!-- -----------------------------------FOOTER----------------------- -->
+	{# <!-- -----------------------------------FOOTER----------------------- --> #}
 	<footer class="Footer py-5">
 		<div class="container-fluid Container-Footer">
 			<div class="Box-Contact">
@@ -352,9 +352,9 @@
 			</div>
 		</div>
 	</footer>
-	<!-- -----------------------------END------FOOTER----------------------- -->
+	{# <!-- -----------------------------END------FOOTER----------------------- --> #}
 
-	<!-- -----------------------------SCRIPT JS----------------------- -->
+	{# <!-- -----------------------------SCRIPT JS----------------------- --> #}
 
 	<script src="{{ asset('js/app.js') }}"></script>
 
