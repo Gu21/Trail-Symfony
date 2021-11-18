@@ -24,10 +24,10 @@ The site is still being improved to this day.
 * PHP 8
 * MySQL
 * HTML5 / CSS3
-* SASS
-* FRAMEWORK BOOTSTRAP
+* Préprocesseur SASS
+* Le FRAMEWORK BOOTSTRAP
 * Javascript / JQuery
-* FRAMEWORK Symfony 5.3
+* Le FRAMEWORK Symfony 5.3
 * COMPOSER 2.0.13
 * Visual Studio code editor
 * Git / Github
