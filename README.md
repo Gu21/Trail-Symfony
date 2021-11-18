@@ -84,7 +84,7 @@ Here the example is for the "Home" entity but the concept is the same for most o
 
 ![modification-admin](https://user-images.githubusercontent.com/79690181/142192499-a8357887-a90e-410d-80a8-7a2d6290d70b.png)
 
-### Added a article:
+## Added a article:
 The Administrator has the possibility to create a new news item.
 ![ajout-rubrique-admin](https://user-images.githubusercontent.com/79690181/142192885-a9e1e325-6b13-4dad-b605-96f8943b0f07.png)
 
