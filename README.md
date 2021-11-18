@@ -69,7 +69,7 @@ The page is represented as a table with buttons and icons to interact with the t
 
 The Administrator has the possibility to modify a section or a photo  ![icone-editer](https://user-images.githubusercontent.com/79690181/142191330-e9bb3603-6480-445e-8057-4b4f0a17001c.png).
 
-### Exemple de la page d'ajout de contenu:
+### Example of the add content page:
 
 ![ajout-contenu](https://user-images.githubusercontent.com/79690181/142191696-88cf82de-9785-401c-8991-13bee55f2b88.png)
 
