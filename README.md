@@ -6,17 +6,17 @@
 The Trail Symfony project is a project realized at the end of a 6 months web and mobile web developer training at ARINFO as part of a professional reconversion, first big project.
 This project is the realization of a website for a non-profit sports association that organizes a trail every year in my region.
 The objective was to develop a new showcase site allowing to bring a new communication support
-a new communication support accessible to the greatest number.
+accessible to the greatest number.
 The site is still being improved to this day.
 
 
 * Creation of specifications in agreement with the association
-* Realization of a model
+* Realization of a mockup
 * Use of the MERISE method for the design of the database
 * Setting up a PHP / Symfony project
 * Creation of entities and their CRUDs and migration with the Doctrine ORM to MySQL
 * Symfony CKEditor plugin added
-* Javascript on Twig templates
+* Javascript on Twig Templates
 
 
 ## Environment 
@@ -24,11 +24,11 @@ The site is still being improved to this day.
 * PHP 8
 * MySQL
 * HTML5 / CSS3
-* Sass
-* Framework Bootstrap
+* SASS
+* FRAMEWORK BOOTSTRAP
 * Javascript / JQuery
-* Framework Symfony 5.3
-* Composer 2.0.13
+* FRAMEWORK Symfony 5.3
+* COMPOSER 2.0.13
 * Visual Studio code editor
 * Git / Github
 
@@ -41,7 +41,7 @@ Home page of the "Administration" part of the site.
 To answer the need of the association on the personalization of the site I set up a
 content management system.
 The association will have the possibility to import photos, to put text, to modify it or to delete it and a pagination was set up.
-and a pagination has been set up.
+
 
 The navigation bar when the mouse passes over it:
 
@@ -49,7 +49,7 @@ The navigation bar when the mouse passes over it:
 
 ### TOPIC MANAGEMENT :
 Left navigation bar when I hover my mouse, I select the link that appears like this
-select the link that appears like this:
+the link appears like this:
 
 ![gestion-rubrique](https://user-images.githubusercontent.com/79690181/142189799-9f5558a6-1594-4d84-ad14-9a4795a7c02a.png)
 
@@ -62,7 +62,7 @@ black cross at the top right:
 
 ![fermeture-burger](https://user-images.githubusercontent.com/79690181/142191019-c6f54318-02ae-40b6-b6fa-e002b229b6cd.png)
 
-Once my home link is selected, I arrive on the index page of my home template
+Once my link is selected, I arrive on the index page of my home Template
 to modify or create a new topic.
 The page is represented as a table with buttons and icons to interact with the topic.
 
@@ -84,7 +84,7 @@ Here the example is for the "Home" entity but the concept is the same for most o
 
 ![modification-admin](https://user-images.githubusercontent.com/79690181/142192499-a8357887-a90e-410d-80a8-7a2d6290d70b.png)
 
-### ADDED A SECTION:
+### ADDED A NEWS:
 The Administrator has the possibility to create a new news item.
 ![ajout-rubrique-admin](https://user-images.githubusercontent.com/79690181/142192885-a9e1e325-6b13-4dad-b605-96f8943b0f07.png)
 
@@ -92,7 +92,7 @@ The Administrator has the possibility to create a new news item.
 
 For the production of my site I used 02switch a web hosting company
 100% French for both the server and the Sav based in Clermont-Ferrand.
-In order to
+
 
 ![O2SWITCH](https://user-images.githubusercontent.com/79690181/142199551-467e9e87-02ce-486e-9c75-16f3d02a28ba.png)
 
