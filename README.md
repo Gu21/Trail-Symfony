@@ -25,7 +25,7 @@ The site is still being improved to this day.
 * MySQL
 * HTML5 / CSS3
 * Préprocesseur SASS
-* Framework Bootstrap
+* Toolms Bootstrap
 * Javascript / JQuery
 * Symfony 5.3
 * COMPOSER 2.0.13
