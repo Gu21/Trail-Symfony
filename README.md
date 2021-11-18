@@ -47,9 +47,9 @@ The navigation bar when the mouse passes over it:
 
 ![barreNavigationAdmin](https://user-images.githubusercontent.com/79690181/142189501-2b9d736f-447c-4e30-9591-276764f2a3eb.png)
 
-### TOPIC MANAGEMENT :
-Left navigation bar when I hover my mouse, I select the link that appears like this
-the link appears like this:
+### TOPIC article :
+Left navigation bar when I hover my mouse, I select the link that appears like this:
+
 
 ![gestion-rubrique](https://user-images.githubusercontent.com/79690181/142189799-9f5558a6-1594-4d84-ad14-9a4795a7c02a.png)
 
