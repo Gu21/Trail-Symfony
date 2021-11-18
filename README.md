@@ -63,11 +63,11 @@ black cross at the top right:
 ![fermeture-burger](https://user-images.githubusercontent.com/79690181/142191019-c6f54318-02ae-40b6-b6fa-e002b229b6cd.png)
 
 Once my link is selected, I arrive on the index page of my home Template
-to modify or create a new topic.
-The page is represented as a table with buttons and icons to interact with the topic.
+to modify or create a new article.
+The page is represented as a table with buttons and icons to interact with the article.
 
 
-The Administrator has the possibility to modify a section or a photo  ![icone-editer](https://user-images.githubusercontent.com/79690181/142191330-e9bb3603-6480-445e-8057-4b4f0a17001c.png).
+The Administrator has the possibility to modify a article or a photo  ![icone-editer](https://user-images.githubusercontent.com/79690181/142191330-e9bb3603-6480-445e-8057-4b4f0a17001c.png).
 
 ### Example of the add content page:
 
@@ -84,7 +84,7 @@ Here the example is for the "Home" entity but the concept is the same for most o
 
 ![modification-admin](https://user-images.githubusercontent.com/79690181/142192499-a8357887-a90e-410d-80a8-7a2d6290d70b.png)
 
-### ADDED A NEWS:
+### Added a article:
 The Administrator has the possibility to create a new news item.
 ![ajout-rubrique-admin](https://user-images.githubusercontent.com/79690181/142192885-a9e1e325-6b13-4dad-b605-96f8943b0f07.png)
 
