@@ -25,9 +25,9 @@ The site is still being improved to this day.
 * MySQL
 * HTML5 / CSS3
 * Préprocesseur SASS
-* Le FRAMEWORK BOOTSTRAP
+* BOOTSTRAP
 * Javascript / JQuery
-* Le FRAMEWORK Symfony 5.3
+* Symfony 5.3
 * COMPOSER 2.0.13
 * Visual Studio code editor
 * Git / Github
