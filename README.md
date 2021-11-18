@@ -16,7 +16,7 @@ The site is still being improved to this day.
 * Setting up a PHP / Symfony project
 * Creation of entities and their CRUDs and migration with the Doctrine ORM to MySQL
 * Symfony CKEditor plugin added
-* Javascript on Twig Templates
+* Javascript on engine Twig Templates
 
 
 ## Environment 
