@@ -1,24 +1,25 @@
 ![projet-trail](https://user-images.githubusercontent.com/79690181/142174993-346f7110-c2e1-4040-b822-c4d6ae63bd11.png)
 
 
-# Projet Trail Symfony
+# Trail Symfony project
 
-Le projet Trail Symfony est un projet réalisé  en fin de formation de développeur web et web mobile de 6 mois à ARINFO dans le cadre d'une reconversion professionnelle, premier gros projet.
-Ce projet est la réalisation d'un site web pour une association sportive  à but non lucratif qui organise chaque année un trail dans ma région.
-L'objectif était de développer un nouveau site vitrine permettant d’apporter un
-nouveau support de communication accessible au plus grand nombre.
-Site encore en amélioration a ce jour.
-
-* Création d'un cahier des charges en accord avec l'association
-* Réalisation d'une maquette
-* Utilisation de la méthode MERISE pour la conception de la base de données
-* Mise en place d'un projet PHP / Symfony
-* Création des entités et de leurs CRUD et migrate avec l'ORM Doctrine vers MySQL
-* Ajout de plugin Symfony CKEditor
-* Javascript sur des templates Twig
+The Trail Symfony project is a project realized at the end of a 6 months web and mobile web developer training at ARINFO as part of a professional reconversion, first big project.
+This project is the realization of a website for a non-profit sports association that organizes a trail every year in my region.
+The objective was to develop a new showcase site allowing to bring a new communication support
+a new communication support accessible to the greatest number.
+The site is still being improved to this day.
 
 
-## Environnement 
+* Creation of specifications in agreement with the association
+* Realization of a model
+* Use of the MERISE method for the design of the database
+* Setting up a PHP / Symfony project
+* Creation of entities and their CRUDs and migration with the Doctrine ORM to MySQL
+* Symfony CKEditor plugin added
+* Javascript on Twig templates
+
+
+## Environment 
 
 * PHP 8
 * MySQL
@@ -28,79 +29,79 @@ Site encore en amélioration a ce jour.
 * Javascript / JQuery
 * Framework Symfony 5.3
 * Composer 2.0.13
-* Editeur de code Visual Studio code
+* Visual Studio code editor
 * Git / Github
 
 
-### Réalisation d'une interface Administration
+### Creation of an administration interface
 
-Page d’accueil de la partie « Administration » du site.
+Home page of the "Administration" part of the site.
 ![admin](https://user-images.githubusercontent.com/79690181/142187976-6433b94b-bfce-4d5a-a9a5-b2a4e7f82bba.png)
 
-Pour répondre au besoin de l'association sur la personnalisation du site j'ai mis en place un
-système de gestion de contenu.
-L'association aura la possibilité d'importer des photos, de mettre du texte, de le modifier ou
-de le supprimer et une pagination a été mise en place.
+To answer the need of the association on the personalization of the site I set up a
+content management system.
+The association will have the possibility to import photos, to put text, to modify it or to delete it and a pagination was set up.
+and a pagination has been set up.
 
-La barre de navigation lorsque la souris passe par dessus:
+The navigation bar when the mouse passes over it:
 
 ![barreNavigationAdmin](https://user-images.githubusercontent.com/79690181/142189501-2b9d736f-447c-4e30-9591-276764f2a3eb.png)
 
-### GESTION DE RUBRIQUES :
-Barre de navigation de gauche lors du survol de ma souris, je
-sélectionne le lien qui apparaît comme ceci:
+### TOPIC MANAGEMENT :
+Left navigation bar when I hover my mouse, I select the link that appears like this
+select the link that appears like this:
 
 ![gestion-rubrique](https://user-images.githubusercontent.com/79690181/142189799-9f5558a6-1594-4d84-ad14-9a4795a7c02a.png)
 
-Voici la barre de navigation en responsive avec le burger :
+Here is the responsive navigation bar with the burger:
 
 ![Barre-nav-burger](https://user-images.githubusercontent.com/79690181/142190590-d8aac252-b66a-457c-91b0-c95bddd558fc.png)
 
-Au clic sur le burger le menu se déroule et il est possible de fermer ce même menu avec la
-croix noire en haut à droite:
+When you click on the burger, the menu unfolds and it is possible to close the menu with the
+black cross at the top right:
 
 ![fermeture-burger](https://user-images.githubusercontent.com/79690181/142191019-c6f54318-02ae-40b6-b6fa-e002b229b6cd.png)
 
-Une fois mon lien Accueil sélectionné, j'arrive sur la page index de mon template home
-pour modifier ou créer une nouvelle rubrique.
-La page est représentée sous la forme d'un tableau avec des boutons et des icônes afin d'interagir avec la rubrique.
+Once my home link is selected, I arrive on the index page of my home template
+to modify or create a new topic.
+The page is represented as a table with buttons and icons to interact with the topic.
 
 
-L'Administrateur a la possibilité de modifier une rubrique ou une photo   ![icone-editer](https://user-images.githubusercontent.com/79690181/142191330-e9bb3603-6480-445e-8057-4b4f0a17001c.png).
+The Administrator has the possibility to modify a section or a photo  ![icone-editer](https://user-images.githubusercontent.com/79690181/142191330-e9bb3603-6480-445e-8057-4b4f0a17001c.png).
 
 ### Exemple de la page d'ajout de contenu:
 
 ![ajout-contenu](https://user-images.githubusercontent.com/79690181/142191696-88cf82de-9785-401c-8991-13bee55f2b88.png)
 
-L'admin a aussi la possibilité d'ajouter des images comme pour l'exemple des partenaires:
+The admin also has the possibility to add images like for the example of the partners:
 
 ![admin-image](https://user-images.githubusercontent.com/79690181/142191916-791020af-cff2-424b-a233-48a7dd0a8322.png)
 
-Il peut aussi supprimer  ![corbeille-admin](https://user-images.githubusercontent.com/79690181/142192419-62406f48-f488-4922-bd99-24dae9e25c57.png) ou enregistrer  ![enregistrer-admin](https://user-images.githubusercontent.com/79690181/142192447-e9a77521-de23-4f28-bf6e-99536c8e514a.png)
- les modifications de la rubrique.
+It can also delete  ![corbeille-admin](https://user-images.githubusercontent.com/79690181/142192419-62406f48-f488-4922-bd99-24dae9e25c57.png)  or register ![enregistrer-admin](https://user-images.githubusercontent.com/79690181/142192447-e9a77521-de23-4f28-bf6e-99536c8e514a.png)
+changes to the rubric.
 
-Ici l’exemple est pour l’entité «Home» mais le concept est le même pour la plupart des autres rubriques:
+Here the example is for the "Home" entity but the concept is the same for most of the other headings:
 
 ![modification-admin](https://user-images.githubusercontent.com/79690181/142192499-a8357887-a90e-410d-80a8-7a2d6290d70b.png)
 
-### AJOUT D'UNE RUBRIQUE :
- L'Administrateur a la possibilité de créer une nouvelle actualité.
+### ADDED A SECTION:
+The Administrator has the possibility to create a new news item.
 ![ajout-rubrique-admin](https://user-images.githubusercontent.com/79690181/142192885-a9e1e325-6b13-4dad-b605-96f8943b0f07.png)
 
-## Mise en production
+## Putting into production
 
-Pour la mise en production de mon site j' ai utilisé 02switch un hébergeur de site web
-100% Français autant pour le serveur que pour la Sav basée à clermont-Ferrand.
-Afin de
+For the production of my site I used 02switch a web hosting company
+100% French for both the server and the Sav based in Clermont-Ferrand.
+In order to
 
 ![O2SWITCH](https://user-images.githubusercontent.com/79690181/142199551-467e9e87-02ce-486e-9c75-16f3d02a28ba.png)
 
-Afin de transférer les données locales de mon ordinateur, je me suis servi du client
-SFTP (Transfer Protocol) « winSCP » qui est open source et me permet la copie
-sécurisée de mes fichiers.
+In order to transfer local data from my computer, I used the
+SFTP (Transfer Protocol) client "winSCP" which is open source and allows me to copy
+of my files.
 
 ![winscp](https://user-images.githubusercontent.com/79690181/142199577-2df3b560-e1ec-4727-8282-02d8385109f8.png)
 
-### Lien du site
+### Link to the site
 
 (https://trail-allaire-bisson.fr)
